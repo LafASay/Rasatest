@@ -1,0 +1,410 @@
+version: "3.1"
+
+responses:
+
+  utter_ask_transfer_form_transfer_verb:
+    - text: "Уточните что Вы хотите сделать? Вывести средства, пополнить кошелек, произвести обмен с кошелька на кошелек или передать средства другому человеку?"
+
+  # utter_ask_transfer_form_purse_type:
+  #   - text: "Какой тип кошелька?"
+
+  # utter_ask_transfer_form_transfer_method:
+  #   - text: "Какой метод или кошелек?"
+
+  utter_slots_values:
+  - text: "Собираюсь ответить по следующим данным:\n
+            - transfer_verb: {transfer_verb}\n
+            - transfer_purse_type: {transfer_purse_type}\n
+            - transfer_method: {transfer_method}"
+
+  utter_this_withdraw_method_is_not_possible:
+    - text: 'Такого способа вывода нет.'
+
+  utter_this_topup_method_is_not_possible:
+    - text: 'Такого способа пополнения нет.'
+
+
+  utter_transfer_form_withdraw_wmz_bank_card:
+  - text: "Вывести средства на банковскую карту можно здесь https://telepay.wmtransfer.com/ru/cards"
+
+  utter_transfer_form_withdraw_wmz_bank_account:
+  - text: "Оформить вывод средств банковским переводом можно здесь https://withdraw.web.money/Home/Index"
+
+  utter_transfer_form_withdraw_wmz_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.money/emoney/home"
+
+  utter_transfer_form_withdraw_wmz_cash:
+  - text: "Выбрать обменный пункт для вывода средств наличными можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru\n
+           Обменять WMZ на наличные посредством перевода через Western Union можно здесь https://exchanger.money/sdp/home/western-union/usd-wmz"
+
+
+  utter_transfer_form_withdraw_wme_bank_card:
+  - text: "Вывести средства на банковскую карту можно здесь https://telepay.wmtransfer.com/ru/cards"
+
+  utter_transfer_form_withdraw_wme_bank_account:
+  - text: "Оформить вывод средств банковским переводом можно здесь https://withdraw.web.money/Home/Indexsellwmb1.asp"
+
+  utter_transfer_form_withdraw_wme_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.money/emoney/home"
+
+  utter_transfer_form_withdraw_wme_cash:
+  - text: "Выбрать обменный пункт для вывода средств можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_withdraw_wmb_bank_card:
+  - text: "Вывести средства на банковскую карту можно здесь http://www.wmtransfer.by/sellwmb1.asp"
+
+  utter_transfer_form_withdraw_wmb_bank_account:
+  - text: "Оформить вывод средств банковским переводом можно здесь http://www.wmtransfer.by/sellwmb1.asp"
+
+  utter_transfer_form_withdraw_wmb_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.money/emoney/home"
+
+  utter_transfer_form_withdraw_wmb_cash:
+  - text: "Оформить заявку на вывод средств наличными в офисе банка или партнера можно здесь http://www.wmtransfer.by/sellwmb1.asp\n
+           Оформить заявку на вывод средств наличными через биржу exchanger путем обмена можно здесь https://exchanger.money/sdp/home"
+
+
+  utter_transfer_form_withdraw_wmk_bank_card:
+  - text: "Вывести средства на банковскую карту можно здесь https://telepay.wmtransfer.com/ru/cards"
+
+  utter_transfer_form_withdraw_wmk_bank_account:
+  - text: "Оформить вывод средств банковским переводом можно здесь http://wmk.kz/home/Withdrawal"
+
+  utter_transfer_form_withdraw_wmk_cash:
+  - text: "Вывести средства наличными в офисе банка или партнера можно здесь http://wmk.kz/home/Withdrawal или через обменные пункты https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_withdraw_wmy_bank_card:
+  - text: "Вывести средства на банковскую карту можно здесь https://telepay.wmtransfer.com/ru/cards"
+
+
+  utter_transfer_form_withdraw_wmx_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
+
+  utter_transfer_form_withdraw_wmx_from_storage_with_the_guarantor:
+  - text: "Вывести средства с WMX кошелека путем возврата с хранения у Гаранта возможно на странице: https://wmx.wmtransfer.com/Home/Withdraw#"
+
+  utter_transfer_form_withdraw_wmh_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
+
+  utter_transfer_form_withdraw_wmh_from_storage_with_the_guarantor:
+  - text: "Вывести средства с WMX кошелека путем возврата с хранения у Гаранта возможно на странице: https://wmh.wmtransfer.com/Home/Withdraw#"
+
+  utter_transfer_form_withdraw_wml_electronic_money:
+  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
+
+  utter_transfer_form_withdraw_wml_from_storage_with_the_guarantor:
+  - text: "Вывести средства с WMX кошелека путем возврата с хранения у Гаранта возможно на странице: https://wml.wmtransfer.com/Home/Withdraw#"
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_withdraw_wmg_cash:
+  - text: "Выбрать обменный пункт для вывода WMG можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+
+  utter_transfer_form_topup_wmz_bank_card:
+  - text: "Пополнить кошелек с банковской карты можно здесь https://top-up.web.money/Order.aspx?ps=80&curr=z или оформить заявку на обмен на бирже https://exchanger.money/cards/home/wmz"
+
+  utter_transfer_form_topup_wmz_bank_account:
+  - text: "Пополнить кошелек с банковского счета можно здесь https://top-up.webmoney.ru/?tab=ba (Для России) Пополнить WMZ кошелек при помомщи СБП можно здесь https://exchanger.money/emoney/home/sbp?utm_source=web.money&utm_campaign=sbp"
+
+  utter_transfer_form_topup_wmz_electronic_money:
+  - text: "Владельцы WMZ кошельков могут обменивать средства в других системах электронных платежей (USD) по выгодному курсу в обе стороны, а также самостоятельно создавать заявки обмена https://exchanger.money/emoney/home\n
+           Владельцы WMZ кошельков могут обменивать средства на M-Pesa (USD) по выгодному курсу в обе стороны, а также самостоятельно создавать заявки обмена https://exchanger.money/emoney/home/m-pesa/usd-wmz\n
+           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/usd-wmя\n
+           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex/rub-wmz"
+
+  utter_transfer_form_topup_wmz_cash:
+  - text: "Пополнить кошелек наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_topup_wme_bank_card:
+  - text: "Пополнить кошелек с банковской карты можно здесь https://top-up.web.money/Order.aspx?ps=80&curr=e или оформить заявку на обмен на бирже https://exchanger.money/cards/home/wme"
+
+  utter_transfer_form_topup_wme_bank_account:
+  - text: "Пополнить кошелек с банковского счета можно здесь https://top-up.wmtransfer.com/?tab=ba&l=ru"
+
+  utter_transfer_form_topup_wme_electronic_money:
+  - text: "Пополнить кошелек электронными деньгами можно на сервисе https://exchanger.money/\n
+           Для выгодного обмена c M-Pesa, перейдите по ссылке https://exchanger.money/emoney/home/m-pesa/usd-wme\n
+           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/usd-wme\n
+           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex"
+
+  utter_transfer_form_topup_wme_cash:
+  - text: "Пополнить кошелек наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_topup_wmb_bank_card:
+  - text: "Пополнить кошелек с банковской карты можно здесь http://wmtransfer.by/buywmb1.asp#1"
+
+  utter_transfer_form_topup_wmb_bank_account:
+  - text: "Пополнить кошелек с банковского счета можно здесь http://wmtransfer.by/buywmb1.asp#1"
+
+  utter_transfer_form_topup_wmb_electronic_money:
+  - text: "Для выгодного обмена с других электронных систем, воспользуйтесь биржей https://exchanger.money/emoney/home\n
+           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/rub-wmb\n
+           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex/rub-wmb"
+
+  utter_transfer_form_topup_wmb_cash:
+  - text: "Пополнить кошелек наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_topup_wmk_bank_card:
+  - text: "Пополнить кошелек с банковской карты можно здесь https://top-up.web.money/Order.aspx?ps=1101 или здесь https://wmk.kz/home/Refill, а также"
+
+  utter_transfer_form_topup_wmk_bank_account:
+  - text: "Пополнить кошелек банковским переводом вы можете здесь https://wmk.kz/home/Refill"
+
+  utter_transfer_form_topup_wmk_cash:
+  - text: "Пополнить кошелек наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
+
+
+  utter_transfer_form_topup_wmy_bank_card:
+  - text: "Пополнить кошелек с банковской карты можно здесь https://top-up.web.money/order.aspx?ps=1502"
+
+
+  utter_transfer_form_topup_wmx_electronic_money:
+  - text: "Пополнить WMX кошелек электронными деньгами посредством обмена можно здесь https://exchanger.web.money/asp/wmlist.asp?exchtype=34"
+
+  utter_transfer_form_topup_wmx_from_storage_with_the_guarantor:
+  - text: "Пополнить кошелек путем передачи прав на хранение можно здесь https://wmx.wmtransfer.com/#"
+
+
+  utter_transfer_form_topup_wmh_electronic_money:
+  - text: "Пополнить WMH кошелек электронными деньгами посредством обмена можно https://exchanger.web.money/asp/wmlist.asp?exchtype=80"
+
+  utter_transfer_form_topup_wmh_from_storage_with_the_guarantor:
+  - text: "Пополнить кошелек путем передачи прав на хранение можно здесь  https://wmh.wmtransfer.com/#"
+
+
+  utter_transfer_form_topup_wml_electronic_money:
+  - text: "Пополнить WML кошелек электронными деньгами посредством обмена можно https://exchanger.web.money/asp/wmlist.asp?exchtype=98"
+
+  utter_transfer_form_topup_wml_from_storage_with_the_guarantor:
+  - text: "Пополнить кошелек путем передачи прав на хранение можно здесь https://wml.wmtransfer.com/#"
+
+
+  utter_transfer_form_topup_wmg_bank_account:
+  - text: "Оформить банковский перевод можно здесь http://www.metdeal.com/en/index.html"
+
+  utter_transfer_form_topup_wmg_electronic_money:
+  - text: "Пополнить WMG кошелек электронными деньгами посредством обмена можно на странице: https://exchanger.web.money/asp/wmlist.asp?exchtype=26"
+
+  utter_transfer_form_topup_wmg_cash:
+  - text: "Пополнить кошелек наличными можно через обменный пункт https://www.webmoney.ru/rus/inout/topup.shtml?currency=wmg&transfer_method=cash_transfer_method"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_withdraw_transfer_method_wmx:
+    - text: "Вывод средств из кошелька WMX возможен электронными деньгами через биржу и возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmh:
+    - text: "Вывод средств из кошелька WMH возможен электронными деньгами через биржу и возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wml:
+    - text: "Вывод средств из кошелька WML возможен электронными деньгами через биржу и возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmz:
+    - text: "Вывод средств с кошелька WMZ возможен на банковскую карту, на банковский счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wme:
+    - text: "Вывод средств с кошелька WME возможен на банковскую карту, на банковский счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmb:
+    - text: "Вывод средств с кошелька WMB возможен на банковскую карту, на банковский счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmk:
+    - text: "Вывод средств с кошелька WMK возможен на банковскую карту, на банковский счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmg:
+    - text: "Вывод средств из кошелька WMG возможен на банковский счет, электронные деньги, наличными или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
+
+  utter_transfer_form_withdraw_transfer_method_wmy:
+    - text: "Вывод средств из кошелька WMY возможен только на банковскую карту."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_topup_transfer_method_wmx:
+    - text: "Пополнение средств на кошелёк WMX возможено электронными деньгами и передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wmh:
+    - text: "Пополнение средств на кошелёк WMH возможено электронными деньгами и передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wml:
+    - text: "Пополнение средств на кошелёк WML возможено электронными деньгами и передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_topup_transfer_method_wmz:
+    - text: "Пополнение средств на кошелёк WMZ возможено с банковской карты, банковского счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wme:
+    - text: "Пополнение средств на кошелёк WME возможено с банковской карты, банковского счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wmb:
+    - text: "Пополнение средств на кошелёк WMB возможено с банковской карты, банковского счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wmk:
+    - text: "Пополнение средств на кошелёк WMK возможено с банковской карты, банковского счета, электронными деньгами передачей Гаранту на хранение или наличными. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wmg:
+    - text: "Пополнение средств на кошелёк WMG возможено с банковского счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
+
+  # utter_transfer_form_topup_transfer_method_wmy:
+  #   - text: "Пополнение средств на кошелёк WMY возможено с банковской карты или банковского счета. Каким способом Вы хотите пополнить?"
+
+  utter_transfer_form_topup_transfer_method_wmy:
+    - text: "Пополнить кошелёк WMY возможно только с банковской карты."
+
+  utter_ask_transfer_form_withdraw_transfer_purse_type:
+    - text: "Укажите пожалуйста тип кошелька с которого хотите вывести средства."
+
+  utter_ask_transfer_form_topup_transfer_purse_type:
+    - text: "Укажите пожалуйста тип кошелька который хотите пополнить."
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_transfer_method_transfer:
+    - text: "Вы можете ознакомиться с инструкцией о передаче средств на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/peredacha_sredstv_v_wm_keeper_standard Обращаем Ваше внимание на то, что перевод возможен только между кошельков одного типа, если Вы хотите передать средств на кошелек другого типа, то Вам необходимо сначала обменять средства между Вашими кошельками."
+
+  utter_transfer_form_transfer_method_exchange:
+    - text: "Вы можете ознакомиться с инструкцией по обмену средств на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/obmen_wm_na_wm_v_wm_keeper_standard"
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_transfer_form_transfer_wmp_wmr:
+    - text: "Операции с WMP и WMR прекращены в связи с отзывом лицензии у Банка ККБ. Создание и использование данных кошельков более невозможно, остаки средств были конвертированы на WMZ кошельки. Подробнее на странице: https://news.wmtransfer.com/blog/zayavlenie-dlya-vladeltsev-wmp-i-wmr-koshelkov"
+
+  utter_transfer_form_transfer_wmu:
+    - text: "Оборот по WMU официально прекращен. Всем держателям WMU деньги были конвертированы в WMZ."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  utter_ask_mobile_number_form_mobile_number:
+    - text: "Укажите, пожалуйста, Ваш номер телефона."
+
+  utter_mobile_number_form_values:
+  - text: "Собираюсь ответить по следующим данным:\n
+            - mobile_number: {mobile_number}"
+
+
+
+
+
+
+
+
+
+  utter_ask_wmid_number_form_wmid_number:
+    - text: "Укажите, пожалуйста, номер Вашего WMID."
+
+  utter_wmid_number_form_values:
+  - text: "Собираюсь ответить по следующим данным:\n
+            - wmid_number: {wmid_number}"
+
+
+
+
+  utter_ask_purse_number_form_purse_number:
+    - text: "Укажите, пожалуйста, номер Вашего кошелька."
+
+  utter_purse_number_form_values:
+  - text: "Собираюсь ответить по следующим данным:\n
+            - purse_number: {purse_number}"
+
+
+
+
+
+
+
+
+
+
+  # utter_slots_values:
+  # - text: "Собираюсь ответить по следующим данным:\n
+  #           - pay: {pay}\n
+  #           - to: {to}"
+
+
+  utter_ask_pay_form_to:
+    - text: "Что Вы хотите оплатить?"
+

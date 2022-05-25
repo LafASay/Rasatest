@@ -1,0 +1,93 @@
+version: "3.1"
+
+rules:
+
+- rule: hi_bye.greet
+  steps:
+  - intent: hi_bye.greet
+  - action: utter_hi_bye.greet
+
+- rule: hi_bye.how_are_you
+  steps:
+  - intent: hi_bye.how_are_you
+  - action: utter_hi_bye.how_are_you
+
+- rule: hi_bye.who_are_you
+  steps:
+  - intent: hi_bye.who_are_you
+  - action: utter_hi_bye.who_are_you
+
+- rule: hi_bye.есть_кто_нибудь
+  steps:
+  - intent: hi_bye.есть_кто_нибудь
+  - action: utter_hi_bye.есть_кто_нибудь
+
+- rule: hi_bye.what_can_you_do
+  steps:
+  - intent: hi_bye.what_can_you_do
+  - action: utter_hi_bye.what_can_you_do
+
+- rule: hi_bye.where_do_you_live
+  steps:
+  - intent: hi_bye.where_do_you_live
+  - action: utter_hi_bye.where_do_you_live
+
+- rule: hi_bye.what_the_wather
+  steps:
+  - intent: hi_bye.what_the_wather
+  - action: utter_hi_bye.what_the_wather
+
+- rule: hi_bye.thanks
+  steps:
+  - intent: hi_bye.thanks
+  - action: utter_hi_bye.thanks
+
+- rule: hi_bye.you_are_stupid
+  steps:
+  - intent: hi_bye.you_are_stupid
+  - action: utter_hi_bye.you_are_stupid
+
+- rule: hi_bye.offend
+  steps:
+  - intent: hi_bye.offend
+  - action: utter_hi_bye.offend
+
+- rule: hi_bye.i_like_you
+  steps:
+  - intent: hi_bye.i_like_you
+  - action: utter_hi_bye.i_like_you
+
+- rule: hi_bye.who_is_creater
+  steps:
+  - intent: hi_bye.who_is_creater
+  - action: utter_hi_bye.who_is_creater
+
+- rule: hi_bye.who_president
+  steps:
+  - intent: hi_bye.who_president
+  - action: utter_hi_bye.who_president
+
+- rule: hi_bye.who_is_bot_owner
+  steps:
+  - intent: hi_bye.who_is_bot_owner
+  - action: utter_hi_bye.who_is_bot_owner
+
+- rule: hi_bye.search_engine
+  steps:
+  - intent: hi_bye.search_engine
+  - action: utter_hi_bye.search_engine
+
+- rule: hi_bye.sad
+  steps:
+  - intent: hi_bye.sad
+  - action: utter_hi_bye.sad
+
+- rule: hi_bye.bye
+  steps:
+  - intent: hi_bye.bye
+  - action: utter_hi_bye.bye
+
+- rule: hi_bye.im_from
+  steps:
+  - intent: hi_bye.im_from
+  - action: utter_hi_bye.im_from

@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+# - story: withdraw.withdraw
+#   steps:
+#   - intent: withdraw.withdraw
+#   - action: utter_withdraw.withdraw
+
+# - story: withdraw.withdraw+cant.cant
+#   steps:
+#   - intent: withdraw.withdraw+cant.cant
+#   - action: utter_withdraw.withdraw+cant.cant
+
+- story: withdraw.как_вывести_с_наименьшей_комиссией
+  steps:
+  - intent: withdraw.как_вывести_с_наименьшей_комиссией
+  - action: utter_withdraw.как_вывести_с_наименьшей_комиссией
+
+- story: withdraw.как_долго_выводятся_средства
+  steps:
+  - intent: withdraw.как_долго_выводятся_средства
+  - action: utter_withdraw.как_долго_выводятся_средства
+
+- story: withdraw.требования_для_вывода_средств
+  steps:
+  - intent: withdraw.требования_для_вывода_средств
+  - action: utter_withdraw.требования_для_вывода_средств
+
+- story: withdraw.when_do_transfers_work
+  steps:
+  - intent: withdraw.when_do_transfers_work
+  - action: utter_withdraw.when_do_transfers_work

@@ -1,0 +1,18 @@
+version: "3.1"
+
+rules:
+
+- rule: support.need_technical_support
+  steps:
+  - intent: support.need_technical_support
+  - action: utter_support.need_technical_support
+
+- rule: support.how_call_you
+  steps:
+  - intent: support.how_call_you
+  - action: utter_support.how_call_you
+
+- rule: support.help_me
+  steps:
+  - intent: support.help_me
+  - action: utter_support.help_me

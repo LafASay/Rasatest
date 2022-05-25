@@ -1,0 +1,15 @@
+version: "3.1"
+
+responses:
+
+  utter_topup.topup:
+  - text: "Вы можете ознакомиться со всеми способами пополнения средств на странице: https://www.webmoney.ru/rus/inout/topup.shtml?currency=wmz&method=bank-card_method"
+
+  utter_topup.topup+cant.cant:
+  - text: "Через какой сервис Вы производите пополнение? Какую ошибку получаете?"
+
+  utter_topup.money_not_received:
+  - text: "Каким образом Вы пополняли кошелек? Через какой сервис? Укажите все реквизиты транзакции."
+
+  utter_topup.как_долго_поступают_средства:
+  - text: "Время зачисления зависит от способа ввода. Каким образом Вы пополняли кошелек?"

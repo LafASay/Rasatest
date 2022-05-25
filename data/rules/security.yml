@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: security.security_ip_story
+  steps:
+  - intent: security.security_ip_story
+  - action: utter_security.security_ip_story
+
+- rule: security.security_ip_block
+  steps:
+  - intent: security.security_ip_block
+  - action: utter_security.security_ip_block

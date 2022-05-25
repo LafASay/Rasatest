@@ -1,0 +1,21 @@
+version: "3.1"
+
+responses:
+
+  utter_withdraw.withdraw:
+  - text: "Вы можете ознакомиться со всеми способами вывода средств на странице: https://www.webmoney.ru/rus/inout/withdraw2.shtml?currency=wmz&method=bank-card_method"
+
+  utter_withdraw.withdraw+cant.cant:
+  - text: "Через какой сервис Вы производите вывод? Какую ошибку получаете?"
+
+  utter_withdraw.как_вывести_с_наименьшей_комиссией:
+  - text: "Комиссия зависит от способа вывода. Все способы вывода указаны на странице: https://www.webmoney.ru/rus/inout/withdraw2.shtml?currency=wmz&method=bank-card_method Вы можете выбрать тот, что подходит Вам."
+
+  utter_withdraw.как_долго_выводятся_средства:
+  - text: "Время зачисления зависит от способа вывода. Каким образом Вы вывели средства?"
+
+  utter_withdraw.требования_для_вывода_средств:
+  - text: "Да, это возможно. Например тут: https://telepay.wmtransfer.com/ru/cards Но мы рекомендуем Вам делать вывод средств только на свои карты."
+
+  utter_withdraw.when_do_transfers_work:
+  - text: "Вывод средств через telepay на карту Visa банков РФ доступны сейчас. Сроки восстановления вывода средств на карты Visa не российских банков неизвестны. Выводы средств через другие сервисы перечислены на странице https://www.webmoney.ru/rus/inout/withdraw2.shtml?currency=wmz&method=bank-card_method "

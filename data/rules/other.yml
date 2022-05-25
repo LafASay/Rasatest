@@ -1,0 +1,38 @@
+version: "3.1"
+
+rules:
+
+- rule: other.user_confirm
+  steps:
+  - intent: other.user_confirm
+  - action: utter_other.user_confirm
+
+- rule: other.user_deny
+  steps:
+  - intent: other.user_deny
+  - action: utter_other.user_deny
+
+- rule: other.user_know
+  steps:
+  - intent: other.user_know
+  - action: utter_other.user_know
+
+- rule: other.user_dont_know
+  steps:
+  - intent: other.user_dont_know
+  - action: utter_other.user_dont_know
+
+- rule: other.user_dont_understand
+  steps:
+  - intent: other.user_dont_understand
+  - action: utter_other.user_dont_understand
+
+- rule: other.user_less_utr
+  steps:
+  - intent: other.user_less_utr
+  - action: utter_other.user_less_utr
+
+- rule: other.user_more_utr
+  steps:
+  - intent: other.user_more_utr
+  - action: utter_other.user_more_utr

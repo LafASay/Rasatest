@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: languages.на_каком_языке_ты_говоришь
+  steps:
+  - intent: languages.на_каком_языке_ты_говоришь
+  - action: utter_languages.на_каком_языке_ты_говоришь
+
+- rule: languages.я_хочу_общаться_на_x_языке
+  steps:
+  - intent: languages.я_хочу_общаться_на_x_языке
+  - action: utter_languages.я_хочу_общаться_на_x_языке
+
+- rule: languages.я_не знаю_x_язык
+  steps:
+  - intent: languages.я_не знаю_x_язык
+  - action: utter_languages.я_не знаю_x_язык
+
+- rule: languages.how_to_change_the_font
+  steps:
+  - intent: languages.how_to_change_the_font
+  - action: utter_languages.how_to_change_the_font
+
+- rule: languages.how_to_change_the_language
+  steps:
+  - intent: languages.how_to_change_the_language
+  - action: utter_languages.how_to_change_the_language

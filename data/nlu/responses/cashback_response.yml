@@ -1,0 +1,12 @@
+version: "3.1"
+
+responses:
+
+  utter_cashback.cashback:
+  - text: "Ознакомьтесь, пожалуйста, с информацией о получении кэшбека здесь: https://bonus.webmoney.ru/ (Кэшбэк сервис Bonus WebMoney)"
+
+  utter_cashback.cashback_didnt_come:
+  - text: "Каждый магазин сам устанавливает сроки начисления кэшбека. Как правило это около 3-6 недель. Следить за статусом своего кэшбека Вы можете из личного кабинета на https://bonus.webmoney.ru/ (Кэшбэк сервис Bonus WebMoney)"
+
+  utter_cashback.how_to_get_cashback:
+  - text: "Ознакомьтесь, пожалуйста, с информацией о получении кэшбека здесь: https://bonus.webmoney.ru/ (Кэшбэк сервис Bonus WebMoney)"

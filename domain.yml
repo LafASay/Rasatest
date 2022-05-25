@@ -1,0 +1,558 @@
+version: "3.1"
+
+intents:
+  - arbitrage.how_to_become_arbitr:
+      use_entities: []
+  - arbitrage.how_apply_to_arbitrage:
+      use_entities: []
+  - arbitrage.was_scamed:
+      use_entities: []
+  - arbitrage.how_to_create_a_claim:
+      use_entities: []
+  - arbitrage.how_to_pretension_block:
+      use_entities: []
+  - arbitrage.unblock_wmid:
+      use_entities: []
+  - arbitrage.validity_period_of_claim:
+      use_entities: []
+  - arbitrage.claim_processing_time:
+      use_entities: []
+  - arbitrage.how_to_file_claim:
+      use_entities: []
+  - cashback.cashback:
+      use_entities: []
+  - cashback.cashback_didnt_come:
+      use_entities: []
+  - cashback.how_to_get_cashback:
+      use_entities: []
+  # - credit.credit:
+  #     use_entities: []
+  - debt.debt:
+      use_entities: []
+#   - enum.enum_install:
+#       use_entities: true
+  - enum.enum_unplug:
+      use_entities: true
+  - events.events:
+      use_entities: []
+  - faq.я_русский_узбек_и_тд:
+      use_entities: []
+  - faq.exchange_rates:
+      use_entities: []
+  - faq.how_recovery:
+      use_entities: true
+  - faq.как_отменить_заявку:
+      use_entities: true
+  - faq.delete_purse:
+      use_entities: true
+  - faq.undelete_purse:
+      use_entities: []
+  - faq.delete_wmid:
+      use_entities: true
+  - faq.delete_phone:
+      use_entities: true
+  - faq.delete_phone+faq.delete_wmid:
+      use_entities: true
+  - faq.delete_phone+faq.delete_purse:
+      use_entities: true
+  - faq.delete_wmid+faq.delete_purse:
+      use_entities: true
+  - faq.delete_story:
+      use_entities: true
+  - faq.delete_group:
+      use_entities: true
+  - faq.create_group:
+      use_entities: true
+  - faq.change_phone_email:
+      use_entities: true
+  - faq.bl_different_color:
+      use_entities: true
+  - faq.protection_transfer_receive:
+      use_entities: true
+  - faq.fee:
+      use_entities: true
+  - faq.services:
+      use_entities: []
+  - faq.attach_bank_card_qiwi_юmoney:
+      use_entities: true
+  - faq.how_plug:
+      use_entities: true
+  - faq.cancel_transaction:
+      use_entities: []
+  - faq.how_make_money:
+      use_entities: []
+  - files.files:
+      use_entities: []
+  - funding.funding_conditions_of_project:
+      use_entities: []
+  - funding.funding_edit:
+      use_entities: []
+  - funding.funding_many_project:
+      use_entities: []
+  - funding.funding_moderation:
+      use_entities: []
+  - funding.money_from_funding:
+      use_entities: []
+  - funding.funding_open_project:
+      use_entities: []
+  - funding.funding_refund_of_a_fee:
+      use_entities: []
+  - hi_bye.greet:
+      use_entities: []
+  - hi_bye.how_are_you:
+      use_entities: []
+  - hi_bye.who_are_you:
+      use_entities: []
+  - hi_bye.есть_кто_нибудь:
+      use_entities: []
+  - hi_bye.what_can_you_do:
+      use_entities: []
+  - hi_bye.where_do_you_live:
+      use_entities: []
+  - hi_bye.what_the_wather:
+      use_entities: []
+  - hi_bye.thanks:
+      use_entities: []
+  - hi_bye.you_are_stupid:
+      use_entities: []
+  - hi_bye.offend:
+      use_entities: []
+  - hi_bye.i_like_you:
+      use_entities: []
+  - hi_bye.who_is_creater:
+      use_entities: []
+  - hi_bye.who_president:
+      use_entities: []
+  - hi_bye.who_is_bot_owner:
+      use_entities: []
+  - hi_bye.search_engine:
+      use_entities: []
+  - hi_bye.sad:
+      use_entities: []
+  - hi_bye.bye:
+      use_entities: []
+  - hi_bye.im_from:
+      use_entities: []
+#   - keeper.install_keeper:
+#       use_entities: []
+  - keeper.install:
+      use_entities: true
+  - keeper.changing_the_method_of_managing_WMID:
+      use_entities: []
+  - keeper.how_to_issue_an_invoice:
+      use_entities: true
+  - keeper.how_to_check_the_history_of_transactions:
+      use_entities: true
+  - keeper.how_to_send_message:
+      use_entities: true
+  - keeper.how_to_add_correspondent:
+      use_entities: true
+  - keeper.cant_exchange_money:
+      use_entities: true
+  - keeper.exchange_did_not_take_place:
+      use_entities: []
+  - keeper.how_to_make_transfer_with_protection:
+      use_entities: true
+  - keeper.how_to_view_the_history_of_correspondence:
+      use_entities: true
+#   - keeper.how_to_view_the_history_of_correspondence_with_correspondent:
+#       use_entities: true
+  - keeper.accepting_funds_from_unauthorized_correspondents:
+      use_entities: []
+  - keeper.как_изменить_пароль:
+      use_entities: []
+  - keeper.как_узнать_свой_пароль:
+      use_entities: []
+  - keeper.не_отображается_кошелек:
+      use_entities: []
+  - languages.на_каком_языке_ты_говоришь:
+      use_entities: []
+  - languages.я_хочу_общаться_на_x_языке:
+      use_entities: []
+  - languages.я_не знаю_x_язык:
+      use_entities: []
+  - languages.how_to_change_the_font:
+      use_entities: []
+  - languages.how_to_change_the_language:
+      use_entities: []
+  - limits.limits:
+      use_entities: true
+  - limits.how_to_increase_limits:
+      use_entities: true
+  - limits.лимит_не_изменился+passport.я_получил_аттестат:
+      use_entities: []
+  - limits.лимит_не_изменился:
+      use_entities: []
+  - merchant.merchant:
+      use_entities: []
+  - other.user_confirm:
+      use_entities: true
+  - other.user_deny:
+      use_entities: true
+  - other.user_know:
+      use_entities: true
+  - other.user_don't_know:
+      use_entities: true
+  - other.user_don't_understand:
+      use_entities: true
+  - other.user_less_utr:
+      use_entities: true
+  - other.user_more_utr:
+      use_entities: true
+  - passport.open_personal_information:
+      use_entities: []
+  - passport.how_get_passport:
+      use_entities: []
+  - passport.how_update_passport_details:
+      use_entities: []
+  - passport.how_long_check_documents:
+      use_entities: []
+  - passport.no_photo_accepted:
+      use_entities: []
+  - passport.как_долго_проверяют_photoid_videoid:
+      use_entities: true
+  - passport.videoID_PhotoID:
+      use_entities: true
+  - passport.videoID_PhotoID_load:
+      use_entities: true
+  - passport.как_загрузить_фото_паспорта:
+      use_entities: []
+  - passport.как_долго_проверяют_фото_паспорта:
+      use_entities: []
+  - passport.нет_камеры_как_загрузить_фото:
+      use_entities: []
+  - passport.я_загрузил_фото_паспорта:
+      use_entities: []
+  - passport.я_сделал_videoID_photoID:
+      use_entities: true
+  - passport.у_меня_нет_паспорта:
+      use_entities: []
+  - passport.не_принимают_фото_паспорта:
+      use_entities: []
+  - passport.я_получил_аттестат:
+      use_entities: []
+  - purses.purse_disappeared:
+      use_entities: true
+  - purses.difference_between_purses:
+      use_entities: []
+  - purses.how_view_purse_number:
+      use_entities: []
+  - purses.purse_requirement:
+      use_entities: true
+  - purses.how_many_purses_can_created:
+      use_entities: []
+  - referal.referal:
+      use_entities: []
+  - security.security_ip_story:
+      use_entities: []
+  - security.security_ip_block:
+      use_entities: []
+  - sms.sms_not_coming:
+      use_entities: []
+  - sms.call_instead_of_sms:
+      use_entities: []
+  - sms.куда ввести проверочный код:
+      use_entities: []
+  - sms.re-registering_sim:
+      use_entities: []
+  - support.need_technical_support:
+      use_entities: []
+  - support.how_call_you:
+      use_entities: []
+  - support.help_me:
+      use_entities: []
+  - system.registration:
+      use_entities: true
+  - system.how_create:
+      use_entities: true
+  - system.keeper:
+      use_entities: true
+  - system.purse:
+      use_entities: true
+  - system.determination:
+      use_entities: true
+  - system.what_types:
+      use_entities: true
+  - system_rules.system_rules:
+      use_entities: []
+  - system_rules.how_to_guarantor:
+      use_entities: []
+  - topup.money_not_received:
+      use_entities: []
+  - topup.как долго поступают средства:
+      use_entities: []
+  - winpro.how_get_keyfile:
+      use_entities: []
+  - withdraw.как вывести с наименьшей комиссией:
+      use_entities: []
+  - withdraw.как долго выводятся средства:
+      use_entities: []
+  - withdraw.требования для вывода средств:
+      use_entities: []
+  - withdraw.when_do_transfers_work:
+      use_entities: []
+  - other.user_dont_know:
+      use_entities: true
+  - sms.куда_ввести_проверочный_код:
+      use_entities: true
+  - topup.как_долго_поступают_средства:
+      use_entities: true
+  - withdraw.требования_для_вывода_средств:
+      use_entities: []
+  - other.user_dont_understand:
+      use_entities: true
+  - faq.how_delete:
+      use_entities: true
+  - withdraw.как_долго_выводятся_средства:
+      use_entities: []
+  - withdraw.как_вывести_с_наименьшей_комиссией:
+      use_entities: []
+  - transfer.transfer:
+      use_entities: true
+  - system.name:
+      use_entities: true
+  - passport.videoID_PhotoID_load+cant.cant:
+      use_entities: true
+  - keeper.как_изменить_пароль+cant.cant:
+      use_entities: true
+  - passport.как_загрузить_фото_паспорта+cant.cant:
+      use_entities: true
+  - system.в_вебмани_есть:
+      use_entities: true
+  - passport.how_get_passport+cant.cant:
+      use_entities: true
+  - cant.cant:
+      use_entities: true
+  - nlu_fallback:
+      use_entities: true
+  - passport.зачем_нужен_videoID_PhotoID:
+      use_entities: true
+  - system.passport:
+      use_entities: true
+
+entities:
+  - passport_type
+  - keeper_type
+  - purse_type
+  - protection_type
+  - name
+  - language
+  - method
+  - verb
+  - service_name
+  - electronic_money
+  # - color
+  # - claim_type
+
+slots:
+  passport_type:
+    type: categorical
+    values:
+      - alias
+      - formal
+      - initial
+      - personal
+      - developer
+      - guarantor
+      - merchant
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: passport_type
+
+  electronic_money:
+    type: categorical
+    values:
+      - qiwi
+      - юmoney
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: electronic_money
+
+  keeper_type:
+    type: categorical
+    values:
+      - standard
+      - winpro
+      - webpro
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: keeper_type
+
+  purse_type:
+    type: categorical
+    values:
+      - wmp
+      - wme
+      - wmb
+      - wmg
+      - wmz
+      - wmk
+      - wmv
+      - wmx
+      - wmh
+      - wml
+      - wmy
+      - wmr
+      - wmc
+      - wmd
+      - wmu
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: purse_type
+
+  protection_type:
+    type: categorical
+    values:
+      - code
+      - time
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: protection_type
+
+  # color:
+  #   type: categorical
+  #   values:
+  #     - blue
+  #     - red
+  #     - orange
+  #     - green
+  #   influence_conversation: true
+  #   mappings:
+  #   - type: from_entity
+  #     entity: color
+
+  # claim_type:
+  #   type: categorical
+  #   values:
+  #     - non-fulfillment of conditions
+  #     - payment protest
+  #     - objection to the assertion
+  #   influence_conversation: true
+  #   mappings:
+  #   - type: from_entity
+  #     entity: claim_type
+
+  name:
+    type: categorical
+    values:
+      - account
+      - activation code
+      - certificate
+      - group
+      - keyfile
+      - purse
+      - telephone number
+      - webmoney
+      - wmid
+      - keeper
+      - email
+      - пароль
+      - business level
+      - trust level
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+
+  verb:
+    type: categorical
+    values:
+      - withdraw
+      - topup
+      - exchange
+      - transfer
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: verb
+
+  service_name:
+    type: categorical
+    values:
+      - enum
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: service_name
+
+  transfer_purse_type:
+    type: categorical
+    values:
+      - wmp
+      - wme
+      - wmb
+      - wmg
+      - wmz
+      - wmk
+      - wmv
+      - wmx
+      - wmh
+      - wml
+      - wmy
+      - wmr
+      - wmc
+      - wmd
+      - wmu
+    mappings:
+    - type: from_entity
+      entity: purse_type
+
+  transfer_verb:
+    type: categorical
+    values:
+      - withdraw
+      - topup
+      - exchange
+      - transfer
+    mappings:
+    - type: from_entity
+      entity: verb
+
+  transfer_method:
+    type: categorical
+    values:
+      - bank_card
+      - bank_account
+      - electronic_money
+      - qiwi
+      - юmoney
+      - cash
+      - from_storage_with_the_guarantor
+      - telephone_number
+    mappings:
+    - type: from_entity
+      entity: method
+    - type: from_entity
+      entity: electronic_money
+    - type: from_entity
+      entity: name
+
+forms:
+  transfer_form:
+    required_slots:
+        - transfer_verb
+        - transfer_purse_type
+        - transfer_method
+
+  passport_form:
+    required_slots:
+        - passport_type
+
+actions:
+  - validate_transfer_form
+  - action_ask_transfer_form_transfer_purse_type
+  - action_ask_transfer_form_transfer_method
+  - action_transfer_form_message
+  - validate_passport_form
+  - action_passport_form_message
+
+responses: {}
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

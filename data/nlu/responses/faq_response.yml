@@ -1,0 +1,322 @@
+version: "3.1"
+
+responses:
+
+  utter_faq.я_русский_узбек_и_тд:
+  - text: "Чем я могу Вам помочь? Какой у Вас вопрос по работе системы WebMoney Transfer?"
+
+  utter_faq.exchange_rates:
+  - text: "В системе WebMoney Transfer нет внутреннего курса обмена. Курс устанавливается либо по биржевому принципу на сервисе https://exchanger.web.money (Автоматический обмен WebMoney), либо частными обменными пунктами по своему курсу."
+
+  utter_faq.how_recovery:
+  - text: 'Для восстановления пароля Вам необходимо подать заявку на восстановление на странице: key.wmtransfer.com'
+
+  utter_faq.how_recovery_keeper:
+  - text: 'utter_faq.how_recovery_keeper'
+
+  utter_faq.how_recovery_certificate:
+  - text: 'Восстановить сертификат нельзя, Вам необходимо подать заявку на восстановление пароля на странице: key.wmtransfer.com , после восстанволения основной способ управления Вашем WMID поменяется на Keeper Standard, Вы сможете подключить Keeper WebPro и получить новый сертификат согласно инструкции: https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard'
+
+  utter_faq.how_recovery_key_file:
+  - text: 'Восстановить файл ключей нельзя, Вам необходимо подать заявку на восстановление пароля на странице: key.wmtransfer.com , после восстанволения основной способ управления Вашем WMID поменяется на Keeper Standard, Вы сможете подключить Keeper WinPro и получить новый файл ключей согласно инструкции: https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_winpro_na_sayte_servisa_bezopasnosti'
+
+  utter_faq.how_recovery_enum:
+  - text: 'Восстановить доступ к системе авторизации E-num можно здесь: https://enum.ru/Account/Recovery'
+
+  utter_faq.how_recovery_purse:
+  - text: 'Для восстановления доступа к кошельку пройдите процедуру восстановления. Заявку на восстановление доступа можно подать на этой странице: https://key.wmtransfer.com/10/ https://key.wmtransfer.com/10/'
+
+  utter_faq.how_recovery_standard:
+  - text: 'Для восстановления доступа к WM Keeper Standard пройдите процедуру восстановления. Заявку на восстановление доступа можно подать на этой странице: https://key.wmtransfer.com/10/'
+
+  utter_faq.how_recovery_winpro:
+  - text: 'Если Вы потеряли доступ к WM Keeper WinPro (WM Keeper Classic) пройдите процедуру восстановления. Заявку на восстановление доступа можно подать на этой странице: https://key.wmtransfer.com/10/ https://key.wmtransfer.com/10/ . Внимание! Для участников системы, которые использовали WM Keeper WinPro или WM Keeper WebPro после восстановления доступа изменяется способ управления на WM Keeper Standard. Вы можете заново подключить способ управления WinPro или WebPro после восстановления.'
+
+  utter_faq.how_recovery_webpro:
+  - text: 'Если Вы потеряли доступ к WM Keeper WebPro (WM Keeper Light) пройдите процедуру восстановления. Заявку на восстановление доступа можно подать на этой странице: https://key.wmtransfer.com/10/ https://key.wmtransfer.com/10/ . Внимание! Для участников системы, которые использовали WM Keeper WinPro или WM Keeper WebPro после восстановления доступа изменяется способ управления на WM Keeper Standard. Вы можете заново подключить способ управления WinPro или WebPro после восстановления.'
+
+  utter_faq.how_recovery_account:
+  - text: 'Если Вы потеряли контроль над своим WMID и не можете войти в WM Keeper, заявку на восстановление контроля можно подать здесь: https://key.wmtransfer.com/10/'
+
+  utter_faq.how_recovery_webmoney:
+  - text: 'Если Вы потеряли контроль над своим WMID и не можете войти в WM Keeper, заявку на восстановление контроля можно подать здесь: https://key.wmtransfer.com/10/'
+
+  utter_faq.how_recovery_wmid:
+  - text: 'Если Вы потеряли контроль над своим WMID и не можете войти в WM Keeper, заявку на восстановление контроля можно подать здесь: https://key.wmtransfer.com/10/'
+
+  utter_faq.how_recovery_password:
+  - text: 'Если Вы потеряли контроль над своим WMID Вы можете подать заявку на восстановление пароля на странице: https://key.wmtransfer.com/10/'
+
+
+  utter_faq.how_recovery_telephone_number:
+  - text: 'Опишите вашу проблему более подробно, пожалуйста.'
+
+  utter_faq.how_recovery_activation_code:
+  - text: |
+      В системе WM требуется код активации для нескольких случаев:
+      - Код активации для сервиса E-num;
+      - Для активации программы WM Keeper WinPro для ПК.
+      Для чего именно Вы хотите восстановить код активации?
+
+  utter_faq.how_recovery_activation_code_enum:
+  - text: 'В случае утери кода активации E-num клиента Вы можете получить новый код активации приложения согласно инструкции "Утерян код активации приложения": https://wiki.webmoney.ru/projects/webmoney/wiki/uteryan_kod_aktivatsii_prilozheniya'
+
+  utter_faq.how_recovery_activation_code_winpro:
+  - text: 'Получить код активации WM Keeper WinPro Вы можете согласно инструкции "Активация WM Keeper на новом оборудовании": https://wiki.webmoney.ru/projects/webmoney/wiki/aktivatsiya_wm_keeper_na_novom_oborudovanii'
+
+  utter_faq.how_recovery_bl:
+  - text: 'Если Вы давно не пользовались кошельком или Ваш кошелек был приостановлен в обслуживании, то после возобновления обслуживания (использования) BL пересчитывается в течение 1-3 дней.'
+
+  utter_faq.how_recovery+cant.cant:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_keeper:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_certificate:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_key_file:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_enum:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_purse:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_standard:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_winpro:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_webpro:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_account:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_webmoney:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_wmid:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_telephone_number:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_activation_code:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_recovery+cant.cant_bl:
+  - text: 'Если Вы давно не пользовались кошельком или Ваш кошелек был приостановлен в обслуживании, то после возобновления обслуживания (использования) BL пересчитывается в течение 1-3 дней.'
+
+  utter_faq.как_отменить_заявку:
+  - text: 'utter_faq.как_отменить_заявку'
+
+  utter_faq.how_delete:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_keeper:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_certificate:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_key_file:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_enum:
+  - text: 'Чтобы отключить E-num подтверждение, Вам надо зайти на сайт сервиса Security. Выберите "защита", "подтверждение" и затем "E-Num подтверждение-отключить".'
+
+  utter_faq.how_delete_purse:
+  - text: 'Участникам Системы доступно удаление (перенос в архив) WM кошельков, за исключением WMC и WMD. При этом необходимо выполнить ряд условий:  - баланс кошелька должен быть 0; - с момента создания кошелька прошло более 1 суток. Выполнить эти действия Вы можете из свойств интересующего Вас кошелька. Подробную инструкцию см. https://wiki.webmoney.ru/projects/webmoney/wiki/kak_udalit_wm_koshelek'
+
+  utter_faq.how_delete_standard:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_winpro:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_webpro:
+  - text: 'Опишите Ваш вопрос более подробно.'
+
+  utter_faq.how_delete_account:
+  - text: 'С порядком удаления WMID Вы можете ознакомиться здесь: https://www.webmoney.ru/rus/help/general/delete_wmid.shtml'
+
+  utter_faq.how_delete_webmoney:
+  - text: 'С порядком удаления WMID Вы можете ознакомиться здесь: https://www.webmoney.ru/rus/help/general/delete_wmid.shtml'
+
+  utter_faq.how_delete_wmid:
+  - text: Удаление WMID это отказ от обслуживания со стороны участника Системы, т.е. это аннулирование 'Соглашения о трансфере имущественных прав цифровыми титульными знаками' и полный запрет на использование Системы и ее сервисов для владельца WMID с невозможностью новой регистрации. Подробнее см. https://www.webmoney.ru/rus/help/general/delete_wmid.shtml
+
+  utter_faq.how_delete_telephone_number:
+  - text: 'Если Вы хотите деактивировать (удалить) номер мобильного телефона, пожалуйста, посетите страницу https://wiki.webmoney.ru/projects/webmoney/wiki/kak_deaktivirovat_nomer_mobilnogo_telefona. Обратите внимание, что при деактивации обслуживание всех WMID, зарегистрированных на указанный Вами телефон, будет приостановлено. Также Вы можете изменить номер телефона, подробнее см. https://wiki.webmoney.ru/projects/webmoney/wiki/izmenenie_nomera_telefona'
+
+  utter_faq.how_delete_activation_code:
+  - text: 'Код активации не удаляется. Вы можете удалить сообщение с кодом активации, а при следующем запросе активации будет сгенерирован новый код.'
+
+  utter_faq.how_delete_bl:
+  - text: 'BL — это публичная cуммарная характеристика уровня деловой активности владельца WM-идентификатора, которая высчитывается на основе данных о: продолжительности активного использования WebMoney Transfer, количестве корреспондентов, с которыми у участника имелись трансакции, объеме проведенных трансакций, наличии претензий в адрес участника. Однако следует учитывать, что BL - не статическая величина. Она может меняться - как расти так и падать, но удалить ее нельзя.'
+
+  utter_faq.how_delete_group:
+  - text: 'Удалить всех участников группы, чтобы остался только администатор (вы). Затем нажать на шестеренку и покинуть самостоятельно. Должно появиться сообщение "Деятельность группы приостановлена."'
+
+  utter_faq.how_delete+cant.cant:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_keeper:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_certificate:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_key_file:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_enum:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_purse:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_standard:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_winpro:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_webpro:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_account:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_webmoney:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_wmid:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_telephone_number:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_activation_code:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+  utter_faq.how_delete+cant.cant_bl:
+  - text: 'BL — это публичная cуммарная характеристика уровня деловой активности владельца WM-идентификатора, которая высчитывается на основе данных о: продолжительности активного использования WebMoney Transfer, количестве корреспондентов, с которыми у участника имелись трансакции, объеме проведенных трансакций, наличии претензий в адрес участника. Однако следует учитывать, что BL - не статическая величина. Она может меняться - как расти так и падать, но удалить ее нельзя.'
+
+  utter_faq.how_delete+cant.cant_group:
+  - text: 'Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно.'
+
+
+
+  utter_faq.delete_purse+cant.cant:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.undelete_purse:
+  - text: 'В приложение или на полной версии сайта вам нужно нажать на синий плюс (функция добавления кошельков), далее выбрать «Добавить уже существующий кошелек».'
+
+  utter_faq.delete_wmid:
+  - text: Удаление WMID это отказ от обслуживания со стороны участника Системы, т.е. это аннулирование 'Соглашения о трансфере имущественных прав цифровыми титульными знаками' и полный запрет на использование Системы и ее сервисов для владельца WMID с невозможностью новой регистрации. Подробнее см. https://www.webmoney.ru/rus/help/general/delete_wmid.shtml
+
+  utter_faq.delete_wmid+cant.cant:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.delete_phone:
+  - text: Если Вы хотите деактивировать (удалить) номер мобильного телефона, пожалуйста, посетите страницу https://wiki.webmoney.ru/projects/webmoney/wiki/kak_deaktivirovat_nomer_mobilnogo_telefona. Обратите внимание, что при деактивации обслуживание всех WMID, зарегистрированных на указанный Вами телефон, будет приостановлено. Также Вы можете изменить номер телефона, подробнее см. https://wiki.webmoney.ru/projects/webmoney/wiki/izmenenie_nomera_telefona
+
+  utter_faq.delete_phone+faq.delete_wmid:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.delete_phone+faq.delete_purse:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.delete_wmid+faq.delete_purse:
+  - text: "Если вы хотите удалить ваш WMID, то нужно подавать заявку на отказ в обслуживании. Сделать это можно по ссылке https://www.web.money/rus/help/general/delete_wmid.shtml Нужно обращать внимание, что после отказа в обслуживании вы более не сможете зарегистрироваться в системе."
+
+  utter_faq.delete_story:
+  - text: Удалить из истории какую-либо операцию или сообщение из WM-чата невозможно.
+
+  utter_faq.delete_group:
+  - text: Нажмите правой кнопкой мыши на группу, выберите «группы» - «удалить» -подтвердите удаление. Участники группы останутся у Вас в корреспондентах.
+
+  utter_faq.change_phone_email_telephone_number:
+  - text: "С инструкцией по изменению номера телефона Вы можете ознакомиться на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/Изменение_номера_телефона"
+
+  utter_faq.change_phone_email_email:
+  - text: "С инструкцией по изменению адреса электронной почты Вы можете ознакомиться на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/izmenenie_adresa_elektronnoy_pochty"
+
+  utter_faq.change_phone_email_telephone_number_in_enum:
+  - text: 'Участники Системы, использующие сервис E-num авторизации, могут самостоятельно произвести смену номера телефона, в своем E-num аккаунте согласно инструкции "Как сменить номер телефона в e-num": https://wiki.webmoney.ru/projects/webmoney/wiki/kak_smenit_nomer_telefona_v_e_num'
+
+  utter_faq.change_phone_email_email_in_enum:
+  - text: 'Участники Системы, использующие сервис E-num авторизации, могут самостоятельно произвести смену электронной почты, в своем E-num аккаунте согласно инструкции "Смена основного email в сервисе E-num": https://wiki.webmoney.ru/projects/webmoney/wiki/smena_osnovnogo_email_v_servise_e_num'
+
+  utter_faq.change_phone+cant.cant:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.bl_different_color:
+  - text: 'Цвет BL показывает уровень платежеспособности, это интервальная оценка участника системы WebMoney Transfer, характеризующая его возможность полностью и своевременно исполнять свои денежные обязательства и совершать платежи. Всего 4 уровня, которые показываются цветами:      - красный < 1 000 WMZ;  - оранжевый < 10 000 WMZ;  - зеленый < 100 000 WMZ;  - синий > 100 000 WMZ."'
+
+  utter_faq.protection_transfer_receive:
+  - text: Для получения перевода с кодом протекции получателю необходимо открыть детали перевода и ввести код протекции. Код протекции знает только отправитель, и передает его получателю по своему усмотрению. Если получатель не введет код протекции в установленный срок, или введет код протекции 8 раз неправильно, то перевод вернется отправителю.
+
+  utter_faq.fee:
+  - text: При совершении каждой трансакции системой взимается комиссия за обеспечение информационного и технологического взаимодействия между участниками расчетов в системе WMT в размере 0.8% от суммы платежа, но не менее 0.01WM.  Подробнее о комиссии можно прочитать нашей Wiki https://wiki.webmoney.ru/projects/webmoney/wiki/komissiya_sistemy
+
+  utter_faq.fee_withdraw:
+  - text: 'Комиссия при выводе такая то;)'
+
+  utter_faq.fee_topup:
+  - text: 'Комиссия при пополнении такая то;)'
+
+  utter_faq.services:
+  - text: Система WebMoney предоставляет множество нужных и полезных сервисов. Как для оплаты товаров и услуг, так и сервисы планирования бюджета Capitaller, сервис Арбитража для разрешения конфликтов, Сервис массовых платежей Масспэймент и многие другие. Список всех предоставляемых сервисов Вы найдете здесь http://wiki.web.money/projects/webmoney/wiki/servisy_sistemy.
+
+  utter_faq.attach_bank_card:
+  - text: "Сервис проверки банковских карт закрыт. Для вывода средств из системы на банковские карты проверка не требуется."
+
+  utter_faq.attach_bank_qiwi_юmoney:
+  - text: "Осуществить привязку возможно в личном кабинете. Пошаговая инструкция - https://exchanger.money/pages/howbind Такого рода привязка необходима только для взаимного обмена на Emoney.Exchanger и через другие авторизованные обменные пункты из каталога Мегасток."
+
+  utter_faq.attach_bank_card+cant.cant:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.attach_bank_qiwi_юmoney+cant.cant:
+  - text: "Какая ошибка у Вас возникает? Опишите, пожалуйста, Вашу проблему более подробно."
+
+  utter_faq.how_plug:
+  - text: "Расскажите подробнее, что именно вас интересует?"
+
+  utter_faq.how_plug_enum:
+  - text: "Если у Вас уже установлено мобильное приложение WebMoney Keeper, то дополнительное приложение Enum ставить не нужно. Произведите необходимые настройки, действуйте согласно инструкциям: http://wiki.webmoney.ru/projects/webmoney/wiki/podtverzhdenie_operatsiy_v_keeper_android#Подключение-и-настройка-E-num или http://wiki.webmoney.ru/projects/webmoney/wiki/podtverzhdenie_operatsiy_v_keeper_na_ustroystvah_s_apple_ios#Подключение-и-настройка-E-num"
+
+  utter_faq.how_plug_standard:
+  - text: |
+      Подключение WM Keeper Standard производится согласно инструкции "Подключение WM Keeper Standard" https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_standard
+      Обязательным условием подключения WM Keeper Standard является:
+      - наличие формального аттестата, в котором проверены номер телефона и e-mail.
+      - наличие функции дополнительного подтверждения операций. Подключить функцию подтверждения операций Вы можете на странице https://security.webmoney.ru/asp/transconfirm.asp
+
+  utter_faq.how_plug_winpro:
+  - text: "Если у Вас основной способ управления WM Keeper Standard, то, чтобы начать пользоваться WM Keeper WinPro (Classic), необходимо подключить новый способ управления согласно инструкции: http://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_winpro_na_sayte_servisa_bezopasnosti Если у Вас основной способ управления WM Keeper WebPro, то Вам необходимо пройти процедуру восстановления контроля, после которой основным способом управления станет WM Keeper Standard, и Вы сможете подключить WM Keeper WinPro согласно инструкции: http://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_winpro_na_sayte_servisa_bezopasnosti"
+
+  utter_faq.how_plug_webpro:
+  - text: 'Чтобы начать пользоваться WM Keeper WebPro (Light), необходимо подключить новый способ управления согласно инструкции: http://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard'
+
+  utter_faq.cancel_transaction:
+  - text: "Переводы между кошельками WebMoney мгновенные и безотзывные. Для возврата платежа Вам необходимо обратиться к получаетлю средств."
+
+  utter_faq.how_make_money:
+  - text: "У нас есть различные инструменты для заработка, например, делиться знаниями, продажа цифровых товаров, торговля на фондовой бирже и т.д. -
+       - Платные видеоконсультации <https://events.web.money/consultations/>
+       - Продажа цифровых товаров <https://softactivation.webmoney.ru/>
+       - INDX: фондовая биржа <https://indx.money/about/eth/>
+       - Publicant: опубликовать книгу <https://publicant.webmoney.ru/>
+       - Mestcom: продажа рекламы <https://www.mestkom.ru/sell.aspx>
+       - CashBox: оплата за действия <https://cashbox.ru/>
+       - Shareholder: дивиденды и торговля долями <https://www.shareholder.ru/About.aspx?lang=ru>
+       - DebtMart: Биржа долгов <https://debtmart.wmtransfer.com/>"
