@@ -1,6 +1,0 @@
-version: "3.1"
-
-responses:
-
-  utter_merchant.merchant:
-  - text: Для интернет-магазинов и платных сервисов предлагается несколько вариантов - прием оплаты через сервис Merchant https://wiki.webmoney.ru/projects/webmoney/wiki/Merchant_WebMoney_Transfer или использование XML-интерфейсов https://wiki.webmoney.ru/projects/webmoney/wiki/xml_interfeysy. Сервис Merchant позволит принимать оплату не только c кошельков WebMoney, но и с банковский карт, через СБП, с мобильных телефонов. Подробная инструкция по использованию сервиса Merchant и подключению оплаты описана в статье https://wiki.webmoney.ru/projects/webmoney/wiki/Merchant_WebMoney_Transfer Руководство по XML-интерфейсам доступно здесь https://wiki.webmoney.ru/projects/webmoney/wiki/xml_interfeysy

@@ -1,9 +1,0 @@
-version: "3.1"
-
-responses:
-
-  utter_debt.debt:
-  - text: Система WebMoney предоставляет функционал, который позволяет брать и получать займы. Займы предоставляют одни участники Системы другим через сервис https://debt.wmtransfer.com, разместите там свою заявку с запросом займа или воспользуйтесь заявками с предложением займа. Подробнее о Сервисе, в нашей Wiki см. https://wiki.webmoney.ru/projects/webmoney/wiki/dolgovoy_servis
-
-  # utter_credit.credit:
-  # - text: Для участников Системы реализована возможность взаимного кредитования. Кредитная схема расчетов использует кошельки WMC и WMD, которые создаются только в WM Keeper WinPro и WM Keeper WebPro. Кредит можно выдать/получить как через Биржу Кредитов http://credit.webmoney.ru так и прямым счетом см. https://wiki.webmoney.ru/projects/webmoney/wiki/kredit_pryamym_schetom Подробное описание работы через Кредитную Биржу Вы можете найти на стр. https://wiki.webmoney.ru/projects/webmoney/wiki/kreditnaya_birzha

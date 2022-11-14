@@ -1,8 +1,0 @@
-version: "3.1"
-
-rules:
-
-# - rule: credit.credit
-#   steps:
-#   - intent: credit.credit
-#   - action: utter_credit.credit

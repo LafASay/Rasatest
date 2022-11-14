@@ -1,0 +1,1580 @@
+version: "2.0"
+
+nlu:
+
+- intent: transfer.wheres_money
+  examples: |
+    - а где деньги которые только что перевел
+    - а где деньги то
+    - а куда делись мои деньги с кошелька
+    - а как отследить где средства
+    - а где мои деньги
+    - а где сейчас эти деньги
+    - скажите на счету было около 22 $ а сейчас нули сможете проверить
+    - можно спросить где мои средства
+    - ало где мои деньги
+    - блядь где деньги
+    - где деньки
+    - где дегьги
+    - где мои бабки
+    - где бабки
+    - скажите а где деньги то на счете    
+    - где деньг
+    - где деньги
+    - подскажите куда делись деньги с моего счета
+    - где деньги ало
+    - где деньги лебовски
+    - где деньги то
+    - где ети денги
+    - где мои деньги
+    - где мои деньги с перевода кошелек на кошелек
+    - где мои переводи
+    - где моя последняя транзакция
+    - где опять мои деньги
+    - где перевод
+    - где сейчас деньги
+    - где сука деньги
+    - где то потерялись мои деньги
+    - где транзакция
+    - ищи деньги
+    - ищите мои деньги
+    - как найти деньги
+    - как найти операцию
+    - как найти транзакцию
+    - куда пошли деньги
+    - куда уходят деньги
+    - не могу найти перевода между кошельками внутри кабинета
+    - перевел деньги с одного счета на другой где деньги
+    - помогите найти переводы на кошелек
+    - последняя транзакция
+    - что то не могу найти перевод средств
+    - я перевел деньги где они
+    - я перевела суда деньги где они
+    - и куда ушли мои сатошы
+    - куда делились деньги
+    - куда исчезли мои деньги
+    - куда ушла мой дениг
+    - исчезли 12 wmz
+    - куда исчезли 18 $
+    - куда опять пропали 50р
+    - куда пропала 1000
+    - пропали 300 р
+    - у меня с кошелька пропали 50₽ я не очень понял куда
+    - куда опять пропали 100р
+    - куда пропали мои сатошки
+    - где мои 10 долларов
+    - где мои 2 доллара
+    - 40 дол потерялись
+    - 40 дол потеряльсь
+    - а куда пропала 1000 wmr
+    - где пропали 245 рублей
+    - деньги пропали
+    - куда пропал денги
+    - куда пропал деньги в районе 40 баксов
+    - куда пропали 50 грн с моего кошелька
+    - куда пропали все мои деньги и кошельки
+    - куда пропали деньги
+    - куда пропали деньги с кошелька z
+    - куда пропали деньги с wmz
+    - куда пропали мои 673 wmr
+    - куда пропали мои деньги
+    - куда пропали мои средства со счета там было 3580 долларов
+    - куда пропали накопления
+    - одновременно пропали деньги со всех кошельков
+    - подскажите почему у меня пропали деньги с рублевого кошелька
+    - пропажа денег с аккаунта wmz около 30
+    - пропали 300 р
+    - пропали 600 рублей
+    - пропали все средства с wmz кошелька
+    - пропали денги
+    - пропали деньги
+    - пропали деньги с wmz кошелька
+    - пропали деньги со счета белорусского кошелька на балансе было примерно 40000 белорусских рублей
+    - пропали деньги что делать
+    - пропали средства
+    - пропали wmz
+    - скажите пожалуйста куда пропали деньги с кошелька
+    - у меня денги пропал
+    - у меня деньги пропали с кошелька срочно нужна помощь
+    - у меня пропали 8 баксов со счета почему
+    - у меня пропали беньги с кошелька
+    - у меня пропали деньги
+    - у меня пропали деньги с евро кошелька
+    - у меня с кошелька пропали 50₽ я не очень понял куда
+    - у меня с кошелька пропали вмз подскажите куда
+    - у меня с кошелька пропали деньги
+    - у мне со счета пропало 161 рубль
+    - я хотел спросить у меня были биткоины куда они пропали
+    - wmz пропали с кошелька
+    - обнулился баланс на wmz кошельке
+    - почему исчезли деньги с кошелька z365011887280 там было более 300$ сейчас 0 в чем дело
+
+- intent: transfer.transfer
+  examples: |
+    - [вевысти](verb) с [кошелька]{"entity": "name", "role": "from"}
+    - [вивод](verb) с [кошелька]{"entity": "name", "role": "from"}
+    - [виводом](verb) средст
+    - [виводом](verb) средств
+    - [вывести](verb)
+    - [пополнить](verb) [wmz кошелек](purse_type) с [карты]{"entity": "bank_card", "role": "from"}
+    - [пополнить](verb) на [wmz]{"entity": "purse_type", "role": "to"}
+    - [вывести](verb) с [wme]{"entity": "purse_type", "role": "from"}
+    - [пополнить](verb) на [wme кошелек]{"entity": "purse_type", "role": "to"}
+    - [вывести](verb) с [wmz кошелька]{"entity": "purse_type", "role": "from"}
+    - [вывести](verb) денеги
+    - [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) с [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) средства
+    - [вывести](verb) средства если я не резидент рф
+    - [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"}
+    - [вывод](verb)
+    - [вывод](verb) webmoney китай
+    - [вывод](verb) в белоруссии
+    - [вывод](verb) денег
+    - [вывод](verb) денег с [кошелька]{"entity": "name", "role": "from"}
+    - [вывод](verb) средств
+    - [вывод](verb) средств с [кошелька]{"entity": "name", "role": "from"}
+    - здравствуйте как можно [вывести](verb) деньги с [веб мани]{"entity": "name", "role": "from"}
+    - как быстро [вывести](verb) денежные средства
+    - как [вывасти](verb) деньги из [кошелек]{"entity": "name", "role": "from"}
+    - как [вывести](verb)
+    - как [вывести](verb) [wme](purse_type)
+    - как [вывести](verb) [wml](purse_type)
+    - как [вывести](verb) [wmp](purse_type)
+    - как [вывести](verb) [wmz](purse_type)
+    - как [вывести](verb) денеги
+    - как [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) деньги
+    - как [вывести](verb) деньги из [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) с [wmb кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wme кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmg кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmh кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wml кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmp кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmp]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmx кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [wmz кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) с [долларового кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) средства
+    - как [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) средства с [wmz кошелька]{"entity": "purse_type", "role": "from"}
+    - как [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"}
+    - как [вывети](verb) 300 [wmz](purse_type)
+    - как [высести](verb) деньги
+    - как денги [вывести](verb)
+    - как мне [вивести](verb) срецтва
+    - как можно деньги [снять](verb)
+    - как можно [забрать](verb) деньги от [моней]{"entity": "name", "role": "from"}
+    - как можно [снять](verb) деньги
+    - как можно [снять](verb) деньги с [веб моней]{"entity": "name", "role": "from"}
+    - как [снимать](verb)
+    - как [снять](verb) все средства
+    - как [снять](verb) деньги
+    - как [снять](verb) деньги в лнр
+    - как [снять](verb) деньги с [webmoney]{"entity": "name", "role": "from"}
+    - как [снять](verb) деньги с [вебмани]{"entity": "name", "role": "from"}
+    - как [снять](verb) деньги с этого [счета]{"entity": "name", "role": "from"}
+    - как теперь мне [выводить](verb) денежные средства с [кошельков wmz]{"entity": "purse_type", "role": "from"}
+    - как я могу [вывести](verb) деньги
+    - как я могу [вывести](verb) деньги внесенные на мой [счет webmoney]{"entity": "name", "role": "to"}
+    - как я могу [снять](verb) деньги
+    - как я могу [снять](verb) деньги в колумбии
+    - как я могу [снять](verb) деньги от [сюда]{"entity": "name", "role": "from"}
+    - как я могу [снять](verb) деньги со [счета]{"entity": "name", "role": "from"}
+    - как я могу [снять](verb) физические деньги
+    - какие способы [вывода](verb) есть для граждан рф
+    - мне нужна информация о том как я могу [снять](verb) деньги со своих [вебмани]{"entity": "name", "role": "from"}
+    - могу ли я [снять](verb) деньги
+    - моментально [вывести](verb) каким способом можно
+    - необходимо [вывести](verb) денеги
+    - необходимо [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) средства
+    - необходимо [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) денеги
+    - нужно [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) средства
+    - нужно [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"}
+    - объясните пожалуйста как с [кошелька z]{"entity": "purse_type", "role": "from"} [выводить](verb) деньги
+    - подскажите пожалуйста по [выводу](verb) средств
+    - скажите какие способы сейчас доступны для [вывода](verb) средств с [вебмани]{"entity": "name", "role": "from"} для россии
+    - [снятие](verb)
+    - [снятие](verb) средств с [кошелька]{"entity": "name", "role": "from"}
+    - [снять](verb) деньги
+    - [снять](verb) с [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) денеги
+    - хочу [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) средства
+    - хочу [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"}
+    - я хотел [снять](verb) со [счета]{"entity": "name", "role": "from"}
+    - я хочу все деньги [снять](verb)
+    - я хочу [снять](verb) деньги со своего [счета]{"entity": "name", "role": "from"}
+    - [wmb](purse_type) в [наличные]{"entity": "cash", "role": "to"}
+    - [wme](purse_type) на [электронные деньги]{"entity": "electronic_money", "role": "to"}
+    - [wmp](purse_type) на [банковский счет]{"entity": "bank", "role": "to"}
+    - [wmz](purse_type) на [карту]{"entity": "bank_card", "role": "to"}
+    - [евро кошелек](purse_type) перевод на [карту своего банка]{"entity": "bank_card", "role": "to"}
+    - а возможно ли как то перекинуть на [счет киви]{"entity": "electronic_money", "role": "to"} с [webmoney]{"entity": "name", "role": "from"}
+    - а возможно ли перевести на [карту]{"entity": "bank_card", "role": "to"} и чтоб пришли рубли
+    - а возможны ли переводы на другие [электронные кошельки]{"entity": "electronic_money", "role": "to"}
+    - а где конкретно переводить на [киви]{"entity": "electronic_money", "role": "to"}
+    - а здесь можно перекидивать деньги на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - а как можно перевести деньги на [карту]{"entity": "bank_card", "role": "to"} не могу разобраться
+    - а как на [карту]{"entity": "bank_card", "role": "to"} скинуть
+    - а как перевести доллары на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - а как перевести на [яндекс кошелек]{"entity": "electronic_money", "role": "to"}
+    - а как производить [вывод](verb) с [wmz]{"entity": "purse_type", "role": "from"} в рубли на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - а могу ли я перевести на [яндекс кошелек]{"entity": "electronic_money", "role": "to"}
+    - а можно на [qiwi]{"entity": "electronic_money", "role": "to"} перевести
+    - а можно отправить на [киви]{"entity": "electronic_money", "role": "to"} в долларах
+    - а на [qiwi]{"entity": "electronic_money", "role": "to"} можно перевести
+    - а на [карту visa]{"entity": "bank_card", "role": "to"} можна перевести
+    - а на [киви кошелек]{"entity": "electronic_money", "role": "to"} могу отправить
+    - а на [киви]{"entity": "electronic_money", "role": "to"} можно перевести
+    - а на [платежную систему киви]{"entity": "electronic_money", "role": "to"} как перевести
+    - а на мою [гривневую карту]{"entity": "bank_card", "role": "to"} можно отправить [wmz](purse_type)
+    - а на свой [киви кошелек]{"entity": "electronic_money", "role": "to"} я могу перевести средства
+    - а с [wmz кошелька](purse_type) можно переводить на [юмани кошелек]{"entity": "electronic_money", "role": "to"}
+    - а с [доларного кашелька](purse_type) можно ли отправить на [карту маестро]{"entity": "bank_card", "role": "to"}
+    - в [сбербанк]{"entity": "bank", "role": "to"} перевести деньги можно
+    - вебмане перевести на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - возможен ли перевод с [wmz]{"entity": "purse_type", "role": "from"} напрямую на [украинскую карту]{"entity": "bank_card", "role": "to"}
+    - возможен ли перевод с [кошелька]{"entity": "name", "role": "from"} на [карту мастеркард]{"entity": "bank_card", "role": "to"}
+    - возможен перевод на [карту сбербанка]{"entity": "bank_card", "role": "to"} в долларах
+    - возможно [вывести](verb) на [долларовую карту]{"entity": "bank_card", "role": "to"}
+    - возможно ли сейчас [вывести](verb) с [wmz-кошелька]{"entity": "purse_type", "role": "from"} деньги на [дебетовую карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - возможно ли то чтобы сделать перевод с [вебмани]{"entity": "name", "role": "from"} на [визу карту]{"entity": "bank_card", "role": "to"}
+    - вы можете перевести мне мои деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [дебетовою карту]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) деньги в [банк]{"entity": "bank", "role": "to"}
+    - [вывести](verb) деньги на [easypaisa]{"entity": "electronic_money", "role": "to"}
+    - [вывести](verb) на [payeer]{"entity": "electronic_money", "role": "to"}
+    - [вывести](verb) на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) на [мобильный]{"entity": "telephone_number", "role": "to"}
+    - [вывести](verb) с [wmk кошелька]{"entity": "purse_type", "role": "from"} на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} [wmz](purse_type)
+    - [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - [вывод](verb) денег на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывод](verb) денег на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - [вывод](verb) на [карту]{"entity": "bank_card", "role": "to"} через систему быстрых платежей
+    - [вывод](verb) средств на [карту]{"entity": "bank_card", "role": "to"}
+    - [вывод](verb) средств на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - [вывод](verb) средств на [мобильный телефон]{"entity": "telephone_number", "role": "to"}
+    - где посмотреть информацию о способах [вывода](verb) на [карту]{"entity": "bank_card", "role": "to"}
+    - граждане казахстана могут переводить [wmz](purse_type) на [банковские карты казахстана]{"entity": "bank_card", "role": "to"}
+    - если перевести на [виза]{"entity": "bank_card", "role": "to"}
+    - зачисление денег на [виртуальную карту]{"entity": "bank_card", "role": "to"}
+    - и как теперь мне на [киви]{"entity": "electronic_money", "role": "to"} средсва перевести
+    - извините могу отправить денег с мой [webmoney]{"entity": "name", "role": "from"} до [карт банк себербанк]{"entity": "bank_card", "role": "to"}
+    - как [wmz](purse_type) перевести в [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как в [qiwi wallet]{"entity": "electronic_money", "role": "to"} перевести
+    - как [вывести](verb) [wmy](purse_type) на [банковский счет]{"entity": "bank", "role": "to"}
+    - как [вывести](verb) [вмз](purse_type) на [картку приват банка]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) денеги на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) денеги на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) деньги на [карту республики беларусь]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) деньги на [приват 24]{"entity": "bank", "role": "to"}
+    - как [вывести](verb) на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) на [карту]{"entity": "bank_card", "role": "to"} менее 100$
+    - как [вывести](verb) на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) с [wme кошелька]{"entity": "purse_type", "role": "from"} в [наличные]{"entity": "cash", "role": "to"}
+    - как [вывести](verb) с [wmh кошелька]{"entity": "purse_type", "role": "from"} с [хранения у гаранта]{"entity": "guarant", "role": "from"}
+    - как [вывести](verb) с [wmt кошелька]{"entity": "purse_type", "role": "from"} с [хранения у гаранта]{"entity": "guarant", "role": "from"}
+    - как [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) средства на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - как [вывести](verb) средства на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) средства с [wmz кошелька]{"entity": "purse_type", "role": "from"} на [рублевую карту]{"entity": "bank_card", "role": "to"}
+    - как [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как [выводить](verb) деньги на [карты]{"entity": "bank_card", "role": "to"} в россии
+    - как [выводить](verb) на [карту]{"entity": "bank_card", "role": "to"} с [кошелька долларового]{"entity": "purse_type", "role": "from"}
+    - как деньги перевести на [яндекс кошелек]{"entity": "electronic_money", "role": "to"}
+    - как [закинуть](verb) деньги на [карту]{"entity": "bank_card", "role": "to"} со [счета вебмани]{"entity": "name", "role": "from"}
+    - как зделать перевоть на [qiwi кошелка]{"entity": "electronic_money", "role": "to"} автоматический
+    - как мне [вывести](verb) [wmz](purse_type) на мою [латвийскую карту]{"entity": "bank_card", "role": "to"} вы можете мне помочь
+    - как мне перевести деньги на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - как мне перевести деньги с [кошелька wmz]{"entity": "purse_type", "role": "from"} на [карту visa]{"entity": "bank_card", "role": "to"}
+    - как мне перевести средства на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - как мне с [wmz кошелька]{"entity": "purse_type", "role": "from"} перевести деньги на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - как можно перевести на [долларовую карту российского банка]{"entity": "bank_card", "role": "to"}
+    - как можно скинуть деньги на [киви]{"entity": "electronic_money", "role": "to"}
+    - как оправить деньги на [платежную систему paoyneer]{"entity": "electronic_money", "role": "to"}
+    - как перевести вэбмани доллары на [qiwi кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести денежные средства на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги в [тинькофф]{"entity": "bank", "role": "to"}
+    - как перевести деньги на [mastercard]{"entity": "bank_card", "role": "to"}
+    - как перевести деньги на [qiwi кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [yandex кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [карту сбербанка]{"entity": "bank_card", "role": "to"} и в какой валюте они переведутся
+    - как перевести деньги на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [киви кошелек]{"entity": "electronic_money", "role": "to"} на номер телефона
+    - как перевести деньги на [киви]{"entity": "electronic_money", "role": "to"} в казахстане
+    - как перевести деньги на [кивикошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [кошелек qiwi]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [приват 24]{"entity": "bank", "role": "to"}
+    - как перевести деньги на [сбер]{"entity": "bank", "role": "to"}
+    - как перевести деньги на [юmoney]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [яндекс кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на [яндес кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на привязанный [кошелек qiwi]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги на привязанный [яндекс кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деньги с [вебмани]{"entity": "name", "role": "from"} на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести деьнги на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - как перевести доллары в рублях на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - как перевести на [paypal]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [qbwi]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [qiwi кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [qiwi кошелек]{"entity": "electronic_money", "role": "to"} рубли
+    - как перевести на [qiwi кошелек]{"entity": "electronic_money", "role": "to"} с [wmz]{"entity": "purse_type", "role": "from"}
+    - как перевести на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [qlwl кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [киви кашелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [киви кошелек]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [киви кошелек]{"entity": "electronic_money", "role": "to"} с [wmz кошелека]{"entity": "purse_type", "role": "from"}
+    - как перевести на [киви]{"entity": "electronic_money", "role": "to"}
+    - как перевести на [киви]{"entity": "electronic_money", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - как перевести на [сбер]{"entity": "bank", "role": "to"}
+    - как перевести на привязанный [кошелек яндекса]{"entity": "electronic_money", "role": "to"}
+    - как перевести рубли на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - как перевести рубли с [вебмани]{"entity": "name", "role": "from"} на [карту украинского банка]{"entity": "bank_card", "role": "to"}
+    - как перевести с [wmp]{"entity": "purse_type", "role": "from"} на [сбербанк]{"entity": "bank", "role": "to"}
+    - как перевести с [веб моней]{"entity": "name", "role": "from"} на [киви кошелек]{"entity": "electronic_money", "role": "to"} на русский номер
+    - как переводить деньги на [сбербанк]{"entity": "bank", "role": "to"}
+    - как [положить](verb) деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - как [снять](verb) деньги [отсюда]{"entity": "name", "role": "from"} на свой [банковский счет]{"entity": "bank", "role": "to"}
+    - как [снять](verb) с [wmz]{"entity": "purse_type", "role": "from"} на [карту]{"entity": "bank_card", "role": "to"}
+    - как я могу [вывести](verb) деньги на [карточку]{"entity": "bank_card", "role": "to"}
+    - как я могу [вывести](verb) деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - как я могу [вывести](verb) на свой [банковский счет]{"entity": "bank", "role": "to"}
+    - как я могу отправить доллары на [paypal]{"entity": "electronic_money", "role": "to"}
+    - каким образом лучше перевести средства на [российскую банковскую карту]{"entity": "bank_card", "role": "to"}
+    - каким способом можно [вывести](verb) деньги с [вебманей]{"entity": "name", "role": "from"} на [банковскую карту]{"entity": "bank_card", "role": "to"}
+    - каким способом перевести денги на [мастеркард]{"entity": "bank_card", "role": "to"}
+    - когда я смогу [вывести](verb) деньги на [карту visa]{"entity": "bank_card", "role": "to"}
+    - мне нужно [положить](verb) на [украинскую карту]{"entity": "bank_card", "role": "to"} деньги в долларах или гривне
+    - мне нужны деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - могу ли я [вывести](verb) средства на [карту приват банка]{"entity": "bank_card", "role": "to"}
+    - могу ли я перевести деньги на [qiwi кошелек]{"entity": "electronic_money", "role": "to"}
+    - могу ли я перевести деньги с [wmz кошелька]{"entity": "purse_type", "role": "from"} на [карту белорусского банка]{"entity": "bank_card", "role": "to"} в byn
+    - могу ли я перевести деньги с [wmz кошелька]{"entity": "purse_type", "role": "from"} на [карту белорусского банка]{"entity": "bank_card", "role": "to"} в долларах
+    - могу ли я скинуть деньги с [wmz-кошелька]{"entity": "purse_type", "role": "from"} на [карту сбербанк]{"entity": "bank_card", "role": "to"} в рублях
+    - могу я из своего [wmz кошелька]{"entity": "purse_type", "role": "from"} перевести дееьги на [юмани]{"entity": "electronic_money", "role": "to"}
+    - могули я [вывести](verb) деньги на [карту]{"entity": "bank_card", "role": "to"} в чехие порядка 60$
+    - можно [вивисти](verb) кошти на [карту моно банк]{"entity": "bank_card", "role": "to"}
+    - можно ли [вывести](verb) деньги на [баланс номера телефона]{"entity": "telephone_number", "role": "to"}
+    - можно ли [вывести](verb) деньги на [карту]{"entity": "bank_card", "role": "to"}
+    - можно ли оплатить с [wmz]{"entity": "purse_type", "role": "from"} на [карту российского банка]{"entity": "bank_card", "role": "to"}
+    - можно ли перевести деньги на [карту]{"entity": "bank_card", "role": "to"} в рублях
+    - можно ли перевести деньги на [карту]{"entity": "bank_card", "role": "to"} по номеру телефона
+    - можно ли перевести деньги на [киви]{"entity": "electronic_money", "role": "to"} если да то как
+    - можно ли перевести деньги на [молдавскую карту]{"entity": "bank_card", "role": "to"} в долларах
+    - можно перевести деньги на [паритет банк]{"entity": "bank", "role": "to"}
+    - можно перевести от [сюда]{"entity": "name", "role": "from"} деньги на [юmoney]{"entity": "electronic_money", "role": "to"}
+    - можно с кошелька перевести деньги на [карту сбербанка]{"entity": "bank_card", "role": "to"}
+    - на [киви кошелек]{"entity": "electronic_money", "role": "to"} могу перевести
+    - необходимо [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) денеги на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"}
+    - необходимо [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) денеги на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"}
+    - необходимо [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - необходимо [вывести](verb) средства на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - необходимо [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"}
+    - нужно [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) денеги на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"}
+    - нужно [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - нужно [вывести](verb) средства на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - нужно [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - обмен на [киви]{"entity": "electronic_money", "role": "to"}
+    - перевести с [кошелька wmz]{"entity": "purse_type", "role": "from"} на [российскую карту]{"entity": "bank_card", "role": "to"}
+    - перевод на [банковский счет]{"entity": "bank", "role": "to"}
+    - подскажите механизм [снятия](verb) денежных средств могу ли просто перевести на [карту visa]{"entity": "bank_card", "role": "to"}
+    - подскажите пожалуйста есть ли возможность [вывода](verb) [wmz](purse_type) на [карту сбербанка]{"entity": "bank_card", "role": "to"} если есть то как это лучше сделать
+    - подскажите пожалуйста как [вывести](verb) гривну на [карту российского сбербанка]{"entity": "bank_card", "role": "to"}
+    - подскажите пожалуйста как [вывести](verb) деньги на [карту]{"entity": "bank_card", "role": "to"} в россии
+    - подскажите пожалуйста как [вывести](verb) средства на [карту приват банка]{"entity": "bank_card", "role": "to"}
+    - с [кашелька wmd]{"entity": "purse_type", "role": "from"} на [сбербанк карту]{"entity": "bank_card", "role": "to"}
+    - с [кошелька]{"entity": "name", "role": "from"} на [карту]{"entity": "bank_card", "role": "to"}
+    - скажите пожалуйста могу ли я со своего [аккаунта]{"entity": "name", "role": "from"} перевести [wmz](purse_type) на [казахскую карту visa]{"entity": "bank_card", "role": "to"}
+    - смогу ли я с вашего [кошелька]{"entity": "name", "role": "from"} [вывести](verb) доллары на [долларовую карту сбербанка россии]{"entity": "bank_card", "role": "to"}
+    - хочу [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) денеги из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) денеги на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"}
+    - хочу [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) денеги на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) денеги на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) денеги с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства из [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"}
+    - хочу [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} из [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) средства на [карту]{"entity": "bank_card", "role": "to"} с [кошелька]{"entity": "name", "role": "from"}
+    - хочу [вывести](verb) средства на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [qiwi]{"entity": "electronic_money", "role": "to"}
+    - хочу [вывести](verb) средства с [кошелька]{"entity": "name", "role": "from"} на [яндекс]{"entity": "electronic_money", "role": "to"}
+    - хочу перевести [отсюда]{"entity": "name", "role": "from"} 50 долларов на [мастеркарту]{"entity": "bank_card", "role": "to"}
+    - я могу [вывести](verb) с [долл]{"entity": "purse_type", "role": "from"} на [долл карту]{"entity": "bank_card", "role": "to"} украина
+    - я хотел узнать каким способом мне можно [вывести](verb) средства на [карточку]{"entity": "bank_card", "role": "to"}
+    - я хочу из [веб мани]{"entity": "name", "role": "from"} [закинуть](verb) деньги на [карту банка]{"entity": "bank_card", "role": "to"}
+    - я хочу перевести деньги на [банковскую карту]{"entity": "bank_card", "role": "to"} живу в азербайджане и гражданин азербайджана прошу помочь
+    - [карту](bank_card) как [пополнить](verb) с [r кошелька]{"entity": "purse_type", "role": "from"}
+    - telepay [пополнение](verb) [карты](bank_card)
+    - а где найти [пополнение](verb) [банковской карты](bank_card)
+    - а как [пополнит](verb) счет [визу карту](bank_card) из [webmoney]{"entity": "name", "role": "from"}
+    - возможно ли [пополнение](verb) [электронного кошелька easypay](electronic_money)
+    - где в рф можно [обналичить](cash) веб мани
+    - имею [кошелек wmz](purse_type) желаю [вывести](verb) есть [карта альфа-банка mastercard](bank_card) в евро каков порядок действий
+    - как [вывести](verb) через [обменный пункт](exchanger)
+    - как мне [пополнить](verb) [карту](bank_card)
+    - как мне [пополнить](verb) свою [банковскую карту](bank_card) с [webmoney]{"entity": "name", "role": "from"}
+    - как [пополнить](verb) [вертикальную карту](bank_card)
+    - как [пополнить](verb) [карту](bank_card)
+    - как [пополнить](verb) [кошелек payeer](electronic_money) с [webmony]{"entity": "name", "role": "from"}
+    - как [пополнить](verb) [кошелек киви](electronic_money) через вебмани
+    - как с [web money]{"entity": "name", "role": "from"} [пополнить](verb) [електроный кошелек payeer](electronic_money)
+    - как с привязанного [кошелька]{"entity": "name", "role": "from"} [пополнить](verb) [счет яндекс-денег](electronic_money)
+    - как я могу [пополнить](verb) [skrill](electronic_money) через webmoney
+    - как я могу [пополнить](verb) [карту](bank_card)
+    - как я могу [пополнить](verb) [тинькофф банк](bank)
+    - мне нужно [пополнить](verb) [российскую карту](bank_card)
+    - можно ли [виртуальную карту](bank_card) [пополнять](verb) в германии
+    - можно ли [получить](verb) [wmz](purse_type) [наличными](cash)
+    - можно ли [пополнить](verb) [карту](bank_card)
+    - [папалнения](verb) [карты](bank_card)
+    - подкажите как [пополнить](verb) свою [карту](bank_card)
+    - [попалнить](verb) [карты](bank_card)
+    - [пополнение](verb) [карты](bank_card)
+    - [пополнить](verb) [банковскую карту](bank_card)
+    - [пополнить](verb) [карту](bank_card)
+    - [пополнить](verb) [тинькофф банк](bank)
+    - [снятие](verb) [наличных](cash)
+    - хочу [снять](verb) на свою собственную [дебетовую карту]{"entity": "bank_card", "role": "to"}
+    - я могу через webmoney [пополнить](verb) [qiwi счет](electronic_money)
+    - я хотел бы [пополнить](verb) свою [карту](bank_card)
+    - я хотел бы [пополнить](verb) свою [карту](bank_card) с баланса [веб мани]{"entity": "name", "role": "from"}
+    - я хотел [пополнить](verb) [банковскую карту](bank_card)
+    - я хотел [пополнить](verb) свою [банковскую карту](bank_card)
+    - я хочу [вывести](verb) с [wml кошелька]{"entity": "purse_type", "role": "from"} [у гаранта](guarant)
+    - [wme](purse_type) [ввод](verb)
+    - [wmz](purse_type) где [взять](verb)
+    - [wmz](purse_type) где я могу [взять](verb)
+    - [wmz](purse_type) как [пополнить](verb) кошелек
+    - [wmz](purse_type) [пополнить](verb) как
+    - а [внести](verb)
+    - а как [ввести](verb) деньги
+    - а как [попалнить](verb) кошелек webmaney
+    - а как [пополнить](verb) баланс
+    - а мне нужно [пополнить](verb) что делать
+    - а [пополнить](verb) кошелек в евро
+    - в росии можно [пополнять](verb)
+    - в украине возможно [пополнение](verb)
+    - [ввести](verb) на [кошелек]{"entity": "name", "role": "to"}
+    - [ввести](verb) средства на [кошелек]{"entity": "name", "role": "to"}
+    - [ввод](verb)
+    - [ввод](verb) [wmb](purse_type)
+    - [ввод](verb) денег
+    - [ввод](verb) средств
+    - [внести](verb) деньги
+    - возможно ли [пополнение](verb) [счета wmz](purse_type) непосредственно сразу в долларах
+    - возможно ли [пополнить](verb) [wmz](purse_type)
+    - возможности по [вводу](verb) денег
+    - где [взять](verb) [wmb](purse_type)
+    - где [взять](verb) [wme](purse_type)
+    - где [взять](verb) [wmr](purse_type)
+    - где [взять](verb) [wmz](purse_type)
+    - [депозит](verb)
+    - [дерозит](verb)
+    - евро могу скинуть на [веб мани]{"entity": "name", "role": "to"}
+    - есть ли варианты [пополнения](verb) счета через приложение
+    - интересует возможность [пополнения](verb) безналом
+    - как [вввести](verb) деньги
+    - как [ввести](verb) [wmz](purse_type)
+    - как [ввести](verb) деньги
+    - как [вносить](verb) деньги на [вебмани]{"entity": "name", "role": "to"}
+    - как [загрузить](verb) деньги
+    - как [закинуть](verb) баланс [сюда]{"entity": "name", "role": "to"}
+    - как [закинуть](verb) деньги на [кошелек]{"entity": "name", "role": "to"}
+    - как мне [внести](verb) средсва
+    - как мне деньги [положить](verb) на [счет]{"entity": "name", "role": "to"} свой
+    - как мне деньги [положить](verb) скажите пожалуйста
+    - как мне [ложить](verb) [сюда]{"entity": "name", "role": "to"} деньги
+    - как мне [положить](verb) [суда]{"entity": "name", "role": "to"} денег
+    - как мне [пополнить](verb) свой акупант
+    - как мне [пополнить](verb) счет
+    - как мне [пополнить](verb) счет не могу разобраться
+    - как мне [пополнять](verb) теперь
+    - как мне [попонить](verb) свой кошелек в крыму
+    - как мне сейчас [пополнить](verb) кошелек
+    - как можно [пополнить](verb) кошелек в киргизии
+    - как [наполнять](verb) кошелек
+    - как [папалняет](verb) кошелек
+    - как [папалняете](verb) боланс кошелек
+    - как [папольнит](verb) кашилек веб мани
+    - как перевести деньги [сюда]{"entity": "name", "role": "to"}
+    - как [поаолнить](verb) кошелек
+    - как [попалнить](verb) кашелек
+    - как [пополнеть](verb) кошелек
+    - как [пополнить](verb) баланс кошелька
+    - как [пополнить](verb) быстро кошелек на 100 рублей
+    - как [пополнить](verb) деньги [сюда]{"entity": "name", "role": "to"}
+    - как [пополнить](verb) кошелек
+    - как [пополнить](verb) кошелек только зарегестрировался разобраться пока не могу
+    - как [пополнить](verb) мой баланс
+    - как [пополнить](verb) свою [карту wmz](purse_type) в [веб мани]{"entity": "name", "role": "to"}
+    - как [пополнить](verb) счет
+    - как [пополнить](verb) счет что бы с него можно было оплатить
+    - как сделать [депозит](verb)
+    - как сейчас [пополнять](verb) кошелек
+    - как счет [пополняеться](verb)
+    - как тут счет [пополнит](verb)
+    - как я могу [положить](verb) деньги на свой [кошелек]{"entity": "name", "role": "to"}
+    - как я могу [пополнить](verb) кошелек каким способом
+    - как я могу [пополнить](verb) кошелек не могу разобраться
+    - какие есть способы [пополнения](verb) кошелька
+    - какие способы [ввода](verb) [wmz](purse_type) сейчас доступны
+    - каким способом можно [пополнить](verb) баланс
+    - каким способом [положить](verb) деньги на [счет]{"entity": "name", "role": "to"}
+    - каким способом сейчас можно [пополнить](verb) [wmz кошелек](purse_type)
+    - когда я смогу [пополнить](verb) счет
+    - могу задать вопрос по поводу [пополнения](verb) кошелька
+    - могу ли я [положить](verb) деньги на свой [счет]{"entity": "name", "role": "to"}
+    - могу ли я [пополнить](verb) свой счет
+    - могу ли я сейчас [пополнить](verb) свой кошелек
+    - могу я [пополнить](verb) [вмз](purse_type) на 2 доллара
+    - можете объяснить могу ли я [пополнить](verb) счет
+    - можно ли [пополнить](verb) [счет wmz](purse_type)
+    - новый клиент хочу [пополнить](verb) веб кошелек немогли бы вы подсказать как ето заделать
+    - перевести деньги на [wmid]{"entity": "name", "role": "to"} в usa
+    - подскажите как [вносить](verb) денежные средства
+    - подскажите как теперь можно [пополнять](verb) кошек
+    - помогите с [пополнением](verb) кошелька
+    - [попалнит](verb)
+    - [пополнит](verb) кошелек туркменистана
+    - [пополнить](verb)
+    - [пополнить](verb) [долларовый кошелек](purse_type) рублями
+    - [пополнить](verb) кошелек
+    - проконсультируйте пожалуйста могу ли я [пополнить](verb) кошелек вебмани в русских рублях и каким образом
+    - скажите каким способом лучше всего [положить](verb) деньги
+    - способы [пополнения](verb)
+    - хочу [пополнить](verb) кошелек
+    - что мне нужно сделать чтобы [пополнять](verb) кошельки
+    - что сделать для [пополнения](verb) кошелька
+    - я могу [пополнить](verb) кошелек
+    - я могу [пополнять](verb) кошелек
+    - я хачу [суда]{"entity": "name", "role": "to"} [закинут](verb) рубль как это возможно
+    - я хотел бы узнать каким способом можно [пополнить](verb) кошелек в [webmoney]{"entity": "name", "role": "to"}
+    - я хочу [ввести](verb)
+    - я хочу [ввести](verb) денги
+    - я хочу [добавить](verb) деньги на свой [счет]{"entity": "name", "role": "to"}
+    - я хочу [положить](verb)
+    - я хочу [пополнить](verb) кошелек мне предлагают зайти в раздел платежи
+    - [r](purse_type) как перевести деньги с [яндекс кошелька]{"entity": "electronic_money", "role": "from"}
+    - [wme](purse_type) [пополнить](verb) счет с [qiwi]{"entity": "electronic_money", "role": "from"}
+    - c [visa]{"entity": "bank_card", "role": "from"} на [wmz](purse_type) как перевести средства
+    - а как перевести с [российской карты]{"entity": "bank_card", "role": "from"} деньги на [счет веб мани]{"entity": "name", "role": "to"}
+    - а как перевести с [юмани]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - а куда мне нужно зайти чтоб [пополнить](verb) вебмани с [мтс]{"entity": "telephone_number", "role": "from"}
+    - а могу ли я [пополнить](verb) [wmz кошелек](purse_type) с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - а могу я [пополнить](verb) [z кошелек](purse_type) со [сбера]{"entity": "bank", "role": "from"}
+    - а можно ли [пополнить](verb) кошелек с [номера телефона]{"entity": "telephone_number", "role": "from"}
+    - а можно ли [пополнить](verb) мой счет в этом приложении с [киви кошелька]{"entity": "electronic_money", "role": "from"}
+    - а можно ли [пополнить](verb) с [тел номера]{"entity": "telephone_number", "role": "from"} на [wmz]{"entity": "purse_type", "role": "to"}
+    - а я могу [пополнить](verb) свой кошелек с [юмани]{"entity": "electronic_money", "role": "from"}
+    - [ввод](verb) из [карты виза]{"entity": "bank_card", "role": "from"} на [кошелек wmz]{"entity": "purse_type", "role": "to"}
+    - [внести](verb) с помощью [карты]{"entity": "bank_card", "role": "from"} доллары
+    - возможно ли [пополнить](verb) кошелек с [российского банка]{"entity": "bank", "role": "from"}
+    - возможно ли с [киви]{"entity": "electronic_money", "role": "from"} превести на имеющийся здесь [z кошелек]{"entity": "purse_type", "role": "to"}
+    - [вывести](verb) с [баланса телефона]{"entity": "telephone_number", "role": "from"}
+    - есть ли возможность [пополнения](verb) с [рублевой карте виза сбербанка россии]{"entity": "bank_card", "role": "from"}
+    - есть счет в [сбербанке]{"entity": "bank", "role": "from"} долларовый как с него можно [пополнить](verb) мой кошелек спс
+    - [заведение](verb) средств с [карточки]{"entity": "bank_card", "role": "from"}
+    - и возможно ли перевести [сюда]{"entity": "name", "role": "to"} деньги с [карты]{"entity": "bank_card", "role": "from"}
+    - как [внести](verb) депозит с [карты виза]{"entity": "bank_card", "role": "from"}
+    - как [закинуть](verb) деньги с другого [банка]{"entity": "bank_card", "role": "from"}
+    - как мне [пополнить](verb) баланс с [кошелька юmoney]{"entity": "electronic_money", "role": "from"}
+    - как мне [пополнить](verb) кошелек с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - как мне [пополнить](verb) кошелек с [номера мобильного телефона]{"entity": "telephone_number", "role": "from"}
+    - как мне [пополнить](verb) с [карты]{"entity": "bank_card", "role": "from"} webmoney кошелек
+    - как мне [пополнять](verb) с [qiwi кошелька]{"entity": "electronic_money", "role": "from"}
+    - как оплатить кошелек веб мани с [сбербанк онлайн]{"entity": "bank", "role": "from"}
+    - как [паполнит](verb) кашлок с [виза карти]{"entity": "bank_card", "role": "from"}
+    - как [паполнить](verb) с [телефона]{"entity": "telephone_number", "role": "from"}
+    - как перевести деньги из [юmoney]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - как перевести деньги на [webmoney]{"entity": "name", "role": "to"} с другого [банка]{"entity": "bank_card", "role": "from"}
+    - как перевести деньги с [карты сбер банка]{"entity": "bank_card", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - как перевести деньги с [карты сбербанка]{"entity": "bank_card", "role": "from"} на [веб мани]{"entity": "name", "role": "to"}
+    - как перевести деньги с [юmoney]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - как перевести из [юmoney]{"entity": "electronic_money", "role": "from"} на мой [счет]{"entity": "name", "role": "to"} здесь
+    - как перевести с [payeer]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - как перевести с [банковской моей карты]{"entity": "bank_card", "role": "from"} на [wmz]{"entity": "purse_type", "role": "to"}
+    - как перевести с [карты мир]{"entity": "bank_card", "role": "from"} на [кошелек]{"entity": "name", "role": "to"} 780 рублей
+    - как перевести с [карты тинькофф]{"entity": "bank_card", "role": "from"}
+    - как перевести с [карты]{"entity": "bank_card", "role": "from"} на [кошелек]{"entity": "name", "role": "to"}
+    - как перевести с [киви кошелька]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - как перевести с [киви]{"entity": "electronic_money", "role": "from"} на [вебмане]{"entity": "name", "role": "to"}
+    - как перевести с [киви]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - как перевести с [киви]{"entity": "electronic_money", "role": "from"} рули в доллары [сюда]{"entity": "name", "role": "to"}
+    - как перевести с [киви]{"entity": "electronic_money", "role": "from"} [сюда]{"entity": "name", "role": "to"}
+    - как перевести с [сбербанка]{"entity": "bank", "role": "from"} на [webmony]{"entity": "name", "role": "to"}
+    - как перевести с [телефона]{"entity": "telephone_number", "role": "from"} деньги на свой [кошелек]{"entity": "name", "role": "to"}
+    - как перевести с [телефона]{"entity": "telephone_number", "role": "from"} на [кошелек]{"entity": "name", "role": "to"} средства
+    - как перевести с [яндекс деньги]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - как [пополните](verb) кошелек с [мобильного телефона]{"entity": "telephone_number", "role": "from"}
+    - как [пополнить](verb) [wmz](purse_type) из [яндекс-деньги]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) [wmz](purse_type) с [тинькофф]{"entity": "bank", "role": "from"}
+    - как [пополнить](verb) [р кошелек](purse_type) из [киви]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) баланс с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - как [пополнить](verb) веб мани с [киви кошелька]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) кошелек с [баланса номера]{"entity": "telephone_number", "role": "from"}
+    - как [пополнить](verb) кошелек с [мобильного номера телефона]{"entity": "telephone_number", "role": "from"}
+    - как [пополнить](verb) кощелек с [qiwi]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) с [банковского счета]{"entity": "bank", "role": "from"} в германии
+    - как [пополнить](verb) с [киви кошелек]{"entity": "electronic_money", "role": "from"} свой [веб мани]{"entity": "name", "role": "to"}
+    - как [пополнить](verb) с [кошилька skril]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) с [юмани]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) счет на [wm]{"entity": "name", "role": "to"} с [qiwi]{"entity": "electronic_money", "role": "from"}
+    - как [пополнить](verb) счет с [банкомата]{"entity": "cash", "role": "from"} в кыргызстане
+    - как с [баланса телефона]{"entity": "telephone_number", "role": "from"} [пополнить](verb) web money
+    - как с [карты виза]{"entity": "bank_card", "role": "from"} отправить деньги на [кошелек]{"entity": "name", "role": "to"}
+    - как с [карты виза]{"entity": "bank_card", "role": "from"} перевести деньги на [счет кошелька]{"entity": "name", "role": "to"}
+    - как с [карты сбера]{"entity": "bank_card", "role": "from"} перевести деньги на [кошелек]{"entity": "name", "role": "to"}
+    - как с [телефонного баланса]{"entity": "telephone_number", "role": "from"} переводить [сюда]{"entity": "name", "role": "to"}
+    - как я могу [пополнить](verb) вебмани с [киви]{"entity": "electronic_money", "role": "from"}
+    - как я могу [пополнить](verb) кошелек с помощью [paypal]{"entity": "electronic_money", "role": "from"}
+    - как я могу [пополнить](verb) свой счет с [банковской карты]{"entity": "bank_card", "role": "from"} в иране
+    - мне нужно на платежную систему веб мани с [киви]{"entity": "electronic_money", "role": "from"}
+    - мне нужно перевести с [банка]{"entity": "bank", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - мне нужно [пополнить](verb) кошелек с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - мне нужно с [paypal]{"entity": "electronic_money", "role": "from"} перевести деньги
+    - мне [пополнить](verb) нужно с [киви]{"entity": "electronic_money", "role": "from"}
+    - могу ли я [завести](verb) деньги с [карты российского банка]{"entity": "bank_card", "role": "from"} на [wm]{"entity": "name", "role": "to"}
+    - могу ли я перевести с [paypal]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - могу ли я [пополнись](verb) свой кошелек с [кошелька qiwi]{"entity": "electronic_money", "role": "from"}
+    - могу ли я скинуть с [банковской карты]{"entity": "bank_card", "role": "from"} деньги в это [приложение]{"entity": "name", "role": "to"}
+    - могу я перевести с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - могу я перевести с своего [мобильного оператора]{"entity": "telephone_number", "role": "from"} деньги на [вебмани]{"entity": "name", "role": "to"}
+    - можно ли перевести с [билайн]{"entity": "telephone_number", "role": "from"}
+    - можно ли перевести с [карты]{"entity": "bank_card", "role": "from"}
+    - можно ли [пополнить](verb) wm кошелек с [банковской карточки приватбанк]{"entity": "bank_card", "role": "from"}
+    - можно ли [пополнить](verb) баланс с [номера телефона]{"entity": "telephone_number", "role": "from"}
+    - можно ли [пополнить](verb) вебмани с россии с [сбербанк банка]{"entity": "bank", "role": "from"}
+    - можно ли [пополнить](verb) кошелек с [карты мир]{"entity": "bank_card", "role": "from"}
+    - можно ли [пополнять](verb) [wmz кошелек](purse_type) [рублевой сбербанковской картой visa]{"entity": "bank_card", "role": "from"}
+    - можно ли сейчас [пополнять](verb) деньги с [терминала наличными]{"entity": "cash", "role": "from"}
+    - на оборот с [киви]{"entity": "electronic_money", "role": "from"} на [wm]{"entity": "name", "role": "to"}
+    - надо перевести с [юмани]{"entity": "electronic_money", "role": "from"} деньги на [кошелек]{"entity": "name", "role": "to"}
+    - нужно перевести с [карты сбербанка]{"entity": "bank_card", "role": "from"}
+    - о переводе с [qiwi кошелька]{"entity": "electronic_money", "role": "from"} на [wm]{"entity": "name", "role": "to"}
+    - перевести из [paypal]{"entity": "electronic_money", "role": "from"}
+    - перевод денег из [банка]{"entity": "bank", "role": "from"}
+    - перевод денег с [paypal]{"entity": "electronic_money", "role": "from"}
+    - перевод денег с [виртуальной карты]{"entity": "bank_card", "role": "from"} на [кошелек]{"entity": "name", "role": "to"}
+    - перевод денег с [кошелька киви]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - перевод с [qiwi кошелька]{"entity": "electronic_money", "role": "from"}
+    - перевод с [qiwi]{"entity": "electronic_money", "role": "from"} на web
+    - перевод с [бербанковской карты]{"entity": "bank_card", "role": "from"}
+    - перевод с [виртуальной карты]{"entity": "bank_card", "role": "from"} на [wmp]{"entity": "purse_type", "role": "to"}
+    - перевод с [карты]{"entity": "bank_card", "role": "from"}
+    - перевод с [карты]{"entity": "bank_card", "role": "from"} на [кашелек]{"entity": "name", "role": "to"}
+    - перевод с [карты]{"entity": "bank_card", "role": "from"} на [кошелек]{"entity": "name", "role": "to"}
+    - перевод с [киви кошелька]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - перевод с [киви]{"entity": "electronic_money", "role": "from"} на [web money]{"entity": "name", "role": "to"}
+    - перевод с [киви]{"entity": "electronic_money", "role": "from"} на [веб мани]{"entity": "name", "role": "to"}
+    - перевод с [юmoney]{"entity": "electronic_money", "role": "from"} на данный [кошелек]{"entity": "name", "role": "to"}
+    - перевод с [юмани]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - переводы с [kiwi]{"entity": "electronic_money", "role": "from"} na [wm]{"entity": "name", "role": "to"}
+    - подробнее о [пополнении](verb) с [телефона]{"entity": "telephone_number", "role": "from"} можно ли с [теле2]{"entity": "telephone_number", "role": "from"}
+    - подскажи как сделать перевод с [карты сбербанка]{"entity": "bank_card", "role": "from"} на [кошелек webmoney]{"entity": "name", "role": "to"}
+    - подскажите как с [сбербанка онлайн]{"entity": "bank", "role": "from"} перевести на [webmoney]{"entity": "name", "role": "to"} деньги
+    - подскажите пожалуйста могу ли я [пополнить](verb) баланс с другого [банка]{"entity": "bank", "role": "from"}
+    - подскажите я могу [вывести](verb) свои средства с [пейпал]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - [пополнение](verb) кошелка с [юmoney]{"entity": "electronic_money", "role": "from"}
+    - [пополнение](verb) кошелька с [юмани]{"entity": "electronic_money", "role": "from"}
+    - [пополнение](verb) с [банковского счета]{"entity": "bank", "role": "from"}
+    - [пополнение](verb) с [банковской карты]{"entity": "bank_card", "role": "from"}
+    - [пополнение](verb) со [skrill]{"entity": "electronic_money", "role": "from"}
+    - [пополнить](verb) с [qlwl]{"entity": "electronic_money", "role": "from"}
+    - [пополнить](verb) с [skrill]{"entity": "electronic_money", "role": "from"}
+    - [пополнить](verb) с [карты виза]{"entity": "bank_card", "role": "from"}
+    - [пополнить](verb) с [киви]{"entity": "electronic_money", "role": "from"} на [вебмани]{"entity": "name", "role": "to"}
+    - [пополнить](verb) с [кошилька skrill]{"entity": "electronic_money", "role": "from"}
+    - [пополнить](verb) со [сбера]{"entity": "bank", "role": "from"} на [счет вебмани]{"entity": "name", "role": "to"}
+    - с [visa карты]{"entity": "bank_card", "role": "from"} на [счет веб мани]{"entity": "name", "role": "to"}
+    - с [визы]{"entity": "bank_card", "role": "from"} можно кошелек [пополнить](verb)
+    - с [визы]{"entity": "bank_card", "role": "from"} [пополнять](verb) можно
+    - с [карты сбербанк]{"entity": "bank_card", "role": "from"} можно отправить на ваш [кошелек]{"entity": "name", "role": "to"}
+    - с [карты]{"entity": "bank_card", "role": "from"} другого банка можно сделать перевод на [кошелек]{"entity": "name", "role": "to"}
+    - с [российской карты]{"entity": "bank_card", "role": "from"} деньги на [веб мани счет]{"entity": "name", "role": "to"}
+    - с [юmoney]{"entity": "electronic_money", "role": "from"} в [кошелек webmoney]{"entity": "name", "role": "to"} можно перевести
+    - скажите пожалуйста как мне [прложить](verb) с [карты]{"entity": "bank_card", "role": "from"} на [кошелек]{"entity": "name", "role": "to"} деньги
+    - скажите пожалуйста как я могу скинуть деньги с [украинской карты]{"entity": "bank_card", "role": "from"}
+    - смогу ли я перевести с [киви кашелька]{"entity": "electronic_money", "role": "from"} в это [приложение]{"entity": "name", "role": "to"} и как
+    - уважаемые можно ли щас [пополнить](verb) щет с [карты]{"entity": "bank_card", "role": "from"}
+    - хотел поинтересоваться можно ли со [сбербанка]{"entity": "bank", "role": "from"} [пополнить](verb) баланс веб мани
+    - хочу перевести 70 рублей с [киви кошелька]{"entity": "electronic_money", "role": "from"} на [webmoney]{"entity": "name", "role": "to"}
+    - хочу перевести с [мтс беларусь]{"entity": "telephone_number", "role": "from"} на [web money]{"entity": "name", "role": "to"}
+    - я только зарегистрировался в первый раз создал кошелек [wme](purse_type) евро как теперь мне его [пополнить](verb) на 70 евро с [рублевой карты viza альфа банка]{"entity": "bank_card", "role": "from"}
+    - я у вас ничего не понимаю как [пополнить](verb) вебмони с [юмони]{"entity": "electronic_money", "role": "from"}
+    - я хотел перевести с [киви кошелка]{"entity": "electronic_money", "role": "from"} перевести на [wmr]{"entity": "purse_type", "role": "to"}
+    - я хочу [пополнить](verb) свой кошелек [картой visa]{"entity": "bank_card", "role": "from"} я потерял визу и хочу перевести с визы на [кошелек]{"entity": "name", "role": "to"}
+    - [qiwi кошельком](electronic_money) [пополнить](verb)
+    - [wmz кошелк](purse_type) [пополнит](verb) через [виза карту](bank_card)
+    - [wmz](purse_type) надо оплатить через [виртуальный карту](bank_card)
+    - а [пополнить](verb) [wmz](purse_type) [счет мобильного](telephone_number) можно или нет
+    - в россии могу [пополнять](verb) через [терминал](cash)
+    - [ввод](verb) через [карту](bank_card)
+    - возможно [пополнить](verb) вебмани через [билайн связь](telephone_number)
+    - есть вариант [поплнить](verb) простым [банковским переводом](bank)
+    - есть вариант [пополнить](verb) простым [банковским перевоздом](bank)
+    - [зарядка](verb) через [банк](bank)
+    - здравствуйте а можно через [мобильный баланс](telephone_number) [пополнить](verb) кошелек
+    - как [загрузить](verb) деньги через [терминал](cash)
+    - как [ложить](verb) [сюда]{"entity": "name", "role": "to"} на баланс через [терминал](cash)
+    - как мне [закинуть](verb) деньги через [банкомат](cash)
+    - как мне [пополнить](verb) кошелек вебмани [карточки приватбанк](bank_card)
+    - как мне [пополнить](verb) через [карту банковскую](bank_card)
+    - как мне [пополнить](verb) через [яндекс деньги](electronic_money)
+    - как мне [пополнять](verb) счет кошелька через [номер телефона](telephone_number) на который он зарегестрирован
+    - как мне через [банкомат](cash) [положить](verb) деньги
+    - как осуществить [пополнение](verb) [р кошелька](purse_type) с [банковской карты](bank_card) через онлай банк
+    - как перевести с другого [номера телефона](telephone_number) деньги на свой [кошелек]{"entity": "name", "role": "to"}
+    - как [пополнит](verb) wabmoney через [qiwi](electronic_money)
+    - как [пополнить](verb) [wmz кошелек](purse_type) [наличными](cash) для оплаты товаров на алиэкспресс в россии
+    - как [пополнить](verb) [электронными деньгами](electronic_money)
+    - как [пополнить](verb) аккаунт через [карту](bank_card)
+    - как [пополнить](verb) баланс через [телефон](telephone_number)
+    - как [пополнить](verb) вебмани через [виртуальную картк](bank_card)
+    - как [пополнить](verb) вэб мани [картой](bank_card)
+    - как [пополнить](verb) кошелек вм через [оператора теле2](telephone_number)
+    - как [пополнить](verb) кошелек через [карту](bank_card)
+    - как [пополнить](verb) кошелек через [мобильный телефон](telephone_number)
+    - как [пополнить](verb) [счет wmz](purse_type) [карта мастеркард альфа банк](bank_card)
+    - как [пополнить](verb) через [гаранта](guarant)
+    - как [пополнять](verb) через [карту мир](bank_card)
+    - мне нужно 10 $ через [карту сбербанка рф](bank_card) могу [пополнить](verb)
+    - мне нужно [приобрести](verb) [wmz](purse_type) через [пластиковую карту узбекистана](bank_card)
+    - могу ли я [пополнить](verb) через [виза карту](bank_card)
+    - могу ли я [пополнять](verb) счет через [банковскую карту](bank_card)
+    - можно ли [пополнить](verb) через [visa](bank_card)
+    - мой [wmr кошелек](purse_type) прикреплен к оплате через банковскую картау но мне также нужно [пополнять](verb) его через [телефон](telephone_number) как это сделать
+    - не понимаю как мне [пополнить](verb) кошелек мне необходимо кое-что оплатить через вашу систему что нужно сделать чтобы [пополнить](verb) с [карты]{"entity": "bank_card", "role": "from"}
+    - перевести [paypal](electronic_money) в [webmoney]{"entity": "name", "role": "to"}
+    - перевод через [киви](electronic_money) в [вебмоней]{"entity": "name", "role": "to"}
+    - подскажите как [пополнить](verb) кошелек через [телефон](telephone_number)
+    - подскажите как [пополнить](verb) счет через [карту виза](bank_card)
+    - подскажите пожалуйста возможно ли [приобрести](verb) [wmz](purse_type) средствами [paypal](electronic_money)
+    - [пополнение](verb) [wme](purse_type) через [тинькофф](bank)
+    - [пополнение](verb) [wmr](purse_type) через [интернетбанк тинькофф](bank)
+    - [пополнение](verb) [wmz](purse_type) [наличными](cash) в отделениях банков
+    - [пополнение](verb) [wmz](purse_type) через [карту](bank_card)
+    - [пополнение](verb) кошелька [easypay](electronic_money)
+    - [пополнение](verb) через [банковскую карту](bank_card)
+    - [пополнение](verb) через [банковскую карту](bank_card) инстукция
+    - [пополнить](verb) wm через [qiwi](electronic_money)
+    - я рогу [пополнить](verb) кошелек через [скрил](electronic_money)
+    - я смогу здесь деньги через [карточку](bank_card) [закинуть](verb)
+    - я хочу [пополнить](verb) вебмани через [киви](electronic_money)
+
+- intent: transfer.telephone_number
+  examples: |
+    - [баланс номера телефона](telephone_number)
+    - [мобильного номера телефона](telephone_number)
+    - [номера мобильного телефона](telephone_number)
+    - [номера телефона](telephone_number)
+    - [тел номера](telephone_number)
+    - [мобильного телефона](telephone_number)
+    - [мобильный телефон](telephone_number)
+    - [оператора теле2](telephone_number)
+    - [телефона](telephone_number)
+    - [баланса номера](telephone_number)
+    - [билайн связь](telephone_number)
+    - [мобильный](telephone_number)
+
+- intent: transfer.banks
+  examples: |
+    - [альфа банк](bank)
+    - [альфа](bank)
+    - [сбербанк](bank)
+    - [тинькофф](bank)
+    - [банк открытие](bank)
+    - [альфа клик](bank)
+    - [банк тинькофф](bank)
+    - [банк ккб](bank)
+    - из [сбербанк](bank)
+    - или [сбербанк](bank)
+    - [интернет банк альфа клик](bank)
+    - [ккб банк](bank)
+    - на [сбербанк](bank)
+    - в [сбербанк](bank)
+    - [приват банк](bank)
+    - со [сбербанка](bank)
+    - [почта банк](bank)
+    - [банк россии](bank)
+    - [банк](bank)
+    - [банковский счет](bank)
+    - [банковского счета](bank)
+    - [интернетбанк тинькофф](bank)
+    - [паритет банк](bank)
+    - [приват 24](bank)
+    - [российского банка](bank)
+    - [сбера](bank)
+    - [сбербанк банка](bank)
+    - [сбербанка](bank)
+    - [сбербанке](bank)
+    - на [банковский счет](bank)
+
+- intent: transfer.cash
+  examples: |
+    - [наличные](cash)
+    - [наличными](cash)
+    - [наличных](cash)
+    - [терминал](cash)
+    - [банкомат](cash)
+    - [банкомата](cash)
+
+- intent: transfer.bank_card
+  examples: |
+    - [мастеркард](bank_card)
+    - [mastercard](bank_card)
+    - [банковской карты](bank_card)
+    - [банковскую карту](bank_card)
+    - [визу карту](bank_card)
+    - [дебетовою карту](bank_card)
+    - [дебетовую карту сбербанка](bank_card)
+    - [дебетовую карту](bank_card)
+    - [долл карту](bank_card)
+    - [долларовую карту российского банка](bank_card)
+    - [долларовую карту сбербанка россии](bank_card)
+    - [долларовую карту](bank_card)
+    - [казахскую карту visa](bank_card)
+    - [карта](bank_card)
+    - [карта альфа-банка mastercard](bank_card)
+    - [карта мастеркард альфа банк](bank_card)
+    - [картку приват банка](bank_card)
+    - [картой](bank_card)
+    - [карточки приватбанк](bank_card)
+    - [карточку](bank_card)
+    - [карту visa](bank_card)
+    - [карту белорусского банка](bank_card)
+    - [карту мастеркард](bank_card)
+    - [карту моно банк](bank_card)
+    - [карту приват банка](bank_card)
+    - [карту республики беларусь](bank_card)
+    - [карту российского сбербанка](bank_card)
+    - [карту сбербанка](bank_card)
+    - [карту сберрбанка](bank_card)
+    - [карту украинского банка](bank_card)
+    - [карту](bank_card)
+    - [карты виза](bank_card)
+    - [карты сбера](bank_card)
+    - [карты сбербанк](bank_card)
+    - [карты](bank_card)
+    - [латвийскую карту](bank_card)
+    - [мастеркарту](bank_card)
+    - [молдавскую карту](bank_card)
+    - [российской карты](bank_card)
+    - [российскую банковскую карту](bank_card)
+    - [российскую карту](bank_card)
+    - [рублевой карте виза сбербанка россии](bank_card)
+    - [рублевой карты viza альфа банка](bank_card)
+    - [рублевой сбербанковской картой visa](bank_card)
+    - [рублевую карту](bank_card)
+    - [сбербанк карту](bank_card)
+    - [украинской карты](bank_card)
+    - [украинскую карту](bank_card)
+    - [банковские карты казахстана](bank_card)
+
+- intent: transfer.electronic_money
+  examples: |
+    - [электронные деньги](electronic_money)
+    - [электронные кошельки](electronic_money)
+    - [электронными деньгами](electronic_money)
+    - c [юmoney](electronic_money)
+    - [giwi](electronic_money)
+    - [kiwi](electronic_money)
+    - [qivi](electronic_money)
+    - [qiwi](electronic_money)
+    - [qiwi](electronic_money) transfer
+    - [qiwi wallet](electronic_money)
+    - [qiwi кошелек](electronic_money)
+    - [qiwi кошелька](electronic_money)
+    - [qiwi кошельке](electronic_money)
+    - [qiwi кошельком](electronic_money)
+    - [qiwi кошельку](electronic_money)
+    - [quiwi](electronic_money)
+    - [yamoney](electronic_money)
+    - [yandex](electronic_money)
+    - [yandex.money](electronic_money)
+    - [ymoney](electronic_money)
+    - [ymoney кошелек](electronic_money)
+    - [ymoney кошелька](electronic_money)
+    - [ymoney кошельке](electronic_money)
+    - [ymoney кошельком](electronic_money)
+    - [ymoney кошельку](electronic_money)
+    - [yoomoney](electronic_money)
+    - [yoomooney](electronic_money)
+    - а [qiwi](electronic_money)
+    - а где [киви](electronic_money)
+    - а если с [qiwi](electronic_money)
+    - а из [qivi](electronic_money)
+    - а именно [юмани](electronic_money)
+    - а на [киви](electronic_money)
+    - и [киви](electronic_money)
+    - из [юmoney](electronic_money)
+    - или [киви](electronic_money)
+    - или с [юмани](electronic_money)
+    - или через [qiwi](electronic_money)
+    - как на [qiwi](electronic_money)
+    - [киви](electronic_money)
+    - [киви](electronic_money) ком
+    - [киви кошек](electronic_money)
+    - [киви кошелек](electronic_money)
+    - [киви кошелька](electronic_money)
+    - [киви кошельке](electronic_money)
+    - [киви кошельком](electronic_money)
+    - [киви кошельку](electronic_money)
+    - [киви](electronic_money) лучше
+    - [кошелек qiwi](electronic_money)
+    - [кошелек ymoney](electronic_money)
+    - [кошелек киви](electronic_money)
+    - [кошелек юmoney](electronic_money)
+    - [кошелек юмани](electronic_money)
+    - [кошелек яндекс](electronic_money)
+    - [кошелька qiwi](electronic_money)
+    - [кошелька ymoney](electronic_money)
+    - [кошелька киви](electronic_money)
+    - [кошелька юmoney](electronic_money)
+    - [кошелька юмани](electronic_money)
+    - [кошелька яндекс](electronic_money)
+    - [кошельке qiwi](electronic_money)
+    - [кошельке ymoney](electronic_money)
+    - [кошельке киви](electronic_money)
+    - [кошельке юmoney](electronic_money)
+    - [кошельке юмани](electronic_money)
+    - [кошельке яндекс](electronic_money)
+    - [кошельком qiwi](electronic_money)
+    - [кошельком ymoney](electronic_money)
+    - [кошельком киви](electronic_money)
+    - [кошельком юmoney](electronic_money)
+    - [кошельком юмани](electronic_money)
+    - [кошельком яндекс](electronic_money)
+    - [кошельку qiwi](electronic_money)
+    - [кошельку ymoney](electronic_money)
+    - [кошельку киви](electronic_money)
+    - [кошельку юmoney](electronic_money)
+    - [кошельку юмани](electronic_money)
+    - [кошельку яндекс](electronic_money)
+    - можна [киви кошалк](electronic_money)
+    - мой [qiwi](electronic_money)
+    - на [qiwi](electronic_money)
+    - на [киви](electronic_money)
+    - на [киви еошелек](electronic_money)
+    - на [юманей](electronic_money)
+    - на [юмани](electronic_money)
+    - на [юмонеу](electronic_money)
+    - нет с [киви](electronic_money)
+    - с [qiwi](electronic_money)
+    - с [qиви](electronic_money)
+    - с [киви](electronic_money)
+    - с [киви](electronic_money) можно
+    - с помощью [киви кошелька](electronic_money)
+    - с [ю мани](electronic_money)
+    - с [юmoney](electronic_money)
+    - с [юмани](electronic_money)
+    - с [юмоней](electronic_money)
+    - у меня [ю money](electronic_money)
+    - через [qiwi](electronic_money)
+    - через [киви](electronic_money)
+    - через [юмани](electronic_money)
+    - через [юмоней](electronic_money)
+    - что там про [киви](electronic_money)
+    - [ю money](electronic_money)
+    - [ю мани](electronic_money)
+    - [юmoney](electronic_money)
+    - [юmoney кошелек](electronic_money)
+    - [юmoney кошелька](electronic_money)
+    - [юmoney кошельке](electronic_money)
+    - [юmoney кошельком](electronic_money)
+    - [юmoney кошельку](electronic_money)
+    - [юманей](electronic_money)
+    - [юмани](electronic_money)
+    - [юмани кошелек](electronic_money)
+    - [юмани кошелька](electronic_money)
+    - [юмани кошельке](electronic_money)
+    - [юмани кошельком](electronic_money)
+    - [юмани кошельку](electronic_money)
+    - [юмоней](electronic_money)
+    - [юмонеу](electronic_money)
+    - [яндекс](electronic_money)
+    - [яндекс денги](electronic_money)
+    - [яндекс деньги](electronic_money)
+    - [яндекс деньиги](electronic_money)
+    - [яндекс кошелек](electronic_money)
+    - [яндекс кошелька](electronic_money)
+    - [яндекс кошельке](electronic_money)
+    - [яндекс кошельком](electronic_money)
+    - [яндекс кошельку](electronic_money)
+    - [яндекс.деньги](electronic_money)
+    - [easypaisa](electronic_money)
+    - [payoneer](electronic_money)
+    - [payeer](electronic_money)
+    - [paypal](electronic_money)
+
+- intent: transfer.guarant
+  examples: |
+    - [возврат c хранения](guarant)
+    - [возврат с хранения у гранта](guarant)
+    - [возврат с хранения](guarant)
+    - [с хранения гаранта](guarant)
+    - [с хранения у гаранта](guarant)
+    - [у гаранта](guarant)
+
+- intent: system.purse
+  examples: |
+    - [b кошелька](purse_type)
+    - [wmh кошелек](purse_type)
+    - [b](purse_type)
+    - [bch](purse_type)
+    - [bitcoincash](purse_type)
+    - [bitecoin кошелька](purse_type)
+    - [bitecoin](purse_type)
+    - [btc кошелька](purse_type)
+    - [btc](purse_type)
+    - [byn](purse_type)
+    - [c кошелек для долгов](purse_type)
+    - [c кошелька](purse_type)
+    - [c](purse_type)
+    - [d кошелька](purse_type)
+    - [d](purse_type)
+    - [e](purse_type)
+    - [eur кошелька](purse_type)
+    - [eur](purse_type)
+    - [g кошелька](purse_type)
+    - [кошелек в беларуских рублях](purse_type)
+    - [g](purse_type)
+    - [h кошелька](purse_type)
+    - [h](purse_type)
+    - [k кошелька](purse_type)
+    - [k](purse_type)
+    - [kzt кошелька](purse_type)
+    - [kzt](purse_type)
+    - [l кошелька](purse_type)
+    - [l](purse_type)
+    - [litecoin кошелька](purse_type)
+    - [litecoin](purse_type)
+    - [ltc кошелька](purse_type)
+    - [ltc](purse_type)
+    - [mdl кошелек](purse_type)
+    - [mdl](purse_type)
+    - [mdl кошелька](purse_type)
+    - [p - кошелек](purse_type)
+    - [p кошелек](purse_type)
+    - [p кошелька](purse_type)
+    - [p-кошелек](purse_type)
+    - [p](purse_type)
+    - [r кошелек](purse_type)
+    - [r-кошолек](purse_type)
+    - [r](purse_type)
+    - [rub кошелька](purse_type)
+    - [rub](purse_type)
+    - [rкошалек](purse_type)
+    - [u](purse_type)
+    - [uah](purse_type)
+    - [usd](purse_type)
+    - [uzb](purse_type)
+    - [uzs кошелька](purse_type)
+    - [uzs](purse_type)
+    - [v кошелька](purse_type)
+    - [v](purse_type)
+    - [vnd](purse_type)
+    - [wmb кошелька](purse_type)
+    - [wmb](purse_type)
+    - [wmbb кошелька](purse_type)
+    - [wmbb](purse_type)
+    - [wmcc кошелька](purse_type)
+    - [wmcc](purse_type)
+    - [wmdd](purse_type)
+    - [wme кошелек](purse_type)
+    - [wme кошелька](purse_type)
+    - [wme](purse_type)
+    - [wmee](purse_type)
+    - [wmg](purse_type)
+    - [wmgg кошелька](purse_type)
+    - [wmgg](purse_type)
+    - [wmhh](purse_type)
+    - [wmk](purse_type)
+    - [wmkk](purse_type)
+    - [wml](purse_type)
+    - [wml кошелька](purse_type)
+    - [wmll](purse_type)
+    - [wmp карту](purse_type)
+    - [wmp кошелька](purse_type)
+    - [wmp рублей кешелок](purse_type)
+    - [wmp](purse_type)
+    - [wmpp кошелька](purse_type)
+    - [wmpp](purse_type)
+    - [wmr карту](purse_type)
+    - [wmr когелек](purse_type)
+    - [wmr кошелек](purse_type)
+    - [wmr кошелька](purse_type)
+    - [wmr](purse_type)
+    - [wmrr кошелька](purse_type)
+    - [wmrr](purse_type)
+    - [wmu](purse_type)
+    - [wmx кошелька](purse_type)
+    - [wmx](purse_type)
+    - [wmxx кошелька](purse_type)
+    - [wmxx](purse_type)
+    - [wmy кошельком](purse_type)
+    - [wmyy кошелька](purse_type)
+    - [wmyy](purse_type)
+    - [wmz карту](purse_type)
+    - [wmz кашелек](purse_type)
+    - [wmz кошалек](purse_type)
+    - [wmz кошелек](purse_type)
+    - [wmz кошелька](purse_type)
+    - [wmz кошельком](purse_type)
+    - [wmz](purse_type)
+    - [wmz](purse_type) web money
+    - [wmzz](purse_type)
+    - [wmр кошелька](purse_type)
+    - [wnz](purse_type)
+    - [x кошелька](purse_type)
+    - [x](purse_type)
+    - [y кошелька](purse_type)
+    - [y](purse_type)
+    - [z кошелька](purse_type)
+    - [z](purse_type)
+    - [американский](purse_type)
+    - [амеровский кошелька](purse_type)
+    - [амеровский](purse_type)
+    - [бакс сша кошелька](purse_type)
+    - [бакс сша](purse_type)
+    - [бакс](purse_type)
+    - [баксовый сша кошелька](purse_type)
+    - [баксовый сша](purse_type)
+    - [баксовый](purse_type)
+    - [баксы](purse_type)
+    - [белорускими](purse_type)
+    - [белоруссии](purse_type)
+    - [белорусский кошелька](purse_type)
+    - [белорусский рубль кошелька](purse_type)
+    - [белорусский рубль](purse_type)
+    - [белорусский](purse_type)
+    - [белорусскими](purse_type)
+    - [белорусскую](purse_type)
+    - [биткеш](purse_type)
+    - [биткоин кеш](purse_type)
+    - [биткоин кошелек](purse_type)
+    - [биткоин](purse_type)
+    - [биткоинкеш](purse_type)
+    - [биткоинкешовский](purse_type)
+    - [биткоинкешовый](purse_type)
+    - [биткоиновский](purse_type)
+    - [биткоиновый](purse_type)
+    - [бульбашный](purse_type)
+    - [бульбашовый](purse_type)
+    - [в рублях кошелек](purse_type)
+    - [в рублях](purse_type)
+    - [в сомы](purse_type)
+    - [вмаш](purse_type)
+    - [вмб кошелька](purse_type)
+    - [вмб](purse_type)
+    - [вмбб кошелька](purse_type)
+    - [вмбб](purse_type)
+    - [вмв кошелька](purse_type)
+    - [вмв](purse_type)
+    - [вмвай кошелька](purse_type)
+    - [вмвай](purse_type)
+    - [вмвв кошелька](purse_type)
+    - [вмвв](purse_type)
+    - [вмг кошелька](purse_type)
+    - [вмг](purse_type)
+    - [вмгг](purse_type)
+    - [вмд кошелька](purse_type)
+    - [вмд](purse_type)
+    - [вмдд](purse_type)
+    - [вме кошелька](purse_type)
+    - [вме](purse_type)
+    - [вмее](purse_type)
+    - [вмз](purse_type)
+    - [вмзз кошелька](purse_type)
+    - [вмзз](purse_type)
+    - [вмикс кошелька](purse_type)
+    - [вмикс](purse_type)
+    - [вмк](purse_type)
+    - [вмкк кошелька](purse_type)
+    - [вмкк](purse_type)
+    - [вмл кошелька](purse_type)
+    - [вмл](purse_type)
+    - [вмлл кошелька](purse_type)
+    - [вмлл](purse_type)
+    - [вмп кашелек](purse_type)
+    - [вмп](purse_type)
+    - [вмпп кошелька](purse_type)
+    - [вмпп](purse_type)
+    - [вмр кошелька](purse_type)
+    - [вмр](purse_type)
+    - [вмрр кошелька](purse_type)
+    - [вмрр](purse_type)
+    - [вму кошелька](purse_type)
+    - [вму](purse_type)
+    - [вмуай кошелька](purse_type)
+    - [вмуай](purse_type)
+    - [вмх кошелька](purse_type)
+    - [вмх](purse_type)
+    - [вмц](purse_type)
+    - [вмцц кошелька](purse_type)
+    - [вмцц](purse_type)
+    - [вмш кошелька](purse_type)
+    - [вмш](purse_type)
+    - [выданные кредиты](purse_type)
+    - [вьетнамский донг кошелька](purse_type)
+    - [вьетнамский донг](purse_type)
+    - [вьетнамский](purse_type)
+    - [г](purse_type)
+    - [голдовый кошелька](purse_type)
+    - [голдовый](purse_type)
+    - [гривен](purse_type)
+    - [гривнами](purse_type)
+    - [гривны](purse_type)
+    - [долар кошелька](purse_type)
+    - [долар сша](purse_type)
+    - [долар](purse_type)
+    - [доларовый сша кошелька](purse_type)
+    - [доларовый сша](purse_type)
+    - [доларовый](purse_type)
+    - [долговой](purse_type)
+    - [долговой кошелек](purse_type)
+    - [кошелек долговой](purse_type)
+    - [доллар сша кошелька](purse_type)
+    - [доллар сша](purse_type)
+    - [доллар](purse_type)
+    - [долларового кошелька](purse_type)
+    - [долларовый кошелька](purse_type)
+    - [долларовый сша](purse_type)
+    - [долларовый](purse_type)
+    - [доллары](purse_type)
+    - [донг кошелька](purse_type)
+    - [донг](purse_type)
+    - [донговый кошелька](purse_type)
+    - [донговый](purse_type)
+    - [евриковый](purse_type)
+    - [евро кошелька](purse_type)
+    - [евро](purse_type)
+    - [евровый](purse_type)
+    - [золота кошелька](purse_type)
+    - [золота](purse_type)
+    - [золото кошелька](purse_type)
+    - [золото](purse_type)
+    - [золотой кошелька](purse_type)
+    - [золотой](purse_type)
+    - [к](purse_type)
+    - [казахский сум](purse_type)
+    - [казахский](purse_type)
+    - [казахстанский](purse_type)
+    - [карту wmp](purse_type)
+    - [карту wmu](purse_type)
+    - [карту wmz](purse_type)
+    - [кашалек рф](purse_type)
+    - [кашелек в белорусских рублях](purse_type)
+    - [кашелек для российских денег](purse_type)
+    - [кашклек типа z](purse_type)
+    - [кошел в эквиваленте гривна](purse_type)
+    - [кошелек mdl](purse_type)
+    - [кошелек r](purse_type)
+    - [кошелек vmz](purse_type)
+    - [кошелек wmf](purse_type)
+    - [кошелек wmp](purse_type)
+    - [кошелек wmr](purse_type)
+    - [кошелек wmz](purse_type)
+    - [кошелек z в долларах сша](purse_type)
+    - [кошелек американской валюте](purse_type)
+    - [кошелек в ru](purse_type)
+    - [кошелек в uah](purse_type)
+    - [кошелек в белорусских рублях](purse_type)
+    - [кошелек в валюте доллар](purse_type)
+    - [кошелек в гривнах](purse_type)
+    - [кошелек в гривне](purse_type)
+    - [кошелек в гривневой валюте](purse_type)
+    - [кошелек в долларах сша](purse_type)
+    - [кошелек в долларах](purse_type)
+    - [кошелек в евро](purse_type)
+    - [кошелек в россиийских рублях](purse_type)
+    - [кошелек в российских рублях](purse_type)
+    - [кошелек в рублевом эквиваленте](purse_type)
+    - [кошелек в рубля](purse_type)
+    - [кошелек в рублях](purse_type)
+    - [кошелек в украинской валюте](purse_type)
+    - [кошелек вмр](purse_type)
+    - [кошелек для баксов](purse_type)
+    - [кошелек для белорусского](purse_type)
+    - [кошелек для долларов](purse_type)
+    - [кошелек для евро](purse_type)
+    - [кошелек для сом](purse_type)
+    - [кошелек для украинской гривни](purse_type)
+    - [кошелек для украинской гривны](purse_type)
+    - [кошелек е](purse_type)
+    - [кошелек мдл](purse_type)
+    - [кошелек с буква z](purse_type)
+    - [кошелек с валютой в рублях](purse_type)
+    - [кошелек с евро валютой](purse_type)
+    - [кошелек с рублями российской федерации](purse_type)
+    - [кошелек с украинской валютой](purse_type)
+    - [кошелек типа wmc](purse_type)
+    - [кошелек типа wmd](purse_type)
+    - [кошелек типа wmh](purse_type)
+    - [кошелек типа wmk](purse_type)
+    - [кошелек типа wml](purse_type)
+    - [кошелек типа wmr](purse_type)
+    - [кошелек типа wmu](purse_type)
+    - [кошелек типа wmx](purse_type)
+    - [кошелек типа wmy](purse_type)
+    - [кошелек типа wmz](purse_type)
+    - [кошелек типа z](purse_type)
+    - [кошелек типа вмаш](purse_type)
+    - [кошелек типа вмб](purse_type)
+    - [кошелек типа вмв](purse_type)
+    - [кошелек типа вмг](purse_type)
+    - [кошелек типа вмд](purse_type)
+    - [кошелек типа вмз](purse_type)
+    - [кошелек типа вмикс](purse_type)
+    - [кошелек типа вмк](purse_type)
+    - [кошелек типа вмл](purse_type)
+    - [кошелек типа вмп](purse_type)
+    - [кошелек типа вмр](purse_type)
+    - [кошелек типа вму](purse_type)
+    - [кошелек типа вмуай](purse_type)
+    - [кошелек типа вмх](purse_type)
+    - [кошелек типа вмц](purse_type)
+    - [кошелек типа вмш](purse_type)
+    - [кошелек типа доллар](purse_type)
+    - [кошелек типа с](purse_type)
+    - [кошелок с российской валютой](purse_type)
+    - [кошель с гривнами](purse_type)
+    - [кошелька b](purse_type)
+    - [кошелька byn](purse_type)
+    - [кошелька c](purse_type)
+    - [кошелька eur](purse_type)
+    - [кошелька g](purse_type)
+    - [кошелька h](purse_type)
+    - [кошелька kzt](purse_type)
+    - [кошелька l](purse_type)
+    - [кошелька ltc](purse_type)
+    - [кошелька r](purse_type)
+    - [кошелька rub](purse_type)
+    - [кошелька uzs](purse_type)
+    - [кошелька v](purse_type)
+    - [кошелька wmbb](purse_type)
+    - [кошелька wmcc](purse_type)
+    - [кошелька wmdd](purse_type)
+    - [кошелька wmgg](purse_type)
+    - [кошелька wmhh](purse_type)
+    - [кошелька wmll](purse_type)
+    - [кошелька wmr](purse_type)
+    - [кошелька wmrr](purse_type)
+    - [кошелька wmxx](purse_type)
+    - [кошелька x](purse_type)
+    - [кошелька y](purse_type)
+    - [кошелька бакс](purse_type)
+    - [кошелька баксовый](purse_type)
+    - [кошелька белорусский рубль](purse_type)
+    - [кошелька бульбашный](purse_type)
+    - [кошелька бульбашовый](purse_type)
+    - [кошелька вмаш](purse_type)
+    - [кошелька вмб](purse_type)
+    - [кошелька вмбб](purse_type)
+    - [кошелька вмв](purse_type)
+    - [кошелька вмвай](purse_type)
+    - [кошелька вмвв](purse_type)
+    - [кошелька вмг](purse_type)
+    - [кошелька вмгг](purse_type)
+    - [кошелька вмдд](purse_type)
+    - [кошелька вме](purse_type)
+    - [кошелька вмее](purse_type)
+    - [кошелька вмз](purse_type)
+    - [кошелька вмикс](purse_type)
+    - [кошелька вмк](purse_type)
+    - [кошелька вмл](purse_type)
+    - [кошелька вмлл](purse_type)
+    - [кошелька вмр](purse_type)
+    - [кошелька вмрр](purse_type)
+    - [кошелька вму](purse_type)
+    - [кошелька вмуай](purse_type)
+    - [кошелька вмх](purse_type)
+    - [кошелька вмц](purse_type)
+    - [кошелька вмцц](purse_type)
+    - [кошелька вмш](purse_type)
+    - [кошелька выданные кредиты](purse_type)
+    - [кошелька вьетнамский донг](purse_type)
+    - [кошелька голдовый](purse_type)
+    - [кошелька для валюты российский рубль](purse_type)
+    - [кошелька долар сша](purse_type)
+    - [кошелька доларовый](purse_type)
+    - [кошелька доллар](purse_type)
+    - [кошелька долларового](purse_type)
+    - [кошелька долларовый сша](purse_type)
+    - [кошелька донг](purse_type)
+    - [кошелька донговый](purse_type)
+    - [кошелька евро](purse_type)
+    - [кошелька золота](purse_type)
+    - [кошелька золото](purse_type)
+    - [кошелька золотой](purse_type)
+    - [кошелька казахский сум](purse_type)
+    - [кошелька лайткоин](purse_type)
+    - [кошелька лайткойновский](purse_type)
+    - [кошелька лайткойновый](purse_type)
+    - [кошелька полученные кредиты](purse_type)
+    - [кошелька рубль](purse_type)
+    - [кошелька узбекский сум](purse_type)
+    - [кошелька упэсп](purse_type)
+    - [кошелька эвровый](purse_type)
+    - [кошелька эквивалент золота](purse_type)
+    - [кошельком wmr](purse_type)
+    - [кошельок для гривень](purse_type)
+    - [кошельок на грн](purse_type)
+    - [л](purse_type)
+    - [лайткоин кошелька](purse_type)
+    - [лайткоин](purse_type)
+    - [лайткойновский кошелька](purse_type)
+    - [лайткойновский](purse_type)
+    - [лайткойновый кошелька](purse_type)
+    - [лайткойновый](purse_type)
+    - [мwz](purse_type)
+    - [мдл кошелек](purse_type)
+    - [мдл](purse_type)
+    - [нэсп](purse_type)
+    - [п](purse_type)
+    - [полученные кредиты кошелька](purse_type)
+    - [полученные кредиты](purse_type)
+    - [пэсп](purse_type)
+    - [р кошелек](purse_type)
+    - [р кошелька](purse_type)
+    - [р-кошелек](purse_type)
+    - [р](purse_type)
+    - [ркошелек](purse_type)
+    - [российский рубль](purse_type)
+    - [российский](purse_type)
+    - [руб левый кошелек](purse_type)
+    - [рубл](purse_type)
+    - [рублевый кошелек](purse_type)
+    - [рублевый](purse_type)
+    - [рублкевый кошелек вебмани](purse_type)
+    - [рубль кошелек](purse_type)
+    - [рубль](purse_type)
+    - [рубльовыв кошельок](purse_type)
+    - [рубыль](purse_type)
+    - [русский кошелек](purse_type)
+    - [русской валютой](purse_type)
+    - [с кошелек](purse_type)
+    - [счет в euro](purse_type)
+    - [счет в wmz](purse_type)
+    - [счет в долларах сша](purse_type)
+    - [счет в долларах](purse_type)
+    - [счет в евро](purse_type)
+    - [счет с номером r](purse_type)
+    - [счет с номером z](purse_type)
+    - [счет с номером p](purse_type)
+    - [счет с номером t](purse_type)
+    - [счет с номером e](purse_type)
+    - [счет с номером b](purse_type)
+    - [у](purse_type)
+    - [узбекский сум кошелька](purse_type)
+    - [узбекский сум](purse_type)
+    - [узбекский](purse_type)
+    - [украинские гривны](purse_type)
+    - [украинский кошелек в гривне](purse_type)
+    - [украинской гривней](purse_type)
+    - [упэсп](purse_type)
+    - [эвриковый](purse_type)
+    - [эвро](purse_type)
+    - [эвровый](purse_type)
+    - [эквивалент золота кошелька](purse_type)
+    - [эквивалент золота](purse_type)
+    - [wmt](purse_type)
+    - [вмт](purse_type)
+    - [вмт кошелек](purse_type)
+    - [кошелек вмт](purse_type)
+    - [wmy кошелька](purse_type)
+    - [wmc кошелька](purse_type)
+    - [wmd кошелька](purse_type)
+    - [wmf кошелька](purse_type)
+    - [wmg кошелька](purse_type)
+    - [вмгг кошелька](purse_type)
+    - [vmg](purse_type)
+    - [g кошелек](purse_type)
+    - [wmg кошелек](purse_type)
+    - [кошелек wmg](purse_type)
+    - [eth](purse_type)
+    - [эфир](purse_type)
+    - [эфириум](purse_type)
+    - [кошелек эфириума](purse_type)
+    - [эфириум кошелек](purse_type)
+    - [ефир кошелек](purse_type)
+    - [eth-кошелек](purse_type)
+    - [eth кошелек](purse_type)
+    - [eth-кошелека](purse_type)
+    - [eth кошелека](purse_type)
+    - [кошелек eth](purse_type)
+    - [кошелек-eth](purse_type)
+    - [usdt](purse_type)
+    - [юсдт](purse_type)
+    - [юсдт кошелек](purse_type)
+    - [кошелек юсдт](purse_type)
+    - [usdt-кошелек](purse_type)
+    - [usdt кошелек](purse_type)
+    - [usdt-кошелека](purse_type)
+    - [usdt кошелека](purse_type)
+    - [кошелек usdt](purse_type)
+    - [кошелек-usdt](purse_type)

@@ -1,9 +1,0 @@
-version: "3.1"
-
-responses:
-
-  utter_enum.enum_install:
-  - text: Вы можете установить приложение E-num на Ваше мобильное устройство на операционной системе iOS, Android или Windows Phone. Инструкции для iOS https://wiki.webmoney.ru/projects/webmoney/wiki/e_num_klient_dlya_apple_ios; Инструкции для Android https://wiki.webmoney.ru/projects/webmoney/wiki/e_num_klient_dlya_android; Инструкции для Windows Phone https://wiki.webmoney.ru/projects/webmoney/wiki/e_num_klient_dlya_windows_phone
-
-  utter_enum.enum_unplug:
-  - text: Для отключения E-num подтверждения, необходимо зайти на сайт Сервиса Безопасности https://security.webmoney.ru. Далее зайдите в раздел 'Защита'-'Подтверждения'- в 'E-Num подтверждение' нажмите 'отключить'

@@ -1,6 +1,0 @@
-version: "3.1"
-
-responses:
-
-  utter_webpro.how_to_connect_webpro:
-  - text: "Вы можете подробно ознакомиться с данной темой в нашей Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard"
