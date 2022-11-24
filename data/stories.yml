@@ -38,19 +38,19 @@ stories:
   - action: utter_transfer.telephone_number
 
 
-- story: transfer.bank
+- story: transfer.banks
   steps:
-  - intent: transfer.bank
-  - action: utter_transfer.bank
+  - intent: transfer.banks
+  - action: utter_transfer.banks
 
-- story: transfer.bank_bank
+- story: transfer.banks_bank
   steps:
-  - intent: transfer.bank
+  - intent: transfer.banks
     entities:
     - bank
   - slot_was_set:
     - bank
-  - action: utter_transfer.bank
+  - action: utter_transfer.banks
 
 
 - story: transfer.cash
@@ -96,19 +96,6 @@ stories:
   - slot_was_set:
     - guarant
   - action: utter_transfer.guarant
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 - story: system.purse

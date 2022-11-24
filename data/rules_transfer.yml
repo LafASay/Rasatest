@@ -17,4 +17,4 @@ rules:
     - slot_was_set:
       - requested_slot: null
     - action: action_transfer_form_message
-    - action: action_slots_restart
+    # - action: action_slots_restart
