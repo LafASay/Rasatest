@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: cashback.cashback_didnt_come
+  steps:
+  - intent: cashback.cashback_didnt_come
+  - action: utter_cashback.cashback_didnt_come
+
+- story: cashback.how_to_get_cashback
+  steps:
+  - intent: cashback.how_to_get_cashback
+  - action: utter_cashback.how_to_get_cashback
+
+- story: cashback.выполнение_задач
+  steps:
+  - intent: cashback.выполнение_задач
+  - action: utter_cashback.выполнение_задач

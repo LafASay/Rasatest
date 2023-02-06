@@ -1,0 +1,217 @@
+version: "3.1"
+
+stories:
+
+- story: purses.нет_кошелька_в_списке
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+  - action: utter_purses.нет_кошелька_в_списке
+
+
+- story: purses.нет_кошелька_в_списке_purse_type__other__
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_purses.нет_кошелька_в_списке
+
+
+- story: purses.нет_кошелька_в_списке_wmp
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_purses.нет_кошелька_в_списке_wmp
+
+- story: purses.нет_кошелька_в_списке_wmr
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_purses.нет_кошелька_в_списке_wmr
+
+- story: purses.нет_кошелька_в_списке_wmu
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_purses.нет_кошелька_в_списке_wmu
+
+- story: purses.нет_кошелька_в_списке_wme
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_purses.нет_кошелька_в_списке_wme
+
+- story: purses.нет_кошелька_в_списке_wmb
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_purses.нет_кошелька_в_списке_wmb
+
+- story: purses.нет_кошелька_в_списке_wmg
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_purses.нет_кошелька_в_списке_wmg
+
+- story: purses.нет_кошелька_в_списке_wmz
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_purses.нет_кошелька_в_списке_wmz
+
+- story: purses.нет_кошелька_в_списке_wmk
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_purses.нет_кошелька_в_списке_wmk
+
+- story: purses.нет_кошелька_в_списке_wmx
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_purses.нет_кошелька_в_списке_wmx
+
+- story: purses.нет_кошелька_в_списке_wmh
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_purses.нет_кошелька_в_списке_wmh
+
+- story: purses.нет_кошелька_в_списке_wml
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_purses.нет_кошелька_в_списке_wml
+
+- story: purses.нет_кошелька_в_списке_wmy
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_purses.нет_кошелька_в_списке_wmy
+
+- story: purses.нет_кошелька_в_списке_wmf
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_purses.нет_кошелька_в_списке_wmf
+
+- story: purses.нет_кошелька_в_списке_wmt
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_purses.нет_кошелька_в_списке_wmt
+
+- story: purses.нет_кошелька_в_списке_mdl
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_purses.нет_кошелька_в_списке_mdl
+
+- story: purses.нет_кошелька_в_списке_wmc
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_purses.нет_кошелька_в_списке_wmc
+
+- story: purses.нет_кошелька_в_списке_wmd
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_purses.нет_кошелька_в_списке_wmd
+
+- story: purses.нет_кошелька_в_списке_btc
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_purses.нет_кошелька_в_списке_btc
+
+- story: purses.нет_кошелька_в_списке_bch
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_purses.нет_кошелька_в_списке_bch
+
+- story: purses.нет_кошелька_в_списке_ltc
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_purses.нет_кошелька_в_списке_ltc
+
+- story: purses.нет_кошелька_в_списке_eth
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_purses.нет_кошелька_в_списке_eth
+
+- story: purses.нет_кошелька_в_списке_usdt
+  steps:
+  - intent: purses.нет_кошелька_в_списке
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_purses.нет_кошелька_в_списке_usdt

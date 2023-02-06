@@ -1,0 +1,156 @@
+version: "3.1"
+
+stories:
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил аттестат но лимиты не изменились
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_passport_type__other__
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [фаармальный аттестат]{"entity": "passport_type", "value": "фаармальный аттестат"} но лимиты не изменились
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_alias_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат псевдонима]{"entity": "passport_type", "value": "alias_passport"} но лимиты не изменились
+    entities:
+    - passport_type: alias_passport
+  - slot_was_set:
+    - passport_type: alias_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_formal_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [формальный аттестат]{"entity": "passport_type", "value": "formal_passport"} но лимиты не изменились
+    entities:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_initial_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [начальный аттестат]{"entity": "passport_type", "value": "initial_passport"} но лимиты не изменились
+    entities:
+    - passport_type: initial_passport
+  - slot_was_set:
+    - passport_type: initial_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_personal_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [персональный аттестат]{"entity": "passport_type", "value": "personal_passport"} но лимиты не изменились
+    entities:
+    - passport_type: personal_passport
+  - slot_was_set:
+    - passport_type: personal_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_merchant_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат продавца]{"entity": "passport_type", "value": "merchant_passport"} но лимиты не изменились
+    entities:
+    - passport_type: merchant_passport
+  - slot_was_set:
+    - passport_type: merchant_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_capitaller_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат capitaller]{"entity": "passport_type", "value": "capitaller_passport"} но лимиты не изменились
+    entities:
+    - passport_type: capitaller_passport
+  - slot_was_set:
+    - passport_type: capitaller_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_transact_automation_tool_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат расчетного автомата]{"entity": "passport_type", "value": "transact_automation_tool_passport"} но лимиты не изменились
+    entities:
+    - passport_type: transact_automation_tool_passport
+  - slot_was_set:
+    - passport_type: transact_automation_tool_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_developer_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат разработчика]{"entity": "passport_type", "value": "developer_passport"} но лимиты не изменились
+    entities:
+    - passport_type: developer_passport
+  - slot_was_set:
+    - passport_type: developer_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_registrar_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат регистратора]{"entity": "passport_type", "value": "registrar_passport"} но лимиты не изменились
+    entities:
+    - passport_type: registrar_passport
+  - slot_was_set:
+    - passport_type: registrar_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_service_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат сервиса]{"entity": "passport_type", "value": "service_passport"} но лимиты не изменились
+    entities:
+    - passport_type: service_passport
+  - slot_was_set:
+    - passport_type: service_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_guarantor_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат гаранта]{"entity": "passport_type", "value": "guarantor_passport"} но лимиты не изменились
+    entities:
+    - passport_type: guarantor_passport
+  - slot_was_set:
+    - passport_type: guarantor_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+
+- story: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid_operator_passport
+  steps:
+  - intent: limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я получил [аттестат оператора]{"entity": "passport_type", "value": "operator_passport"} но лимиты не изменились
+    entities:
+    - passport_type: operator_passport
+  - slot_was_set:
+    - passport_type: operator_passport
+  - action: utter_limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid

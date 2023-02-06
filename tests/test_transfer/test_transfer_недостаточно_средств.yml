@@ -1,0 +1,19 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.недостаточно_средств
+  steps:
+  - intent: transfer.недостаточно_средств
+  - action: utter_transfer.недостаточно_средств
+
+- story: transfer.недостаточно_средств_error_недостаточно_средств
+  steps:
+  - intent: transfer.недостаточно_средств
+    user: |-
+      [недостаточно средств]{"entity": "error_недостаточно_средств", "value": "недостаточно средств"} на кошельке
+    entities:
+    - error_недостаточно_средств
+  - slot_was_set:
+    - error_недостаточно_средств
+  - action: utter_transfer.недостаточно_средств

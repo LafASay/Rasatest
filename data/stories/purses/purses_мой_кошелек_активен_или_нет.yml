@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: purses.мой_кошелек_активен_или_нет
+  steps:
+  - intent: purses.мой_кошелек_активен_или_нет
+  - action: utter_purses.мой_кошелек_активен_или_нет

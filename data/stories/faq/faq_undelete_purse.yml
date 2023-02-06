@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: faq.undelete_purse
+  steps:
+  - intent: faq.undelete_purse
+  - action: utter_faq.undelete_purse

@@ -1,0 +1,363 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.electronic_money
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      электронные деньги
+  - action: utter_transfer.electronic_money
+
+
+- story: transfer.electronic_money_electronic_money_electronic_money
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [электронные деньги]{"entity": "electronic_money", "value": "electronic_money"}
+    entities:
+    - electronic_money: electronic_money
+  - slot_was_set:
+    - electronic_money: electronic_money
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_advcash
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [advcash]{"entity": "electronic_money", "value": "advcash"}
+    entities:
+    - electronic_money: advcash
+  - slot_was_set:
+    - electronic_money: advcash
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_alipay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [alipay]{"entity": "electronic_money", "value": "alipay"}
+    entities:
+    - electronic_money: alipay
+  - slot_was_set:
+    - electronic_money: alipay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_banxy
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [banxy]{"entity": "electronic_money", "value": "banxy"}
+    entities:
+    - electronic_money: banxy
+  - slot_was_set:
+    - electronic_money: banxy
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_bitpay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [bitpay]{"entity": "electronic_money", "value": "bitpay"}
+    entities:
+    - electronic_money: bitpay
+  - slot_was_set:
+    - electronic_money: bitpay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_bkash
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [bkash]{"entity": "electronic_money", "value": "bkash"}
+    entities:
+    - electronic_money: bkash
+  - slot_was_set:
+    - electronic_money: bkash
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_easypaisa
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [easypaisa]{"entity": "electronic_money", "value": "easypaisa"}
+    entities:
+    - electronic_money: easypaisa
+  - slot_was_set:
+    - electronic_money: easypaisa
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_easypay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [easypay]{"entity": "electronic_money", "value": "easypay"}
+    entities:
+    - electronic_money: easypay
+  - slot_was_set:
+    - electronic_money: easypay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_gcash
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [gcash]{"entity": "electronic_money", "value": "gcash"}
+    entities:
+    - electronic_money: gcash
+  - slot_was_set:
+    - electronic_money: gcash
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_idram
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [idram]{"entity": "electronic_money", "value": "idram"}
+    entities:
+    - electronic_money: idram
+  - slot_was_set:
+    - electronic_money: idram
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_imps
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [imps]{"entity": "electronic_money", "value": "imps"}
+    entities:
+    - electronic_money: imps
+  - slot_was_set:
+    - electronic_money: imps
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_ipass_money
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [ipass money]{"entity": "electronic_money", "value": "ipass money"}
+    entities:
+    - electronic_money: ipass money
+  - slot_was_set:
+    - electronic_money: ipass money
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_jazzcash
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [jazzcash]{"entity": "electronic_money", "value": "jazzcash"}
+    entities:
+    - electronic_money: jazzcash
+  - slot_was_set:
+    - electronic_money: jazzcash
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_m-pesa
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [m-pesa]{"entity": "electronic_money", "value": "m-pesa"}
+    entities:
+    - electronic_money: m-pesa
+  - slot_was_set:
+    - electronic_money: m-pesa
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_mobidram
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [mobidram]{"entity": "electronic_money", "value": "mobidram"}
+    entities:
+    - electronic_money: mobidram
+  - slot_was_set:
+    - electronic_money: mobidram
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_nagad
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [nagad]{"entity": "electronic_money", "value": "nagad"}
+    entities:
+    - electronic_money: nagad
+  - slot_was_set:
+    - electronic_money: nagad
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_neteller
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [neteller]{"entity": "electronic_money", "value": "neteller"}
+    entities:
+    - electronic_money: neteller
+  - slot_was_set:
+    - electronic_money: neteller
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_paybox
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [paybox]{"entity": "electronic_money", "value": "paybox"}
+    entities:
+    - electronic_money: paybox
+  - slot_was_set:
+    - electronic_money: paybox
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_payeer
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [payeer]{"entity": "electronic_money", "value": "payeer"}
+    entities:
+    - electronic_money: payeer
+  - slot_was_set:
+    - electronic_money: payeer
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_payoneer
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [payoneer]{"entity": "electronic_money", "value": "payoneer"}
+    entities:
+    - electronic_money: payoneer
+  - slot_was_set:
+    - electronic_money: payoneer
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_paypal
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [paypal]{"entity": "electronic_money", "value": "paypal"}
+    entities:
+    - electronic_money: paypal
+  - slot_was_set:
+    - electronic_money: paypal
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_perfect_money
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [perfect money]{"entity": "electronic_money", "value": "perfect money"}
+    entities:
+    - electronic_money: perfect money
+  - slot_was_set:
+    - electronic_money: perfect money
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_promptpay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [promptpay]{"entity": "electronic_money", "value": "promptpay"}
+    entities:
+    - electronic_money: promptpay
+  - slot_was_set:
+    - electronic_money: promptpay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_qiwi
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [qiwi]{"entity": "electronic_money", "value": "qiwi"}
+    entities:
+    - electronic_money: qiwi
+  - slot_was_set:
+    - electronic_money: qiwi
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_rocket
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [rocket]{"entity": "electronic_money", "value": "rocket"}
+    entities:
+    - electronic_money: rocket
+  - slot_was_set:
+    - electronic_money: rocket
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_runpay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [runpay]{"entity": "electronic_money", "value": "runpay"}
+    entities:
+    - electronic_money: runpay
+  - slot_was_set:
+    - electronic_money: runpay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_skrill
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [skrill]{"entity": "electronic_money", "value": "skrill"}
+    entities:
+    - electronic_money: skrill
+  - slot_was_set:
+    - electronic_money: skrill
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_upi
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [upi]{"entity": "electronic_money", "value": "upi"}
+    entities:
+    - electronic_money: upi
+  - slot_was_set:
+    - electronic_money: upi
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_viettelpay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [viettelpay]{"entity": "electronic_money", "value": "viettelpay"}
+    entities:
+    - electronic_money: viettelpay
+  - slot_was_set:
+    - electronic_money: viettelpay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_wechat_pay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [wechat pay]{"entity": "electronic_money", "value": "wechat pay"}
+    entities:
+    - electronic_money: wechat pay
+  - slot_was_set:
+    - electronic_money: wechat pay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_zalopay
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [zalopay]{"entity": "electronic_money", "value": "zalopay"}
+    entities:
+    - electronic_money: zalopay
+  - slot_was_set:
+    - electronic_money: zalopay
+  - action: utter_transfer.electronic_money
+
+- story: transfer.electronic_money_electronic_money_юmoney
+  steps:
+  - intent: transfer.electronic_money
+    user: |-
+      [юmoney]{"entity": "electronic_money", "value": "юmoney"}
+    entities:
+    - electronic_money: юmoney
+  - slot_was_set:
+    - electronic_money: юmoney
+  - action: utter_transfer.electronic_money

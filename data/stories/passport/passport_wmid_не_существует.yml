@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: passport.wmid_не_существует
+  steps:
+  - intent: passport.wmid_не_существует
+  - action: utter_passport.wmid_не_существует

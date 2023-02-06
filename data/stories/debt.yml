@@ -1,0 +1,78 @@
+version: "3.1"
+
+stories:
+
+- story: debt.debt
+  steps:
+  - intent: debt.debt
+  - action: utter_debt.debt
+
+- story: debt.вернуть_долг
+  steps:
+  - intent: debt.вернуть_долг
+  - action: utter_debt.вернуть_долг
+
+- story: debt.вернул_долг
+  steps:
+  - intent: debt.вернул_долг
+  - action: utter_debt.вернул_долг
+
+- story: debt.вернул_долг+arbitrage.unblock_wmid
+  steps:
+  - intent: debt.вернул_долг+arbitrage.unblock_wmid
+  - action: utter_debt.вернул_долг+arbitrage.unblock_wmid
+
+- story: debt.не_могу_взять_долг
+  steps:
+  - intent: debt.не_могу_взять_долг
+  - action: utter_debt.не_могу_взять_долг
+
+- story: debt.не_могу_вернуть_долг
+  steps:
+  - intent: debt.не_могу_вернуть_долг
+  - action: utter_debt.не_могу_вернуть_долг
+
+- story: debt.не_могу_вернуть_долг+arbitrage.unblock_wmid
+  steps:
+  - intent: debt.не_могу_вернуть_долг+arbitrage.unblock_wmid
+  - action: utter_debt.не_могу_вернуть_долг+arbitrage.unblock_wmid
+
+- story: debt.как_открыть_лимит_доверия
+  steps:
+  - intent: debt.как_открыть_лимит_доверия
+  - action: utter_debt.как_открыть_лимит_доверия
+
+- story: debt.как_получить_лимит_доверия
+  steps:
+  - intent: debt.как_получить_лимит_доверия
+  - action: utter_debt.как_получить_лимит_доверия
+
+- story: debt.как_отменить_лимит_доверия
+  steps:
+  - intent: debt.как_отменить_лимит_доверия
+  - action: utter_debt.как_отменить_лимит_доверия
+
+- story: debt.критерии_скоринга
+  steps:
+  - intent: debt.критерии_скоринга
+  - action: utter_debt.критерии_скоринга
+
+- story: debt.мне_не_вернули_займ
+  steps:
+  - intent: debt.мне_не_вернули_займ
+  - action: utter_debt.мне_не_вернули_займ
+
+- story: debt.просрочил_займ
+  steps:
+  - intent: debt.просрочил_займ
+  - action: utter_debt.просрочил_займ
+
+- story: debt.проверить_займы
+  steps:
+  - intent: debt.проверить_займы
+  - action: utter_debt.проверить_займы
+
+- story: debt.займ_который_я_не_брал
+  steps:
+  - intent: debt.займ_который_я_не_брал
+  - action: utter_debt.займ_который_я_не_брал

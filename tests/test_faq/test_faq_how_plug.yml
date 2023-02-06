@@ -1,0 +1,84 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_plug
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить
+  - action: utter_faq.how_plug
+
+
+
+- story: faq.how_plug_service_name__other__
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [енаам]{"entity": "service_name", "value": "енаам"}
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+
+- story: faq.how_plug_enum
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [енам]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_plug_enum
+
+
+
+- story: faq.how_plug_keeper_type__other__
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [stindard]{"entity": "keeper_type", "value": "stindard"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_plug_keeper
+
+
+
+- story: faq.how_plug_standard
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [стандарт]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_faq.how_plug_standard
+
+- story: faq.how_plug_winpro
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [классик]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_faq.how_plug_winpro
+
+- story: faq.how_plug_webpro
+  steps:
+  - intent: faq.how_plug
+    user: |-
+      как подключить [лайт]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_faq.how_plug_webpro

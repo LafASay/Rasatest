@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+- story: app.app
+  steps:
+  - intent: app.app
+  - action: utter_app.app
+
+- story: app.как_авторизоваться_в_приложении
+  steps:
+  - intent: app.как_авторизоваться_в_приложении
+  - action: utter_app.как_авторизоваться_в_приложении
+
+- story: app.не_работает_прилождение
+  steps:
+  - intent: app.не_работает_прилождение
+  - action: utter_app.не_работает_прилождение
+
+# - story: app.как_установить_приложение
+#   steps:
+#   - intent: app.как_установить_приложение
+#   - action: utter_app.как_установить_приложение
+
+# - story: app.как_выйти_из_приложения
+#   steps:
+#   - intent: app.как_выйти_из_приложения
+#   - action: utter_app.как_выйти_из_приложения
+
+# - story: app.возможности_приложения
+#   steps:
+#   - intent: app.возможности_приложения
+#   - action: utter_app.возможности_приложения

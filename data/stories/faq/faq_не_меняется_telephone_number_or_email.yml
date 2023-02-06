@@ -1,0 +1,67 @@
+version: "3.1"
+
+stories:
+
+# - story: faq.не_меняется_telephone_number_or_email_telephone_number__other__
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - telephone_number
+#     - service_name: __other__
+#   - slot_was_set:
+#     - telephone_number
+#     - service_name: __other__
+#   - action: utter_faq.не_меняется_telephone_number_or_email_telephone_number_in_enum
+
+# - story: faq.не_меняется_telephone_number_or_email_email__other__
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - email
+#     - service_name: __other__
+#   - slot_was_set:
+#     - email
+#     - service_name: __other__
+#   - action: utter_faq.не_меняется_telephone_number_or_email_email_in_enum
+
+
+# - story: faq.не_меняется_telephone_number_or_email_telephone_number
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - telephone_number
+#   - slot_was_set:
+#     - telephone_number
+#   - action: utter_faq.не_меняется_telephone_number_or_email_telephone_number
+
+# - story: faq.не_меняется_telephone_number_or_email_email
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - email
+#   - slot_was_set:
+#     - email
+#   - action: utter_faq.не_меняется_telephone_number_or_email_email
+
+
+# - story: faq.не_меняется_telephone_number_or_email_telephone_number_in_enum
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - telephone_number
+#     - service_name: enum
+#   - slot_was_set:
+#     - telephone_number
+#     - service_name: enum
+#   - action: utter_faq.не_меняется_telephone_number_or_email_telephone_number_in_enum
+
+# - story: faq.не_меняется_telephone_number_or_email_email_in_enum
+#   steps:
+#   - intent: faq.не_меняется_telephone_number_or_email
+#     entities:
+#     - email
+#     - service_name: enum
+#   - slot_was_set:
+#     - email
+#     - service_name: enum
+#   - action: utter_faq.не_меняется_telephone_number_or_email_email_in_enum

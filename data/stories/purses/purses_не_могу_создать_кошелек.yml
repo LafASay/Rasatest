@@ -1,0 +1,217 @@
+version: "3.1"
+
+stories:
+
+- story: purses.не_могу_создать_кошелек
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+  - action: utter_purses.не_могу_создать_кошелек
+
+
+- story: purses.не_могу_создать_кошелек_purse_type__other__
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_purses.не_могу_создать_кошелек
+
+
+- story: purses.не_могу_создать_кошелек_wmp
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_purses.не_могу_создать_кошелек_wmp
+
+- story: purses.не_могу_создать_кошелек_wmr
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_purses.не_могу_создать_кошелек_wmr
+
+- story: purses.не_могу_создать_кошелек_wmu
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_purses.не_могу_создать_кошелек_wmu
+
+- story: purses.не_могу_создать_кошелек_wme
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_purses.не_могу_создать_кошелек_wme
+
+- story: purses.не_могу_создать_кошелек_wmb
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_purses.не_могу_создать_кошелек_wmb
+
+- story: purses.не_могу_создать_кошелек_wmg
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_purses.не_могу_создать_кошелек_wmg
+
+- story: purses.не_могу_создать_кошелек_wmz
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_purses.не_могу_создать_кошелек_wmz
+
+- story: purses.не_могу_создать_кошелек_wmk
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_purses.не_могу_создать_кошелек_wmk
+
+- story: purses.не_могу_создать_кошелек_wmx
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_purses.не_могу_создать_кошелек_wmx
+
+- story: purses.не_могу_создать_кошелек_wmh
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_purses.не_могу_создать_кошелек_wmh
+
+- story: purses.не_могу_создать_кошелек_wml
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_purses.не_могу_создать_кошелек_wml
+
+- story: purses.не_могу_создать_кошелек_wmy
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_purses.не_могу_создать_кошелек_wmy
+
+- story: purses.не_могу_создать_кошелек_wmf
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_purses.не_могу_создать_кошелек_wmf
+
+- story: purses.не_могу_создать_кошелек_wmt
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_purses.не_могу_создать_кошелек_wmt
+
+- story: purses.не_могу_создать_кошелек_mdl
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_purses.не_могу_создать_кошелек_mdl
+
+- story: purses.не_могу_создать_кошелек_wmc
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_purses.не_могу_создать_кошелек_wmc
+
+- story: purses.не_могу_создать_кошелек_wmd
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_purses.не_могу_создать_кошелек_wmd
+
+- story: purses.не_могу_создать_кошелек_btc
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_purses.не_могу_создать_кошелек_btc
+
+- story: purses.не_могу_создать_кошелек_bch
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_purses.не_могу_создать_кошелек_bch
+
+- story: purses.не_могу_создать_кошелек_ltc
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_purses.не_могу_создать_кошелек_ltc
+
+- story: purses.не_могу_создать_кошелек_eth
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_purses.не_могу_создать_кошелек_eth
+
+- story: purses.не_могу_создать_кошелек_usdt
+  steps:
+  - intent: purses.не_могу_создать_кошелек
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_purses.не_могу_создать_кошелек_usdt

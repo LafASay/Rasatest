@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.guarant
+  steps:
+  - intent: transfer.guarant
+  - action: utter_transfer.guarant
+
+
+- story: transfer.guarant_guarant
+  steps:
+  - intent: transfer.guarant
+    entities:
+    - guarant
+  - slot_was_set:
+    - guarant
+  - action: utter_transfer.guarant

@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+
+- story: passport.videoid_photoid_load
+  steps:
+  - intent: passport.videoid_photoid_load
+    user: |-
+      как
+  - action: utter_please_rephrase
+
+
+
+- story: passport.videoid_photoid_load_name__other__
+  steps:
+  - intent: passport.videoid_photoid_load
+    user: |-
+      как загрузить [videofd]{"entity": "name", "value": "videofd"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: passport.videoid_photoid_load_photoid
+  steps:
+  - intent: passport.videoid_photoid_load
+    user: |-
+      как загрузить [photoid]{"entity": "name", "value": "photoid"}
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_passport.videoid_photoid_load_photoid
+
+- story: passport.videoid_photoid_load_videoid
+  steps:
+  - intent: passport.videoid_photoid_load
+    user: |-
+      как загрузить [videoid]{"entity": "name", "value": "videoid"}
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_passport.videoid_photoid_load_videoid

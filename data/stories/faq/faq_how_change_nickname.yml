@@ -1,0 +1,30 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_change_nickname
+  steps:
+  - intent: faq.how_change_nickname
+  - action: utter_please_rephrase
+
+
+
+- story: faq.how_change_nickname_nickname
+  steps:
+  - intent: faq.how_change_nickname
+    entities:
+    - nickname
+  - slot_was_set:
+    - nickname
+  - action: utter_faq.how_change_nickname
+
+- story: faq.how_change_nickname_nickname_events
+  steps:
+  - intent: faq.how_change_nickname
+    entities:
+    - nickname
+    - service_name: events
+  - slot_was_set:
+    - nickname
+    - service_name: events
+  - action: utter_faq.how_change_nickname

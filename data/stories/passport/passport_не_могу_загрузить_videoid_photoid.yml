@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+
+- story: passport.не_могу_загрузить_videoid_photoid
+  steps:
+  - intent: passport.не_могу_загрузить_videoid_photoid
+  - action: utter_passport.не_могу_загрузить_videoid_photoid
+
+- story: passport.не_могу_загрузить_videoid_photoid_videoid
+  steps:
+  - intent: passport.не_могу_загрузить_videoid_photoid
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_passport.не_могу_загрузить_videoid_photoid
+
+- story: passport.не_могу_загрузить_videoid_photoid_photoid
+  steps:
+  - intent: passport.не_могу_загрузить_videoid_photoid
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_passport.не_могу_загрузить_videoid_photoid

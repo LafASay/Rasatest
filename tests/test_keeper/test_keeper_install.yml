@@ -1,0 +1,96 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.install
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить
+  - action: utter_please_rephrase
+
+
+
+- story: keeper.install_name__other__
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [клипер]{"entity": "name", "value": "клипер"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+
+- story: keeper.install_service_name__other__
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [enumm]{"entity": "service_name", "value": "enumm"}
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: keeper.install_enum
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [enum]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_enum.enum_install
+
+
+
+- story: keeper.install_keeper_type__other__
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [кипер]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_keeper.install_keeper
+
+
+- story: keeper.install_standard
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_keeper.install_standard
+
+- story: keeper.install_winpro
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_keeper.install_winpro
+
+- story: keeper.install_webpro
+  steps:
+  - intent: keeper.install
+    user: |-
+      как установить [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_keeper.install_webpro
+

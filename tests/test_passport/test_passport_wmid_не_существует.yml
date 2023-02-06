@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: passport.wmid_не_существует
+  steps:
+  - intent: passport.wmid_не_существует
+    user: |-
+      показывает что мой вмид не существует
+  - action: utter_passport.wmid_не_существует

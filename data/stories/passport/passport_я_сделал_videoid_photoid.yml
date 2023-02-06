@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+# - story: passport.я_сделал_videoid_photoid
+#   steps:
+#   - intent: passport.я_сделал_videoid_photoid
+#   - action: utter_passport.я_сделал_videoid_photoid

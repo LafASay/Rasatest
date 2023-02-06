@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+
+- story: arbitrage.how_to_create_a_claim_or_pretension
+  steps:
+  - intent: arbitrage.how_to_create_a_claim_or_pretension
+    user: |-
+      как подать иск
+  - action: utter_arbitrage.how_to_create_a_claim
+
+
+
+- story: arbitrage.how_to_create_a_claim_or_pretension
+  steps:
+  - intent: arbitrage.how_to_create_a_claim_or_pretension
+    user: |-
+      как подать [притинзию]{"entity": "name", "value": "притинзию"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: arbitrage.how_to_create_a_claim
+  steps:
+  - intent: arbitrage.how_to_create_a_claim_or_pretension
+    user: |-
+      как подать [иск]{"entity": "name", "value": "claim"}
+    entities:
+    - name: claim
+  - slot_was_set:
+    - name: claim
+  - action: utter_arbitrage.how_to_create_a_claim
+
+- story: arbitrage.how_to_create_a_pretension
+  steps:
+  - intent: arbitrage.how_to_create_a_claim_or_pretension
+    user: |-
+      как подать [претензию]{"entity": "name", "value": "pretension"}
+    entities:
+    - name: pretension
+  - slot_was_set:
+    - name: pretension
+  - action: utter_arbitrage.how_to_create_a_pretension

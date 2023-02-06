@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+  steps:
+  - intent: keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      не могу войти [потерял телефон]{"entity": "нет_доступа_к_telephone_number", "value": "потерял телефон"}
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+
+- story: keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email
+  steps:
+  - intent: keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      не могу войти [нет доступа к почте]{"entity": "нет_доступа_к_email", "value": "нет доступа к почте"}
+    entities:
+    - нет_доступа_к_email
+  - slot_was_set:
+    - нет_доступа_к_email
+  - action: utter_keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email

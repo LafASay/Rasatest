@@ -1,0 +1,55 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.как_оплатить
+  steps:
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить?
+  - action: utter_transfer.как_оплатить
+
+
+- story: transfer.как_оплатить_telephone_number
+  steps:
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить за [мобильную связь]{"entity": "telephone_number", "value": "telephone_number"}
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_transfer.как_оплатить_telephone_number
+
+- story: transfer.как_оплатить_internet
+  steps:
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить за [интернет]{"entity": "internet", "value": "интернет"}
+    entities:
+    - internet
+  - slot_was_set:
+    - internet
+  - action: utter_transfer.как_оплатить_internet
+
+- story: transfer.как_оплатить_steam
+  steps:
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить за [стим]{"entity": "steam", "value": "steam"}
+    entities:
+    - steam
+  - slot_was_set:
+    - steam
+  - action: utter_transfer.как_оплатить_steam
+
+- story: transfer.как_оплатить_communal_payments
+  steps:
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить за [жкх]{"entity": "communal payments", "value": "жкх"}
+    entities:
+    - communal payments
+  - slot_was_set:
+    - communal payments
+  - action: utter_transfer.как_оплатить_communal_payments

@@ -1,0 +1,168 @@
+version: "3.1"
+
+stories:
+
+- story: faq.я_русский_узбек_и_тд
+  steps:
+  - intent: faq.я_русский_узбек_и_тд
+    user: |-
+      я русский
+  - action: utter_faq.я_русский_узбек_и_тд
+
+- story: faq.exchange_rates
+  steps:
+  - intent: faq.exchange_rates
+    user: |-
+      чему равен 1 wmz
+  - action: utter_faq.exchange_rates
+
+- story: faq.transaction_history_deleted
+  steps:
+  - intent: faq.transaction_history_deleted
+    user: |-
+      у меня удалилась история операций
+  - action: utter_faq.transaction_history_deleted
+
+- story: faq.transaction_is_not_shown_in_history
+  steps:
+  - intent: faq.transaction_is_not_shown_in_history
+    user: |-
+      не отображается операция в истории
+  - action: utter_faq.transaction_is_not_shown_in_history
+
+- story: faq.когда_поменяется_telephone_number_or_email
+  steps:
+  - intent: faq.когда_поменяется_telephone_number_or_email
+    user: |-
+      как долго будет назначаться номер
+  - action: utter_faq.когда_поменяется_telephone_number_or_email
+
+# - story: faq.не_изменился_telephone_number
+#   steps:
+#   - intent: faq.не_изменился_telephone_number
+#     user: |-
+#       создавал заявку на смену номера до сих пор не обработалось
+#   - action: utter_faq.не_изменился_telephone_number
+
+- story: faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+  steps:
+  - intent: faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+    user: |-
+      хочу изменить номер но он привязан к другому вмид
+  - action: utter_faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+
+- story: faq.how_to_change_purse_number
+  steps:
+  - intent: faq.how_to_change_purse_number
+    user: |-
+      изменить номер кошелька
+  - action: utter_faq.how_to_change_purse_number
+
+- story: faq.bl_different_color
+  steps:
+  - intent: faq.bl_different_color
+    user: |-
+      цвет бл
+  - action: utter_faq.bl_different_color
+
+- story: faq.protection_transfer_receive
+  steps:
+  - intent: faq.protection_transfer_receive
+    user: |-
+      как зачислить перевод с протекцией
+  - action: utter_faq.protection_transfer_receive
+
+# - story: faq.почему_такая_большая_комиссия
+#   steps:
+#   - intent: faq.почему_такая_большая_комиссия
+#     user: |-
+#       почему такая большая комиссия
+#   - action: utter_faq.почему_такая_большая_комиссия
+
+- story: faq.services
+  steps:
+  - intent: faq.services
+    user: |-
+      сервисы вебмани
+  - action: utter_faq.services
+
+- story: faq.cancel_transaction
+  steps:
+  - intent: faq.cancel_transaction
+    user: |-
+      а операцию нельзя отменить
+  - action: utter_faq.cancel_transaction
+
+- story: faq.cancel_transaction+++faq.корреспондент_не_отвечает
+  steps:
+  - intent: faq.cancel_transaction
+    user: |-
+      а операцию нельзя отменить
+  - action: utter_faq.cancel_transaction
+  - intent: faq.корреспондент_не_отвечает
+    user: |-
+      он не отвечает
+  - action: utter_faq.cancel_transaction+++faq.корреспондент_не_отвечает
+
+- story: faq.how_make_money
+  steps:
+  - intent: faq.how_make_money
+    user: |-
+      а как зарабатывать
+  - action: utter_faq.how_make_money
+
+# - story: faq.how_change_nickname
+#   steps:
+#   - intent: faq.how_change_nickname
+#     user: |-
+#       как измениться ник
+#   - action: utter_faq.how_change_nickname
+
+- story: faq.termination_of_service_отмена
+  steps:
+  - intent: faq.termination_of_service_отмена
+    user: |-
+      в сообщении также присутствует специальная ссылка для отмены процедуры отказа в обслуживании
+  - action: utter_faq.termination_of_service_отмена
+
+- story: faq.не_могу_отказаться_от_обслуживания
+  steps:
+  - intent: faq.не_могу_отказаться_от_обслуживания
+    user: |-
+      не могу отказаться от обслуживания нет соединения с сервером
+  - action: utter_faq.не_могу_отказаться_от_обслуживания
+
+- story: faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+  steps:
+  - intent: faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+    user: |-
+      я отказался от обслуживания но теперь снова хочу использовать вебмани но не могу
+  - action: utter_faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+
+- story: faq.как_им_написать
+  steps:
+  - intent: faq.как_им_написать
+    user: |-
+      как им написать
+  - action: utter_faq.как_им_написать
+
+- story: faq.как_настроить
+  steps:
+  - intent: faq.как_настроить
+    user: |-
+      как настроить
+  - action: utter_faq.как_настроить
+
+- story: faq.где_раздел_финансы
+  steps:
+  - intent: faq.где_раздел_финансы
+    user: |-
+      где раздел финансы
+  - action: utter_faq.где_раздел_финансы
+
+- story: faq.корреспондент_не_отвечает
+  steps:
+  - intent: faq.корреспондент_не_отвечает
+    user: |-
+      корреспондент не отвечает
+  - action: utter_faq.корреспондент_не_отвечает

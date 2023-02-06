@@ -1,0 +1,369 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.cant_transfer
+  steps:
+  - intent: transfer.cant_transfer
+  - action: utter_transfer.cant_transfer
+
+- story: transfer.cant_transfer+limits.лимит_превышен
+  steps:
+  - intent: transfer.cant_transfer+limits.лимит_превышен
+  - action: utter_transfer.cant_transfer+limits.лимит_превышен
+
+- story: transfer.cant_transfer+arbitrage.unblock_wmid
+  steps:
+  - intent: transfer.cant_transfer+arbitrage.unblock_wmid
+  - action: utter_transfer.cant_transfer+arbitrage.unblock_wmid
+
+- story: transfer.wheres_money
+  steps:
+  - intent: transfer.wheres_money
+  - action: utter_transfer.wheres_money
+
+- story: transfer.какие_данные_указать_для_перевода
+  steps:
+  - intent: transfer.какие_данные_указать_для_перевода
+  - action: utter_transfer.какие_данные_указать_для_перевода
+
+- story: transfer.купить_товар
+  steps:
+  - intent: transfer.купить_товар
+  - action: utter_transfer.купить_товар
+
+# - story: transfer.как_купить
+#   steps:
+#   - intent: transfer.как_купить
+#   - action: utter_transfer.как_купить
+
+- story: transfer.как_долго_выводятся_деньги
+  steps:
+  - intent: transfer.как_долго_выводятся_деньги
+  - action: utter_transfer.как_долго_выводятся_деньги
+
+# - story: transfer.не_могу_вывести+limits.лимит_превышен
+#   steps:
+#   - intent: transfer.не_могу_вывести+limits.лимит_превышен
+#   - action: utter_transfer.не_могу_вывести+limits.лимит_превышен
+
+# - story: transfer.не_могу_пополнить
+#   steps:
+#   - intent: transfer.не_могу_пополнить
+#   - action: utter_transfer.не_могу_пополнить
+
+- story: transfer.qr
+  steps:
+  - intent: transfer.qr
+  - action: utter_transfer.qr
+
+- story: transfer.не_все_деньги_вывелись
+  steps:
+  - intent: transfer.не_все_деньги_вывелись
+  - action: utter_transfer.не_все_деньги_вывелись
+
+- story: transfer.не_все_деньги_вывелись+++other.сколько_ждать
+  steps:
+  - intent: transfer.не_все_деньги_вывелись
+  - action: utter_transfer.не_все_деньги_вывелись
+  - intent: other.сколько_ждать
+  - action: utter_transfer.как_долго_выводятся_деньги
+
+- story: transfer.мне_не_могут_перевести_средства
+  steps:
+  - intent: transfer.мне_не_могут_перевести_средства
+  - action: utter_transfer.мне_не_могут_перевести_средства
+
+- story: transfer.мне_могут_перевести_средства
+  steps:
+  - intent: transfer.мне_могут_перевести_средства
+  - action: utter_transfer.мне_могут_перевести_средства
+
+# - story: transfer.не_могу_отправить_на_webmoney
+#   steps:
+#   - intent: transfer.не_могу_отправить_на_webmoney
+#   - action: utter_transfer.не_могу_отправить_на_webmoney
+
+# - story: transfer.автоплатеж
+#   steps:
+#   - intent: transfer.автоплатеж
+#   - action: utter_transfer.автоплатеж
+
+- story: transfer.ali_не_принимает_webmoney
+  steps:
+  - intent: transfer.ali_не_принимает_webmoney
+  - action: utter_transfer.ali_не_принимает_webmoney
+
+# - story: transfer.обменники
+#   steps:
+#   - intent: transfer.обменники
+#   - action: utter_transfer.обменники
+
+- story: transfer.верните_деньги
+  steps:
+  - intent: transfer.верните_деньги
+  - action: utter_transfer.верните_деньги
+
+- story: transfer.трансфер_в_страны
+  steps:
+  - intent: transfer.трансфер_в_страны
+  - action: utter_transfer.трансфер_в_страны
+
+- story: transfer.трансфер_в_страны+++system.how_create
+  steps:
+  - intent: transfer.трансфер_в_страны
+  - action: utter_transfer.трансфер_в_страны
+  - intent: system.how_create
+  - action: utter_transfer_form_None_None_None
+
+- story: transfer.мне_отправили_средства
+  steps:
+  - intent: transfer.мне_отправили_средства
+  - action: utter_transfer.мне_отправили_средства
+
+# - story: transfer.мне_отправили_средства_но_я_их_не_получил
+#   steps:
+#   - intent: transfer.мне_отправили_средства_но_я_их_не_получил
+#   - action: utter_transfer.мне_отправили_средства_но_я_их_не_получил
+
+- story: transfer.операция_которую_я_не_совершал
+  steps:
+  - intent: transfer.операция_которую_я_не_совершал
+  - action: utter_transfer.операция_которую_я_не_совершал
+
+# - story: transfer.не_могу_обменять
+#   steps:
+#   - intent: transfer.не_могу_обменять
+#   - action: utter_transfer.не_могу_обменять
+
+# - story: transfer.не_могу_обменять+limits.лимит_превышен
+#   steps:
+#   - intent: transfer.не_могу_обменять+limits.лимит_превышен
+#   - action: utter_transfer.не_могу_обменять+limits.лимит_превышен
+
+- story: transfer.курс_конвертации_при_выводе
+  steps:
+  - intent: transfer.курс_конвертации_при_выводе
+  - action: utter_transfer.курс_конвертации_при_выводе
+
+- story: transfer.не_могу_оплатить
+  steps:
+  - intent: transfer.не_могу_оплатить
+  - action: utter_transfer.не_могу_оплатить
+
+- story: transfer.на_какую_карту_возможен_вывод
+  steps:
+  - intent: transfer.на_какую_карту_возможен_вывод
+  - action: utter_transfer.на_какую_карту_возможен_вывод
+
+- story: transfer.с_каких_карт_возможно_пополнение
+  steps:
+  - intent: transfer.с_каких_карт_возможно_пополнение
+  - action: utter_transfer.с_каких_карт_возможно_пополнение
+
+- story: transfer.сколько_ждать_перевод_средств
+  steps:
+  - intent: transfer.сколько_ждать_перевод_средств
+  - action: utter_transfer.сколько_ждать_перевод_средств
+
+- story: transfer.оплата_на_кассе
+  steps:
+  - intent: transfer.оплата_на_кассе
+  - action: utter_transfer.оплата_на_кассе
+
+- story: transfer.совершить_платеж_если_нет_доступа
+  steps:
+  - intent: transfer.совершить_платеж_если_нет_доступа
+  - action: utter_transfer.совершить_платеж_если_нет_доступа
+
+# - story: transfer.узнать_статус_транзакции
+#   steps:
+#   - intent: transfer.узнать_статус_транзакции
+#   - action: utter_transfer.узнать_статус_транзакции
+
+# - story: transfer.со_стороннего_сайта_на_кошелек
+#   steps:
+#   - intent: transfer.со_стороннего_сайта_на_кошелек
+#   - action: utter_transfer.со_стороннего_сайта_на_кошелек
+
+# - story: transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+#   steps:
+#   - intent: transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+#   - action: utter_transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+
+- story: transfer.как_купить_крипту
+  steps:
+  - intent: transfer.как_купить_крипту
+  - action: utter_transfer.как_купить_крипту
+
+- story: transfer.получатель_не_получил_перевод
+  steps:
+  - intent: transfer.получатель_не_получил_перевод
+  - action: utter_transfer.получатель_не_получил_перевод
+
+- story: transfer.пополнял_кошелек_но_дленьги_не_пришли
+  steps:
+  - intent: transfer.пополнял_кошелек_но_дленьги_не_пришли
+  - action: utter_transfer.пополнял_кошелек_но_дленьги_не_пришли
+
+- story: transfer.деньги_не_пришли
+  steps:
+  - intent: transfer.деньги_не_пришли
+  - action: utter_transfer.деньги_не_пришли
+
+- story: transfer.отправил_деньги_на_неактивный_кошелек
+  steps:
+  - intent: transfer.отправил_деньги_на_неактивный_кошелек
+  - action: utter_transfer.отправил_деньги_на_неактивный_кошелек
+
+- story: transfer.деньги_не_вернулись
+  steps:
+  - intent: transfer.деньги_не_вернулись
+  - action: utter_transfer.деньги_не_вернулись
+
+- story: transfer.перевел_не_туда
+  steps:
+  - intent: transfer.перевел_не_туда
+  - action: utter_transfer.перевел_не_туда
+
+
+
+
+
+
+
+
+
+# - story: activate_transfer_form
+#   steps:
+#     - intent: transfer.transfer
+#     - action: transfer_form
+#     - active_loop: transfer_form
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+#     # - action: action_slots_restart
+
+
+
+
+
+
+
+
+
+
+# - story: Story from Conversation ID 285901912
+#   steps:
+#   - intent: transfer.transfer
+#     entities:
+#     - verb: topup
+#   - slot_was_set:
+#     - verb: topup
+#   - action: transfer_form
+#   - active_loop: transfer_form
+#   - slot_was_set:
+#     - verb: topup
+#   - slot_was_set:
+#     - transfer_direction: topup
+#   - slot_was_set:
+#     - requested_slot: transfer_purse_type
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - action: transfer_form
+#   - slot_was_set:
+#     - transfer_purse_type: wmz
+#   - slot_was_set:
+#     - requested_slot: transfer_method
+#   - intent: transfer.bank_card
+#     entities:
+#     - bank_card: bank_card
+#   - action: transfer_form
+#   - slot_was_set:
+#     - transfer_direction: topup
+#   - slot_was_set:
+#     - transfer_method: transfer_bank
+#   - slot_was_set:
+#     - requested_slot: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_transfer_form_message
+#   - slot_was_set:
+#     - fee: null
+#   - slot_was_set:
+#     - protected_payment: null
+#   - action: action_slots_restart
+#   - slot_was_set:
+#     - transfer_direction: null
+#   - slot_was_set:
+#     - transfer_purse_type: null
+#   - slot_was_set:
+#     - transfer_method: null
+#   - slot_was_set:
+#     - verb: null
+#   - intent: faq.fee
+#   - action: utter_faq.fee
+
+
+
+
+
+
+
+
+# - story: Story from Conversation ID 285901912
+#   steps:
+#   - intent: transfer.transfer
+#     entities:
+#     - verb: withdraw
+#     - purse_type: wmz
+#     - bank_card: bank_card
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - verb: withdraw
+#   - action: transfer_form
+#   - active_loop: transfer_form
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - verb: withdraw
+#   - slot_was_set:
+#     - transfer_direction: withdraw
+#   - slot_was_set:
+#     - transfer_purse_type: wmz
+#   - slot_was_set:
+#     - transfer_method: transfer_bank
+#   - slot_was_set:
+#     - requested_slot: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_transfer_form_message
+#   - intent: faq.fee
+#   - action: utter_faq.fee
+
+
+
+
+# - story: User
+#   steps:
+#   - intent: transfer.transfer
+#     entities:
+#     - purse_type: wmz
+#     - verb: withdraw
+#   - slot_was_set:
+#     - purse_type: wmz
+#     - verb: withdraw
+#   - action: transfer_form
+#   - active_loop: transfer_form
+#   - intent: debt.debt
+#   - action: utter_please_rephrase
+#   - action: action_deactivate_loop
+#   - active_loop: null

@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.не_могу_войти+keeper.пароль_не_подходит
+  steps:
+  - intent: keeper.не_могу_войти+keeper.пароль_не_подходит
+  - action: utter_keeper.не_могу_войти+keeper.пароль_не_подходит

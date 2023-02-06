@@ -1,0 +1,278 @@
+version: "3.1"
+
+rules:
+
+- rule: activate_transfer_form
+  steps:
+    - intent: transfer.transfer
+    - action: transfer_form
+    - active_loop: transfer_form
+
+- rule: submit_transfer_form
+  condition:
+  - active_loop: transfer_form
+  steps:
+    - action: transfer_form
+    - active_loop: null
+    - slot_was_set:
+      - requested_slot: null
+    - action: action_transfer_form_message
+    # - action: action_slots_restart
+
+- rule: submit_transfer_form+++transfer.transfer
+  condition:
+  - active_loop: transfer_form
+  steps:
+  - intent: transfer.transfer
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: transfer_form
+  - active_loop: transfer_form
+
+- rule: submit_transfer_form+++system.name
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: system.name
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.cash
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.cash
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.bank_card
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.bank_card
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.telephone_number
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.telephone_number
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.banks
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.banks
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.electronic_money
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.electronic_money
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++transfer.guarant
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: transfer.guarant
+  - action: transfer_form
+  - active_loop: transfer_form
+  # - action: transfer_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_transfer_form_message
+
+- rule: submit_transfer_form+++nlu_fallback
+  condition:
+  - active_loop: transfer_form
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+
+- rule: submit_transfer_form+++faq.fee_withdraw
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: faq.fee
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - action: utter_faq.fee_withdraw
+
+- rule: submit_transfer_form+++faq.fee_topup
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_transfer_form_message
+  - intent: faq.fee
+  - slot_was_set:
+    - transfer_direction: topup
+  - action: utter_faq.fee_topup
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - rule: submit_transfer_form
+#   condition:
+#   - active_loop: transfer_form
+#   steps:
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+
+
+
+
+
+
+
+
+
+
+# - rule: submit_transfer_form_2
+#   condition:
+#   - active_loop: transfer_form
+#   steps:
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+#     - intent: faq.fee
+#     - action: utter_faq.fee_withdraw
+
+# - rule: submit_transfer_form
+#   condition:
+#   - active_loop: transfer_form
+#   steps:
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+#     - intent: system.purse
+#     - action: transfer_form
+#     - active_loop: transfer_form
+
+
+
+
+# - rule: activate_transfer_form
+#   steps:
+#     - intent: transfer.transfer
+#     - action: transfer_form
+#     - active_loop: transfer_form
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+
+
+
+
+
+
+# - rule: activate_transfer_form2
+#   steps:
+#     - intent: transfer.transfer
+#     - action: transfer_form
+#     - active_loop: transfer_form
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+#     - intent: system.purse
+#     - action: transfer_form
+#     - active_loop: transfer_form
+#     - action: transfer_form
+#     - active_loop: null
+#     - slot_was_set:
+#       - requested_slot: null
+#     - action: action_transfer_form_message
+
+# - rule: User
+#   steps:
+#   - intent: transfer.transfer
+#   - action: transfer_form
+#   - active_loop: transfer_form
+#   - intent: debt.debt
+#   - action: utter_please_rephrase
+#   - action: action_deactivate_loop
+#   - active_loop: null

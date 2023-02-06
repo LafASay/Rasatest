@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+# - story: system_rules.когда_восстановится_bl_tl
+#   steps:
+#   - intent: system_rules.когда_восстановится_bl_tl
+#     user: |-
+#       когда восстановится бл
+#   - action: utter_system_rules.когда_восстановится_bl_tl_bl
+
+
+# - story: system_rules.когда_восстановится_bl_tl_bl
+#   steps:
+#   - intent: system_rules.когда_восстановится_bl_tl
+#     user: |-
+#       когда восстановится [бл]{"entity": "name", "value": "business_level"}
+#     entities:
+#     - name: business_level
+#   - slot_was_set:
+#     - name: business_level
+#   - action: utter_system_rules.когда_восстановится_bl_tl_bl
+
+# - story: system_rules.когда_восстановится_bl_tl_tl
+#   steps:
+#   - intent: system_rules.когда_восстановится_bl_tl
+#     user: |-
+#       когда восстановится [tl]{"entity": "name", "value": "trust_level"}
+#     entities:
+#     - name: trust_level
+#   - slot_was_set:
+#     - name: trust_level
+#   - action: utter_system_rules.когда_восстановится_bl_tl_tl

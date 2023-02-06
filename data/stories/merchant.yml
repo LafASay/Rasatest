@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: merchant.merchant
+  steps:
+  - intent: merchant.merchant
+  - action: utter_merchant.merchant

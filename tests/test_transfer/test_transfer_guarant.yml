@@ -1,0 +1,22 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.guarant
+  steps:
+  - intent: transfer.guarant
+    user: |-
+      с хранения у гаранта
+  - action: utter_transfer.guarant
+
+
+- story: transfer.guarant_guarant
+  steps:
+  - intent: transfer.guarant
+    user: |-
+      [с хранения у гаранта]{"entity": "guarant", "value": "guarant"}
+    entities:
+    - guarant
+  - slot_was_set:
+    - guarant
+  - action: utter_transfer.guarant

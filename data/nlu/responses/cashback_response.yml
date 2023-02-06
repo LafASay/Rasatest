@@ -1,0 +1,12 @@
+version: "3.1"
+
+responses:
+
+  utter_cashback.cashback_didnt_come:
+  - text: "Каждый магазин сам устанавливает сроки начисления кэшбека, как правило это около 3-6 недель. Следить за статусом своего кэшбека Вы можете в личном кабинете на странице https://bonus.webmoney.ru/"
+
+  utter_cashback.how_to_get_cashback:
+  - text: "Ознакомьтесь, пожалуйста, с информацией о получении кэшбека на странице: https://bonus.webmoney.ru/"
+
+  utter_cashback.выполнение_задач:
+  - text: "Перейдите на сайт сервиса https://cashbox.ru/ и ознакомьтесь с условиями и предложениями."

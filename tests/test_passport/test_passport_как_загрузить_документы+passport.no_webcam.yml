@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: passport.как_загрузить_документы+passport.no_webcam
+  steps:
+  - intent: passport.как_загрузить_документы+passport.no_webcam
+    user: |-
+      как загрузить документы без вебки
+  - action: utter_passport.как_загрузить_документы+passport.no_webcam
+
+- story: passport.как_загрузить_документы+passport.no_webcam
+  steps:
+  - intent: passport.как_загрузить_документы+passport.no_webcam
+    user: |-
+      как загрузить документы [не имея вебкамеры]{"entity": "no_webcam", "value": "не имея вебкамеры"}
+    entities:
+    - no_webcam: не имея вебкамеры
+  - slot_was_set:
+    - no_webcam: не имея вебкамеры
+  - action: utter_passport.как_загрузить_документы+passport.no_webcam

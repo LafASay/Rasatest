@@ -1,0 +1,485 @@
+version: "3.1"
+
+responses:
+
+  utter_system.registration:
+  - text: "Для первичной регистрации в системе WebMoney зайдите на сайт WebMoney https://www.webmoney.ru/ и нажмите кнопку Регистрация."
+
+  utter_system.registration_in_this_country_is_not_possible:
+  - text: "Регистрация в данной стране невозможна. Со списком юрисдикций, резидентам которых услуги не предоставляются, Вы можете ознакомиться на странице: https://www.web.money/rus/legal/transfert.shtml"
+
+  utter_system.registration_enum:
+  - text: "Зарегистрироваться в системе E-num можно на сайте сервиса - https://e-num.com. Кроме того, участники системы WebMoney имеют возможность создать E-num аккаунт автоматически при подтверждении оплаты или авторизации, а также через E-num клиент. Как это сделать смотрите здесь https://wiki.webmoney.ru/projects/webmoney/wiki/registratsiya_v_servise_e_num"
+
+  utter_system.registration_megastock:
+  - text: "Подробная инструкция о регистрации сайта в каталоге MegaStock представлена в этой статье: https://wiki.web.money/projects/capitaller/wiki/poryadok_registratsii_sayta_ba_v_kataloge_megastok"
+
+  utter_system.registration_indx:
+  - text: "Для регистрации на сервисе INDX войдите на биржу под своей учетной записью WebMoney, после чего пройдите первичную регистрацию следуя инструкции на странице: https://indx.money"
+
+  utter_system.registration_standard:
+  - text: "Для первичной регистрации в системе WebMoney требуется предоставление достоверных сведений о своей личности и других данных персонального характера. После первичной регистрации участник получает в управление электронные кошельки WM Keeper Standard (Mini), подробнее о регистрации в статье https://wiki.webmoney.ru/projects/webmoney/wiki/registratsiya"
+
+  utter_system.registration_winpro:
+  - text: "Для того чтобы изменить основной способ управления с Keeper Standard на WM Keeper WinPro участнику необходимо иметь формальный аттестат, в котором проверены номер телефона и e-mail. Рекомендации по подключению WM Keeper WinPro (Classic) Вы найдете здесь https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_winpro_na_sayte_servisa_bezopasnosti"
+
+  utter_system.registration_webpro:
+  - text: "Для того чтобы изменить основной способ управления с Keeper Standard на WM Keeper WebPro участнику необходимо иметь формальный аттестат, в котором проверены номер телефона и e-mail. Инструкцию по смене способа управления Вы найдете здесь https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard"
+
+  utter_system.registration_нет_доступа_к_telephone_number:
+  - text: "Регистрация без мобильного телефона, ответ пока в разработке."
+
+  utter_system.я_зарегистрирован:
+  - text: "Поздравляю! Теперь Вы можете пользоваться Системой."
+
+  utter_system.how_create:
+  - text: "Что Вы имеете ввиду? Опишите детальнее, в чем заключается Ваша проблема."
+
+  utter_system.how_create_enum:
+  - text: "Зарегистрироваться в системе E-num можно на сайте сервиса - https://e-num.com. Кроме того, участники системы WebMoney имеют возможность создать E-num аккаунт автоматически при подтверждении оплаты или авторизации, а также через E-num клиент. Как это сделать смотрите здесь https://wiki.webmoney.ru/projects/webmoney/wiki/registratsiya_v_servise_e_num"
+
+  utter_system.how_create_purse_in_standard:
+  - text: 'Для создания кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMZ и т.д.), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+  utter_system.how_create_purse_in_winpro:
+  - text: 'Для создания кошелька в WM Keeper WinPro необходимо перейти в раздел "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMZ и т.д.) и принять условия соглашения. Обратите внимание, в системе есть ограничения на количество создаваемых WM кошельков https://wiki.webmoney.ru/projects/webmoney/wiki/ogranicheniya_na_kolichestvo_sozdavaemyh_wm_koshelkov'
+
+  utter_system.how_create_purse_in_webpro:
+  - text: 'Для создания кошелька в WM Keeper WebPro необходимо перейти в раздел "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMZ и т.д.) и принять условия соглашения. Обратите внимание, в системе есть ограничения на количество создаваемых WM кошельков https://wiki.webmoney.ru/projects/webmoney/wiki/ogranicheniya_na_kolichestvo_sozdavaemyh_wm_koshelkov'
+
+  utter_system.how_create_wmc_purse_in_standard:
+  - text: 'В Keeper Standard недоступно создание WMC кошелька. Он создается только в WM Keeper WinPro и WM Keeper WebPro, при наличии персонального аттестата. Подробнее ознакомиться можно на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/WMC'
+
+  utter_system.how_create_wmc_purse_in_winpro:
+  - text: 'Для создания кошелька Вам необходимо нажать на соответствующую кнопку "Создать" во вкладке "Кошельки", и выбрать нужный тип кошелька. Важно понимать, что у Вас должен быть персональный аттестат.'
+
+  utter_system.how_create_wmc_purse_in_webpro:
+  - text: 'Для создания кошелька Вам необходимо нажать на соответствующую кнопку "Создать" во вкладке "Кошельки", и выбрать нужный тип кошелька. Важно понимать, что у Вас должен быть персональный аттестат.'
+
+  utter_system.how_create_wmd_purse_in_standard:
+  - text: 'В Keeper Standard недоступно создание WMD кошелька. Создать кошелек типа D может участник системы WebMoney в WM Keeper WinPro и WM Keeper WebPro с аттестатом не ниже формального. Подробнее о WMD-кошельке Вы можете прочитать на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/WMD'
+
+  utter_system.how_create_wmd_purse_in_winpro:
+  - text: 'Для создания кошелька в WM Keeper WinPro необходимо перейти в раздел "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMZ и т.д.) и принять условия соглашения. Обратите внимание, в системе есть ограничения на количество создаваемых WM кошельков https://wiki.webmoney.ru/projects/webmoney/wiki/ogranicheniya_na_kolichestvo_sozdavaemyh_wm_koshelkov'
+
+  utter_system.how_create_wmd_purse_in_webpro:
+  - text: 'Для создания кошелька в WM Keeper WebPro необходимо перейти в раздел "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMZ и т.д.) и принять условия соглашения. Обратите внимание, в системе есть ограничения на количество создаваемых WM кошельков https://wiki.webmoney.ru/projects/webmoney/wiki/ogranicheniya_na_kolichestvo_sozdavaemyh_wm_koshelkov'
+
+  # utter_system.how_create_purse_wmp:
+  # - text: "Создать WMP кошелек не представляется возможным. В связи с отзывом лицензии у АО Банка «ККБ», Гаранта и расчетного банка Системы по рублевым кошелькам, с 11 февраля 2022 года все операции c P-кошельками становятся недоступны. https://news.wmtransfer.com/blog/zayavlenie-dlya-vladeltsev-wmp-i-wmr-koshelkov"
+
+  utter_system.how_create_purse_wmp:
+  - text: "WMP кошелека не существует."
+
+  # utter_system.how_create_purse_wmr:
+  # - text: "Создать WMR кошелек не представляется возможным. В связи с отзывом лицензии у АО Банка «ККБ», Гаранта и расчетного банка Системы по рублевым кошелькам, с 11 февраля 2022 года все операции c R-кошельками становятся недоступны. https://news.wmtransfer.com/blog/zayavlenie-dlya-vladeltsev-wmp-i-wmr-koshelkov"
+
+  utter_system.how_create_purse_wmr:
+  - text: "WMR кошелека не существует."
+
+  utter_system.how_create_purse_wmu:
+  - text: "Создать WMU кошелек не представляется возможным cогласно Указу Президента Украины №126/2018 (Приложение 2. пп. 428, 1-12) https://news.wmtransfer.com/blog/zayavlenie-webmoney-transfer-v-otnoshenii-blokirovki-snbo-ukrainy"
+
+  utter_system.how_create_purse_mdl:
+  - text: "Участники системы WebMoney Transfer из Молдовы, имеющие телефонный номер с кодом +373, могут подключить MDL-кошельки оператора электронных денег RunPay Moldova."
+
+  utter_system.how_create_purse_btc:
+  - text: 'Это кошелёк в системе Bitcoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMX. Для создания WMX-кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMX), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+  utter_system.how_create_purse_bch:
+  - text: 'Это кошелёк в системе Bitcoin Cash, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMH. Для создания WMH-кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMH), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+  utter_system.how_create_purse_ltc:
+  - text: 'Это кошелёк в системе Litecoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WML. Для создания WML-кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WML), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+  utter_system.how_create_purse_eth:
+  - text: 'Это кошелёк в системе Ethereum, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMF. Для создания WMF-кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMF), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+  utter_system.how_create_purse_usdt:
+  - text: 'Это кошелёк в системе USDT, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMT. Для создания WMT-кошелька необходимо войти в Keeper Standard, выбрать пункт меню "КОШЕЛЬКИ" и нажать "Создать". Затем из представленного списка, Вам необходимо выбрать тип кошелька (WMT), принять условия соглашения и нажать "СОЗДАТЬ". ВАЖНО: в WM Keeper Standard (Mini) можно создать только один кошелек одного типа: http://wiki.webmoney.ru/projects/webmoney/wiki/sozdanie_koshelka_v_webmoney_keeper_standard'
+
+
+  utter_system.how_create_keyfile:
+  - text: |
+      Файл ключей предназначен для пользователей WM Keeper WinPro (Classic) на тот случай, если:
+      - переустанавливается Windows или осуществляется вход с другой учетной записи;
+      - меняются технические параметры компьютера;
+      - вход осуществляется с другого компьютера.
+      В такой ситуации программа кроме WMID и пароля запрашивает файл ключей и код доступа к нему. О том, как получить и хранить файл ключей, Вы можете узнать здесь https://wiki.webmoney.ru/projects/webmoney/wiki/fayl_klyuchey
+
+  utter_system.how_create_certificate:
+  - text: "Участники Системы, использующие для управления своими кошельками WM Keeper WebPro (Light) без персонального сертификата, имеют возможность получить его самостоятельно. Клиентский (персональный) сертификат может понадобится участникам системы WebMoney для доступа к сервисам, к которым доступ возможен только по сертификату, или для подписи XML запросов, подробнее здесь https://wiki.webmoney.ru/projects/webmoney/wiki/poluchenie_klientskogo_sertifikata_v_wm_keeper_webpro"
+
+  utter_system.how_create_account:
+  - text: "Для первичной регистрации в системе WebMoney зайдите на сайт WebMoney https://www.webmoney.ru/ и нажмите кнопку Регистрация."
+
+  utter_system.how_create_wmid:
+  - text: "Для первичной регистрации в системе WebMoney зайдите на сайт WebMoney https://www.webmoney.ru/ и нажмите кнопку Регистрация."
+
+  utter_system.how_create_group:
+  - text: В разделе «корреспонденты» нажмите на «еще» - группы» - «создать новую» и придумайте для нее название. При добавлении нового корреспондента сможете выбрать в какую группу его добавить. Если нужно переместить уже добавленного корреспондента, то наведите курсором на нужного, нажмите на левую кнопку мыши и не отпуская переместите его в нужную группу, отпустите левую кнопку мыши. Еще один вариант переместить контакт в группу - нажмите на него правой кнопкой мыши - «группы» - «переместить корреспондента в группу» - выберите группу.
+
+  utter_system.how_create_bank_card:
+  - text: 'Сервис WebMoney Cards (https://cards.web.money) предназначен для заказа и обслуживания банковских пластиковых карт международных платежных систем (Mastercard, UnionPay и др.), которые могут использоваться участниками WebMoney для вывода средств со своих WM-кошельков. Виртуальные карты, на данный момент, не выпускаются.'
+
+  utter_system.how_create_root_certificate:
+  - text: 'Корневой сертификат создавать не требуется. Вы можете его скачать по ссылке из инструкции "Корневой сертификат WebMoney": https://wiki.web.money/projects/webmoney/wiki/kornevoy_sertifikat_webmoney'
+
+  utter_system.determination_keeper:
+  - text: "WM Keeper - это способ управления своими кошельками в системе WebMoney Transfer. Существует 3 типа киперов: WM Keeper WinPro (Classic), WM Keeper WebPro (Light) и Keeper Standard (Mini)."
+
+  utter_system.determination_purse:
+  - text: "WM кошелек - это зарегистрированный в рамках WMID реквизит для учета титульных знаков. Каждый кошелёк имеет номер и префикс, обозначающий для каких средств он предназначен. Например — Z012345678910. Доступные типы кошельков указаны на странице https://www.webmoney.ru/rus/information/wmwallets/index.shtml"
+
+  utter_system.determination_wmid:
+  - text: "Идентификатор участника (WMID) представляет собой уникальную 12-тизначную цифровую последовательность, которая является адресом участника в системе WebMoney. Например, WMID 464889785562 - идентификатор центра аттестации WebMoney."
+
+  utter_system.determination:
+  - text: "О чём идет речь?"
+
+  utter_system.determination_wmp:
+  - text: "В Системе больше нет такого типа кошелька. Ранее этот кошелёк являлся эквивалентом российского рубля."
+
+  utter_system.determination_wme:
+  - text: "WME - титульный знак системы WebMoney Transfer, являющийся эквивалентом евро. Учитывается на кошельках типа Е. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WME"
+
+  utter_system.determination_wmb:
+  - text: "WMB - титульный знак системы WebMoney Transfer, являющийся эквивалентом белорусского рубля. Подробнее об этом титульном знаке можно узнать в этом разделе нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMB"
+
+  utter_system.determination_wmg:
+  - text: "WMG - титульный знак системы WebMoney Transfer, являющийся эквивалентом золота. Единицей учета на кошельках типа G является один грамм чистого золота (1 WMG), учет ведется в сотых долях грамма (0.01 WMG). Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMG"
+
+  utter_system.determination_wmz:
+  - text: "WMZ - титульный знак системы WebMoney Transfer, являющийся эквивалентом доллара США. Учитывается на кошельках типа Z. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMZ"
+
+  utter_system.determination_wmk:
+  - text: "WMK - титульный знак системы WebMoney Transfer, являющийся эквивалентом одному казахcтанскому тенге. Учитывается на кошельках типа K. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMK"
+
+  utter_system.determination_wmx:
+  - text: "WMX - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 BTC. Учитывается на кошельках типа X. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMX"
+
+  utter_system.determination_wmh:
+  - text: "WMH - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 BCH. Учитывается на кошельках типа H. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMH"
+
+  utter_system.determination_wml:
+  - text: "WML - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 LTC. WML представляет собой единицу учета переданных участниками системы на хранение Гаранту имущественных прав на публикацию записей в глобальной публичной базе данных сети litecoin.org. Учитывается на кошельках типа L. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WML"
+
+  utter_system.determination_wmy:
+  - text: "WMY - титульный знак системы WebMoney Transfer, являющийся эквивалентом узбекского сума. Учитывается на кошельках типа Y. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMY"
+
+  utter_system.determination_wmr:
+  - text: "В Системе больше нет такого типа кошелька. Ранее этот кошелёк являлся эквивалентом российского рубля."
+
+  utter_system.determination_wmc:
+  - text: "WMC - титульный знак системы WebMoney Transfer, являющийся эквивалентом WMZ для кредитных операций с использованием кошельков типа C. Кошельки типа C предназначены для учета выданных кредитов. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/wmc_koshelek"
+
+  utter_system.determination_wmd:
+  - text: "WMD - титульный знак системы WebMoney Transfer, являющийся эквивалентом WMZ для кредитных операций с использованием кошельков типа D. Кошельки типа D предназначены для учета выданных кредитов. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMD"
+
+  utter_system.determination_wmu:
+  - text: "Оборот по WMU официально прекращен. Всем держателям WMU деньги были конвертированы в WMZ."
+
+  utter_system.determination_wmf:
+  - text: "WMF - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 ETH (Ethereum)."
+
+  utter_system.determination_wmt:
+  - text: "WMT - титульный знак системы WebMoney Transfer (учитывается на кошельках типа T), являющийся эквивалентом 1 USDT. WMT представляет собой переданные на хранение токены USDT (единицы учета в глобальных публичных базах данных на условиях https://tether.to/en/legal)."
+
+  utter_system.determination_mdl:
+  - text: "MDL кошельки доступны для создания участникам системы WebMoney Transfer из Молдовы, имеющим телефонный номер с кодом +373. Полная информация о получении и возможностях MDL-кошельков представлена здесь: https://wiki.web.money/projects/webmoney/wiki/mdl_koshelek"
+
+  utter_system.determination_btc:
+  - text: "Это кошелёк в системе Bitcoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMX. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 BTC, хранятся на кошельках типа X."
+
+  utter_system.determination_bch:
+  - text: "Это кошелёк в системе Bitcoin Cash, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMH. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 BCH, хранятся на кошельках типа H."
+
+  utter_system.determination_ltc:
+  - text: "Это кошелёк в системе Litecoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WML. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 LTC, хранятся на кошельках типа L."
+
+  utter_system.determination_eth:
+  - text: "Это кошелёк в системе Ethereum, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMF. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 ETH, хранятся на кошельках типа F."
+
+  utter_system.determination_usdt:
+  - text: "Это кошелёк в системе USDT, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMT. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 USDT, хранятся на кошельках типа T."
+
+
+  utter_system.determination_standard:
+  - text: "WM Keeper Standard (WM Keeper Mini) - это еще один WebMoney Keeper, не такой мощный, как Keeper WinPro (Keeper Classic) и WebPro (Light), но очень простой и удобный для большинства случаев. Он выполнен в виде легкого сайта и реализует основные функции управления аккаунтом в системе WebMoney Transfer. Подробнее о приложении можно узнать здесь: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_Standard"
+
+  utter_system.determination_winpro:
+  - text: "WM Keeper WinPro (WM Keeper Classic) - это один из возможных способов управления WM-кошельками и работы с системой WebMoney Transfer. Приложение выполнено в виде отдельной программы для ОС Windows, которая устанавливается на компьютер пользователя. Более подробную информацию о нем можно получить в этом разделе нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_WinPro"
+
+  utter_system.determination_webpro:
+  - text: "WM Keeper WebPro (WM Keeper Light) предназначен для работы с системой WebMoney предназначен для работы с системой WebMoney через браузер, без привязки к операционной системе.. Доступ к WM Keeper WebPro возможен с любого компьютера, подключенного к Интернету, в том числе и с мобильного устройства. Результаты работы передаются в браузер клиента по защищенному https-соединению. Подробнее о приложении читайте в этом разделе нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_WebPro"
+
+  utter_system.determination_webmoney:
+  - text: 'WebMoney Transfer — международная система расчетов и среда для ведения бизнеса в сети. В системе WebMoney предусмотрены сервисы, позволяющие вести учет, обменивать расчетные средства, привлекать финансирование, решать споры и заключать безопасные сделки. Более подробно про систему Вы можете узнать на сайте https://wiki.web.money'
+
+
+  utter_system.determination_alias_passport:
+  - text: 'Аттестат псевдонима выдается бесплатно и автоматически каждому участнику системы WebMoney Transfer при регистрации в системе (после получения WM-идентификатора).'
+
+  utter_system.determination_formal_passport:
+  - text: 'Формальный аттестат подойдет активным пользователям систем электронных платежей и фрилансерам. Помимо прочего может использоваться для регулярной оплаты всевозможных госуслуг и перевода средств в наличные. Условия получения: выдается бесплатно, через Центр аттестации WebMoney Transfer, после ввода участником своих паспортных данных и загрузки для сверки скана паспорта.'
+
+  utter_system.determination_initial_passport:
+  - text: |
+      Начальный аттестат рекомендуется для малого бизнеса и сотрудников интернет-компаний. Начальный аттестат будет отличать вас от анонимного пользователя Системы, но все еще не гарантирует безоговорочное доверие к вам со стороны опытных участников.
+      Условия получения: выдается платно после проверки паспортных данных Персонализатором (участником партнерской программы Центра аттестации) или автоматически при выполнении определенных условий.
+
+  utter_system.determination_personal_passport:
+  - text: |
+      Персональный аттестат рекомендуется для бизнеса и продвинутых частных пользователей, желающих не только тратить и переводить средства, но и зарабатывать в сети, используя весь набор сервисов системы WebMoney Transfer. Персональный аттестат обеспечивает высокую степень доверия со стороны других участников системы, т.к. ваши паспортные данные будут проверяться лично с предоставлением оригиналов (или по нотариально заверенным копиям) документов.
+      Условия получения: выдается платно после проверки паспортных данных Регистратором (участником партнерской программы Центра аттестации)\n
+      Получение Персонального аттестата для большинства частных пользователей системы WebMoney является конечной ступенью, т.к. обеспечивает самые главные функции – максимальное доверие со стороны других участников и доступ к большинству необходимых функций при работе с кошельками.
+
+  utter_system.determination_merchant_passport:
+  - text: 'Аттестат продавца - один из видов профессиональных аттестатов, который позволяет осуществлять прием средств в автоматизированном режиме через интерфейс Мерчанта и выдается бесплатно участнику системы WebMoney Transfer, получившему персональный аттестат. Для получения аттестата продавца необходимо зарегистрировать сайт, на котором будет осуществляться прием WebMoney и прописать кошельки для приема платежей, в каталоге MegaStock.'
+
+  utter_system.determination_capitaller_passport:
+  - text: 'Аттестат Capitaller - один из видов профессиональных аттестатов. Является одной из форм персонального аттестата и выдается бесплатно для WMID бюджетного автомата, зарегистрированного в сервисе Capitaller: https://wiki.web.money/projects/webmoney/wiki/Capitaller'
+
+  utter_system.determination_transact_automation_tool_passport:
+  - text: 'Аттестат расчетного автомата - один из видов профессиональных аттестатов, который выдается юридическим лицам (компаниям) только при необходимости автоматизировать процессы приема WM и расчетов с помощью WM c использованием XML интерфейсов. Таким образом у компании должен быть сайт и интернет-ориентированный бизнес. Вопросы интеграции собственного программного обеспечения и сервисов WebMoney компания решает самостоятельно: https://wiki.web.money/projects/webmoney/wiki/attestat_raschetnogo_avtomata'
+
+  utter_system.determination_developer_passport:
+  - text: 'Аттестат разработчика - один из видов профессиональных аттестатов, который выдается разработчику, создающему программное обеспечение по заказу WebMoney Transfer или совместно со специалистами WebMoney Transfer. Выдается владельцу персонального аттестата автоматически (бесплатно) после аргументированного обращения в службу технической поддержки системы WebMoney. https://wiki.web.money/projects/webmoney/wiki/attestat_razrabotchika'
+
+  utter_system.determination_registrar_passport:
+  - text: 'Аттестат регистратора является наивысшим по статусу среди аттестатов, выдаваемых участникам системы WebMoney Transfer. Обязательным условием получения аттестата Регистратора является участие в партнерской программе Центра аттестации по выдаче персональных аттестатов, либо участие в работе арбитражного сервиса в качестве арбитра. https://wiki.web.money/projects/webmoney/wiki/attestat_registratora'
+
+  utter_system.determination_service_passport:
+  - text: 'Аттестат сервиса - один из видов профессиональных аттестатов, который выдается собственным проектам системы WebMoney Transfer. Для эффективного ведения бизнеса и обмена информацией в системе предусмотрены различные сервисы, позволяющие участникам обеспечивать необходимый уровень безопасности операций, автоматизировать расчеты, вести учет, проводить обмен различных расчетных средств, оперативно находить партнеров в своем регионе, не отходя от своего компьютера. https://wiki.web.money/projects/webmoney/wiki/attestat_servisa'
+
+  utter_system.determination_guarantor_passport:
+  - text: 'Аттестат гаранта - один из видов профессиональных аттестатов. Гаранты обеспечивают ввод/вывод средств в/из системы по поручению владельцев WM-кошельков соответствующего типа. Выдается юридическим лицам после выполнения определенных требований: https://www.webmoney.ru/rus/cooperation/guarantors.shtml Гаранты системы WM: https://www.webmoney.ru/rus/subjects/guarantors/index.shtml'
+
+  utter_system.determination_operator_passport:
+  - text: 'Аттестат оператора - один из видов профессиональных аттестатов. Оператор выполняет организационную и технологическую целостность системы, ее бесперебойное функционирование и учет всех проводимых в системе операций. Оператор обеспечивает регистрацию новых гарантов в системе, организует их взаимодействие с пользователями, ведет баланс системы с предоставлением участникам статистики по каждому из гарантов, а также по общей активности в системе. https://wiki.web.money/projects/webmoney/wiki/attestat_operatora'
+
+
+
+
+  utter_system.determination_passport:
+  - text: "Каждый участник имеет WM-аттестат (или просто Аттестат) — цифровое свидетельство, составленное на основании предоставленных им персональных данных. Просмотр WM-аттестата любого участника системы WebMoney Transfer производится через специальную страничку сайта центра аттестации."
+
+  utter_system.determination_activation_code:
+  - text: "Код активации предназначен для защиты от несанкционированного доступа к средствам, хранящимся на кошельках данного WMID, в случае кражи файлов ключей (*.kwm), кошельков (*.pwm) и пароля. Лицо, не имеющее доступа к e-mail, на который высылается код активации, не сможет воспользоваться Вашими средствами."
+
+  utter_system.determination_indx:
+  - text: "Интернет-биржа INDX (indx.money) представляет собой площадку для торговли нотами - производными инструментами, базовым активом которых являются акции российских и иностранных компаний, а также популярные криптовалюты. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/webmoney/wiki/internet_birzha_indx"
+
+  utter_system.determination_exchanger:
+  - text: "Сервис WM Exchanger предназначен для обмена одних WebMoney титульных знаков на другие. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/webmoney/wiki/Exchanger"
+
+  utter_system.determination_events:
+  - text: 'Сервис "События WebMoney" (Events) является специализированной социальной (деловой) сетью, предназначенной для обмена новостной, персональной и деловой информацией между участниками системы WebMoney Transfer. Сайт сервиса расположен по адресу https://events.webmoney.ru Подробнее о данном сервисе Вы можете прочесть на странице - https://wiki.web.money/projects/webmoney/wiki/delovaya_set_sobytiya_webmoney'
+
+  utter_system.determination_capitaller:
+  - text: 'Capitaller – это специализированная версия программы WM Keeper, реализующая коллективный доступ к кошелькам и управление средствами в соответствии с различными алгоритмами, назначаемыми участниками с целью автоматизации проведения операций. Сервис Capitaller относится к сервисам "Планирования бюджета и автоматизации". Полнофункциональный доступ к сервису Capitaller имеют участники с персональным аттестатом. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/capitaller/wiki'
+
+  utter_system.determination_merchant:
+  - text: 'Сервис Merchant WebMoney Transfer (http://merchant.webmoney.ru) служит для облегчения интеграции системы WebMoney Transfer с веб-сайтами с целью обеспечения автоматизированного приема платежей за товары и услуги. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/webmoney/wiki/Merchant_WebMoney_Transfer'
+
+  utter_system.determination_debt:
+  - text: 'Долговой сервис WebMoney ( https://debt.wmtransfer.com ) - это программно-аппаратный комплекс управления долговыми отношениями между участниками системы WMT. Сервис позволяет участникам системы предоставлять собственные средства своим корреспондентам в долг, обеспечивает проведение операций учета выданных займов и их своевременного возврата. Все займы выдаются в титульных знаках WMZ или WMV (только для резидентов Вьетнама) на определенных условиях и на ограниченный срок. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/webmoney/wiki/dolgovoy_servis'
+
+  utter_system.determination_credit:
+  - text: 'Кредитная биржа (credit.webmoney.ru) представляет собой автоматический интерфейс, реализующий получение и выдачу кредитов с использованием кредитной схемы расчетов WebMoney Transfer в режиме Online и обеспечивающий удобство размещения заявок и поиска встречных предложений. Подробнее о данном сервисе Вы можете прочесть на странице: https://wiki.web.money/projects/webmoney/wiki/kreditnaya_birzha'
+
+  utter_system.determination_enum:
+  - text: "E-num - это современная система авторизации, обеспечивающая высокий уровень безопасности информации. Защита обеспечивается как средствами криптографии, так и на архитектурном уровне. Секретный ключ для доступа к данным хранится не в компьютере, а в мобильном устройстве участника WebMoney (телефон, смартфон, планшет), что позволяет использовать его при работе с различных компьютеров, а также исключает риск порчи или хищения ключа троянскими и другими вредоносными программами."
+
+  utter_system.determination_report:
+  - text: "WebMoney Report - сервис для получения отчетов по операциям с кошельками WebMoney: https://report.web.money"
+
+  utter_system.determination_verification_centre:
+  - text: "Центр аттестации - сервис, на котором Вы можете увидеть всю информацию о своём аттестате, а так же имеете возможность получить новый: https://passport.web.money"
+
+  utter_system.determination_megastock:
+  - text: "MegaStock — каталог интернет-магазинов и сервисов, принимающих WebMoney. https://www.megastock.ru"
+
+  utter_system.determination_videoid:
+  - text: "VideoID — видеозапись на камеру мобильного телефона или компьютера, при создании которой участник системы WebMoney Transfer повторяет предложенный ему жест, демонстрирует главный разворот паспорта (или другого документа, удостоверяющего личность), а также читает вслух текст «Соглашения об ответственности»."
+
+  utter_system.determination_photoid:
+  - text: "PhotoID — фотография участника системы WebMoney Transfer вместе с главным разворотом паспорта (или другого документа, удостоверяющего личность)."
+
+  utter_system.determination_keyfile:
+  - text: "Файл ключей - это специальный файл для программы WM Keeper WinPro (Classic), который содержит в себе секретные данные и нужен для доступа к WMID при одном из вариантов входа в Кипер - способе Этот компьютер. Имеет в своем расширении kwm (символы после имени файла и точки) и строго установленный размер 164 байта. Для дополнительной безопасности файл ключей закрывается собственным паролем, который устанавливается лично участником."
+
+  utter_system.determination_business_level:
+  - text: |
+      Бизнес-уровень (BL) — это публичная cуммарная характеристика уровня деловой активности владельца WM-идентификатора, которая высчитывается на основе данных о:
+      - продолжительности активного использования WebMoney Transfer;
+      - количестве корреспондентов, с которыми у участника имелись трансакции;
+      - объеме проведенных трансакций;
+      - наличии претензий в адрес участника.
+      Цвет цифр BL показывает уровень платежеспособности.
+
+  utter_system.determination_trust_level:
+  - text: |
+      Уровень доверия (TL) — степень финансового доверия владельцу WM-идентификатора со стороны других участников системы WebMoney. TL характеризует уровень доступности WMID к доверяемым ему средствам через открытые кредитные линии (лимиты доверия) Долгового сервиса. Показатель TL рассчитывается на основе следующих параметров:
+      - количество открытых кредитных линий (лимитов доверия) в Долговом сервисе;
+      - размеры кредитных линий;
+      - сумма займов, полученных по лимитам доверия;
+      - сумма, доступная для займа на текущий момент.
+      Показатель TL равный нулю говорит о том, что владелец WM-идентификатора:
+      - или не нуждается в заемных средствах и не имеет открытых кредитных линий (лимитов доверия) в Долговом сервисе;
+      - или исчерпал все открытые ему лимиты доверия;
+      - или на кошельках доверителей отсутствуют средства для займа.
+
+
+  utter_system.determination_account:
+  - text: "Это зарегистрированный в рамках аттестата системы WM-идентификатор (WMID), с возможностью создания кошельков для хранения титульных знаков системы."
+
+  utter_system.determination_certificate:
+  - text: "В системе существует Персональный (личный, клиентский) и Корневой сертификат WebMoney. Персональный цифровой сертификат X.509, который предназначен для защиты, идентификации и передачи данных при интернет-соединениях в WM Keeper WebPro. Корневой сертификат WebMoney предназначен для работы с WM Keeper WebPro и для разработчиков, использующих XML-интерфейсы."
+
+  utter_system.determination_root_certificate:
+  - text: "В системе существует Персональный (личный, клиентский) и Корневой сертификат WebMoney. Персональный цифровой сертификат X.509, который предназначен для защиты, идентификации и передачи данных при интернет-соединениях в WM Keeper WebPro. Корневой сертификат WebMoney предназначен для работы с WM Keeper WebPro и для разработчиков, использующих XML-интерфейсы."
+
+  utter_system.determination_check_paymer:
+  - text: "Чек Paymer - это цифровое средство расчетов представляющее собой номер и код, которые могут храниться на любом носителе информации и передаваться между пользователями любым удобным для них способом (email, факс, телефон и т.д.). Более подробно с сервисом Вы можете ознакомиться в разделе Вопрос/Ответ на странице https://www.paymer.com/Wa3/default.aspx?t=faq&lang=ru-RU"
+
+  utter_system.determination_forum:
+  - text: "Сайт форума https://forum.web.money/ Это интернет-сервис для общения между пользователями на разные темы связанные с системой Webmoney."
+
+  utter_system.determination_c2c:
+  - text: "Сервис Банковская карта (http://c2c.web.money) предназначен для ввода и вывода WMZ с использованием банковских карт. Он обеспечивает продажу и покупку WMZ за рубли с помощью технологии перевода с карты на карту. Продавцы, те кто хочет вывести WMZ, размещают и оплачивают свои заявки на сервисе. Покупатели переводят средства на карты продавцов и получают от сервиса пополнение своих WMZ-кошельков."
+
+  utter_system.determination_transaction_history:
+  - text: "Историю транзакций своих WM-кошельков можете увидеть кликнув на историю операций нужного Вам кошелька, или получив отчет на сервисе https://report.web.money"
+
+  utter_system.determination_chat_history:
+  - text: "История переписки находится в мессенджере любой версии WebMoney Keeper: https://wiki.web.money/projects/webmoney/wiki/prosmotr_istorii_soobscheniy_v_wm_keeper_standard"
+
+  utter_system.determination_protected_payment:
+  - text: "Определение перевода с протекцией, ответ пока в разработаке."
+
+  utter_system.determination_wmmail:
+  - text: |
+      WM-почта - это почтовый ящик вида XXXXXXXXXXXX@wmkeeper.com и XXXXXXXXXXXX@wmid.com (где XXXXXXXXXXXX - это Ваш WMID).
+      Работа с ним доступна на сайте: https://mail.wmkeeper.com/
+      Или через WM Keeper WinPro (Classic): "Меню" - "Почта" - "Мой почтовый ящик на mail.wmkeeper.com..."
+      Почтовый ящик на доменах wmkeeper.com и wmid.com создается автоматически после регистрации в системе.
+      Первый вход на https://mail.wmkeeper.com происходит через авторизацию "Как участник WebMoney Transfer".
+      В дальнейшем в разделе настроек можно создать себе псевдоним, установить возможность входя по логину и паролю, а также выполнить другие настройки.
+
+  utter_system.determination_digiseller:
+  - text: "Digiseller - это конструктор магазинов для продажи цифровых товаров, таких как: коды активации, файлы, виртуальная валюта, электронные книги и т.д. Функционал позволяет настроить различные способы оплаты, а также полностью автоматизировать весь процесс торговли. Для подробной информации можете обратиться на почту: support@digiseller.com"
+
+  utter_system.determination_login:
+  - text: "Сервис Login предназначен для разработчиков и Web-мастеров, которые хотят использовать все способы аутентификации пользователей, которые предоставляет система WebMoney Transfer. Клиентам WebMoney сервис Login позволяет авторизоваться по WMID всеми доступными в системе способами и служит для безопасного использования своих ключей и паролей."
+
+  utter_system.determination_debtmart:
+  - text: "DebtMart - это сервис, предназначенный для покупки и продажи просроченных долговых обязательств участников Системы. Цену продажи назначает продавец, но покупатель может торговаться."
+
+  utter_system.determination_wiki:
+  - text: "utter_system.determination_wiki"
+
+  utter_system.determination_escrow:
+  - text: "utter_system.determination_escrow"
+
+  utter_system.determination_title_units:
+  - text: "Титульные знаки - права на имущество, имеющее юридическое документальное подтверждение. Именно они отображаются у Вас на кошельке и используются для расчетов."
+
+
+
+  utter_system.what_types_purse:
+  - text: 'В настоящее время система поддерживает несколько типов кошельков: Z, E, B, Y, K, G, X, H, L, F и T. Также существует два специальных типа кошельков: D и C. Подробную информацию о каждом из них Вы можете найти на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/wm_koshelek'
+
+  utter_system.what_types_passport:
+  - text: |
+      Аттестаты WebMoney бывают следующих типов:
+      - Аттестат псевдонима (выдается автоматически (бесплатно) при регистрации в системе);
+      - Формальный аттестат (выдается бесплатно, через Центр аттестации WebMoney Transfer, после ввода участником своих паспортных данных и загрузки для сверки скана паспорта);
+      - Начальный аттестат (выдается платно) или после проверки паспортных данных Персонализатором (участником партнерской программы Центра аттестации), или после записи и проверки VideoID;
+      - Персональный аттестат (выдается платно) одним из способов: - при личной встрече с Регистратором (участником партнерской программы Центра аттестации); - после записи VideoID и проверки банковского счета; - после записи VideoID и прохождения собеседования с регистратором в формате видеоинтервью; - по нотариально заверенным документам.
+      Подробнее в нашей Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/poryadok_vydachi_personalnogo_attestata
+
+  utter_system.what_types_project_funding:
+  - text: |-
+      На сервисе Webmoney.Funding Вы можете открыть и развивать единовременно один из следующих типов проектов: \n Сбор средств для стримеров   Получайте вознаграждения от зрителей, автоматически отображая их на своих трансляциях.  Поддержка сайта/сбор средств в социальных сетях Создайте платежный виджет и организуйте сбор средств на своем сайте или странице в социальной сети. 
+      Краудфандинг Воплотите в жизнь уникальный проект или интересный продукт. Опишите свою идею, предложите вознаграждение и единомышленники найдут вас сами.
+      Коллективная покупка Любите экономить на шопинге — присоединяйтесь к группам коллективных покупок для получения скидок на интересующие товары. 
+      Мероприятие Организовать мероприятие, будь то концерт или конференция, проще, чем кажется — объединяйтесь с единомышленниками, заинтересованными в участии.
+
+  utter_system.what_types_keeper:
+  - text: |
+      Есть три основных способа управления:
+      1. WM Keeper Standard (Mini) - это простой сайт-кошелек. Работает во всех браузерах, включая мобильные. Подробнее ознакомиться можно здесь: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_Standard ;
+      2. WebMoney Keeper WinPro – это профессиональный способ управления, с помощью программы для MS Windows. Подробнее здесь: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_WinPro ;
+      3. WM Keeper WebPro (Light) - это профессиональный способ управления, с помощью сайт-кошелька с расширенными возможностями. Подробнее здесь: https://wiki.webmoney.ru/projects/webmoney/wiki/WM_Keeper_WebPro .
+      С описанием способов управления можно ознакомиться на странице: https://www.web.money/rus/information/manage/index.shtml
+
+  utter_system.безопасность:
+  - text: "Защита Ваших данных осуществляется с использованием физических, технических и административных мероприятий, нацеленных на предотвращение риска потери, неправильного использования, несанкционированного доступа, нарушения конфиденциальности и изменения данных. Меры обеспечения безопасности включают в себя межсетевую защиту (брандмауэр) и шифрование данных, контроль физического доступа к центрам данных системы, а также контроль полномочий на доступ к данным."
+
+
+
+  utter_system.не_могу_зарегистрироваться:
+  - text: 'Регистрация в системе производится согласно инструкции https://www.webmoney.ru/rus/help/start/registration.shtml Какие трудности при регистрации у Вас возникают?'
+
+  utter_system.не_могу_зарегистрироваться_enum:
+  - text: 'Какая ошибка у Вас возникает?'
+
+  utter_system.не_могу_зарегистрироваться_megastock:
+  - text: 'Убедитесь, что Ваш сайт соответствует требованиям для размещения в каталоге. Правила и соглашения сервиса: https://megastock.ru/docs.aspx'
+
+  utter_system.не_могу_зарегистрироваться_indx:
+  - text: 'Доступ к проведению операций в INDX могут иметь только лица, присоединившиеся к WebMoney Transfer на сайте www.webmoney.ru , имеющие статус в ней не ниже формального аттестата. Ознакомиться с правилами функционирования сервиса можно на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/'
+
+  utter_system.не_могу_зарегистрироваться_standard:
+  - text: 'Откройте страницу https://wallet.webmoney.ru/signup и выберите код страны, из которой Вы регистрируетесь. Далее нужно указать номер телефона и следовать по инструкции.'
+
+  utter_system.не_могу_зарегистрироваться_winpro:
+  - text: 'Все новые участники WebMoney при регистрации в системе получают электронные кошельки под управлением WM Keeper Standard (Mini). Далее, если Вы хотите использовать Keeper WinPro (Classic), то необходимо подключить этот способ управления на сайте безопасности security.webmoney.ru Также обратите внимание, что может быть подключен только один Keeper Pro: или WinPro или WebPro. Более подробную инструкцую см. тут: https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_winpro_na_sayte_servisa_bezopasnosti'
+
+  utter_system.не_могу_зарегистрироваться_webpro:
+  - text: 'Любой участник WebMoney может зарегистрировать дополнительный WM Keeper WinPro (Classic) с использованием процедуры повторной регистрации. При этом создаются новые кошельки и новый WMID, которые прикрепляются к аттестату участника. Перейдите по ссылке https://start.wmtransfer.com/Clone.aspx и авторизуйтесь тем WM Keeper, который является основным способом управления для вашего зарегистрированного ранее WMID. Далее необходимо нажать кнопку “Выбрать” в разделе  WM Keeper WinPro и следовать по инструкции. Более подробно см. тут: https://wiki.webmoney.ru/projects/webmoney/wiki/registratsiya_wm_keeper_winpro'
+
+
+
+  utter_system.я_не_регистрировался:
+  - text: 'Если Вам нужно зарегистрироваться в системе, то сделать это можно на странице: https://wallet.webmoney.ru/signup Или через приложение Webmoney Keeper для мобильного устройства: https://wiki.web.money/projects/webmoney/wiki/WM_Keeper_Mobile'
+
+  utter_system.news:
+  - text: 'Новости WebMoney Transfer Вы можете смотреть на странице: https://news.wmtransfer.com/ Так же, на wallet.web.money и в приложении найти этот пункт можно в разделе "Еще".'
+
+  utter_system.news_как_отключить:
+  - text: 'В адресной строке нажмите на замок и отключите уведомления для данной страницы, также отключить уведомления для news.wmtransfer.com возможно в разделе настроек сайтов, используемого браузера.'
+
+  utter_system.оформление_на_юр_лицо:
+  - text: 'Юридическим лицам и индивидуальным предпринимателям, желающим осуществлять продажу товаров/работ/услуг с оплатой посредством системы WebMoney Transfer на расчетный счет компании, предлагаются различные варианты сотрудничества. Для получения информации о доступных для Вашей компании вариантах и об условиях их подключения, необходимо обратиться к одному из гарантов системы WebMoney Transfer или уполномоченных агентов. Пожалуйста, посмотрите информацию на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/informatsiya_dlya_yuridicheskih_lits'
+
+  utter_system.пользователь_уже_есть:
+  - text: |
+      Если Вы получаете сообщение, что на указанный Вами телефон был зарегистрирован другой WM-идентификатор, Вам нужно подать заявку на удаление номера телефона.
+      Порядок действий:
+      - Установите и запустите приложение WebMoney Keeper;
+      - Укажите номер телефона и нажмите "Далее";
+      - Сделайте селфи для подтверждения, что регистрацию проходит человек, а не робот;
+      - Введите код, полученный в sms и подтвердите согласие на обработку персональных данных. Если далее на странице отображается номер WMID, но Вы ранее никогда не регистрировались в Системе, нажмите на иконку "х";
+      - Если Вы хотите, чтобы этот номер перестал ассоциироваться с данным WM-идентификатором (WMID), нажмите кнопку "Ok";
+
+  utter_system.пользователь_не_найден:
+  - text: |
+      Ваш WMID был перенесен в архив в соответствии с пунктом 9.3 (с и d).
+      Если вы хотите восстановить работу WMID, то вам необходимо:
+      1. Зарегистрироваться (если у Вас нет других регистраций) в системе WebMoney Transfer на странице: https://www.webmoney.ru/rus/help/start/registration.shtml
+      2. Получить персональный аттестат одним из способов, описанных на странице: https://passport.webmoney.ru/asp/WMHowToGet.asp
+      3. Подать иск «Оспаривание прав на владение WM-идентификатором» на странице: https://arbitrage.webmoney.ru/asp/inewprocess.asp
+
+  # utter_system.пользователь_не_найден:
+  # - text: 'Возможно, что Ваш WMID был перенесен в архив. Такое возможно в соответствии с пунктом 9.3 (с и d). Если Вы хотите восстановить доступ к WMID, то Вам необходимо будет зарегистрировать новый WMID и подать иск "Оспаривание прав на владение WM-идентификатором" в Арбитражном сервисе: https://arbitrage.webmoney.ru/asp/inewprocess.asp'
+
+  utter_system.bug:
+  - text: 'Пожалуйста, создайте обращение в техническую поддержку на странице support.wmtransfer.com и опишите нам, что у Вас происходит.'
+
+  utter_system.как_узнать_тип_keeper:
+  - text: 'В разделе "Способы управления" security.webmoney.ru/asp/controllist2.asp, есть возможность просмотреть (подключить) тип/типы кипера, посредством, которого происходит управление, Вашим WMID.'
+
+  utter_system.как_узнать_тип_passport:
+  - text: 'Посмотреть информацию по Вашему аттестату Вы можете на странице: https://passport.webmoney.ru/asp/aProcess.asp'

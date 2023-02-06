@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.как_войти
+  steps:
+  - intent: keeper.как_войти
+    user: |-
+      как войти
+  - action: utter_keeper.как_войти

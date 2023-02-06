@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: funding.funding_conditions_of_project
+  steps:
+  - intent: funding.funding_conditions_of_project
+  - action: utter_funding.funding_conditions_of_project
+
+- story: funding.funding_edit
+  steps:
+  - intent: funding.funding_edit
+  - action: utter_funding.funding_edit
+
+- story: funding.funding_many_project
+  steps:
+  - intent: funding.funding_many_project
+  - action: utter_funding.funding_many_project
+
+- story: funding.funding_moderation
+  steps:
+  - intent: funding.funding_moderation
+  - action: utter_funding.funding_moderation
+
+- story: funding.money_from_funding
+  steps:
+  - intent: funding.money_from_funding
+  - action: utter_funding.money_from_funding
+
+- story: funding.funding_open_project
+  steps:
+  - intent: funding.funding_open_project
+  - action: utter_funding.funding_open_project
+
+- story: funding.funding_refund_of_a_fee
+  steps:
+  - intent: funding.funding_refund_of_a_fee
+  - action: utter_funding.funding_refund_of_a_fee

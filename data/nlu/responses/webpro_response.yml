@@ -1,0 +1,38 @@
+version: "3.1"
+
+responses:
+
+  # utter_webpro.how_to_connect_webpro:
+  # - text: "Вы можете подробно ознакомиться с данной темой в нашей Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard"
+
+  utter_webpro.получение_сертификата:
+  - text: |
+      Получить личный сертификат Keeper WebPro возможно только в 1)Internet Explorer или 2)Mozzila Firefox ESR версии:
+      1) Перед продлением в IE:
+      -проверьте наличие сертификата в хранилище браузера
+      -выполните настройки: https://download.ru/files/mE43KmYN
+      -установите корневой сертификат WebMoney CA: https://wiki.webmoney.ru/projects/webmoney/wiki/ustanovka_kornevogo_sertifikata_v_brauzere_internet_explorer
+      После получения сертификата не забудьте сделать экспорт: https://wiki.webmoney.ru/projects/webmoney/wiki/eksport_sertifikata_v_brauzere_internet_explorer
+
+      2) Последние версии Mozzila Firefox не поддерживают keygen и генерацию сертификата, но есть возможность скачать и использовать версию Mozilla Firefox ESR не старше 68 версии: https://mozilla-russia.org/products/firefox/history.html#release Не забудьте также о его настройках и установке корневого сертификата WebMoney CA.
+
+  utter_webpro.продление_сертификата:
+  - text: 'В первую очередь убедитесь, что Вы помните пароль на вход в Ваш Keeper WebPro (Light). В любом случае, при утере или просрочке сертификата Вы сможете продолжать пользоваться Вашим Keeper WebPro (Light) при помощи логина и пароля. Если Вы не помните пароль от Keeper WebPro (Light) назначить новый Вы можете в разделе безопасность непосредственно в Keeper WebPro (Light). Последние версии Mozzila Firefox не поддерживают keygen и генерацию сертификата, но есть возможность скачать и использовать версию Mozilla Firefox 68: https://ftp.mozilla.org/pub/firefox/releases/ Не забудьте также о его настройках и установке корневого сертификата WebMoney CA. Если Вы имеете возможность войти в light.web.money при помощи логина и пароля с подтверждением по СМС или E-num, то в случае если срок действия Вашего сертификата истек, Вы сможете войти и запросить его вручную в "Настройки" - "Безопасность". Подробнее о продлении сертификата Вы можете прочитать в нашей Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/prodlenie_personalnogo_sertifikata_v_brauzere_mozilla_firefox_esr'
+
+  utter_webpro.просрочил_сертификата:
+  - text: "Последние версии FF не поддерживают keygen и генерацию сертификата. Для продления сертификата рекомендуем скачать и установить версию Mozilla Firefox не старше 68.12: https://mozilla-russia.org/products/firefox/history.html#release Не забудьте также о его настройках и установке корневого сертификата WebMoney CA: https://wiki.webmoney.ru/projects/webmoney/wiki/kornevoy_sertifikat_webmoney Инструкция по продлению: https://wiki.webmoney.ru/projects/webmoney/wiki/prodlenie_personalnogo_sertifikata_v_brauzere_mozilla_firefox_esr В случае истечения срока действия сертификата, Вы можете его продлить согласно инструкции используя в качестве входа логин и пароль (с подтверждением по sms или enum): https://wiki.webmoney.ru/projects/webmoney/wiki/prodlenie_personalnogo_sertifikata_v_brauzere_internet_explorer"
+
+  utter_webpro.экспорт_сертификата:
+  - text: "Процедура экспорта ключа Keeper WebPro представляет собой сохранение персонального сертификата WM Keeper WebPro (Light) вместе с закрытым ключом на каком-либо носителе информации. Файл сертификата с закрытым ключом должен иметь расширение *.pfx или *.p12. Экспорт сертификата происходит из хранилища браузера, который Вы используете. У нас есть инструкции для наиболее популярных браузеров: Internet Explorer, Microsoft Edge, MacOS X, Google Chrome и другие. Ознакомьтесь, пожалуйста, с инструкцией: «Экспорт ключа Keeper WebPro»: http://wiki.webmoney.ru/projects/webmoney/wiki/eksport_klyucha_keeper_webpro"
+
+  utter_webpro.импорт_сертификата:
+  - text: "Процедура импорта ключа Keeper WebPro представляет собой запись персонального сертификата WM Keeper WebPro (Light) вместе с закрытым ключом в хранилище сертификатов браузера. При этом файл сертификата должен иметь расширение *.pfx или *.p12. У нас есть инструкции для наиболее популярных браузеров: Internet Explorer, Microsoft Edge, MacOS X, Google Chrome и другие. Вы так же можете импортировать сертификат на мобильные устройства с операционной системой Android и iOS. Ознакомьтесь, пожалуйста, с инструкцией: «Импорт ключа Keeper WebPro»: http://wiki.webmoney.ru/projects/webmoney/wiki/import_klyucha_keeper_webpro"
+
+  utter_webpro.как_посмотреть_хранилище_сертификатов:
+  - text: 'С инструкцией о том как проверить наличие сертификата в хранилище Вы можете ознакомиться на странице: https://wiki.web.money/projects/webmoney/wiki/kak_posmotret_nalichie_personalnogo_sertifikata_v_hranilische_brauzera'
+
+  utter_webpro.не_могу_продлить_сертификат:
+  - text: 'В первую очередь убедитесь, что Вы помните пароль на вход в Ваш Keeper WebPro. В любом случае, при утере или просрочке сертификата Вы сможете продолжать пользоваться Вашим Keeper WebPro при помощи логина и пароля. Если Вы не помните пароль от Keeper WebPro назначить новый Вы можете в разделе безопасность непосредственно в Keeper WebPro. На текущий момент продление сертификата возможно в браузерах Internet Explorer и Mozilla Firefox версии 68 и ниже. Скачать нужную версию Mozilla Вы можете на странице - https://ftp.mozilla.org/pub/firefox/releases/'
+
+  utter_webpro.нет_сертификата:
+  - text: 'В случае, если после подключения Keeper WebPro Вами не был получен персональный сертификат, Вы можете сгенерировать его, согласно инструкции в статье по ссылке: https://wiki.web.money/projects/webmoney/wiki/podklyuchenie_wm_keeper_webpro_k_wm_keeper_standard Процедуру получения персонального сертификата рекомендуется производить в браузере Mozilla Firefox не старше 68 версии ( https://mozilla-russia.org/products/firefox/history.html#release ) или Internet Explorer 11.'

@@ -1,0 +1,13 @@
+version: "3.1"
+
+stories:
+
+- story: withdraw.требования_для_вывода_средств
+  steps:
+  - intent: withdraw.требования_для_вывода_средств
+  - action: utter_withdraw.требования_для_вывода_средств
+
+- story: withdraw.when_do_transfers_work
+  steps:
+  - intent: withdraw.when_do_transfers_work
+  - action: utter_withdraw.when_do_transfers_work

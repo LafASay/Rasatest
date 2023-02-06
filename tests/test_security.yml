@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: security.security_ip_story
+  steps:
+  - intent: security.security_ip_story
+    user: |-
+      как посмотреть айпи адреса входов
+  - action: utter_security.security_ip_story
+
+- story: security.security_ip_block
+  steps:
+  - intent: security.security_ip_block
+    user: |-
+      как ограничить по ip
+  - action: utter_security.security_ip_block
+
+- story: security.отключить_security_ip_block
+  steps:
+  - intent: security.отключить_security_ip_block
+    user: |-
+      как отключить блокировку по ip
+  - action: utter_security.отключить_security_ip_block
+
+- story: security.как_узнать_ip
+  steps:
+  - intent: security.как_узнать_ip
+    user: |-
+      как узнать свой ip
+  - action: utter_security.как_узнать_ip
+
+- story: security.подтвердить_ip
+  steps:
+  - intent: security.подтвердить_ip
+    user: |-
+      как подтвердить свой ip
+  - action: utter_security.подтвердить_ip

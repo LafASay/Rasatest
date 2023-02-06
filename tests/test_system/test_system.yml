@@ -1,0 +1,66 @@
+version: "3.1"
+
+stories:
+
+- story: system.безопасность
+  steps:
+  - intent: system.безопасность
+    user: |-
+      безопасна ли идентификация через паспортные данные
+  - action: utter_system.безопасность
+
+- story: system.я_зарегистрирован
+  steps:
+  - intent: system.я_зарегистрирован
+    user: |-
+      я уже зарегистрирован
+  - action: utter_system.я_зарегистрирован
+
+- story: system.я_не_регистрировался
+  steps:
+  - intent: system.я_не_регистрировался
+    user: |-
+      это не мои регистрации
+  - action: utter_system.я_не_регистрировался
+
+- story: system.news
+  steps:
+  - intent: system.news
+    user: |-
+      новости системы
+  - action: utter_system.news
+
+- story: system.news_как_отключить
+  steps:
+  - intent: system.news_как_отключить
+    user: |-
+      как отключить новости
+  - action: utter_system.news_как_отключить
+
+- story: system.оформление_на_юр_лицо
+  steps:
+  - intent: system.оформление_на_юр_лицо
+    user: |-
+      как подключить к webmoney transfer юридическое лицо
+  - action: utter_system.оформление_на_юр_лицо
+
+- story: system.пользователь_уже_есть
+  steps:
+  - intent: system.пользователь_уже_есть
+    user: |-
+      пользователь уже зарегистрирован
+  - action: utter_system.пользователь_уже_есть
+
+- story: system.пользователь_не_найден
+  steps:
+  - intent: system.пользователь_не_найден
+    user: |-
+      пользователь не найден
+  - action: utter_system.пользователь_не_найден
+
+- story: system.bug
+  steps:
+  - intent: system.bug
+    user: |-
+      нашел баг
+  - action: utter_system.bug

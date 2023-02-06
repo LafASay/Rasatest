@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: system.безопасность
+  steps:
+  - intent: system.безопасность
+  - action: utter_system.безопасность
+
+- story: system.я_зарегистрирован
+  steps:
+  - intent: system.я_зарегистрирован
+  - action: utter_system.я_зарегистрирован
+
+- story: system.я_не_регистрировался
+  steps:
+  - intent: system.я_не_регистрировался
+  - action: utter_system.я_не_регистрировался
+
+- story: system.news
+  steps:
+  - intent: system.news
+  - action: utter_system.news
+
+- story: system.news_как_отключить
+  steps:
+  - intent: system.news_как_отключить
+  - action: utter_system.news_как_отключить
+
+- story: system.оформление_на_юр_лицо
+  steps:
+  - intent: system.оформление_на_юр_лицо
+  - action: utter_system.оформление_на_юр_лицо
+
+- story: system.пользователь_уже_есть
+  steps:
+  - intent: system.пользователь_уже_есть
+  - action: utter_system.пользователь_уже_есть
+
+- story: system.пользователь_не_найден
+  steps:
+  - intent: system.пользователь_не_найден
+  - action: utter_system.пользователь_не_найден
+
+- story: system.bug
+  steps:
+  - intent: system.bug
+  - action: utter_system.bug

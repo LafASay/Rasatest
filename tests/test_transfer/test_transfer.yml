@@ -1,0 +1,333 @@
+version: "3.1"
+
+stories:
+
+# - story: transfer.transfer
+#   steps:
+#   - intent: transfer.transfer
+#     user: |-
+#       как отправить средства
+#   - action: utter_transfer.transfer
+
+- story: transfer.cant_transfer
+  steps:
+  - intent: transfer.cant_transfer
+    user: |-
+      не могу перевести средства
+  - action: utter_transfer.cant_transfer
+
+- story: transfer.cant_transfer+limits.лимит_превышен
+  steps:
+  - intent: transfer.cant_transfer+limits.лимит_превышен
+    user: |-
+      не могу перевести средства превышен лимит
+  - action: utter_transfer.cant_transfer+limits.лимит_превышен
+
+- story: transfer.cant_transfer+arbitrage.unblock_wmid
+  steps:
+  - intent: transfer.cant_transfer+arbitrage.unblock_wmid
+    user: |-
+      не могу перевести средства вмид заблокирован
+  - action: utter_transfer.cant_transfer+arbitrage.unblock_wmid
+
+- story: transfer.wheres_money
+  steps:
+  - intent: transfer.wheres_money
+    user: |-
+      а где деньги то
+  - action: utter_transfer.wheres_money
+
+- story: transfer.какие_данные_указать_для_перевода
+  steps:
+  - intent: transfer.какие_данные_указать_для_перевода
+    user: |-
+      да какие данные указать что бы мне перевели деньги
+  - action: utter_transfer.какие_данные_указать_для_перевода
+
+- story: transfer.купить_товар
+  steps:
+  - intent: transfer.купить_товар
+    user: |-
+      купить топор
+  - action: utter_transfer.купить_товар
+
+# - story: transfer.как_купить
+#   steps:
+#   - intent: transfer.как_купить
+#     user: |-
+#       как я могу купить доллар
+#   - action: utter_transfer.как_купить
+
+- story: transfer.как_долго_выводятся_деньги
+  steps:
+  - intent: transfer.как_долго_выводятся_деньги
+    user: |-
+      в течение которого время зачисляются средства при выводе с кошелька на карту мир
+  - action: utter_transfer.как_долго_выводятся_деньги
+
+# - story: transfer.не_могу_вывести
+#   steps:
+#   - intent: transfer.не_могу_вывести
+#     user: |-
+#       в данный момент вывод в usd не доступен
+#   - action: utter_transfer.не_могу_вывести
+
+# - story: transfer.не_могу_вывести+limits.лимит_превышен
+#   steps:
+#   - intent: transfer.не_могу_вывести+limits.лимит_превышен
+#     user: |-
+#       не могу вывести превышен лимит
+#   - action: utter_transfer.не_могу_вывести+limits.лимит_превышен
+
+# - story: transfer.не_могу_пополнить
+#   steps:
+#   - intent: transfer.не_могу_пополнить
+#     user: |-
+#       не могу пополнить кашелек с карты код ошибки 997
+#   - action: utter_transfer.не_могу_пополнить
+
+- story: transfer.qr
+  steps:
+  - intent: transfer.qr
+    user: |-
+      qr login
+  - action: utter_transfer.qr
+
+- story: transfer.не_все_деньги_вывелись
+  steps:
+  - intent: transfer.не_все_деньги_вывелись
+    user: |-
+      а мне все деньги вывели а то пришло маловато
+  - action: utter_transfer.не_все_деньги_вывелись
+
+- story: transfer.не_все_деньги_вывелись
+  steps:
+  - intent: transfer.не_все_деньги_вывелись
+    user: |-
+      а мне все деньги вывели а то пришло маловато
+  - action: utter_transfer.не_все_деньги_вывелись
+  - intent: other.сколько_ждать
+    user: |-
+      когда
+  - action: utter_transfer.как_долго_выводятся_деньги
+
+- story: transfer.мне_не_могут_перевести_средства
+  steps:
+  - intent: transfer.мне_не_могут_перевести_средства
+    user: |-
+      мне не могут перевести средства
+  - action: utter_transfer.мне_не_могут_перевести_средства
+
+- story: transfer.мне_могут_перевести_средства
+  steps:
+  - intent: transfer.мне_могут_перевести_средства
+    user: |-
+      210 долларов мне могут прислать на wmz кошелек
+  - action: utter_transfer.мне_могут_перевести_средства
+
+# - story: transfer.не_могу_отправить_на_webmoney
+#   steps:
+#   - intent: transfer.не_могу_отправить_на_webmoney
+#     user: |-
+#       а почему не могу в вебмони отправить со счета 1хбет
+#   - action: utter_transfer.не_могу_отправить_на_webmoney
+
+# - story: transfer.автоплатеж
+#   steps:
+#   - intent: transfer.автоплатеж
+#     user: |-
+#       автоматический платеж
+#   - action: utter_transfer.автоплатеж
+
+- story: transfer.ali_не_принимает_webmoney
+  steps:
+  - intent: transfer.ali_не_принимает_webmoney
+    user: |-
+      алиэкспресс перестал принимать webmoney
+  - action: utter_transfer.ali_не_принимает_webmoney
+
+# - story: transfer.обменники
+#   steps:
+#   - intent: transfer.обменники
+#     user: |-
+#       а каким обменным пунктом можно воспользоваться
+#   - action: utter_transfer.обменники
+
+- story: transfer.верните_деньги
+  steps:
+  - intent: transfer.верните_деньги
+    user: |-
+      верните деньги
+  - action: utter_transfer.верните_деньги
+
+- story: transfer.трансфер_в_страны
+  steps:
+  - intent: transfer.трансфер_в_страны
+    user: |-
+      возможен ли сейчас перевод через вас из россии в южную корею
+  - action: utter_transfer.трансфер_в_страны
+
+- story: transfer.трансфер_в_страны+++system.how_create
+  steps:
+  - intent: transfer.трансфер_в_страны
+    user: |-
+      как перевести из россии в украину
+  - action: utter_transfer.трансфер_в_страны
+  - intent: system.how_create
+    user: |-
+      как это сделать
+  - action: utter_transfer_form_None_None_None
+
+- story: transfer.мне_отправили_средства
+  steps:
+  - intent: transfer.мне_отправили_средства
+    user: |-
+      мне отправили 121 доллар
+  - action: utter_transfer.мне_отправили_средства
+
+# - story: transfer.мне_отправили_средства_но_я_их_не_получил
+#   steps:
+#   - intent: transfer.мне_отправили_средства_но_я_их_не_получил
+#     user: |-
+#       мне отправили 200$ но я пока не получила эту сумму
+#   - action: utter_transfer.мне_отправили_средства_но_я_их_не_получил
+
+- story: transfer.операция_которую_я_не_совершал
+  steps:
+  - intent: transfer.операция_которую_я_не_совершал
+    user: |-
+      операция которую я не совершал
+  - action: utter_transfer.операция_которую_я_не_совершал
+
+# - story: transfer.не_могу_обменять
+#   steps:
+#   - intent: transfer.не_могу_обменять
+#     user: |-
+#       мне нужна помощь почему я не могу обменять валюту
+#   - action: utter_transfer.не_могу_обменять
+
+# - story: transfer.не_могу_обменять+limits.лимит_превышен
+#   steps:
+#   - intent: transfer.не_могу_обменять+limits.лимит_превышен
+#     user: |-
+#       не могу обменять средства пишет что превышен лимит
+#   - action: utter_transfer.не_могу_обменять+limits.лимит_превышен
+
+- story: transfer.курс_конвертации_при_выводе
+  steps:
+  - intent: transfer.курс_конвертации_при_выводе
+    user: |-
+      выводу доллара на карту по курсу банка верно
+  - action: utter_transfer.курс_конвертации_при_выводе
+
+- story: transfer.не_могу_оплатить
+  steps:
+  - intent: transfer.не_могу_оплатить
+    user: |-
+      почему я немогу ничего оплатить со своего кошелька
+  - action: utter_transfer.не_могу_оплатить
+
+- story: transfer.на_какую_карту_возможен_вывод
+  steps:
+  - intent: transfer.на_какую_карту_возможен_вывод
+    user: |-
+      а на какую карту можно будет делать вывод
+  - action: utter_transfer.на_какую_карту_возможен_вывод
+
+- story: transfer.с_каких_карт_возможно_пополнение
+  steps:
+  - intent: transfer.с_каких_карт_возможно_пополнение
+    user: |-
+      с каких карт возможно пополнение
+  - action: utter_transfer.с_каких_карт_возможно_пополнение
+
+- story: transfer.сколько_ждать_перевод_средств
+  steps:
+  - intent: transfer.сколько_ждать_перевод_средств
+    user: |-
+      а долго ждать перевод
+  - action: utter_transfer.сколько_ждать_перевод_средств
+
+- story: transfer.оплата_на_кассе
+  steps:
+  - intent: transfer.оплата_на_кассе
+    user: |-
+      а чтобы рассчетатся на кассе через qr код куда его прилаживать
+  - action: utter_transfer.оплата_на_кассе
+
+- story: transfer.совершить_платеж_если_нет_доступа
+  steps:
+  - intent: transfer.совершить_платеж_если_нет_доступа
+    user: |-
+      совершать платежи если нет доступа
+  - action: utter_transfer.совершить_платеж_если_нет_доступа
+
+# - story: transfer.узнать_статус_транзакции
+#   steps:
+#   - intent: transfer.узнать_статус_транзакции
+#     user: |-
+#       хотел бы узнать прошел ли платеж
+#   - action: utter_transfer.узнать_статус_транзакции
+
+# - story: transfer.со_стороннего_сайта_на_кошелек
+#   steps:
+#   - intent: transfer.со_стороннего_сайта_на_кошелек
+#     user: |-
+#       скажите пожалуйста как мне вывести деньги с сайта кумит на электронный кошелек
+#   - action: utter_transfer.со_стороннего_сайта_на_кошелек
+
+# - story: transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+#   steps:
+#   - intent: transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+#     user: |-
+#       со стороннего сайта на кошелек не могу перевести
+#   - action: utter_transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести
+
+- story: transfer.как_купить_крипту
+  steps:
+  - intent: transfer.как_купить_крипту
+    user: |-
+      как купить криптовалюту
+  - action: utter_transfer.как_купить_крипту
+
+- story: transfer.получатель_не_получил_перевод
+  steps:
+  - intent: transfer.получатель_не_получил_перевод
+    user: |-
+      я отправил перевод а получатель говорит что не получил его
+  - action: utter_transfer.получатель_не_получил_перевод
+
+- story: transfer.пополнял_кошелек_но_дленьги_не_пришли
+  steps:
+  - intent: transfer.пополнял_кошелек_но_дленьги_не_пришли
+    user: |-
+      пополнил кошелек но деньги не пришли
+  - action: utter_transfer.пополнял_кошелек_но_дленьги_не_пришли
+
+- story: transfer.деньги_не_пришли
+  steps:
+  - intent: transfer.деньги_не_пришли
+    user: |-
+      деньги не пришли
+  - action: utter_transfer.деньги_не_пришли
+
+- story: transfer.отправил_деньги_на_неактивный_кошелек
+  steps:
+  - intent: transfer.отправил_деньги_на_неактивный_кошелек
+    user: |-
+      отправил деньги на неактивный кошелек
+  - action: utter_transfer.отправил_деньги_на_неактивный_кошелек
+
+- story: transfer.деньги_не_вернулись
+  steps:
+  - intent: transfer.деньги_не_вернулись
+    user: |-
+      деньги не вернулись
+  - action: utter_transfer.деньги_не_вернулись
+
+- story: transfer.перевел_не_туда
+  steps:
+  - intent: transfer.перевел_не_туда
+    user: |-
+      перевел не на свой кошелек
+  - action: utter_transfer.перевел_не_туда

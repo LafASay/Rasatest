@@ -1,0 +1,162 @@
+version: "3.1"
+
+stories:
+
+- story: system.registration
+  steps:
+  - intent: system.registration
+  - action: utter_system.registration
+
+
+
+- story: system.registration_service_name__other__
+  steps:
+  - intent: system.registration
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.registration_enum
+  steps:
+  - intent: system.registration
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_system.registration_enum
+
+- story: system.registration_megastock
+  steps:
+  - intent: system.registration
+    entities:
+    - service_name: megastock
+  - slot_was_set:
+    - service_name: megastock
+  - action: utter_system.registration_megastock
+
+- story: system.registration_indx
+  steps:
+  - intent: system.registration
+    entities:
+    - service_name: indx
+  - slot_was_set:
+    - service_name: indx
+  - action: utter_system.registration_indx
+
+
+- story: system.registration_keeper_type__other__
+  steps:
+  - intent: system.registration
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.registration_standard
+  steps:
+  - intent: system.registration
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_system.registration_standard
+
+- story: system.registration_winpro
+  steps:
+  - intent: system.registration
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_system.registration_winpro
+
+- story: system.registration_webpro
+  steps:
+  - intent: system.registration
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_system.registration_webpro
+
+
+
+- story: system.registration_country__other__
+  steps:
+  - intent: system.registration
+    entities:
+    - country: __other__
+  - slot_was_set:
+    - country: __other__
+  - action: utter_system.registration
+
+
+- story: system.registration_canada
+  steps:
+  - intent: system.registration
+    entities:
+    - country: canada
+  - slot_was_set:
+    - country: canada
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+- story: system.registration_north_korea
+  steps:
+  - intent: system.registration
+    entities:
+    - country: north korea
+  - slot_was_set:
+    - country: north korea
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+- story: system.registration_somalia
+  steps:
+  - intent: system.registration
+    entities:
+    - country: somalia
+  - slot_was_set:
+    - country: somalia
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+- story: system.registration_sudan
+  steps:
+  - intent: system.registration
+    entities:
+    - country: sudan
+  - slot_was_set:
+    - country: sudan
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+- story: system.registration_south_sudan
+  steps:
+  - intent: system.registration
+    entities:
+    - country: south sudan
+  - slot_was_set:
+    - country: south sudan
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+- story: system.registration_usa
+  steps:
+  - intent: system.registration
+    entities:
+    - country: usa
+  - slot_was_set:
+    - country: usa
+  - action: utter_system.registration_in_this_country_is_not_possible
+
+
+
+- story: system.registration_нет_доступа_к_telephone_number
+  steps:
+  - intent: system.registration
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_system.registration_нет_доступа_к_telephone_number

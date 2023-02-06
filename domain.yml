@@ -1,840 +1,1550 @@
-version: "2.0"
+version: "3.1"
+
+# config:
+#   store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 10
+  carry_over_slots_to_new_session: false
 
 intents:
-  - transfer.wheres_money
-  - transfer.transfer
-  - transfer.telephone_number
-  - transfer.banks
-  - transfer.cash
-  - transfer.bank_card
-  - transfer.electronic_money
-  - transfer.guarant
-  - system.purse
+- app.app:
+    use_entities: []
+- app.как_авторизоваться_в_приложении:
+    use_entities: []
+- app.не_работает_прилождение:
+    use_entities: []
+# - app.как_выйти_из_приложения:
+#     use_entities: []
+# - app.как_установить_приложение:
+#     use_entities: []
+# - app.возможности_приложения:
+#     use_entities: []
+
+- arbitrage.how_to_become_arbitr:
+    use_entities: []
+- arbitrage.how_apply_to_arbitrage:
+    use_entities: []
+- arbitrage.was_scamed:
+    use_entities: []
+- arbitrage.вы_мошенники:
+    use_entities: []
+- arbitrage.how_to_create_a_claim_or_pretension:
+    use_entities: true
+- arbitrage.how_to_pretension_block:
+    use_entities: []
+- arbitrage.unblock_wmid:
+    use_entities: []
+- arbitrage.validity_period_of_claim:
+    use_entities: []
+- arbitrage.claim_processing_time:
+    use_entities: []
+# - arbitrage.how_to_file_claim:
+#     use_entities: []
+# - arbitrage.почему_меня_заблокировали:
+#     use_entities: []
+# - arbitrage.как_вывести_деньги_при_блокировке:
+#     use_entities: []
+- arbitrage.я_ничего_не_нарушал:
+    use_entities: []
+
+- cashback.cashback_didnt_come:
+    use_entities: []
+- cashback.how_to_get_cashback:
+    use_entities: []
+- cashback.выполнение_задач:
+    use_entities: []
+
+- debt.debt:
+    use_entities: []
+- debt.вернуть_долг:
+    use_entities: []
+- debt.вернул_долг:
+    use_entities: []
+- debt.вернул_долг+arbitrage.unblock_wmid:
+    use_entities: []
+- debt.не_могу_взять_долг:
+    use_entities: []
+- debt.не_могу_вернуть_долг:
+    use_entities: []
+- debt.не_могу_вернуть_долг+arbitrage.unblock_wmid:
+    use_entities: []
+- debt.как_открыть_лимит_доверия:
+    use_entities: []
+- debt.как_получить_лимит_доверия:
+    use_entities: []
+- debt.как_отменить_лимит_доверия:
+    use_entities: []
+- debt.критерии_скоринга:
+    use_entities: []
+- debt.мне_не_вернули_займ:
+    use_entities: []
+- debt.просрочил_займ:
+    use_entities: []
+- debt.проверить_займы:
+    use_entities: []
+- debt.займ_который_я_не_брал:
+    use_entities: []
+
+- xml.xml:
+    use_entities: []
+
+- hi_bye.greet:
+    use_entities: []
+- hi_bye.how_are_you:
+    use_entities: []
+- hi_bye.who_are_you:
+    use_entities: []
+- hi_bye.мальчик_или_девочка:
+    use_entities: []
+- hi_bye.есть_кто_нибудь:
+    use_entities: []
+- hi_bye.what_can_you_do:
+    use_entities: []
+- hi_bye.where_do_you_live:
+    use_entities: []
+- hi_bye.what_the_wather:
+    use_entities: []
+- hi_bye.thanks:
+    use_entities: []
+- hi_bye.ответ_не_помог:
+    use_entities: []
+- hi_bye.offend:
+    use_entities: []
+- hi_bye.i_like_you:
+    use_entities: []
+# - hi_bye.who_is_creater:
+#     use_entities: []
+- hi_bye.вторая_половинка_муравьиха:
+    use_entities: []
+- hi_bye.где_твой_муравейник:
+    use_entities: []
+# - hi_bye.who_president:
+#     use_entities: []
+- hi_bye.who_is_bot_owner:
+    use_entities: []
+# - hi_bye.search_engine:
+#     use_entities: []
+- hi_bye.sad:
+    use_entities: []
+- hi_bye.bye:
+    use_entities: []
+- hi_bye.sorry:
+    use_entities: []
+- hi_bye.анекдот:
+    use_entities: []
+- hi_bye.калькулятор:
+    use_entities: []
+- hi_bye.im_from:
+    use_entities: []
+# - hi_bye.name:
+#     use_entities: []
+- hi_bye.вебмани_не_нравится:
+    use_entities: []
+- hi_bye.are_you_kidding_me:
+    use_entities: []
+- hi_bye.trash:
+    use_entities: []
+- hi_bye.lol:
+    use_entities: []
+- hi_bye.ты_не_понял:
+    use_entities: []
+
+- referal.referal:
+    use_entities: []
+
+- sms.sms_not_coming:
+    use_entities:
+      - call
+      - service_name
+- sms.call_instead_of_sms:
+    use_entities: []
+- sms.куда_ввести_проверочный_код:
+    use_entities: []
+- sms.re-registering_sim:
+    use_entities: []
+- sms.cant_re-registering_sim:
+    use_entities: []
+- sms.cant_re-registering_sim+sms.sms_not_coming:
+    use_entities: []
+- sms.подключение_telegram:
+    use_entities: []
+- sms.число-ответ:
+    use_entities: []
+- sms.установить_авторизацию_через_смс:
+    use_entities: []
+- sms.подтверждение_операций:
+    use_entities: []
+# - sms.phone_number:
+#     use_entities:
+#       - phone_number
+# - sms.email:
+#     use_entities:
+#       - email
+- sms.покупка_смс:
+    use_entities: []
+- sms.не_приходит_пуш:
+    use_entities: []
+- sms.пишет_что_код_неправильный:
+    use_entities: []
+- sms.получить_смс_на_почту:
+    use_entities: []
+- sms.unplug_sms:
+    use_entities: []
+- sms.не_активна_кнопка_смс:
+    use_entities: []
+- sms.без_подтверждения:
+    use_entities: []
+
+- error.error:
+    use_entities: []
+
+- security.security_ip_story:
+    use_entities: []
+- security.security_ip_block:
+    use_entities: []
+- security.отключить_security_ip_block:
+    use_entities: []
+- security.как_узнать_ip:
+    use_entities: []
+- security.подтвердить_ip:
+    use_entities: []
+
+- withdraw.требования_для_вывода_средств:
+    use_entities: []
+- withdraw.when_do_transfers_work:
+    use_entities: []
+
+- events.events:
+    use_entities: []
+
+- exchanger.время_на_обмен:
+    use_entities: []
+
+# - enum.enum_install:
+#    use_entities: []
+- enum.enum_unplug:
+    use_entities:
+      - service_name
+- enum.не_могу_активировать_enum:
+    use_entities: []
+- enum.не_могу_активировать_enum+sms.sms_not_coming:
+    use_entities: []
+- enum.как_сменить_enum_аккаунт:
+    use_entities: []
+- enum.enum_не_работает:
+    use_entities: []
+- enum.enum:
+    use_entities: []
+- enum.как_настроить_enum:
+    use_entities: []
+- enum.не_могу_включить_функцию_enum:
+    use_entities: []
+- enum.получить_код_активации_enum:
+    use_entities: []
+
+- funding.funding_conditions_of_project:
+    use_entities: []
+- funding.funding_edit:
+    use_entities: []
+- funding.funding_many_project:
+    use_entities: []
+- funding.funding_moderation:
+    use_entities: []
+- funding.money_from_funding:
+    use_entities: []
+- funding.funding_open_project:
+    use_entities: []
+- funding.funding_refund_of_a_fee:
+    use_entities: []
+
+- files.files:
+    use_entities: []
+
+- support.need_technical_support:
+    use_entities: []
+- support.how_call_you:
+    use_entities: []
+- support.звонок_в_поддержку_платный:
+    use_entities: []
+- support.help_me:
+    use_entities: []
+- support.вы_есть_в_telegram:
+    use_entities: []
+- support.когда_ответят_на_тикет:
+    use_entities: []
+# - support.ticket_number:
+#     use_entities: []
+- support.платные_консультации:
+    use_entities: []
+
+- winpro.how_get_keyfile:
+    use_entities:
+      - name 
+      - keeper_type
+- winpro.keyfile_утрачен:
+    use_entities: []
+# - winpro.keyfile_утрачен+winpro.how_get_keyfile:
+#     use_entities: []
+
+- webpro.продление_сертификата:
+    use_entities: []
+- webpro.просрочил_сертификата:
+    use_entities: []
+- webpro.получение_сертификата:
+    use_entities: []
+- webpro.экспорт_сертификата:
+    use_entities: []
+- webpro.импорт_сертификата:
+    use_entities: []
+- webpro.как_посмотреть_хранилище_сертификатов:
+    use_entities: []
+- webpro.не_могу_продлить_сертификат:
+    use_entities: []
+- webpro.нет_сертификата:
+    use_entities: []
+
+- system_rules.system_rules:
+    use_entities: []
+- system_rules.how_to_guarantor:
+    use_entities: []
+- system_rules.кто_является_гарантом:
+    use_entities: []
+- system_rules.минимальный_возраст:
+    use_entities: []
+- system_rules.повторная_регистрация:
+    use_entities: []
+- system_rules.сотрудничество:
+    use_entities: []
+- system_rules.изменился_bl_tl:
+    use_entities:
+      - name
+- system_rules.адрес_webmoney:
+    use_entities: []
+# - system_rules.как_работает_webmoney:
+#     use_entities: []
+- system_rules.webmoney_платное:
+    use_entities: []
+- system_rules.webmoney_в_каких_странах:
+    use_entities: []
+# - system_rules.о_проблемах:
+#     use_entities: []
+- system_rules.запрещенные_платежные_системы:
+    use_entities: []
+# - system_rules.webmoney_не_работает:
+#     use_entities: []
+- system_rules.как_использовать_webmoney:
+    use_entities: []
+- system_rules.привязка_к_google_apple_samsung_pay:
+    use_entities: []
+# - system_rules.webmoney_и_бк:
+#     use_entities: []
+- system_rules.как_увеличить_bl_tl:
+    use_entities:
+      - name
+# - system_rules.когда_восстановится_bl_tl:
+#     use_entities: true
+- system_rules.сколько_лет_webmoney:
+    use_entities: []
+- system_rules.преимущества_webmoney:
+    use_entities: []
+- system_rules.часы_работы:
+    use_entities: []
+- system_rules.откуда_webmoney:
+    use_entities: []
+- system_rules.наследство:
+    use_entities: []
+- system_rules.кому_принадлежит_вебмани:
+    use_entities: []
+- system_rules.передача_аккаунта:
+    use_entities: []
+
+- purses.purse_disappeared:
+    use_entities:
+      - purse_type
+- purses.difference_between_purses:
+    use_entities: []
+- purses.how_view_purse_number:
+    use_entities:
+      - purse_type
+- purses.purse_requirement:
+    use_entities:
+      - purse_type
+- purses.how_many_purses_can_created:
+    use_entities: []
+- purses.какой_кошелек_для:
+    use_entities: []
+- purses.как_долго_создается_кошелек:
+    use_entities: []
+- purses.не_могу_создать_кошелек:
+    use_entities:
+      - purse_type
+# - purses.purse_number:
+#     use_entities:
+#       - purse_number
+# - purses.wmid_number:
+#     use_entities:
+#       - wmid_number
+- purses.мой_кошелек_активен_или_нет:
+    use_entities: []
+- purses.кошелек_не_работает:
+    use_entities: []
+- purses.изменить_валюту_кошелька:
+    use_entities: []
+- purses.у_меня_нет_кошелька:
+    use_entities:
+      - purse_type
+- purses.отображается_нулевой_баланс:
+    use_entities: []
+- purses.нет_кошелька_в_списке:
+    use_entities:
+      - purse_type
+
+- faq.я_русский_узбек_и_тд:
+    use_entities: []
+- faq.exchange_rates:
+    use_entities: []
+- faq.how_recovery:
+    use_entities:
+      - name
+      - service_name
+      - keeper_type
+      - purse_type
+      - telephone_number
+- faq.cant_recovery:
+    use_entities: []
+- faq.cant_recovery+sms.sms_not_coming:
+    use_entities: []
+- faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email:
+    use_entities:
+      - нет_доступа_к_telephone_number
+      - нет_доступа_к_email
+- faq.how_delete:
+    use_entities:
+      - name
+      - purse_type
+      - telephone_number
+      - service_name
+      - keeper_type
+- faq.termination_of_service:
+    use_entities: []
+- faq.undelete_purse:
+    use_entities: []
+- faq.transaction_history_deleted:
+    use_entities: []
+- faq.transaction_is_not_shown_in_history:
+    use_entities: []
+- faq.change_telephone_number_or_email_or_password:
+    use_entities: true
+- faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email:
+    use_entities:
+      - telephone_number
+      - email
+      - service_name
+# - faq.не_меняется_telephone_number_or_email:
+#     use_entities:
+#       - telephone_number
+#       - email
+#       - service_name
+- faq.не_могу_поменять_telephone_number_or_email_or_password:
+    use_entities:
+      - telephone_number
+      - email
+      - service_name
+- faq.не_могу_поменять_telephone_number_or_email_or_password+sms.sms_not_coming:
+    use_entities:
+      - telephone_number
+      - email
+      - service_name
+- faq.не_хочу_менять_telephone_number_or_email_or_password:
+    use_entities: []
+- faq.когда_поменяется_telephone_number_or_email:
+    use_entities: []
+# - faq.не_изменился_telephone_number:
+#     use_entities: []
+- faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid:
+    use_entities: []
+- faq.how_to_change_purse_number:
+    use_entities: []
+- faq.bl_different_color:
+    use_entities: []
+- faq.protection_transfer_receive: #ответ только для кода протекции
+    use_entities: []
+- faq.fee:
+    use_entities:
+      - steam
+      - verb
+# - faq.почему_такая_большая_комиссия:
+#     use_entities: []
+- faq.services:
+    use_entities: []
+- faq.attach_bank_card_qiwi_юmoney:
+    use_entities:
+      - electronic_money
+      - bank_card
+- faq.how_plug:
+    use_entities:
+      - service_name
+      - keeper_type
+- faq.how_unplug:
+    use_entities: []
+# - faq.cancel_transaction:
+#     use_entities: []
+- faq.how_make_money:
+    use_entities: []
+- faq.how_change_nickname:
+    use_entities:
+      - nickname
+      - service_name
+- faq.termination_of_service_отмена:
+    use_entities: []
+- faq.не_могу_отказаться_от_обслуживания:
+    use_entities: []
+- faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат:
+    use_entities: []
+- faq.как_им_написать:
+    use_entities: []
+- faq.как_настроить:
+    use_entities: []
+- faq.где_раздел_финансы:
+    use_entities: []
+- faq.корреспондент_не_отвечает:
+    use_entities: []
+
+- system.registration:
+    use_entities:
+      - service_name
+      - keeper_type
+- system.я_зарегистрирован:
+    use_entities: []
+- system.how_create:
+    use_entities:
+      - purse_type
+      - keeper_type
+      - bank_card
+      - name
+      - bank
+      - electronic_money
+- system.name:
+    use_entities: true
+# - system.keeper:
+#     use_entities:
+#       - keeper_type
+# - system.purse:
+#     use_entities:
+#       - purse_type
+# - system.passport:
+#     use_entities:
+#       - passport_type
+- system.determination:
+    use_entities:
+      - service_name
+      - purse_type
+      - name
+      - passport_type
+      - keeper_type
+      - protected_payment
+- system.what_types:
+    use_entities:
+      - name
+- system.безопасность:
+    use_entities: []
+- system.не_могу_зарегистрироваться:
+    use_entities: []
+- system.я_не_регистрировался:
+    use_entities: []
+- system.news:
+    use_entities: []
+- system.news_как_отключить:
+    use_entities: []
+- system.оформление_на_юр_лицо:
+    use_entities: []
+- system.пользователь_уже_есть:
+    use_entities: []
+- system.пользователь_не_найден:
+    use_entities: []
+- system.bug:
+    use_entities: []
+- system.как_узнать_тип:
+    use_entities:
+      - name
+      - keeper_type
+      - passport_type
+
+- passport.open_personal_information:
+    use_entities: []
+- passport.how_get_passport:
+    use_entities:
+      - passport_type
+- passport.не_могу_получить_аттестат:
+    use_entities: []
+- passport.почему_не_дают_аттестат:
+    use_entities: []
+- passport.how_update_passport_details:
+    use_entities: []
+- passport.how_long_check_documents:
+    use_entities:
+      - name
+# - passport.no_photo_accepted:
+#     use_entities: []
+- passport.videoid_photoid_load:
+    use_entities:
+      - name
+- passport.не_могу_загрузить_videoid_photoid:
+    use_entities:
+      - name
+- passport.как_загрузить_документы:
+    use_entities: []
+- passport.как_загрузить_документы+passport.no_webcam:
+    use_entities:
+      - no_webcam
+- passport.я_загрузил_фото_паспорта:
+    use_entities: []
+# - passport.я_сделал_videoid_photoid:
+#     use_entities: true
+# - passport.у_меня_нет_паспорта:
+#     use_entities: []
+- passport.я_получил_passport_or_videoid_or_photoid:
+    use_entities:
+      - passport_type
+      - name
+- passport.как_проверить_адрес:
+    use_entities: []
+- passport.как_скачать_загруженные_документы:
+    use_entities: []
+- passport.как_удалить_загруженные_документы:
+    use_entities: []
+- passport.письмо_не_пришло:
+    use_entities: []
+- passport.паспортные_данные_уже_есть_в_системе:
+    use_entities: []
+# - passport.какой_у_меня_аттестат:
+#     use_entities: []
+- passport.поиск_wmid:
+    use_entities: []
+- passport.какой_аттестат_нужен:
+    use_entities: []
+# - passport.вывод_без_аттестации:
+#     use_entities: []
+- passport.сняли_аттестат:
+    use_entities: []
+- passport.адрес_регистрации_не_совпадает_с_местом_жительства:
+    use_entities: []
+- passport.скриншот_с_данными:
+    use_entities: []
+- passport.нет_моего_адреса:
+    use_entities: []
+- passport.wmid_не_существует:
+    use_entities: []
+- passport.какой_паспорт_можно_использовать:
+    use_entities: []
+- passport.не_могу_загрузить_документы:
+    use_entities: []
+# - passport.куда_можете_отправить_письмо_для_проверки_адреса:
+#     use_entities: []
+- passport.не_хочу_отправлять_документы:
+    use_entities: []
+- passport.как_долго_рассматривается_заявка_на_восстановление:
+    use_entities: []
+- passport.случайно_создал_новый_вмид:
+    use_entities: []
+- passport.зачем_нужен:
+    use_entities:
+      - name
+      - keeper_type
+      - passport_type
+      - service_name
+- passport.no_webcam:
+    use_entities: []
+- passport.скриншот_отправка:
+    use_entities: []
+- passport.у_меня_нет_аттестата:
+    use_entities: []
+- passport.как_найти_пользователя:
+    use_entities: []
+- passport.сколько_стоит_аттестат:
+    use_entities:
+      - passport_type
+- passport.хочу_выдавать_аттестаты:
+    use_entities: []
+- passport.какие_документы_нужны:
+    use_entities: []
+- passport.аттестаторы:
+    use_entities: []
+- passport.как_оплатить_аттестат:
+    use_entities: []
+
+- other.user_confirm:
+    use_entities: []
+- other.user_deny:
+    use_entities: []
+- other.user_know:
+    use_entities: []
+- other.user_dont_know:
+    use_entities: []
+- other.user_dont_understand:
+    use_entities: []
+- other.сколько_ждать:
+    use_entities: []
+- other.прошло_много_времени:
+    use_entities: []
+# - other.user_less_utr:
+#     use_entities: []
+# - other.user_more_utr:
+#     use_entities: []
+- other.все_сделал:
+    use_entities: []
+- other.англ:
+    use_entities: []
+- other.страны:
+    use_entities:
+      - country
+- other.дайте_ссылку:
+    use_entities: []
+- other.хочу_быстрее:
+    use_entities: []
+- other.где_посмотреть:
+    use_entities: []
+- other.как_увеличить:
+    use_entities: []
+- other.я_использую:
+    use_entities:
+      - keeper_type
+- other.не_получилось:
+    use_entities: []
+- other.приведи_пример:
+    use_entities: []
+- other.нужно_подробнее:
+    use_entities: []
+- other.что_нужно_делать:
+    use_entities: []
+- other.указание_возраста:
+    use_entities: []
+- other.я_уже_отправил:
+    use_entities: []
+- other.не_работает:
+    use_entities: []
+- other.не_гражданин:
+    use_entities: []
+- other.why:
+    use_entities: []
+- other.counter:
+    use_entities: []
+
+- keeper.install:
+    use_entities:
+      - service_name
+      - keeper_type
+- keeper.changing_the_method_of_managing_wmid:
+    use_entities: []
+- keeper.how_to_issue_an_invoice:
+    use_entities:
+      - keeper_type
+- keeper.how_to_check_the_history:
+    use_entities:
+      - name
+      - keeper_type
+- keeper.how_to_send_message:
+    use_entities:
+      - keeper_type
+- keeper.how_to_add_correspondent:
+    use_entities:
+      - keeper_type
+- keeper.exchange_did_not_take_place:
+    use_entities: []
+# - keeper.how_to_make_transfer_with_protection:
+#     use_entities: true
+- keeper.как_оплатить_счет:
+    use_entities: []
+# - keeper.how_to_view_the_history_of_correspondence:
+#     use_entities: true
+- keeper.accepting_funds_from_unauthorized_correspondents:
+    use_entities: []
+# - keeper.как_изменить_пароль:
+#     use_entities: true
+# - keeper.не_могу_изменить_пароль:
+#     use_entities: []
+- keeper.забыл_пароль:
+    use_entities: []
+- keeper.забыл_пароль+faq.change_telephone_number_or_email_or_password:
+    use_entities: []
+- keeper.как_войти:
+    use_entities: []
+- keeper.как_войти+keeper.забыл_пароль:
+    use_entities: []
+- keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email:
+    use_entities:
+      - нет_доступа_к_telephone_number
+      - нет_доступа_к_email
+- keeper.как_выйти:
+    use_entities: []
+- keeper.не_могу_войти:
+    use_entities: []
+- keeper.не_могу_войти+keeper.пароль_не_подходит:
+    use_entities: []
+- keeper.не_могу_войти+keeper.нет_доступа_к_telephone_number_or_email:
+    use_entities:
+      - нет_доступа_к_telephone_number
+      - нет_доступа_к_email
+- keeper.не_могу_войти+keeper.забыл_пароль:
+    use_entities: []
+- keeper.нет_доступа_к_telephone_number_or_email:
+    use_entities:
+      - нет_доступа_к_telephone_number
+      - нет_доступа_к_email
+# - keeper.отключение_автологина:
+#     use_entities: []
+# - keeper.пароль_не_пришел:
+#     use_entities: []
+- keeper.пароль_не_подходит:
+    use_entities: []
+# - keeper.как_узнать_тип_кипера:
+#     use_entities: []
+- keeper.нет_доступа_к_аккаунту:
+    use_entities: []
+- keeper.потерял_все_данные:
+    use_entities: false
+
+- languages.на_каком_языке_ты_говоришь:
+    use_entities: []
+# - languages.я_хочу_общаться_на_x_языке:
+#     use_entities: []
+- languages.how_to_change_the_language_or_font:
+    use_entities:
+      - font
+
+- limits.limits:
+    ignore_entities:
+      - steam
+
+
+
+
+
+
+
+
+- limits.how_to_increase_limits:
+    use_entities:
+      - verb
+      - steam
+- limits.лимит_не_изменился+passport.я_получил_passport_or_videoid_or_photoid:
+    use_entities:
+      - passport_type
+- limits.лимит_не_изменился:
+    use_entities: []
+- limits.лимит_превышен:
+    use_entities: []
+- limits.когда_обновляются_лимиты:
+    use_entities: []
+# - limits.отличие_расходного_лимита_и_лимит_на_колличество_средств_на_кошельке:
+#     use_entities: []
+
+- merchant.merchant:
+    use_entities: []
+
+- transfer.transfer:
+    use_entities: true
+- transfer.cant_transfer:
+    use_entities: true
+- transfer.cant_transfer+limits.лимит_превышен:
+    use_entities: true
+- transfer.cant_transfer+arbitrage.unblock_wmid:
+    use_entities: true
+- transfer.wheres_money:
+    use_entities: []
+- transfer.какие_данные_указать_для_перевода:
+    use_entities: []
+# - transfer.как_купить:
+#     use_entities: []
+- transfer.как_оплатить:
+    use_entities:
+      - telephone_number
+      - internet
+      - steam
+- transfer.купить_товар:
+    use_entities: []
+- transfer.как_долго_выводятся_деньги:
+    use_entities: []
+# - transfer.не_могу_вывести:
+#     use_entities: []
+# - transfer.не_могу_вывести+limits.лимит_превышен:
+#     use_entities: []
+# - transfer.не_могу_пополнить:
+#     use_entities: []
+- transfer.qr:
+    use_entities: []
+- transfer.не_все_деньги_вывелись:
+    use_entities: []
+- transfer.мне_не_могут_перевести_средства:
+    use_entities: []
+- transfer.мне_могут_перевести_средства:
+    use_entities: []
+# - transfer.не_могу_отправить_на_webmoney:
+#     use_entities: []
+# - transfer.автоплатеж:
+#     use_entities: []
+- transfer.ali_не_принимает_webmoney:
+    use_entities: []
+# - transfer.обменники:
+#     use_entities: []
+- transfer.верните_деньги:
+    use_entities: []
+- transfer.трансфер_в_страны:
+    use_entities: []
+- transfer.мне_отправили_средства:
+    use_entities: []
+# - transfer.мне_отправили_средства_но_я_их_не_получил:
+#     use_entities: []
+- transfer.операция_которую_я_не_совершал:
+    use_entities: []
+# - transfer.не_могу_обменять:
+#     use_entities: []
+# - transfer.не_могу_обменять+limits.лимит_превышен:
+#     use_entities: []
+- transfer.курс_конвертации_при_выводе:
+    use_entities: []
+- transfer.не_могу_оплатить:
+    use_entities: []
+- transfer.на_какую_карту_возможен_вывод:
+    use_entities: []
+- transfer.с_каких_карт_возможно_пополнение:
+    use_entities: []
+- transfer.сколько_ждать_перевод_средств:
+    use_entities: []
+- transfer.оплата_на_кассе:
+    use_entities: []
+- transfer.совершить_платеж_если_нет_доступа:
+    use_entities: []
+# - transfer.узнать_статус_транзакции:
+#     use_entities: []
+# - transfer.со_стороннего_сайта_на_кошелек:
+#     use_entities: []
+# - transfer.со_стороннего_сайта_на_кошелек_не_могу_перевести:
+#     use_entities: []
+- transfer.как_купить_крипту:
+    use_entities: []
+- transfer.cash:
+    use_entities:
+      - cash  
+- transfer.bank_card:
+    use_entities:
+      - bank_card
+- transfer.telephone_number:
+    use_entities:
+      - telephone_number  
+- transfer.banks:
+    use_entities:
+      - bank
+- transfer.electronic_money:
+    use_entities:
+      - electronic_money  
+- transfer.недостаточно_средств:
+    use_entities:
+      - error_недостаточно_средств 
+- transfer.получатель_не_получил_перевод:
+    use_entities: []
+- transfer.guarant:
+    use_entities:
+      - guarant 
+# - transfer.не_могу_перевести_средства:
+#     use_entities: true
+- transfer.пополнял_кошелек_но_дленьги_не_пришли:
+    use_entities: []
+- transfer.деньги_не_пришли:
+    use_entities: []
+- transfer.отправил_деньги_на_неактивный_кошелек:
+    use_entities: []
+- transfer.деньги_не_вернулись:
+    use_entities: []
+- transfer.перевел_не_туда:
+    use_entities: []
+
+- number.number_and_email:
+    use_entities: []
 
 entities: 
-   - verb
+- phone_number
+- service_name
+- keeper_type
+- purse_number
+- wmid_number
+- verb
+- fee
+- protected_payment
+- steam
+- passport_type
+- no_webcam
+# - нет_доступа_к_telephone_number
+# - нет_доступа_к_email
+- error_недостаточно_средств
+- internet
+- call
+- font
+- currency
+- country
+- nickname
+- communal payments
+- date
+- standard
+- winpro
+- webpro
+- mobile
+- pro
+- keeper
+- passport
+- alias_passport
+- formal_passport
+- initial_passport
+- personal_passport
+- merchant_passport
+- capitaller_passport
+- transact_automation_tool_passport
+- developer_passport
+- registrar_passport
+- service_passport
+- guarantor_passport
+- operator_passport
+- telegram
 
+- bank_card:
+    roles:
+    - from
+    - to
+    - through
+- bank:
+    roles:
+    - from
+    - to
+    - through
+- electronic_money:
+    roles:
+    - from
+    - to
+    - through
+- cash:
+    roles:
+    - from
+    - to
+    - through
+- telephone_number:
+    roles:
+    - from
+    - to
+    - through
+    - no_access
+    - without
 
-   - fee:
-       roles:
-       - min
-       - no
+- email:
+    roles:
+    - no_access
 
-   - bank_card:
-       roles:
-       - from
-       - to
-       - through
-   - bank:
-       roles:
-       - from
-       - to
-       - through
-   - electronic_money:
-       roles:
-       - from
-       - to
-       - through
-   - cash:
-       roles:
-       - from
-       - to
-       - through
-   - telephone_number:
-       roles:
-       - from
-       - to
-       - through
-   - guarant:
-       roles:
-       - from
-       - to
-       - through
-   - name:
-       roles:
-       - from
-       - to
-       - through
-   - purse_type:
-       roles:
-       - from
-       - to
-       - through
-
-
-
-
-
-forms:
-  transfer_form:
-    required_slots: {}
-
+- guarant:
+    roles:
+    - from
+    - to
+    - through
+- name:
+    roles:
+    - from
+    - to
+    - through
+- purse_type:
+    roles:
+    - from
+    - to
+    - through
 slots:
-  purse_type:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
-    values:
-    - wmp
-    - wme
-    - wmb
-    - wmg
-    - wmz
-    - wmk
-    - wmx
-    - wmh
-    - wml
-    - wmy
-    - wmr
-    - wmc
-    - wmd
-    - wmu
-    - wmf
-    - wmt
-    - mdl
-    - btc
-    - bch
-    - ltc
-    - eth
-    - usdt
 
-  # currency:
-  #   type: rasa.shared.core.slots.CategoricalSlot
-  #   initial_value: null
-  #   auto_fill: true
-  #   influence_conversation: true
-  #   values:
-  #   - rub
-  #   - eur
-  #   - byn
-  #   - usd
-  #   - kzt
-  #   - uzs
-  #   - uah
+  passport_type:
+    type: categorical
+    values:
+      - alias_passport
+      - formal_passport
+      - initial_passport
+      - personal_passport
+      - merchant_passport
+      - capitaller_passport
+      - transact_automation_tool_passport
+      - developer_passport
+      - registrar_passport
+      - service_passport
+      - guarantor_passport
+      - operator_passport
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: passport_type
 
   transfer_direction:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: false
-    influence_conversation: false
+    type: categorical
     values:
-    - to
-    - from
+      - topup
+      - withdraw
+      - exchange
+      - transfer
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  call:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: call
+
+  font:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: font
+ 
+  phone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: phone_number
+
+  email:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: email
+
+  service_name:
+    type: categorical
+    values:
+      - c2c
+      - capitaller
+      - credit
+      - debt
+      - enum
+      - events
+      - exchanger
+      - forum
+      - indx
+      - merchant
+      - report
+      - verification_centre
+      - megastock
+      - wmmail
+      - digiseller
+      - login
+      - debtmart
+      - wiki
+      - escrow
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: service_name
+
+  name:
+    type: categorical
+    values:
+      - account
+      - activation_code
+      - business_level
+      - certificate
+      - check_paymer
+      - group
+      - keyfile
+      - photoid
+      - root_certificate
+      - trust_level
+      - videoid
+      - webmoney
+      - wmid
+      - пароль
+      - project_funding
+      - transaction_history
+      - chat_history
+      - ticket
+      - title_units
+      - claim
+      - pretension
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+    - type: from_entity
+      entity: name
+      role: from
+    - type: from_entity
+      entity: name
+      role: to
+    - type: from_entity
+      entity: name
+      role: through
+
+  purse_type:
+    type: categorical
+    values:
+      - wmp
+      - wme
+      - wmb
+      - wmg
+      - wmz
+      - wmk
+      - wmx
+      - wmh
+      - wml
+      - wmy
+      - wmr
+      - wmc
+      - wmd
+      - wmu
+      - wmf
+      - wmt
+      - mdl
+      # - btc
+      # - bch
+      # - ltc
+      # - eth
+      # - usdt
+    mappings:
+    - type: from_entity
+      entity: purse_type
+    - type: from_entity
+      entity: purse_type
+      role: from
+    - type: from_entity
+      entity: purse_type
+      role: to
+    - type: from_entity
+      entity: purse_type
+      role: through
+
+  currency:
+    type: categorical
+    values:
+      - rub
+      - eur
+      - byn
+      - usd
+      - kzt
+      - uzs
+      - uah
+      - btc
+      - bch
+      - ltc
+      - eth
+      - usdt
+    mappings:
+    - type: from_entity
+      entity: currency
+
+  purse_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: purse_number
+
+  wmid_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: wmid_number
+
+  date:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: date
 
   electronic_money:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
-    - electronic_money
-    - advcash
-    - alipay
-    - banxy
-    - bitpay
-    - bkash
-    - easypaisa
-    - easypay
-    - gcash
-    - idram
-    - imps
-    - ipass money
-    - jazzcash
-    - m-pesa
-    - mobidram
-    - nagad
-    - neteller
-    - paybox
-    - payeer
-    - payoneer
-    - paypal
-    - perfect money
-    - promptpay
-    - qiwi
-    - rocket
-    - runpay
-    - skrill
-    - upi
-    - viettelpay
-    - wechat pay
-    - zalopay
-    - юmoney
+      - electronic_money
+      - advcash
+      - alipay
+      - banxy
+      - bitpay
+      - bkash
+      - easypaisa
+      - easypay
+      - gcash
+      - idram
+      - imps
+      - ipass money
+      - jazzcash
+      - m-pesa
+      - mobidram
+      - nagad
+      - neteller
+      - paybox
+      - payeer
+      - payoneer
+      - paypal
+      - perfect money
+      - promptpay
+      - qiwi
+      - rocket
+      - runpay
+      - skrill
+      - upi
+      - viettelpay
+      - wechat pay
+      - zalopay
+      - юmoney
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: electronic_money
+    - type: from_entity
+      entity: electronic_money
+      role: from
+    - type: from_entity
+      entity: electronic_money
+      role: to
+    - type: from_entity
+      entity: electronic_money
+      role: through
 
-  bank_card:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
+  country:
+    type: categorical
+    values:
+      - canada
+      - north korea
+      - somalia
+      - sudan
+      - south sudan
+      - usa
     influence_conversation: true
-
-  bank:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
-
-  cash:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
- 
-  telephone_number:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
-
-  guarant:
-    type: rasa.shared.core.slots.TextSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
 
   verb:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: true
-    influence_conversation: true
+    type: categorical
     values:
-    - withdraw
-    - topup
-    - exchange
+      - withdraw
+      - topup
+      - exchange
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: verb
+
+  steam:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: steam
+
+  keeper_type:
+    type: categorical
+    values:
+      - standard
+      - winpro
+      - webpro
+      - mobile
+      - pro
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: standard
+    - type: from_entity
+      entity: winpro
+    - type: from_entity
+      entity: webpro
+    - type: from_entity
+      entity: mobile
+    - type: from_entity
+      entity: pro
+
+  no_webcam:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: no_webcam
+
+  нет_доступа_к_telephone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: telephone_number
+      role: no_access
+
+  нет_доступа_к_email:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: email
+      role: no_access
+
+  bank_card:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bank_card
+    - type: from_entity
+      entity: bank_card
+      role: from
+    - type: from_entity
+      entity: bank_card
+      role: to
+    - type: from_entity
+      entity: bank_card
+      role: through
+
+  bank:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bank
+    - type: from_entity
+      entity: bank
+      role: from
+    - type: from_entity
+      entity: bank
+      role: to
+    - type: from_entity
+      entity: bank
+      role: through
+
+  cash:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cash
+    - type: from_entity
+      entity: cash
+      role: from
+    - type: from_entity
+      entity: cash
+      role: to
+    - type: from_entity
+      entity: cash
+      role: through
+
+  nickname:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: nickname
+
+  error_недостаточно_средств:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: error_недостаточно_средств
+
+  telephone_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: telephone_number
+
+  guarant:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: guarant
+    - type: from_entity
+      entity: guarant
+      role: from
+    - type: from_entity
+      entity: guarant
+      role: to
+    - type: from_entity
+      entity: guarant
+      role: through
+
+  internet:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: internet
+
+  communal payments:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: communal payments
 
   transfer_purse_type:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: false
-    influence_conversation: false
+    type: categorical
     values:
-    - wmp
-    - wme
-    - wmb
-    - wmg
-    - wmz
-    - wmk
-    - wmx
-    - wmh
-    - wml
-    - wmy
-    - wmr
-    - wmc
-    - wmd
-    - wmu
-    - wmf
-    - wmt
-    - mdl
-    - btc
-    - bch
-    - ltc
-    - eth
-    - usdt
+      - wmp
+      - wme
+      - wmb
+      - wmg
+      - wmz
+      - wmk
+      - wmx
+      - wmh
+      - wml
+      - wmy
+      - wmr
+      - wmc
+      - wmd
+      - wmu
+      - wmf
+      - wmt
+      - mdl
+      - btc
+      - bch
+      - ltc
+      - eth
+      - usdt
+    influence_conversation: true
+    mappings:
+    - type: custom
 
   transfer_method:
-    type: rasa.shared.core.slots.CategoricalSlot
-    initial_value: null
-    auto_fill: false
-    influence_conversation: false
+    type: categorical
     values:
     - transfer_bank
     - transfer_electronic_money
     - transfer_cash
     - transfer_telephone_number
     - transfer_guarant
-
-responses:
-  utter_transfer.wheres_money:
-  - text: "transfer.wheres_money"
-
-  utter_please_rephrase:
-  - text: "Извините, я Вас не понял, опишите, пожалуйста, Вашу проблему подробнее."
-
-
-
-
-
-  utter_system.determination_wmp:
-  - text: "В Системе больше нет такого типа кошелька. Ранее этот кошелёк являлся эквивалентом российского рубля."
-
-  utter_system.determination_wme:
-  - text: "WME - титульный знак системы WebMoney Transfer, являющийся эквивалентом евро. Учитывается на кошельках типа Е. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WME"
-
-  utter_system.determination_wmb:
-  - text: "WMB - титульный знак системы WebMoney Transfer, являющийся эквивалентом белорусского рубля. Подробнее об этом титульном знаке можно узнать в этом разделе нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMB"
-
-  utter_system.determination_wmg:
-  - text: "WMG - титульный знак системы WebMoney Transfer, являющийся эквивалентом золота. Единицей учета на кошельках типа G является один грамм чистого золота (1 WMG), учет ведется в сотых долях грамма (0.01 WMG). Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMG"
-
-  utter_system.determination_wmz:
-  - text: "WMZ - титульный знак системы WebMoney Transfer, являющийся эквивалентом доллара США. Учитывается на кошельках типа Z. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMZ"
-
-  utter_system.determination_wmk:
-  - text: "WMK - титульный знак системы WebMoney Transfer, являющийся эквивалентом одному казахcтанскому тенге. Учитывается на кошельках типа K. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMK"
-
-  utter_system.determination_wmx:
-  - text: "WMX - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 BTC. Учитывается на кошельках типа X. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMX"
-
-  utter_system.determination_wmh:
-  - text: "WMH - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 BCH. Учитывается на кошельках типа H. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMH"
-
-  utter_system.determination_wml:
-  - text: "WML - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 LTC. WML представляет собой единицу учета переданных участниками системы на хранение Гаранту имущественных прав на публикацию записей в глобальной публичной базе данных сети litecoin.org. Учитывается на кошельках типа L. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WML"
-
-  utter_system.determination_wmy:
-  - text: "WMY - титульный знак системы WebMoney Transfer, являющийся эквивалентом узбекского сума. Учитывается на кошельках типа Y. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMY"
-
-  utter_system.determination_wmr:
-  - text: "В Системе больше нет такого типа кошелька. Ранее этот кошелёк являлся эквивалентом российского рубля."
-
-  utter_system.determination_wmc:
-  - text: "WMC - титульный знак системы WebMoney Transfer, являющийся эквивалентом WMZ для кредитных операций с использованием кошельков типа C. Кошельки типа C предназначены для учета выданных кредитов. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/wmc_koshelek"
-
-  utter_system.determination_wmd:
-  - text: "WMD - титульный знак системы WebMoney Transfer, являющийся эквивалентом WMZ для кредитных операций с использованием кошельков типа D. Кошельки типа D предназначены для учета выданных кредитов. Подробнее об этом титульном знаке можно узнать на странице нашей WebMoney Wiki: https://wiki.webmoney.ru/projects/webmoney/wiki/WMD"
-
-  utter_system.determination_wmu:
-  - text: "Оборот по WMU официально прекращен. Всем держателям WMU деньги были конвертированы в WMZ."
-
-  utter_system.determination_wmf:
-  - text: "WMF - титульный знак системы WebMoney Transfer, являющийся эквивалентом 0,001 ETH (Ethereum)."
-
-  utter_system.determination_wmt:
-  - text: "WMT - титульный знак системы WebMoney Transfer (учитывается на кошельках типа T), являющийся эквивалентом 1 USDT. WMT представляет собой переданные на хранение токены USDT (единицы учета в глобальных публичных базах данных на условиях https://tether.to/en/legal)."
-
-  utter_system.determination_mdl:
-  - text: "MDL кошельки доступны для создания участникам системы WebMoney Transfer из Молдовы, имеющим телефонный номер с кодом +373. Полная информация о получении и возможностях MDL-кошельков представлена здесь: https://wiki.web.money/projects/webmoney/wiki/mdl_koshelek"
-
-  utter_system.determination_btc:
-  - text: "Это кошелёк в системе Bitcoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMX. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 BTC, хранятся на кошельках типа X."
-
-  utter_system.determination_bch:
-  - text: "Это кошелёк в системе Bitcoin Cash, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMH. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 BCH, хранятся на кошельках типа H."
-
-  utter_system.determination_ltc:
-  - text: "Это кошелёк в системе Litecoin, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WML. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 LTC, хранятся на кошельках типа L."
-
-  utter_system.determination_eth:
-  - text: "Это кошелёк в системе Ethereum, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMF. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 ETH, хранятся на кошельках типа F."
-
-  utter_system.determination_usdt:
-  - text: "Это кошелёк в системе USDT, я консультирую только по кошелькам, которые есть в Системе WebMoney Transfer, у нас есть только кошелёк WMT. Титульные знаки системы WebMoney Transfer, являющиеся эквивалентом 0,001 USDT, хранятся на кошельках типа T."
-
-
-
-
-
-
-
-
-  utter_transfer.bank_card:
-  - text: "utter_transfer.bank_card"
-
-  utter_transfer.telephone_number:
-  - text: "utter_transfer.telephone_number"
-
-  utter_transfer.banks:
-  - text: "utter_transfer.banks"
-
-  utter_transfer.cash:
-  - text: "utter_transfer.cash"
-
-  utter_transfer.electronic_money:
-  - text: "utter_transfer.electronic_money"
-
-  utter_transfer.guarant:
-  - text: "utter_transfer.guarant"
-
-
-  utter_ask_transfer_form_to_transfer_purse_type:
-  - text: "Укажите пожалуйста тип кошелька который хотите пополнить."
-
-  utter_ask_transfer_form_from_transfer_purse_type:
-  - text: "Укажите пожалуйста тип кошелька с которого хотите вывести средства."
-
-
-
-  utter_ask_transfer_form_to_wme_transfer_method:
-    - text: "Пополнить WME кошелёк можно с банковской карты или счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmb_transfer_method:
-    - text: "Пополнить WMB кошелёк можно с банковской карты или счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmg_transfer_method:
-    - text: "Пополнить WMG кошелёк можно с банковского счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmz_transfer_method:
-    - text: "Пополнить WMZ кошелёк можно с банковской карты или счета, электронными деньгами или наличными. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmk_transfer_method:
-    - text: "Пополнить WMK кошелёк можно с банковской карты или счета, электронными деньгами передачей Гаранту на хранение или наличными. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmx_transfer_method:
-    - text: "Пополнить WMX кошелёк можно электронными деньгами или передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmh_transfer_method:
-    - text: "Пополнить WMH кошелёк можно электронными деньгами или передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wml_transfer_method:
-    - text: "Пополнить WML кошелёк можно электронными деньгами или передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmy_transfer_method:
-    - text: "Пополнить WMY кошелёк можно только с банковской карты."
-
-  utter_ask_transfer_form_to_wmf_transfer_method:
-    - text: "Пополнить WMF кошелёк можно электронными деньгами или передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
-
-  utter_ask_transfer_form_to_wmt_transfer_method:
-    - text: "Пополнить WMT кошелёк можно электронными деньгами или передачей Гаранту на хранение. Каким способом Вы хотите пополнить?"
-
-
-
-  utter_ask_transfer_form_from_wme_transfer_method:
-    - text: "Вывод из WME кошелька возможен на банковскую карту или счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmb_transfer_method:
-    - text: "Вывод из WMB кошелька возможен на банковскую карту или счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmg_transfer_method:
-    - text: "Вывод из WMG кошелька возможен на банковский счет, электронные деньги, наличными или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmz_transfer_method:
-    - text: "Вывод из WMZ кошелька возможен на банковскую карту или счет, электронные деньги или наличные. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmk_transfer_method:
-    - text: "Вывод из WMK кошелька возможен на банковскую карту или счет, электронные деньги или наличными. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmx_transfer_method:
-    - text: "Вывод из WMX кошелька возможен электронными деньгами через биржу или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmh_transfer_method:
-    - text: "Вывод из WMH кошелька возможен электронными деньгами через биржу или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wml_transfer_method:
-    - text: "Вывод из WML кошелька возможен электронными деньгами через биржу или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmy_transfer_method:
-    - text: "Вывод из WMY кошелька возможен только на банковскую карту."
-
-  utter_ask_transfer_form_from_wmf_transfer_method:
-    - text: "Вывод из WMF кошелька возможен электронными деньгами через биржу или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-  utter_ask_transfer_form_from_wmt_transfer_method:
-    - text: "Вывод из WMT кошелька возможен электронными деньгами через биржу или возвратом с хранения у Гаранта. Каким способом Вы хотите вывести?"
-
-
-
-
-
-  utter_this_method_is_not_possible:
-    - text: "Данный способ недоступен для указанного типа кошелька."
-
-  utter_purse_does_not_exist:
-  - text: "Вы указали некорректный кошелек."
-
-
-
-
-
-
-
-  utter_transfer_form_from_None_transfer_telephone_number:
-  - text: "Вывести средства на счет мобильного телефона Вы можете на странице: https://telepay.webmoney.ru/ru/mobile"
-
-  utter_transfer_form_to_None_transfer_telephone_number:
-  - text: "utter_transfer_form_to_None_transfer_telephone_number"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#utter_transfer_form_exchange_transfer_purse_type
-  utter_transfer_form_exchange_wmp:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_exchange_wmr:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_exchange_wmu:
-  - text: "Согласно Указу Президента Украины №126/2018 (Приложение 2. пп. 428, 1-12) система Webmoney Transfer внесена в санкционный список Совета национальной безопасности и обороны Украины. Это повлекло за собой запрет Гаранту WMU совершать банковские операции в гривне со своих счетов. Поэтому с 28 мая 2020 года титульные знаки на U-кошельках (обязательства Украинского Гарантийного Агентства в гривнах) были автоматически сконвертированы в WMZ по курсу НБУ на дату обмена за счет собственных средств системы WebMoney Transfe. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/"
-
-  utter_transfer_form_exchange_wmc:
-  - text: "utter_transfer_form_exchange_wmc"
-
-  utter_transfer_form_exchange_wmd:
-  - text: "utter_transfer_form_exchange_wmd"
-
-  utter_transfer_form_exchange_mdl:
-  - text: "utter_transfer_form_exchange_mdl"
-
-
-
-
-
-
-
-
-
-
-
-#utter_transfer_form_transfer_purse_type
-  utter_transfer_form_wmp:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_wmr:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_wmu:
-  - text: "Согласно Указу Президента Украины №126/2018 (Приложение 2. пп. 428, 1-12) система Webmoney Transfer внесена в санкционный список Совета национальной безопасности и обороны Украины. Это повлекло за собой запрет Гаранту WMU совершать банковские операции в гривне со своих счетов. Поэтому с 28 мая 2020 года титульные знаки на U-кошельках (обязательства Украинского Гарантийного Агентства в гривнах) были автоматически сконвертированы в WMZ по курсу НБУ на дату обмена за счет собственных средств системы WebMoney Transfe. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/"
-
-  utter_transfer_form_wmc:
-  - text: "utter_transfer_form_wmc"
-
-  utter_transfer_form_wmd:
-  - text: "utter_transfer_form_wmd"
-
-  utter_transfer_form_mdl:
-  - text: "utter_transfer_form_mdl"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#utter_transfer_form_to_transfer_purse_type_None
-  utter_transfer_form_to_wmp_None:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_to_wmr_None:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_to_wmu_None:
-  - text: "Согласно Указу Президента Украины №126/2018 (Приложение 2. пп. 428, 1-12) система Webmoney Transfer внесена в санкционный список Совета национальной безопасности и обороны Украины. Это повлекло за собой запрет Гаранту WMU совершать банковские операции в гривне со своих счетов. Поэтому с 28 мая 2020 года титульные знаки на U-кошельках (обязательства Украинского Гарантийного Агентства в гривнах) были автоматически сконвертированы в WMZ по курсу НБУ на дату обмена за счет собственных средств системы WebMoney Transfe. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/"
-
-  utter_transfer_form_to_wmc_None:
-  - text: "Кошелек WMC не предназначен для ввода/вывода средств. Данный кошелек используется Заемщиком для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-  utter_transfer_form_to_wmd_None:
-  - text: "Кошелек WMD не предназначен для ввода/вывода средств. Данный кошелек используется Кредитором для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-  utter_transfer_form_to_mdl_None:
-  - text: "utter_transfer_form_to_mdl_None"
-
-#utter_transfer_form_from_transfer_purse_type_None
-  utter_transfer_form_from_wmp_None:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_from_wmr_None:
-  - text: "В связи с отзывом ЦБ РФ лицензии на осуществление банковских операций у кредитной организации АО Банк «ККБ», предоставлявшей электронные денежные средства (ЭДС) в качестве инструментов учета на R- и P-кошельках, с 11 февраля 2022 года операции с WMR и WMP стали невозможны. В этой ситуации Оператором Системы было поручено уполномоченному Агенту за свой счет до 05.03.2022 обменять WMR и WMP на WMZ по курсу USD/RUB, установленному ЦБ РФ на 26.02.2022, – 83.55. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/ Новость: https://news.wmtransfer.com/blog/vozmeschenie-sredstv-vladeltsam-p-i-r-koshelkov"
-
-  utter_transfer_form_from_wmu_None:
-  - text: "Согласно Указу Президента Украины №126/2018 (Приложение 2. пп. 428, 1-12) система Webmoney Transfer внесена в санкционный список Совета национальной безопасности и обороны Украины. Это повлекло за собой запрет Гаранту WMU совершать банковские операции в гривне со своих счетов. Поэтому с 28 мая 2020 года титульные знаки на U-кошельках (обязательства Украинского Гарантийного Агентства в гривнах) были автоматически сконвертированы в WMZ по курсу НБУ на дату обмена за счет собственных средств системы WebMoney Transfe. Проверьте историю своего WMZ кошелька на сервере https://report.wmtransfer.com/"
-
-  utter_transfer_form_from_wmc_None:
-  - text: "Кошелек WMC не предназначен для ввода/вывода средств. Данный кошелек используется Заемщиком для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-  utter_transfer_form_from_wmd_None:
-  - text: "Кошелек WMD не предназначен для ввода/вывода средств. Данный кошелек используется Кредитором для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-  utter_transfer_form_from_mdl_None:
-  - text: "utter_transfer_form_from_mdl_None"
-
-
-
-#utter_transfer_withdraw_form_wme
-  utter_transfer_form_from_wme_transfer_bank:
-  - text: "Вывести средства на банковскую карту можно на странице: https://telepay.wmtransfer.com/ru/cards\n
-           Оформить вывод средств банковским переводом можно здесь: https://withdraw.web.money/Home/Index"
-
-  utter_transfer_form_from_wme_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь: https://exchanger.money/emoney/home"
-
-  utter_transfer_form_from_wme_transfer_cash:
-  - text: "Выбрать обменный пункт для вывода средств можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_withdraw_form_wmb
-  utter_transfer_form_from_wmb_transfer_bank:
-  - text: "Вывести средства на банковскую карту можно на странице: http://www.wmtransfer.by/sellwmb1.asp\n
-           Оформить вывод средств банковским переводом можно здесь: http://www.wmtransfer.by/sellwmb1.asp"
-
-  utter_transfer_form_from_wmb_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь: https://exchanger.money/emoney/home"
-
-  utter_transfer_form_from_wmb_transfer_cash:
-  - text: "Оформить заявку на вывод средств наличными в офисе банка или партнера можно здесь http://www.wmtransfer.by/sellwmb1.asp\n
-           Оформить заявку на вывод средств наличными через биржу exchanger путем обмена можно здесь https://exchanger.money/sdp/home"
-
-#utter_transfer_withdraw_form_wmg
-  utter_transfer_form_from_wmg_transfer_bank:
-  - text: "Оформить вывод средств банковским переводом можно на странице: https://www.metdeal.com/en/index.html"
-
-  utter_transfer_form_from_wmg_transfer_guarant:
-  - text: "Вывести средства с WMG кошелька путем возврата с хранения у Гаранта возможно на странице: https://www.metdeal.com/en/index.html"
-
-  utter_transfer_form_from_wmg_transfer_cash:
-  - text: "Выбрать обменный пункт для вывода WMG можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_withdraw_form_wmz
-  utter_transfer_form_from_wmz_transfer_bank:
-  - text: "Вывести средства на банковскую карту можно на странице: https://telepay.wmtransfer.com/ru/cards\n
-           Оформить вывод средств банковским переводом можно здесь https://withdraw.web.money/Home/Index"
-
-  utter_transfer_form_from_wmz_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.money/emoney/home"
-
-  utter_transfer_form_from_wmz_transfer_cash:
-  - text: "Выбрать обменный пункт для вывода средств наличными можно здесь https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru\n
-           Обменять WMZ на наличные посредством перевода через Western Union можно здесь https://exchanger.money/sdp/home/western-union/usd-wmz"
-
-#utter_transfer_form_from_wmk
-  utter_transfer_form_from_wmk_transfer_bank:
-  - text: "Вывести средства на банковскую карту можно на странице: https://telepay.wmtransfer.com/ru/cards\n
-           Оформить вывод средств банковским переводом можно здесь: http://wmk.kz/home/Withdrawal"
-
-  utter_transfer_form_from_wmk_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь: https://exchanger.money/emoney/home"
-
-  utter_transfer_form_from_wmk_transfer_cash:
-  - text: "Вывести средства наличными в офисе банка или партнера можно на странице: http://wmk.kz/home/Withdrawal\n
-           Так же Вы можете вывести через обменные пункты: https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-
-#utter_transfer_form_from_wmx
-  utter_transfer_form_from_wmx_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_from_wmx_transfer_guarant:
-  - text: "Вывести средства с WMX кошелька путем возврата с хранения у Гаранта возможно на странице: https://wmx.wmtransfer.com/Home/Withdraw#"
-
-#utter_transfer_form_from_wmh
-  utter_transfer_form_from_wmh_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_from_wmh_transfer_guarant:
-  - text: "Вывести средства с WMH кошелька путем возврата с хранения у Гаранта возможно на странице: https://wmh.wmtransfer.com/Home/Withdraw#"
-
-#utter_transfer_form_from_wml
-  utter_transfer_form_from_wml_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_from_wml_transfer_guarant:
-  - text: "Вывести средства с WML кошелька путем возврата с хранения у Гаранта возможно на странице: https://wml.wmtransfer.com/Home/Withdraw#"
-
-#utter_transfer_form_from_wmy
-  utter_transfer_form_from_wmy_transfer_bank:
-  - text: "Вывести средства на банковскую карту можно здесь https://telepay.wmtransfer.com/ru/cards"
-
-#utter_transfer_form_from_wmf
-  utter_transfer_form_from_wmf_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_from_wmf_transfer_guarant:
-  - text: "Вывести средства с WMF кошелька путем возврата с хранения у Гаранта возможно на странице: https://wmf.wmtransfer.com/Output.aspx"
-
-#utter_transfer_form_from_wmt
-  utter_transfer_form_from_wmt_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_from_wmt_transfer_guarant:
-  - text: "Вывести средства с WMT кошелька путем возврата с хранения у Гаранта возможно на странице: https://wmt.wmtransfer.com/Output.aspx"
-
-# #utter_transfer_form_from_mdl
-#   utter_transfer_form_from_mdl_None:
-#   - text: "Кошельком MDL могут пользоваться только участники системы WebMoney Transfer из Молдовы, имеющие телефонный номер с кодом +373. Вывод средств доступен на сайте оператора электронных денег RunPay Moldova https://my.runpay.com/ и переводом на WMZ или WME кошельки. Подробнее на странице: https://wiki.web.money/projects/webmoney/wiki/popolnenie_mdl_koshelka_oplata_i_vyvod_sredstv"
-
-# #utter_transfer_form_from_wmc
-#   utter_transfer_form_from_wmc_None:
-#   - text: "Кошелек WMC не предназначен для ввода/вывода средств. Данный кошелек используется Заемщиком для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-# #utter_transfer_form_from_wmd
-#   utter_transfer_form_from_wmd_None:
-#   - text: "Кошелек WMD не предназначен для ввода/вывода средств. Данный кошелек используется Кредитором для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#utter_transfer_form_to_wme
-  utter_transfer_form_to_wme_transfer_bank:
-  - text: "Пополнить кошелёк с банковской карты можно на странице: https://top-up.web.money/Order.aspx?ps=80&curr=e\n
-           Оформить пополнение средств с банковского счета можно здесь https://top-up.wmtransfer.com/?tab=ba&l=ru"
-
-  utter_transfer_form_to_wme_transfer_electronic_money:
-  - text: "Пополнить кошелёк электронными деньгами можно на сервисе https://exchanger.money/\n
-           Для выгодного обмена c M-Pesa, перейдите по ссылке https://exchanger.money/emoney/home/m-pesa/usd-wme\n
-           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/usd-wme\n
-           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex"
-
-  utter_transfer_form_to_wme_transfer_cash:
-  - text: "Пополнить кошелёк наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_form_to_wmb
-  utter_transfer_form_to_wmb_transfer_bank:
-  - text: "Пополнить кошелёк с банковской карты можно на странице: http://wmtransfer.by/buywmb1.asp#1\n
-           Пополнить кошелёк с банковского счета можно здесь http://wmtransfer.by/buywmb1.asp#1"
-
-  utter_transfer_form_to_wmb_transfer_electronic_money:
-  - text: "Для выгодного обмена с других электронных систем, воспользуйтесь биржей https://exchanger.money/emoney/home\n
-           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/rub-wmb\n
-           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex/rub-wmb"
-
-  utter_transfer_form_to_wmb_transfer_cash:
-  - text: "Пополнить кошелёк наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_form_to_wmg
-  utter_transfer_form_to_wmg_transfer_bank:
-  - text: "Оформить банковский перевод можно здесь http://www.metdeal.com/en/index.html"
-
-  utter_transfer_form_to_wmg_transfer_guarant:
-  - text: "Пополнить WMG кошелёк электронными деньгами посредством обмена можно на странице: https://exchanger.web.money/asp/wmlist.asp?exchtype=26"
-
-  utter_transfer_form_to_wmg_transfer_cash:
-  - text: "Пополнить кошелёк наличными можно через обменный пункт: https://www.webmoney.ru/rus/inout/topup.shtml?currency=wmg&transfer_method=cash_transfer_method"
-
-#utter_transfer_form_to_wmz
-  utter_transfer_form_to_wmz_transfer_bank:
-  - text: "Пополнить кошелёк с банковской карты можно здесь https://top-up.web.money/Order.aspx?ps=80&curr=z или оформить заявку на обмен на бирже https://exchanger.money/cards/home/wmz\n
-           Пополнить кошелёк с банковского счета можно здесь https://top-up.webmoney.ru/?tab=ba (Для России) Пополнить WMZ кошелёк при помощи СБП можно здесь https://exchanger.money/emoney/home/sbp?utm_source=web.money&utm_campaign=sbp"
-
-  utter_transfer_form_to_wmz_transfer_electronic_money:
-  - text: "Владельцы WMZ кошельков могут обменивать средства в других системах электронных платежей (USD) по выгодному курсу в обе стороны, а также самостоятельно создавать заявки обмена https://exchanger.money/emoney/home\n
-           Владельцы WMZ кошельков могут обменивать средства на M-Pesa (USD) по выгодному курсу в обе стороны, а также самостоятельно создавать заявки обмена https://exchanger.money/emoney/home/m-pesa/usd-wmz\n
-           Для выгодного обмена с Qiwi, воспользуйтесь биржей https://exchanger.money/emoney/home/qiwi/usd-wmя\n
-           Для выгодного обмена с Юmoney, воспользуйтесь биржей https://exchanger.money/emoney/home/yandex/rub-wmz"
-
-  utter_transfer_form_to_wmz_transfer_cash:
-  - text: "Пополнить кошелёк наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_form_to_wmk
-  utter_transfer_form_to_wmk_transfer_bank:
-  - text: "Пополнить кошелёк с банковской карты можно здесь https://top-up.web.money/Order.aspx?ps=1101 или https://exchanger.money/cards/home, а также на: https://wmk.kz/home/Refill\n
-           Пополнить кошелёк банковским переводом вы можете здесь https://wmk.kz/home/Refill"
-
-  utter_transfer_form_to_wmk_transfer_cash:
-  - text: "Пополнить кошелёк наличными можно через обменный пункт https://geo.webmoney.ru/wmobjects/mapex/default.aspx?type=1&lang=ru"
-
-#utter_transfer_form_to_wmx
-  utter_transfer_form_to_wmx_transfer_electronic_money:
-  - text: "Пополнить WMX кошелёк электронными деньгами посредством обмена можно здесь https://exchanger.web.money/asp/wmlist.asp?exchtype=34"
-
-  utter_transfer_form_to_wmx_transfer_guarant:
-  - text: "Пополнить кошелёк путем передачи прав на хранение можно здесь https://wmx.wmtransfer.com/#"
-
-#utter_transfer_form_to_wmh
-  utter_transfer_form_to_wmh_transfer_electronic_money:
-  - text: "Пополнить WMH кошелёк электронными деньгами посредством обмена можно https://exchanger.web.money/asp/wmlist.asp?exchtype=80"
-
-  utter_transfer_form_to_wmh_transfer_guarant:
-  - text: "Пополнить кошелёк путем передачи прав на хранение можно здесь  https://wmh.wmtransfer.com/#"
-
-#utter_transfer_withdraw_form_wml
-  utter_transfer_form_to_wml_transfer_electronic_money:
-  - text: "Пополнить WML кошелёк электронными деньгами посредством обмена можно https://exchanger.web.money/asp/wmlist.asp?exchtype=98"
-
-  utter_transfer_form_to_wml_transfer_guarant:
-  - text: "Пополнить кошелёк путем передачи прав на хранение можно здесь https://wml.wmtransfer.com/#"
-
-#utter_transfer_form_to_wmy
-  utter_transfer_form_to_wmy_transfer_bank:
-  - text: "Пополнить кошелёк с банковской карты можно здесь https://top-up.web.money/order.aspx?ps=1502"
-
-#utter_transfer_form_to_wmf
-  utter_transfer_form_to_wmf_transfer_electronic_money:
-  - text: "Пополнить WMF кошелёк электронными деньгами посредством обмена можно https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_to_wmf_transfer_guarant:
-  - text: "Пополнить кошелёк путем передачи прав на хранение можно здесь https://wmf.wmtransfer.com/"
-
-#utter_transfer_form_to_wmt
-  utter_transfer_form_to_wmt_transfer_electronic_money:
-  - text: "Вывести средства электронными деньгами путем обмена можно здесь https://exchanger.web.money/asp/wmlist.asp"
-
-  utter_transfer_form_to_wmt_transfer_guarant:
-  - text: "Пополнить кошелёк путем передачи прав на хранение можно здесь https://wmt.webmoney.com/"
-
-# #utter_transfer_form_to_mdl
-#   utter_transfer_form_to_mdl_None:
-#   - text: "utter_transfer_form_to_mdl_None"
-
-# #utter_transfer_form_to_wmc
-#   utter_transfer_form_to_wmc_None:
-#   - text: "Кошелек WMC не предназначен для ввода/вывода средств. Данный кошелек используется Заемщиком для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-# #utter_transfer_form_to_wmd
-#   utter_transfer_form_to_wmd_None:
-#   - text: "Кошелек WMD не предназначен для ввода/вывода средств. Данный кошелек используется Кредитором для кредитных операций в системе, на нем отображаются долговые обязательства Заемщика в титульных знаках WMZ."
-
-
-
-
-
-
-
-
-
-  # utter_transfer_form_None_None_None:
-  #   - text: "Вы можете ознакомиться с инструкцией о передаче средств на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/peredacha_sredstv_v_wm_keeper_standard Обращаем Ваше внимание на то, что перевод возможен только между кошельками одного типа, если Вы хотите передать средств на кошелёк другого типа, то Вам необходимо сначала обменять средства между Вашими кошельками."
-
-
-  utter_transfer_form_None_None_None:
-    - text: "Вы можете ознакомиться с инструкцией о передаче средств на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/peredacha_sredstv_v_wm_keeper_standard"
-
-  utter_transfer.exchange:
-    - text: "Вы можете ознакомиться с инструкцией по обмену средств на странице: https://wiki.webmoney.ru/projects/webmoney/wiki/obmen_wm_na_wm_v_wm_keeper_standard"
-
-
-
-
-
+    influence_conversation: true
+    mappings:
+    - type: custom
+
+  fee:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: fee
+
+  protected_payment:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: protected_payment
+
+responses: {}
 actions:
- - validate_transfer_form
- - action_ask_transfer_form_transfer_purse_type
- - action_ask_transfer_form_transfer_method
- - action_transfer_form_message
- - action_slots_restart
- - action_ask_transfer_form_transfer_direction
+- validate_how_get_passport_form
+- action_how_get_passport_form_message
+- validate_purse_requirement_form
+- action_purse_requirement_form_message
+- validate_purse_disappeared_form
+- action_purse_disappeared_form_message
+- validate_transfer_form
+- action_ask_transfer_form_transfer_purse_type
+- action_ask_transfer_form_transfer_method
+- action_transfer_form_message
+# - action_slots_restart
+- action_ask_transfer_form_transfer_direction
 
-session_config:
-  session_expiration_time: 60
-  carry_over_slots_to_new_session: true
+forms:
+
+  how_get_passport_form:
+    required_slots:
+        - passport_type
+
+  purse_requirement_form:
+    required_slots:
+        - purse_type
+
+  purse_disappeared_form:
+    required_slots:
+        - purse_type
+
+  transfer_form:
+    required_slots: []
+
+e2e_actions: []

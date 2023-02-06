@@ -1,0 +1,9 @@
+version: "3.1"
+
+responses:
+
+  utter_withdraw.требования_для_вывода_средств:
+  - text: "Для пользования сервисом вывода средств с WMZ и WME кошельков необходимо иметь аттестат не ниже Формального с подтвержденным фактическим адресом проживания. Подробнее о требованиях для пользователей сервиса ввода и вывода средств с WMZ и WME кошельков и необходимых для осуществления данных операций документов написано в этой статье, пожалуйста, ознакомьтесь: https://wiki.webmoney.ru/projects/webmoney/wiki/trebovaniya_dlya_polzovateley_servisa_vvoda_i_vyvoda_sredstv_s_wmz_i_wme_koshelkov"
+
+  utter_withdraw.when_do_transfers_work:
+  - text: "Вывод средств через telepay на карту Visa банков РФ недоступны сейчас. Сроки восстановления вывода средств на карты Visa не российских банков неизвестны. Выводы средств через другие сервисы перечислены на странице https://www.webmoney.ru/rus/inout/withdraw2.shtml?currency=wmz&method=bank-card_method "

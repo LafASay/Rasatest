@@ -1,0 +1,368 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_delete
+  steps:
+  - intent: faq.how_delete
+  - action: utter_faq.how_delete
+
+
+
+- story: faq.how_delete_name__other__
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: faq.how_delete_certificate
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_faq.how_delete_certificate
+
+- story: faq.how_delete_key_file
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_faq.how_delete_key_file
+
+- story: faq.how_delete_activation_code
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_faq.how_delete_activation_code
+
+- story: faq.how_delete_bl
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_faq.how_delete_bl
+
+- story: faq.how_delete_group
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: group
+  - slot_was_set:
+    - name: group
+  - action: utter_faq.how_delete_group
+
+- story: faq.how_delete_ticket
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: ticket
+  - slot_was_set:
+    - name: ticket
+  - action: utter_faq.how_delete_ticket
+
+- story: faq.how_delete_transaction_history
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - name: transaction_history
+  - slot_was_set:
+    - name: transaction_history
+  - action: utter_faq.how_delete_transaction_history
+
+
+- story: faq.how_delete_service_name__other__
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+
+- story: faq.how_delete_enum
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_delete_enum
+
+
+
+- story: faq.how_delete_service_keeper_type__other__
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_delete_keeper
+
+
+- story: faq.how_delete_standard
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_faq.how_delete_standard
+
+- story: faq.how_delete_winpro
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_faq.how_delete_winpro
+
+- story: faq.how_delete_webpro
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_faq.how_delete_webpro
+
+
+
+- story: faq.how_delete_purse_type__other__
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_faq.how_delete_purse
+
+
+- story: faq.how_delete_purse_wmp
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wme
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmb
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmg
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmz
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmk
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmx
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmh
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wml
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmy
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmr
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmc
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmd
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmu
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_wmf
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_faq.how_delete_purse
+
+- story: faq.how_delete_purse_mdl
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_faq.how_delete_purse
+
+
+
+- story: faq.how_delete_purse_btc
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_faq.how_delete_purse_btc
+
+- story: faq.how_delete_purse_bch
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_faq.how_delete_purse_bch
+
+- story: faq.how_delete_purse_ltc
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_faq.how_delete_purse_ltc
+
+- story: faq.how_delete_purse_eth
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_faq.how_delete_purse_eth
+
+- story: faq.how_delete_purse_usdt
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_faq.how_delete_purse_usdt
+
+
+
+- story: faq.how_delete_telephone_number
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_faq.how_delete_telephone_number
+
+- story: faq.how_delete_telephone_number_in_enum
+  steps:
+  - intent: faq.how_delete
+    entities:
+    - telephone_number
+    - service_name: enum
+  - slot_was_set:
+    - telephone_number
+    - service_name: enum
+  - action: utter_faq.how_delete_telephone_number_in_enum

@@ -1,0 +1,260 @@
+version: "3.1"
+
+stories:
+
+- story: webpro.получение_сертификата+++system.passport
+  steps:
+  - intent: webpro.получение_сертификата
+    user: |-
+      как получить персональный сертификат
+  - action: utter_webpro.получение_сертификата
+  - intent: system.passport
+    user: |-
+      я имел ввиду [аттестат]{"entity": "passport_type", "value": "passport"}
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_passport.how_get_passport_personal_passport
+
+- story: passport.how_get_passport+++system.what_types
+  steps:
+  - intent: passport.how_get_passport
+    user: |-
+      как получить аттестат
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: system.what_types
+    user: |-
+      а какие они есть
+  - action: utter_system.what_types_passport
+  - action: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+
+
+# - story: passport.how_get_passport_какой_лучше
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: system.what_types
+#   - action: utter_system.what_types_passport
+#   - action: utter_passport.recomend_formal_passport
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+
+
+# - story: passport.how_get_passport_не_знаю
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: other.user_dont_know
+#   - action: utter_system.what_types_passport
+#   - action: utter_passport.recomend_formal_passport
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+
+
+# - story: passport.how_get_passport_alias_passport
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_formal
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: formal
+#   - slot_was_set:
+#     - passport_type: formal
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_initial
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: initial
+#   - slot_was_set:
+#     - passport_type: initial
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_personal
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: personal
+#   - slot_was_set:
+#     - passport_type: personal
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_merchant
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: merchant
+#   - slot_was_set:
+#     - passport_type: merchant
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_capitaller
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: capitaller
+#   - slot_was_set:
+#     - passport_type: capitaller
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_transact_automation_tool
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: transact_automation_tool
+#   - slot_was_set:
+#     - passport_type: transact_automation_tool
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_developer
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: developer
+#   - slot_was_set:
+#     - passport_type: developer
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_registrar
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: registrar
+#   - slot_was_set:
+#     - passport_type: registrar
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_service
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: service
+#   - slot_was_set:
+#     - passport_type: service
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_guarantor
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: guarantor
+#   - slot_was_set:
+#     - passport_type: guarantor
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message
+
+# - story: passport.how_get_passport_operator
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: passport_form
+#   - active_loop: passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - slot_was_set:
+#     - passport_type: operator
+#   - slot_was_set:
+#     - passport_type: operator
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_passport_form_message

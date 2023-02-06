@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: xml.xml
+  steps:
+  - intent: xml.xml
+    user: |-
+      интерфейс x3
+  - action: utter_xml.xml

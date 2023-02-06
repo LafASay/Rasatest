@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: events.events
+  steps:
+  - intent: events.events
+    user: |-
+      увидеть события пользователей
+  - action: utter_events.events

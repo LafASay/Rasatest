@@ -1,0 +1,38 @@
+version: "3.1"
+
+stories:
+
+- story: passport.how_long_check_documents
+  steps:
+  - intent: passport.how_long_check_documents
+  - action: utter_passport.how_long_check_documents
+
+
+
+- story: passport.how_long_check_name___other__
+  steps:
+  - intent: passport.how_long_check_documents
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: passport.how_long_check_photoid
+  steps:
+  - intent: passport.how_long_check_documents
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_passport.как_долго_проверяют_photoid_videoid
+
+- story: passport.how_long_check_videoid
+  steps:
+  - intent: passport.how_long_check_documents
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_passport.как_долго_проверяют_photoid_videoid

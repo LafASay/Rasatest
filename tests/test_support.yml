@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+
+- story: support.need_technical_support
+  steps:
+  - intent: support.need_technical_support
+    user: |-
+      а живого человека нет
+  - action: utter_support.need_technical_support
+
+- story: support.how_call_you
+  steps:
+  - intent: support.how_call_you
+    user: |-
+      а можно аудио связь
+  - action: utter_support.how_call_you
+
+- story: support.звонок_в_поддержку_платный
+  steps:
+  - intent: support.звонок_в_поддержку_платный
+    user: |-
+      звонок в поддержку платный
+  - action: utter_support.звонок_в_поддержку_платный
+
+- story: support.help_me
+  steps:
+  - intent: support.help_me
+    user: |-
+      помогите мне
+  - action: utter_support.help_me
+
+- story: support.вы_есть_в_telegram
+  steps:
+  - intent: support.вы_есть_в_telegram
+    user: |-
+      вы есть в телеграм
+  - action: utter_support.вы_есть_в_telegram
+
+- story: support.когда_ответят_на_тикет
+  steps:
+  - intent: support.когда_ответят_на_тикет
+    user: |-
+      когда на тикет ответят
+  - action: utter_support.когда_ответят_на_тикет
+
+- story: support.платные_консультации
+  steps:
+  - intent: support.платные_консультации
+    user: |-
+      хочу оказывать платные консультации
+  - action: utter_support.платные_консультации
+
+# - story: support.ticket_number
+#   steps:
+#   - intent: support.ticket_number
+#     user: |-
+#       тикет 15561369
+#   - action: utter_support.ticket_number

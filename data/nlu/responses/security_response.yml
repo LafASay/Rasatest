@@ -1,0 +1,18 @@
+version: "3.1"
+
+responses:
+
+  utter_security.security_ip_story:
+  - text: Проверить журнал входов и IP-адресами вашего кипера можно в Сервисе Безопасности в разделе Защита, вкладка IP-адреса. См. https://security.webmoney.ru/asp/securjournal.asp В журнале отображается дата, время, тип кипера и IP-адрес.
+
+  utter_security.security_ip_block:
+  - text: Сервис Безопасности позволяет задать ограничение для входов кипера по IP адресу. Данная функция работает только для версий WM Keeper WinPro и WM Keeper WebPro. Функция позволяет задать разрешенные для подключения IP адреса или подсети в разделе Защита, вкладка IP-адреса и далее 'Блокировки' https://security.webmoney.ru/asp/securjournal.asp. Подробнее в нашей Wiki https://wiki.webmoney.ru/projects/webmoney/wiki/blokirovka_po_ip
+
+  utter_security.отключить_security_ip_block:
+  - text: "utter_security.отключить_security_ip_block"
+
+  utter_security.как_узнать_ip:
+  - text: "utter_security.как_узнать_ip"
+
+  utter_security.подтвердить_ip:
+  - text: "utter_security.подтвердить_ip"

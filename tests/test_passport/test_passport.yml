@@ -1,0 +1,248 @@
+version: "3.1"
+
+stories:
+
+- story: passport.open_personal_information
+  steps:
+  - intent: passport.open_personal_information
+    user: |-
+      в моем кошельке фио закрыты для просмотра как открыть
+  - action: utter_passport.open_personal_information
+
+- story: passport.не_могу_получить_аттестат
+  steps:
+  - intent: passport.не_могу_получить_аттестат
+    user: |-
+      а почему паспорт никак не устанавливается
+  - action: utter_passport.не_могу_получить_аттестат
+
+- story: passport.почему_не_дают_аттестат
+  steps:
+  - intent: passport.почему_не_дают_аттестат
+    user: |-
+      а почему мой паспорт не официальный
+  - action: utter_passport.почему_не_дают_аттестат
+
+- story: passport.how_update_passport_details
+  steps:
+  - intent: passport.how_update_passport_details
+    user: |-
+      заменен паспорт гражданина
+  - action: utter_passport.how_update_passport_details
+
+# - story: passport.no_photo_accepted
+#   steps:
+#   - intent: passport.no_photo_accepted
+#     user: |-
+#       2 раза отправил фото паспорта но так статус и не дали
+#   - action: utter_passport.no_photo_accepted
+
+- story: passport.как_загрузить_документы
+  steps:
+  - intent: passport.как_загрузить_документы
+    user: |-
+      а как добавить паспорт
+  - action: utter_passport.как_загрузить_документы
+
+- story: passport.я_загрузил_фото_паспорта
+  steps:
+  - intent: passport.я_загрузил_фото_паспорта
+    user: |-
+      загрузил фото паспорта
+  - action: utter_passport.я_загрузил_фото_паспорта
+
+# - story: passport.у_меня_нет_паспорта
+#   steps:
+#   - intent: passport.у_меня_нет_паспорта
+#     user: |-
+#       а как мне пройти авторизацию без паспорта
+#   - action: utter_passport.у_меня_нет_паспорта
+
+- story: passport.как_проверить_адрес
+  steps:
+  - intent: passport.как_проверить_адрес
+    user: |-
+      адрес проживания
+  - action: utter_passport.как_проверить_адрес
+
+- story: passport.как_скачать_загруженные_документы
+  steps:
+  - intent: passport.как_скачать_загруженные_документы
+    user: |-
+      как скачать свою копию паспорта
+  - action: utter_passport.как_скачать_загруженные_документы
+
+- story: passport.как_удалить_загруженные_документы
+  steps:
+  - intent: passport.как_удалить_загруженные_документы
+    user: |-
+      как удалить загруженные документы
+  - action: utter_passport.как_удалить_загруженные_документы
+
+- story: passport.письмо_не_пришло
+  steps:
+  - intent: passport.письмо_не_пришло
+    user: |-
+      бумажное письмо так и не пришло
+  - action: utter_passport.письмо_не_пришло
+
+- story: passport.паспортные_данные_уже_есть_в_системе
+  steps:
+  - intent: passport.паспортные_данные_уже_есть_в_системе
+    user: |-
+      аттестат с такими же паспортными данными уже есть в системе
+  - action: utter_passport.паспортные_данные_уже_есть_в_системе
+
+# - story: passport.какой_у_меня_аттестат
+#   steps:
+#   - intent: passport.какой_у_меня_аттестат
+#     user: |-
+#       а как узнать свой аккаунт и учетную запись
+#   - action: utter_passport.какой_у_меня_аттестат
+
+- story: passport.поиск_wmid
+  steps:
+  - intent: passport.поиск_wmid
+    user: |-
+      розыск wmid
+  - action: utter_passport.поиск_wmid
+
+- story: passport.какой_аттестат_нужен
+  steps:
+  - intent: passport.какой_аттестат_нужен
+    user: |-
+      какой уровень аттестата мне нужен чтобы оплачивать покупки в интернет магазинах
+  - action: utter_passport.какой_аттестат_нужен
+
+# - story: passport.вывод_без_аттестации
+#   steps:
+#   - intent: passport.вывод_без_аттестации
+#     user: |-
+#       без верификации вывод работает
+#   - action: utter_passport.вывод_без_аттестации
+
+- story: passport.сняли_аттестат
+  steps:
+  - intent: passport.сняли_аттестат
+    user: |-
+      мой аттестат куда то пропал
+  - action: utter_passport.сняли_аттестат
+
+- story: passport.адрес_регистрации_не_совпадает_с_местом_жительства
+  steps:
+  - intent: passport.адрес_регистрации_не_совпадает_с_местом_жительства
+    user: |-
+      мой адрес прописки не совпадает с адресом проживания как поступить в этой ситуации
+  - action: utter_passport.адрес_регистрации_не_совпадает_с_местом_жительства
+
+- story: passport.скриншот_с_данными
+  steps:
+  - intent: passport.скриншот_с_данными
+    user: |-
+      в каком разделе находятся личные данные нужно сделать скриншот
+  - action: utter_passport.скриншот_с_данными
+
+- story: passport.нет_моего_адреса
+  steps:
+  - intent: passport.нет_моего_адреса
+    user: |-
+      в поле адреса при выборе города тегерана нет
+  - action: utter_passport.нет_моего_адреса
+
+- story: passport.какой_паспорт_можно_использовать
+  steps:
+  - intent: passport.какой_паспорт_можно_использовать
+    user: |-
+      а днр паспорт можно использовать
+  - action: utter_passport.какой_паспорт_можно_использовать
+
+- story: passport.не_могу_загрузить_документы
+  steps:
+  - intent: passport.не_могу_загрузить_документы
+    user: |-
+      а почему я не могу загрузить фото своего паспорта
+  - action: utter_passport.не_могу_загрузить_документы
+
+# - story: passport.куда_можете_отправить_письмо_для_проверки_адреса
+#   steps:
+#   - intent: passport.куда_можете_отправить_письмо_для_проверки_адреса
+#     user: |-
+#       вы отправляете письма в иран для подтверждения почтового адреса
+#   - action: utter_passport.куда_можете_отправить_письмо_для_проверки_адреса
+
+- story: passport.не_хочу_отправлять_документы
+  steps:
+  - intent: passport.не_хочу_отправлять_документы
+    user: |-
+      а без проверки паспорта нельзя
+  - action: utter_passport.не_хочу_отправлять_документы
+
+- story: passport.как_долго_рассматривается_заявка_на_восстановление
+  steps:
+  - intent: passport.как_долго_рассматривается_заявка_на_восстановление
+    user: |-
+      сколько рассматривать заявка на восстановление контроля над wmid
+  - action: utter_passport.как_долго_рассматривается_заявка_на_восстановление
+
+- story: passport.случайно_создал_новый_вмид
+  steps:
+  - intent: passport.случайно_создал_новый_вмид
+    user: |-
+      хотел зайти на свой старый кошелек не получилось случайно новый создал
+  - action: utter_passport.случайно_создал_новый_вмид
+
+- story: passport.скриншот_отправка
+  steps:
+  - intent: passport.скриншот_отправка
+    user: |-
+      как вам скрин послать
+  - action: utter_passport.скриншот_отправка
+
+- story: passport.у_меня_нет_аттестата
+  steps:
+  - intent: passport.у_меня_нет_аттестата
+    user: |-
+      у меня нет аттестата
+  - action: utter_passport.у_меня_нет_аттестата
+
+- story: passport.как_найти_пользователя
+  steps:
+  - intent: passport.как_найти_пользователя
+    user: |-
+      как найти пользователя по телефону
+  - action: utter_passport.как_найти_пользователя
+
+- story: passport.сколько_стоит_аттестат
+  steps:
+  - intent: passport.сколько_стоит_аттестат
+    user: |-
+      сколько стоит аттестат
+  - action: utter_passport.сколько_стоит_аттестат
+
+- story: passport.хочу_выдавать_аттестаты
+  steps:
+  - intent: passport.хочу_выдавать_аттестаты
+    user: |-
+      хочу выдавать аттестаты
+  - action: utter_passport.хочу_выдавать_аттестаты
+
+- story: passport.какие_документы_нужны
+  steps:
+  - intent: passport.какие_документы_нужны
+    user: |-
+      какие документы нужны
+  - action: utter_passport.какие_документы_нужны
+
+- story: passport.аттестаторы
+  steps:
+  - intent: passport.аттестаторы
+    user: |-
+      список аттестаторов
+  - action: utter_passport.аттестаторы
+
+- story: passport.как_оплатить_аттестат
+  steps:
+  - intent: passport.как_оплатить_аттестат
+    user: |-
+      как оплатить получение аттестата
+  - action: utter_passport.как_оплатить_аттестат

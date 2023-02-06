@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: faq.termination_of_service
+  steps:
+  - intent: faq.termination_of_service
+  - action: utter_faq.termination_of_service
+
+- story: faq.termination_of_service_wmid
+  steps:
+  - intent: faq.termination_of_service
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_faq.termination_of_service_wmid

@@ -1,0 +1,208 @@
+version: "3.1"
+
+stories:
+
+- story: passport.зачем_нужен
+  steps:
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен
+
+
+
+- story: passport.зачем_нужен_name__other__
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: passport.зачем_нужен_videoid
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_passport.зачем_нужен_videoid
+
+- story: passport.зачем_нужен_photoid
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_passport.зачем_нужен_photoid
+
+
+
+- story: passport.зачем_нужен_passport_type__other__
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_passport.зачем_нужен_passport
+
+
+- story: passport.зачем_нужен_alias_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: alias_passport
+  - slot_was_set:
+    - passport_type: alias_passport
+  - action: utter_passport.зачем_нужен_alias_passport
+
+- story: passport.зачем_нужен_formal_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: utter_passport.зачем_нужен_formal_passport
+
+- story: passport.зачем_нужен_initial_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: initial_passport
+  - slot_was_set:
+    - passport_type: initial_passport
+  - action: utter_passport.зачем_нужен_initial_passport
+
+- story: passport.зачем_нужен_personal_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: personal_passport
+  - slot_was_set:
+    - passport_type: personal_passport
+  - action: utter_passport.зачем_нужен_personal_passport
+
+- story: passport.зачем_нужен_merchant_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: merchant_passport
+  - slot_was_set:
+    - passport_type: merchant_passport
+  - action: utter_passport.зачем_нужен_merchant_passport
+
+- story: passport.зачем_нужен_capitaller_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: capitaller_passport
+  - slot_was_set:
+    - passport_type: capitaller_passport
+  - action: utter_passport.зачем_нужен_capitaller_passport
+
+- story: passport.зачем_нужен_transact_automation_tool_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: transact_automation_tool_passport
+  - slot_was_set:
+    - passport_type: transact_automation_tool_passport
+  - action: utter_passport.зачем_нужен_transact_automation_tool_passport
+
+- story: passport.зачем_нужен_developer_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: developer_passport
+  - slot_was_set:
+    - passport_type: developer_passport
+  - action: utter_passport.зачем_нужен_developer_passport
+
+- story: passport.зачем_нужен_registrar_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: registrar_passport
+  - slot_was_set:
+    - passport_type: registrar_passport
+  - action: utter_passport.зачем_нужен_registrar_passport
+
+- story: passport.зачем_нужен_service_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: service_passport
+  - slot_was_set:
+    - passport_type: service_passport
+  - action: utter_passport.зачем_нужен_service_passport
+
+- story: passport.зачем_нужен_guarantor_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: guarantor_passport
+  - slot_was_set:
+    - passport_type: guarantor_passport
+  - action: utter_passport.зачем_нужен_guarantor_passport
+
+- story: passport.зачем_нужен_operator_passport
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - passport_type: operator_passport
+  - slot_was_set:
+    - passport_type: operator_passport
+  - action: utter_passport.зачем_нужен_operator_passport
+
+
+
+- story: passport.зачем_нужен_keeper_type__other__
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_passport.зачем_нужен_keeper
+
+
+- story: passport.зачем_нужен_standard
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_passport.зачем_нужен_standard
+
+- story: passport.зачем_нужен_winpro
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_passport.зачем_нужен_winpro
+
+- story: passport.зачем_нужен_webpro
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_passport.зачем_нужен_webpro
+
+
+
+- story: passport.зачем_нужен_enum
+  steps:
+  - intent: passport.зачем_нужен
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_passport.зачем_нужен_enum

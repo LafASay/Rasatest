@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+# - story: purses.wmid_number
+#   steps:
+#   - intent: purses.wmid_number
+#   - action: utter_purses.wmid_number
+
+# - story: purses.wmid_number
+#   steps:
+#   - intent: purses.wmid_number
+#     entities:
+#     - wmid_number: wmid_number
+#   - slot_was_set:
+#     - wmid_number: wmid_number
+#   - action: utter_purses.wmid_number

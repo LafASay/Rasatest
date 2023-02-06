@@ -1,0 +1,42 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      [потерял телефон]{"entity": "нет_доступа_к_telephone_number", "value": "потерял телефон"}
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.нет_доступа_к_telephone_number
+
+- story: keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      [нет доступа к почте]{"entity": "нет_доступа_к_email", "value": "нет доступа к почте"}
+    entities:
+    - нет_доступа_к_email
+  - slot_was_set:
+    - нет_доступа_к_email
+  - action: utter_keeper.нет_доступа_к_email
+
+
+
+- story: keeper.нет_доступа_к_telephone_number_or_email+++passport.как_долго_рассматривается_заявка_на_восстановление
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      у меня [нет доступа к старому номеру]{"entity": "нет_доступа_к_telephone_number", "value": "нет доступа к старому номеру"}
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.нет_доступа_к_telephone_number
+  - intent: passport.как_долго_рассматривается_заявка_на_восстановление
+    user: |-
+      сколько рассматривают заявку
+  - action: utter_passport.как_долго_рассматривается_заявка_на_восстановление

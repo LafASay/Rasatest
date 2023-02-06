@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email_telephone_number
+  steps:
+  - intent: faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email_telephone_number
+
+- story: faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email_email
+  steps:
+  - intent: faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - нет_доступа_к_email
+  - slot_was_set:
+    - нет_доступа_к_email
+  - action: utter_faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email_email

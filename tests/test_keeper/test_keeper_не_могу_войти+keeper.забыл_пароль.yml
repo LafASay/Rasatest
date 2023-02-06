@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.не_могу_войти+keeper.забыл_пароль
+  steps:
+  - intent: keeper.не_могу_войти+keeper.забыл_пароль
+    user: |-
+      не могу войти забыл пароль
+  - action: utter_keeper.не_могу_войти+keeper.забыл_пароль

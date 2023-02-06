@@ -1,0 +1,23 @@
+version: "3.1"
+
+stories:
+
+- story: faq.cant_recovery
+  steps:
+  - intent: faq.cant_recovery
+  - action: utter_faq.cant_recovery
+
+
+- story: faq.cant_recovery+sms.sms_not_coming
+  steps:
+  - intent: faq.cant_recovery+sms.sms_not_coming
+  - action: utter_faq.cant_recovery+sms.sms_not_coming
+
+
+
+- story: faq.cant_recovery+++system.пользователь_не_найден
+  steps:
+  - intent: faq.cant_recovery
+  - action: utter_faq.cant_recovery
+  - intent: system.пользователь_не_найден
+  - action: utter_system.пользователь_не_найден

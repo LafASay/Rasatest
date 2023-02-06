@@ -1,0 +1,90 @@
+version: "3.1"
+
+responses:
+
+  utter_other.user_confirm:
+  - text: "Очень хорошо"
+
+  utter_other.user_deny:
+  - text: "Опишите Вашу проблему в деталях."
+
+  utter_other.user_know:
+  - text: "Отлично)"
+
+  utter_other.user_dont_know:
+  - text: "Как говорят, знание - сила!"
+
+  utter_other.user_dont_understand:
+  - text: "Очень плохо("
+
+  # utter_other.user_less_utr:
+  # - text: "Правда меньше?"
+
+  # utter_other.user_more_utr:
+  # - text: "Правда больше?"
+
+  utter_other.англ:
+  - text: "Пишите, пожалуйста, на русском, я плохо понимаю другие языки."
+
+  utter_other.сколько_ждать:
+  - text: "Совсем не долго."
+
+  utter_other.прошло_много_времени:
+  - text: "Осталось совсем чуть-чуть."
+
+  utter_other.все_сделал:
+  - text: "Отлично! Вы молодец!"
+
+  utter_other.страны:
+  - text: "А я живу в компьютере."
+
+  utter_other.дайте_ссылку:
+  - text: "Извините, у меня нет ссылок("
+
+  utter_other.хочу_быстрее:
+  - text: "Будет быстрее ;)"
+
+  utter_other.где_посмотреть:
+  - text: "А что Вы хотите увидеть?"
+
+  utter_other.как_увеличить:
+  - text: "Очень просто!"
+
+  utter_other.я_использую_standard:
+  - text: "Хороший выбор, Keeper Standard подходит для большенства задач."
+
+  utter_other.я_использую_winpro:
+  - text: "Поздравляю, Вы профессиональный пользователь WebMoney!"
+
+  utter_other.я_использую_webpro:
+  - text: "Поздравляю, Вы профессиональный пользователь WebMoney!"
+
+  utter_other.не_получилось:
+  - text: "Очень жаль("
+
+  utter_other.приведи_пример:
+  - text: "По данному вопросу Вы можете обратиться в нашу техническую поддержку."
+
+  utter_other.нужно_подробнее:
+  - text: "Для подробных разъяснений Вы можете обратиться в нашу техническую поддержку."
+
+  utter_other.что_нужно_делать:
+  - text: "Зависит от того, что хотите сделать."
+
+  utter_other.указание_возраста:
+  - text: "С чем Вас и поздравляю!"
+
+  utter_other.я_уже_отправил:
+  - text: "Вы молодец!"
+
+  utter_other.не_работает:
+  - text: "Это очень плохо!"
+
+  utter_other.не_гражданин:
+  - text: "Ничего плохого в этом нет!"
+
+  utter_other.why:
+  - text: "utter_other.why"
+
+  utter_other.counter:
+  - text: "utter_other.counter"

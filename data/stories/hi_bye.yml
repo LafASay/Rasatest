@@ -1,0 +1,165 @@
+version: "3.1"
+
+stories:
+
+- story: hi_bye.greet
+  steps:
+  - intent: hi_bye.greet
+  - action: utter_hi_bye.greet
+
+- story: second_greet
+  steps:
+  - intent: hi_bye.greet
+  - action: utter_hi_bye.greet
+  - intent: hi_bye.greet
+  - action: utter_hi_bye.second_greet
+
+- story: hi_bye.how_are_you
+  steps:
+  - intent: hi_bye.how_are_you
+  - action: utter_hi_bye.how_are_you
+
+- story: hi_bye.who_are_you
+  steps:
+  - intent: hi_bye.who_are_you
+  - action: utter_hi_bye.who_are_you
+
+- story: hi_bye.мальчик_или_девочка
+  steps:
+  - intent: hi_bye.мальчик_или_девочка
+  - action: utter_hi_bye.мальчик_или_девочка
+
+- story: hi_bye.есть_кто_нибудь
+  steps:
+  - intent: hi_bye.есть_кто_нибудь
+  - action: utter_hi_bye.есть_кто_нибудь
+
+- story: hi_bye.what_can_you_do
+  steps:
+  - intent: hi_bye.what_can_you_do
+  - action: utter_hi_bye.what_can_you_do
+
+- story: hi_bye.where_do_you_live
+  steps:
+  - intent: hi_bye.where_do_you_live
+  - action: utter_hi_bye.where_do_you_live
+
+- story: hi_bye.what_the_wather
+  steps:
+  - intent: hi_bye.what_the_wather
+  - action: utter_hi_bye.what_the_wather
+
+- story: hi_bye.thanks
+  steps:
+  - intent: hi_bye.thanks
+  - action: utter_hi_bye.thanks
+
+- story: hi_bye.ответ_не_помог
+  steps:
+  - intent: hi_bye.ответ_не_помог
+  - action: utter_hi_bye.ответ_не_помог
+
+- story: hi_bye.offend
+  steps:
+  - intent: hi_bye.offend
+  - action: utter_hi_bye.offend
+
+- story: hi_bye.i_like_you
+  steps:
+  - intent: hi_bye.i_like_you
+  - action: utter_hi_bye.i_like_you
+
+# - story: hi_bye.who_is_creater
+#   steps:
+#   - intent: hi_bye.who_is_creater
+#   - action: utter_hi_bye.who_is_creater
+
+- story: hi_bye.вторая_половинка_муравьиха
+  steps:
+  - intent: hi_bye.вторая_половинка_муравьиха
+  - action: utter_hi_bye.вторая_половинка_муравьиха
+
+- story: hi_bye.где_твой_муравейник
+  steps:
+  - intent: hi_bye.где_твой_муравейник
+  - action: utter_hi_bye.где_твой_муравейник
+
+# - story: hi_bye.who_president
+#   steps:
+#   - intent: hi_bye.who_president
+#   - action: utter_hi_bye.who_president
+
+- story: hi_bye.who_is_bot_owner
+  steps:
+  - intent: hi_bye.who_is_bot_owner
+  - action: utter_hi_bye.who_is_bot_owner
+
+# - story: hi_bye.search_engine
+#   steps:
+#   - intent: hi_bye.search_engine
+#   - action: utter_hi_bye.search_engine
+
+- story: hi_bye.sad
+  steps:
+  - intent: hi_bye.sad
+  - action: utter_hi_bye.sad
+
+# - story: hi_bye.вы_плохие
+#   steps:
+#   - intent: hi_bye.вы_плохие
+#   - action: utter_hi_bye.вы_плохие
+
+- story: hi_bye.bye
+  steps:
+  - intent: hi_bye.bye
+  - action: utter_hi_bye.bye
+
+- story: hi_bye.sorry
+  steps:
+  - intent: hi_bye.sorry
+  - action: utter_hi_bye.sorry
+
+- story: hi_bye.анекдот
+  steps:
+  - intent: hi_bye.анекдот
+  - action: utter_hi_bye.анекдот
+
+- story: hi_bye.калькулятор
+  steps:
+  - intent: hi_bye.калькулятор
+  - action: utter_hi_bye.калькулятор
+
+- story: hi_bye.im_from
+  steps:
+  - intent: hi_bye.im_from
+  - action: utter_hi_bye.im_from
+
+# - story: hi_bye.name
+#   steps:
+#   - intent: hi_bye.name
+#   - action: utter_hi_bye.name
+
+- story: hi_bye.вебмани_не_нравится
+  steps:
+  - intent: hi_bye.вебмани_не_нравится
+  - action: utter_hi_bye.вебмани_не_нравится
+
+- story: hi_bye.are_you_kidding_me
+  steps:
+  - intent: hi_bye.are_you_kidding_me
+  - action: utter_hi_bye.are_you_kidding_me
+
+- story: hi_bye.trash
+  steps:
+  - intent: hi_bye.trash
+  - action: utter_hi_bye.trash
+
+- story: hi_bye.lol
+  steps:
+  - intent: hi_bye.lol
+  - action: utter_hi_bye.lol
+
+- story: hi_bye.ты_не_понял
+  steps:
+  - intent: hi_bye.ты_не_понял
+  - action: utter_hi_bye.ты_не_понял

@@ -1,0 +1,1010 @@
+version: "3.1"
+
+stories:
+
+- story: system.determination
+  steps:
+  - intent: system.determination
+  - action: utter_system.determination
+
+
+
+- story: system.determination_purse_type__other__
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_system.determination_purse
+
+
+- story: system.determination_wmp
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_system.determination_wmp
+
+- story: system.determination_wme
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_system.determination_wme
+
+- story: system.determination_wmb
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_system.determination_wmb
+
+- story: system.determination_wmg
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_system.determination_wmg
+
+- story: system.determination_wmz
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+
+- story: system.determination_wmk
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_system.determination_wmk
+
+- story: system.determination_wmx
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_system.determination_wmx
+
+- story: system.determination_wmh
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_system.determination_wmh
+
+- story: system.determination_wml
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_system.determination_wml
+
+- story: system.determination_wmy
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_system.determination_wmy
+
+- story: system.determination_wmr
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_system.determination_wmr
+
+- story: system.determination_wmc
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_system.determination_wmc
+
+- story: system.determination_wmd
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_system.determination_wmd
+
+- story: system.determination_wmu
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_system.determination_wmu
+
+- story: system.determination_wmf
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_system.determination_wmf
+
+- story: system.determination_wmt
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_system.determination_wmt
+
+- story: system.determination_mdl
+  steps:
+  - intent: system.determination
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_system.determination_mdl
+
+- story: system.determination_btc
+  steps:
+  - intent: system.determination
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_system.determination_btc
+
+- story: system.determination_bch
+  steps:
+  - intent: system.determination
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_system.determination_bch
+
+- story: system.determination_ltc
+  steps:
+  - intent: system.determination
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_system.determination_ltc
+
+- story: system.determination_eth
+  steps:
+  - intent: system.determination
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_system.determination_eth
+
+- story: system.determination_usdt
+  steps:
+  - intent: system.determination
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_system.determination_usdt
+
+
+
+- story: system.determination_keeper_type__other__
+  steps:
+  - intent: system.determination
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_system.determination_keeper
+
+
+- story: system.determination_standard
+  steps:
+  - intent: system.determination
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_system.determination_standard
+
+- story: system.determination_winpro
+  steps:
+  - intent: system.determination
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_system.determination_winpro
+
+- story: system.determination_webpro
+  steps:
+  - intent: system.determination
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_system.determination_webpro
+
+
+
+- story: system.determination_name__other__
+  steps:
+  - intent: system.determination
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.determination_webmoney
+  steps:
+  - intent: system.determination
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.determination_webmoney
+
+- story: system.determination_keyfile
+  steps:
+  - intent: system.determination
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_system.determination_keyfile
+
+- story: system.determination_wmid
+  steps:
+  - intent: system.determination
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_system.determination_wmid
+
+- story: system.determination_activation_code
+  steps:
+  - intent: system.determination
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_system.determination_activation_code
+
+- story: system.determination_videoid
+  steps:
+  - intent: system.determination
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_system.determination_videoid
+
+- story: system.determination_photoid
+  steps:
+  - intent: system.determination
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_system.determination_photoid
+
+- story: system.determination_business_level
+  steps:
+  - intent: system.determination
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_system.determination_business_level
+
+- story: system.determination_trust_level
+  steps:
+  - intent: system.determination
+    entities:
+    - name: trust_level
+  - slot_was_set:
+    - name: trust_level
+  - action: utter_system.determination_trust_level
+
+- story: system.determination_certificate
+  steps:
+  - intent: system.determination
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_system.determination_certificate
+
+- story: system.determination_root_certificate
+  steps:
+  - intent: system.determination
+    entities:
+    - name: root_certificate
+  - slot_was_set:
+    - name: root_certificate
+  - action: utter_system.determination_root_certificate
+
+- story: system.determination_account
+  steps:
+  - intent: system.determination
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_system.determination_account
+
+- story: system.determination_check_paymer
+  steps:
+  - intent: system.determination
+    entities:
+    - name: check_paymer
+  - slot_was_set:
+    - name: check_paymer
+  - action: utter_system.determination_check_paymer
+
+- story: system.determination_transaction_history
+  steps:
+  - intent: system.determination
+    entities:
+    - name: transaction_history
+  - slot_was_set:
+    - name: transaction_history
+  - action: utter_system.determination_transaction_history
+
+- story: system.determination_chat_history
+  steps:
+  - intent: system.determination
+    entities:
+    - name: chat_history
+  - slot_was_set:
+    - name: chat_history
+  - action: utter_system.determination_chat_history
+
+- story: system.determination_title_units
+  steps:
+  - intent: system.determination
+    entities:
+    - name: title_units
+  - slot_was_set:
+    - name: title_units
+  - action: utter_system.determination_title_units
+
+
+
+- story: system.determination_service_name__other__
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.determination_c2c
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: c2c
+  - slot_was_set:
+    - service_name: c2c
+  - action: utter_system.determination_c2c
+
+- story: system.determination_capitaller
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: capitaller
+  - slot_was_set:
+    - service_name: capitaller
+  - action: utter_system.determination_capitaller
+
+- story: system.determination_credit
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: credit
+  - slot_was_set:
+    - service_name: credit
+  - action: utter_system.determination_credit
+
+- story: system.determination_debt
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: debt
+  - slot_was_set:
+    - service_name: debt
+  - action: utter_system.determination_debt
+
+- story: system.determination_enum
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_system.determination_enum
+
+- story: system.determination_events
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: events
+  - slot_was_set:
+    - service_name: events
+  - action: utter_system.determination_events
+
+- story: system.determination_exchanger
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: exchanger
+  - slot_was_set:
+    - service_name: exchanger
+  - action: utter_system.determination_exchanger
+
+- story: system.determination_forum
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: forum
+  - slot_was_set:
+    - service_name: forum
+  - action: utter_system.determination_forum
+
+- story: system.determination_indx
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: indx
+  - slot_was_set:
+    - service_name: indx
+  - action: utter_system.determination_indx
+
+- story: system.determination_merchant
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: merchant
+  - slot_was_set:
+    - service_name: merchant
+  - action: utter_system.determination_merchant
+
+- story: system.determination_report
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: report
+  - slot_was_set:
+    - service_name: report
+  - action: utter_system.determination_report
+
+- story: system.determination_verification_centre
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: verification_centre
+  - slot_was_set:
+    - service_name: verification_centre
+  - action: utter_system.determination_verification_centre
+
+- story: system.determination_megastock
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: megastock
+  - slot_was_set:
+    - service_name: megastock
+  - action: utter_system.determination_megastock
+
+- story: system.determination_wmmail
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: wmmail
+  - slot_was_set:
+    - service_name: wmmail
+  - action: utter_system.determination_wmmail
+
+- story: system.determination_digiseller
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: digiseller
+  - slot_was_set:
+    - service_name: digiseller
+  - action: utter_system.determination_digiseller
+
+- story: system.determination_login
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: login
+  - slot_was_set:
+    - service_name: login
+  - action: utter_system.determination_login
+
+- story: system.determination_debtmart
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: debtmart
+  - slot_was_set:
+    - service_name: debtmart
+  - action: utter_system.determination_debtmart
+
+- story: system.determination_wiki
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: wiki
+  - slot_was_set:
+    - service_name: wiki
+  - action: utter_system.determination_wiki
+
+- story: system.determination_escrow
+  steps:
+  - intent: system.determination
+    entities:
+    - service_name: escrow
+  - slot_was_set:
+    - service_name: escrow
+  - action: utter_system.determination_escrow
+
+
+
+- story: system.determination_passport_type__other__
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_system.determination_passport
+
+
+- story: system.determination_alias_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: alias_passport
+  - slot_was_set:
+    - passport_type: alias_passport
+  - action: utter_system.determination_alias_passport
+
+- story: system.determination_formal_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: utter_system.determination_formal_passport
+
+- story: system.determination_initial_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: initial_passport
+  - slot_was_set:
+    - passport_type: initial_passport
+  - action: utter_system.determination_initial_passport
+
+- story: system.determination_personal_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: personal_passport
+  - slot_was_set:
+    - passport_type: personal_passport
+  - action: utter_system.determination_personal_passport
+
+- story: system.determination_merchant_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: merchant_passport
+  - slot_was_set:
+    - passport_type: merchant_passport
+  - action: utter_system.determination_merchant_passport
+
+- story: system.determination_capitaller_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: capitaller_passport
+  - slot_was_set:
+    - passport_type: capitaller_passport
+  - action: utter_system.determination_capitaller_passport
+
+- story: system.determination_transact_automation_tool_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: transact_automation_tool_passport
+  - slot_was_set:
+    - passport_type: transact_automation_tool_passport
+  - action: utter_system.determination_transact_automation_tool_passport
+
+- story: system.determination_developer_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: developer_passport
+  - slot_was_set:
+    - passport_type: developer_passport
+  - action: utter_system.determination_developer_passport
+
+- story: system.determination_registrar_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: registrar_passport
+  - slot_was_set:
+    - passport_type: registrar_passport
+  - action: utter_system.determination_registrar_passport
+
+- story: system.determination_service_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: service_passport
+  - slot_was_set:
+    - passport_type: service_passport
+  - action: utter_system.determination_service_passport
+
+- story: system.determination_guarantor_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: guarantor_passport
+  - slot_was_set:
+    - passport_type: guarantor_passport
+  - action: utter_system.determination_guarantor_passport
+
+- story: system.determination_operator_passport
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: operator_passport
+  - slot_was_set:
+    - passport_type: operator_passport
+  - action: utter_system.determination_operator_passport
+
+
+
+- story: system.determination_passport_type__other__+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_system.determination_passport
+  - intent: system.how_create
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+
+
+- story: system.determination_alias_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: alias_passport
+  - slot_was_set:
+    - passport_type: alias_passport
+  - action: utter_system.determination_alias_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_alias_passport
+
+- story: system.determination_formal_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: utter_system.determination_formal_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_formal_passport
+
+- story: system.determination_initial_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: initial_passport
+  - slot_was_set:
+    - passport_type: initial_passport
+  - action: utter_system.determination_initial_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_initial_passport
+
+- story: system.determination_personal_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: personal_passport
+  - slot_was_set:
+    - passport_type: personal_passport
+  - action: utter_system.determination_personal_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_personal_passport
+
+- story: system.determination_merchant_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: merchant_passport
+  - slot_was_set:
+    - passport_type: merchant_passport
+  - action: utter_system.determination_merchant_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_merchant_passport
+
+- story: system.determination_capitaller_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: capitaller_passport
+  - slot_was_set:
+    - passport_type: capitaller_passport
+  - action: utter_system.determination_capitaller_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_capitaller_passport
+
+- story: system.determination_transact_automation_tool_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: transact_automation_tool_passport
+  - slot_was_set:
+    - passport_type: transact_automation_tool_passport
+  - action: utter_system.determination_transact_automation_tool_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_transact_automation_tool_passport
+
+- story: system.determination_developer_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: developer_passport
+  - slot_was_set:
+    - passport_type: developer_passport
+  - action: utter_system.determination_developer_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_developer_passport
+
+- story: system.determination_registrar_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: registrar_passport
+  - slot_was_set:
+    - passport_type: registrar_passport
+  - action: utter_system.determination_registrar_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_registrar_passport
+
+- story: system.determination_service_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: service_passport
+  - slot_was_set:
+    - passport_type: service_passport
+  - action: utter_system.determination_service_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_service_passport
+
+- story: system.determination_guarantor_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: guarantor_passport
+  - slot_was_set:
+    - passport_type: guarantor_passport
+  - action: utter_system.determination_guarantor_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_guarantor_passport
+
+- story: system.determination_operator_passport+++system.how_create
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: operator_passport
+  - slot_was_set:
+    - passport_type: operator_passport
+  - action: utter_system.determination_operator_passport
+  - intent: system.how_create
+  - action: utter_passport.how_get_passport_operator_passport
+
+
+
+- story: system.determination_passport_type__other__+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_system.determination_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_passport
+
+- story: system.determination_alias_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: alias_passport
+  - slot_was_set:
+    - passport_type: alias_passport
+  - action: utter_system.determination_alias_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_alias_passport
+
+- story: system.determination_formal_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: utter_system.determination_formal_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_formal_passport
+
+- story: system.determination_initial_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: initial_passport
+  - slot_was_set:
+    - passport_type: initial_passport
+  - action: utter_system.determination_initial_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_initial_passport
+
+- story: system.determination_personal_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: personal_passport
+  - slot_was_set:
+    - passport_type: personal_passport
+  - action: utter_system.determination_personal_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_personal_passport
+
+- story: system.determination_merchant_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: merchant_passport
+  - slot_was_set:
+    - passport_type: merchant_passport
+  - action: utter_system.determination_merchant_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_merchant_passport
+
+- story: system.determination_capitaller_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: capitaller_passport
+  - slot_was_set:
+    - passport_type: capitaller_passport
+  - action: utter_system.determination_capitaller_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_capitaller_passport
+
+- story: system.determination_transact_automation_tool_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: transact_automation_tool_passport
+  - slot_was_set:
+    - passport_type: transact_automation_tool_passport
+  - action: utter_system.determination_transact_automation_tool_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_transact_automation_tool_passport
+
+- story: system.determination_developer_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: developer_passport
+  - slot_was_set:
+    - passport_type: developer_passport
+  - action: utter_system.determination_developer_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_developer_passport
+
+- story: system.determination_registrar_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: registrar_passport
+  - slot_was_set:
+    - passport_type: registrar_passport
+  - action: utter_system.determination_registrar_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_registrar_passport
+
+- story: system.determination_service_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: service_passport
+  - slot_was_set:
+    - passport_type: service_passport
+  - action: utter_system.determination_service_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_service_passport
+
+- story: system.determination_guarantor_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: guarantor_passport
+  - slot_was_set:
+    - passport_type: guarantor_passport
+  - action: utter_system.determination_guarantor_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_guarantor_passport
+
+- story: system.determination_operator_passport+++passport.зачем_нужен
+  steps:
+  - intent: system.determination
+    entities:
+    - passport_type: operator_passport
+  - slot_was_set:
+    - passport_type: operator_passport
+  - action: utter_system.determination_operator_passport
+  - intent: passport.зачем_нужен
+  - action: utter_passport.зачем_нужен_operator_passport
+
+
+
+- story: system.determination_protected_payment
+  steps:
+  - intent: system.determination
+    entities:
+    - protected_payment
+  - slot_was_set:
+    - protected_payment
+  - action: utter_system.determination_protected_payment

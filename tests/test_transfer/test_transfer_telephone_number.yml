@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.telephone_number
+  steps:
+  - intent: transfer.telephone_number
+    user: |-
+      билайн
+  - action: utter_transfer.telephone_number
+
+- story: transfer.telephone_number_telephone_number
+  steps:
+  - intent: transfer.telephone_number
+    user: |-
+      [билайн]{"entity": "telephone_number", "value": "telephone_number"}
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_transfer.telephone_number

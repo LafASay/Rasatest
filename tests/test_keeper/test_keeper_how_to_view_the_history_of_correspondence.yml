@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+
+# - story: keeper.how_to_view_the_history_of_correspondence
+#   steps:
+#   - intent: keeper.how_to_view_the_history_of_correspondence
+#     user: |-
+#       посмотреть историю сообщений
+#   - action: utter_keeper.how_to_view_the_history_of_correspondence_in_standard
+
+
+
+# - story: keeper.how_to_view_the_history_of_correspondence_keeper_type__other__
+#   steps:
+#   - intent: keeper.how_to_view_the_history_of_correspondence
+#     user: |-
+#       посмотреть историю сообщений в [класссик]{"entity": "keeper_type", "value": "класссик"}
+#     entities:
+#     - keeper_type: __other__
+#   - slot_was_set:
+#     - keeper_type: __other__
+#   - action: utter_keeper.how_to_view_the_history_of_correspondence_in_standard
+
+
+# - story: keeper.how_to_view_the_history_of_correspondence_in_standard
+#   steps:
+#   - intent: keeper.how_to_view_the_history_of_correspondence
+#     user: |-
+#       посмотреть историю сообщений в [standard]{"entity": "keeper_type", "value": "standard"}
+#     entities:
+#     - keeper_type: standard
+#   - slot_was_set:
+#     - keeper_type: standard
+#   - action: utter_keeper.how_to_view_the_history_of_correspondence_in_standard
+
+# - story: keeper.how_to_view_the_history_of_correspondence_in_winpro
+#   steps:
+#   - intent: keeper.how_to_view_the_history_of_correspondence
+#     user: |-
+#       посмотреть историю сообщений в [winpro]{"entity": "keeper_type", "value": "winpro"}
+#     entities:
+#     - keeper_type: winpro
+#   - slot_was_set:
+#     - keeper_type: winpro
+#   - action: utter_keeper.how_to_view_the_history_of_correspondence_in_winpro
+
+# - story: keeper.how_to_view_the_history_of_correspondence_in_webpro
+#   steps:
+#   - intent: keeper.how_to_view_the_history_of_correspondence
+#     user: |-
+#       посмотреть историю сообщений в [webpro]{"entity": "keeper_type", "value": "webpro"}
+#     entities:
+#     - keeper_type: webpro
+#   - slot_was_set:
+#     - keeper_type: webpro
+#   - action: utter_keeper.how_to_view_the_history_of_correspondence_in_webpro

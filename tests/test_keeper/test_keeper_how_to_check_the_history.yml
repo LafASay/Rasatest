@@ -1,0 +1,123 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.how_to_check_the_history
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить историю переводов
+  - action: utter_keeper.how_to_check_the_history_in_standard
+
+
+
+- story: keeper.how_to_check_the_history_keeper_type__other__
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить историю переводов в [класссик]{"entity": "keeper_type", "value": "класссик"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_keeper.how_to_check_the_history_in_standard
+
+
+- story: keeper.how_to_check_the_history_in_standard
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить историю переводов в [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_keeper.how_to_check_the_history_in_standard
+
+- story: keeper.how_to_check_the_history_in_winpro
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить историю переводов в [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_keeper.how_to_check_the_history_in_winpro
+
+- story: keeper.how_to_check_the_history_in_webpro
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить историю переводов в [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_keeper.how_to_check_the_history_in_webpro
+
+
+
+- story: keeper.how_to_check_the_history_name__other__
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить [историю сиабщений]{"entity": "name", "value": "историю сиабщений"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_keeper.how_to_check_the_history_in_standard
+
+
+- story: keeper.how_to_check_the_history_chat_history
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить [историю сообщений]{"entity": "name", "value": "chat_history"}
+    entities:
+    - name: chat_history
+  - slot_was_set:
+    - name: chat_history
+  - action: utter_keeper.how_to_check_the_history_chat_history_in_standard
+
+
+
+- story: keeper.how_to_check_the_history_in_standard_chat_history_in_standard
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить [историю сообщений]{"entity": "name", "value": "chat_history"} в [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - name: chat_history
+    - keeper_type: standard
+  - slot_was_set:
+    - name: chat_history
+    - keeper_type: standard
+  - action: utter_keeper.how_to_check_the_history_chat_history_in_standard
+
+- story: keeper.how_to_check_the_history_in_standard_chat_history_in_winpro
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить [историю сообщений]{"entity": "name", "value": "chat_history"} в [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - name: chat_history
+    - keeper_type: winpro
+  - slot_was_set:
+    - name: chat_history
+    - keeper_type: winpro
+  - action: utter_keeper.how_to_check_the_history_chat_history_in_winpro
+
+- story: keeper.how_to_check_the_history_in_standard_chat_history_in_webpro
+  steps:
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      проверить [историю сообщений]{"entity": "name", "value": "chat_history"} в [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - name: chat_history
+    - keeper_type: webpro
+  - slot_was_set:
+    - name: chat_history
+    - keeper_type: webpro
+  - action: utter_keeper.how_to_check_the_history_chat_history_in_webpro

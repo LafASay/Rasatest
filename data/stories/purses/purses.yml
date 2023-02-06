@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+- story: purses.difference_between_purses
+  steps:
+  - intent: purses.difference_between_purses
+  - action: utter_purses.difference_between_purses
+
+- story: purses.how_many_purses_can_created
+  steps:
+  - intent: purses.how_many_purses_can_created
+  - action: utter_purses.how_many_purses_can_created
+
+- story: purses.какой_кошелек_для
+  steps:
+  - intent: purses.какой_кошелек_для
+  - action: utter_purses.какой_кошелек_для
+
+- story: purses.как_долго_создается_кошелек
+  steps:
+  - intent: purses.как_долго_создается_кошелек
+  - action: utter_purses.как_долго_создается_кошелек
+
+- story: purses.изменить_валюту_кошелька
+  steps:
+  - intent: purses.изменить_валюту_кошелька
+  - action: utter_purses.изменить_валюту_кошелька
+
+- story: purses.отображается_нулевой_баланс
+  steps:
+  - intent: purses.отображается_нулевой_баланс
+  - action: utter_purses.отображается_нулевой_баланс

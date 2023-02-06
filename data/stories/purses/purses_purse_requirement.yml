@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+
+- story: purses.purse_requirement+++system.what_types
+  steps:
+  - intent: purses.purse_requirement
+  - action: purse_requirement_form
+  - active_loop: purse_requirement_form
+  - slot_was_set:
+    - requested_slot: purse_type
+  - intent: system.what_types
+  - action: utter_system.what_types_purse
+  - action: purse_requirement_form
+  - slot_was_set:
+    - requested_slot: purse_type

@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: exchanger.время_на_обмен
+  steps:
+  - intent: exchanger.время_на_обмен
+  - action: utter_exchanger.время_на_обмен

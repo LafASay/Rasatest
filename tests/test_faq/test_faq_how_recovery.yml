@@ -1,0 +1,495 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_recovery
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить
+  - action: utter_faq.how_recovery
+
+
+
+- story: faq.how_recovery_name__other__
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [сертификит]{"entity": "name", "value": "сертификит"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: faq.how_recovery_certificate
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [сертификат]{"entity": "name", "value": "certificate"}
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_faq.how_recovery_certificate
+
+- story: faq.how_recovery_key_file
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [файл ключей]{"entity": "name", "value": "keyfile"}
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_faq.how_recovery_key_file
+
+- story: faq.how_recovery_bl
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [bl]{"entity": "name", "value": "business_level"}
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_faq.how_recovery_bl
+
+- story: faq.how_recovery_account
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [аккаунт]{"entity": "name", "value": "account"}
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_faq.how_recovery_account
+
+- story: faq.how_recovery_webmoney
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [webmoney]{"entity": "name", "value": "webmoney"}
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_faq.how_recovery_webmoney
+
+- story: faq.how_recovery_wmid
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmid]{"entity": "name", "value": "wmid"}
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_faq.how_recovery_wmid
+
+- story: faq.how_recovery_password
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [пароль]{"entity": "name", "value": "пароль"}
+    entities:
+    - name: пароль
+  - slot_was_set:
+    - name: пароль
+  - action: utter_faq.how_recovery_password
+
+- story: faq.how_recovery_winpro_key_file
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [файл ключей]{"entity": "name", "value": "keyfile"} в [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - name: keyfile
+    - keeper_type: winpro
+  - slot_was_set:
+    - name: keyfile
+    - keeper_type: winpro
+  - action: utter_faq.how_recovery_key_file
+
+- story: faq.how_recovery_certificate_in_webpro
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [сертификат]{"entity": "name", "value": "certificate"} в [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - name: certificate
+    - keeper_type: webpro
+  - slot_was_set:
+    - name: certificate
+    - keeper_type: webpro
+  - action: utter_faq.how_recovery_certificate
+
+- story: faq.how_recovery_activation_code_enum
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [код активации]{"entity": "name", "value": "activation_code"}
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_faq.how_recovery_activation_code
+  - intent: system.name
+    user: |-
+      [enum]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_recovery_activation_code_enum
+
+- story: faq.how_recovery_activation_code_winpro
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [код активации]{"entity": "name", "value": "activation_code"}
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_faq.how_recovery_activation_code
+  - intent: system.keeper
+    user: |-
+      [кипер]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_recovery_activation_code_winpro
+
+
+
+- story: faq.how_recovery_service_name__other__
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [енамх]{"entity": "service_name", "value": "енамх"}
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: faq.how_recovery_enum
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [enum]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_recovery_enum
+
+
+
+- story: faq.how_recovery_keeper_type__other__
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [кипер]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_recovery_keeper
+
+
+- story: faq.how_recovery_standard
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_faq.how_recovery_standard
+
+- story: faq.how_recovery_winpro
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_faq.how_recovery_winpro
+
+- story: faq.how_recovery_webpro
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_faq.how_recovery_webpro
+
+
+
+- story: faq.how_recovery_purse_type__other__
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [кошелек]{"entity": "purse_type", "value": "purse"}
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_faq.how_recovery_purse
+
+
+- story: faq.how_recovery_wmp
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmp кошелек]{"entity": "purse_type", "value": "wmp"}
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wme
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wme кошелек]{"entity": "purse_type", "value": "wme"}
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmb
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmb кошелек]{"entity": "purse_type", "value": "wmb"}
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmg
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmg кошелек]{"entity": "purse_type", "value": "wmg"}
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmz
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmz кошелек]{"entity": "purse_type", "value": "wmz"}
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmk
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmk кошелек]{"entity": "purse_type", "value": "wmk"}
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmx
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmx кошелек]{"entity": "purse_type", "value": "wmx"}
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmh
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmh кошелек]{"entity": "purse_type", "value": "wmh"}
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wml
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wml кошелек]{"entity": "purse_type", "value": "wml"}
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmy
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmy кошелек]{"entity": "purse_type", "value": "wmy"}
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmr
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmr кошелек]{"entity": "purse_type", "value": "wmr"}
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmc
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmc кошелек]{"entity": "purse_type", "value": "wmc"}
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmd
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmd кошелек]{"entity": "purse_type", "value": "wmd"}
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmu
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmu кошелек]{"entity": "purse_type", "value": "wmu"}
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmf
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [wmf кошелек]{"entity": "purse_type", "value": "wmf"}
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_mdl
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [mdl кошелек]{"entity": "purse_type", "value": "mdl"}
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_btc
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [btc кошелек]{"entity": "currency", "value": "btc"}
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_faq.how_recovery_purse_btc
+
+- story: faq.how_recovery_bch
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [bch кошелек]{"entity": "currency", "value": "bch"}
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_faq.how_recovery_purse_bch
+
+- story: faq.how_recovery_ltc
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [ltc кошелек]{"entity": "currency", "value": "ltc"}
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_faq.how_recovery_purse_ltc
+
+- story: faq.how_recovery_eth
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [eth кошелек]{"entity": "currency", "value": "eth"}
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_faq.how_recovery_purse_eth
+
+- story: faq.how_recovery_usdt
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [usdt кошелек]{"entity": "currency", "value": "usdt"}
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_faq.how_recovery_purse_usdt
+
+
+
+- story: faq.how_recovery_telephone_number
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [номер телефона]{"entity": "telephone_number", "value": "telephone_number"}
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_faq.how_recovery_telephone_number

@@ -1,0 +1,56 @@
+version: "3.1"
+
+stories:
+
+- story: number.number_and_email
+  steps:
+  - intent: number.number_and_email
+    user: |-
+      номер телефона
+  - action: utter_number.number_and_email
+
+
+
+- story: number.number_and_email_purse_number
+  steps:
+  - intent: number.number_and_email
+    user: |-
+      [z958564751584]{"entity": "purse_number", "value": "z958564751584"}
+    entities:
+    - purse_number
+  - slot_was_set:
+    - purse_number
+  - action: utter_number.number_and_email_purse_number
+
+- story: number.number_and_email_wmid_number
+  steps:
+  - intent: number.number_and_email
+    user: |-
+      [477984534585]{"entity": "wmid_number", "value": "477984534585"}
+    entities:
+    - wmid_number
+  - slot_was_set:
+    - wmid_number
+  - action: utter_number.number_and_email_wmid_number
+
+- story: number.number_and_email_phone_number
+  steps:
+  - intent: number.number_and_email
+    user: |-
+      [+7964570770]{"entity": "phone_number", "value": "+7964570770"}
+    entities:
+    - phone_number
+  - slot_was_set:
+    - phone_number
+  - action: utter_number.number_and_email_phone_number
+
+- story: number.number_and_email_email
+  steps:
+  - intent: number.number_and_email
+    user: |-
+      [lafa.say@gmail.com]{"entity": "email", "value": "lafa.say@gmail.com"}
+    entities:
+    - email
+  - slot_was_set:
+    - email
+  - action: utter_number.number_and_email_email

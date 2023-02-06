@@ -1,0 +1,407 @@
+version: "3.1"
+
+stories:
+
+- story: system.sorry_dont_know_yet
+  steps:
+  - intent: system.name
+    user: |-
+      сервер
+  - action: utter_please_rephrase
+
+
+
+- story: system.name__other__
+  steps:
+  - intent: system.name
+    user: |-
+      [webmoneyу]{"entity": "name", "value": "webmoneyу"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.name_webmoney
+  steps:
+  - intent: system.name
+    user: |-
+      [webmoney]{"entity": "name", "value": "webmoney"}
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.determination_webmoney
+
+- story: system.name_keyfile
+  steps:
+  - intent: system.name
+    user: |-
+      [файл ключей]{"entity": "name", "value": "keyfile"}
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_system.determination_keyfile
+
+- story: system.name_wmid
+  steps:
+  - intent: system.name
+    user: |-
+      [wmid]{"entity": "name", "value": "wmid"}
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_system.determination_wmid
+
+- story: system.name_activation_code
+  steps:
+  - intent: system.name
+    user: |-
+      [код активации]{"entity": "name", "value": "activation_code"}
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_system.determination_activation_code
+
+- story: system.name_business_level
+  steps:
+  - intent: system.name
+    user: |-
+      [bl]{"entity": "name", "value": "business_level"}
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_system.determination_business_level
+
+- story: system.name_trust_level
+  steps:
+  - intent: system.name
+    user: |-
+      [tl]{"entity": "name", "value": "trust_level"}
+    entities:
+    - name: trust_level
+  - slot_was_set:
+    - name: trust_level
+  - action: utter_system.determination_trust_level
+
+- story: system.name_certificate
+  steps:
+  - intent: system.name
+    user: |-
+      [сертификат]{"entity": "name", "value": "certificate"}
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_system.determination_certificate
+
+- story: system.name_root_certificate
+  steps:
+  - intent: system.name
+    user: |-
+      [корневой сертификат]{"entity": "name", "value": "root_certificate"}
+    entities:
+    - name: root_certificate
+  - slot_was_set:
+    - name: root_certificate
+  - action: utter_system.determination_root_certificate
+
+- story: system.name_account
+  steps:
+  - intent: system.name
+    user: |-
+      [аккаунт]{"entity": "name", "value": "account"}
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_system.determination_account
+
+- story: system.name_check_paymer
+  steps:
+  - intent: system.name
+    user: |-
+      [чек пэймер]{"entity": "name", "value": "check_paymer"}
+    entities:
+    - name: check_paymer
+  - slot_was_set:
+    - name: check_paymer
+  - action: utter_system.determination_check_paymer
+
+- story: system.name_photoid
+  steps:
+  - intent: system.name
+    user: |-
+      [photoid]{"entity": "name", "value": "photoid"}
+    entities:
+    - name: photoid
+  - slot_was_set:
+    - name: photoid
+  - action: utter_system.determination_photoid
+
+- story: system.name_videoid
+  steps:
+  - intent: system.name
+    user: |-
+      [videoid]{"entity": "name", "value": "videoid"}
+    entities:
+    - name: videoid
+  - slot_was_set:
+    - name: videoid
+  - action: utter_system.determination_videoid
+
+- story: system.name_title_units
+  steps:
+  - intent: system.name
+    user: |-
+      [титульные знаки]{"entity": "name", "value": "title_units"}
+    entities:
+    - name: title_units
+  - slot_was_set:
+    - name: title_units
+  - action: utter_system.determination_title_units
+
+
+
+- story: system.service_name__other__
+  steps:
+  - intent: system.name
+    user: |-
+      [reeport]{"entity": "service_name", "value": "reeport"}
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.name_c2c
+  steps:
+  - intent: system.name
+    user: |-
+      [c2c]{"entity": "service_name", "value": "c2c"}
+    entities:
+    - service_name: c2c
+  - slot_was_set:
+    - service_name: c2c
+  - action: utter_system.determination_c2c
+
+- story: system.name_capitaller
+  steps:
+  - intent: system.name
+    user: |-
+      [capitaller]{"entity": "service_name", "value": "capitaller"}
+    entities:
+    - service_name: capitaller
+  - slot_was_set:
+    - service_name: capitaller
+  - action: utter_system.determination_capitaller
+
+- story: system.name_credit
+  steps:
+  - intent: system.name
+    user: |-
+      [credit]{"entity": "service_name", "value": "credit"}
+    entities:
+    - service_name: credit
+  - slot_was_set:
+    - service_name: credit
+  - action: utter_system.determination_credit
+
+- story: system.name_debt
+  steps:
+  - intent: system.name
+    user: |-
+      [debt]{"entity": "service_name", "value": "debt"}
+    entities:
+    - service_name: debt
+  - slot_was_set:
+    - service_name: debt
+  - action: utter_system.determination_debt
+
+- story: system.name_enum
+  steps:
+  - intent: system.name
+    user: |-
+      [enum]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_system.determination_enum
+
+- story: system.name_events
+  steps:
+  - intent: system.name
+    user: |-
+      [events]{"entity": "service_name", "value": "events"}
+    entities:
+    - service_name: events
+  - slot_was_set:
+    - service_name: events
+  - action: utter_system.determination_events
+
+- story: system.name_exchanger
+  steps:
+  - intent: system.name
+    user: |-
+      [exchanger]{"entity": "service_name", "value": "exchanger"}
+    entities:
+    - service_name: exchanger
+  - slot_was_set:
+    - service_name: exchanger
+  - action: utter_system.determination_exchanger
+
+- story: system.name_forum
+  steps:
+  - intent: system.name
+    user: |-
+      [forum]{"entity": "service_name", "value": "forum"}
+    entities:
+    - service_name: forum
+  - slot_was_set:
+    - service_name: forum
+  - action: utter_system.determination_forum
+
+- story: system.name_indx
+  steps:
+  - intent: system.name
+    user: |-
+      [indx]{"entity": "service_name", "value": "indx"}
+    entities:
+    - service_name: indx
+  - slot_was_set:
+    - service_name: indx
+  - action: utter_system.determination_indx
+
+- story: system.name_merchant
+  steps:
+  - intent: system.name
+    user: |-
+      [merchant]{"entity": "service_name", "value": "merchant"}
+    entities:
+    - service_name: merchant
+  - slot_was_set:
+    - service_name: merchant
+  - action: utter_system.determination_merchant
+
+- story: system.name_report
+  steps:
+  - intent: system.name
+    user: |-
+      [report]{"entity": "service_name", "value": "report"}
+    entities:
+    - service_name: report
+  - slot_was_set:
+    - service_name: report
+  - action: utter_system.determination_report
+
+- story: system.name_verification_centre
+  steps:
+  - intent: system.name
+    user: |-
+      [центр атестации]{"entity": "service_name", "value": "verification_centre"}
+    entities:
+    - service_name: verification_centre
+  - slot_was_set:
+    - service_name: verification_centre
+  - action: utter_system.determination_verification_centre
+
+- story: system.name_megastock
+  steps:
+  - intent: system.name
+    user: |-
+      [мегасток]{"entity": "service_name", "value": "megastock"}
+    entities:
+    - service_name: megastock
+  - slot_was_set:
+    - service_name: megastock
+  - action: utter_system.determination_megastock
+
+- story: system.name_wmmail
+  steps:
+  - intent: system.name
+    user: |-
+      [wm-почта]{"entity": "service_name", "value": "wmmail"}
+    entities:
+    - service_name: wmmail
+  - slot_was_set:
+    - service_name: wmmail
+  - action: utter_system.determination_wmmail
+
+- story: system.name_digiseller
+  steps:
+  - intent: system.name
+    user: |-
+      [digiseller]{"entity": "service_name", "value": "digiseller"}
+    entities:
+    - service_name: digiseller
+  - slot_was_set:
+    - service_name: digiseller
+  - action: utter_system.determination_digiseller
+
+- story: system.name_login
+  steps:
+  - intent: system.name
+    user: |-
+      [login]{"entity": "service_name", "value": "login"}
+    entities:
+    - service_name: login
+  - slot_was_set:
+    - service_name: login
+  - action: utter_system.determination_login
+
+- story: system.name_debtmart
+  steps:
+  - intent: system.name
+    user: |-
+      [debtmart]{"entity": "service_name", "value": "debtmart"}
+    entities:
+    - service_name: debtmart
+  - slot_was_set:
+    - service_name: debtmart
+  - action: utter_system.determination_debtmart
+
+- story: system.name_wiki
+  steps:
+  - intent: system.name
+    user: |-
+      [wiki]{"entity": "service_name", "value": "wiki"}
+    entities:
+    - service_name: wiki
+  - slot_was_set:
+    - service_name: wiki
+  - action: utter_system.determination_wiki
+
+- story: system.name_escrow
+  steps:
+  - intent: system.name
+    user: |-
+      [escrow]{"entity": "service_name", "value": "escrow"}
+    entities:
+    - service_name: escrow
+  - slot_was_set:
+    - service_name: escrow
+  - action: utter_system.determination_escrow
+
+
+
+- story: system.name_webmoney
+  steps:
+  - intent: system.name
+    user: |-
+      [webmoney]{"entity": "name", "value": "webmoney"}
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.determination_webmoney
+  - intent: system.how_create
+    user: |-
+      как создать
+  - action: utter_system.registration

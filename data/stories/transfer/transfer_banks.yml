@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.banks
+  steps:
+  - intent: transfer.banks
+  - action: utter_transfer.banks
+
+- story: transfer.banks_banks
+  steps:
+  - intent: transfer.banks
+    entities:
+    - bank
+  - slot_was_set:
+    - bank
+  - action: utter_transfer.banks

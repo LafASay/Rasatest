@@ -1,0 +1,409 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_recovery
+  steps:
+  - intent: faq.how_recovery
+  - action: utter_faq.how_recovery
+
+
+
+- story: faq.how_recovery_activation_code_enum
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_faq.how_recovery_activation_code
+  - intent: system.name
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_recovery_activation_code_enum
+
+- story: faq.how_recovery_activation_code_winpro
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: activation_code
+  - slot_was_set:
+    - name: activation_code
+  - action: utter_faq.how_recovery_activation_code
+  - intent: system.name
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_recovery_activation_code_winpro
+
+
+
+- story: faq.how_recovery_name__other__
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: faq.how_recovery_certificate
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_faq.how_recovery_certificate
+
+- story: faq.how_recovery_key_file
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_faq.how_recovery_key_file
+
+- story: faq.how_recovery_bl
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_faq.how_recovery_bl
+
+- story: faq.how_recovery_account
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_faq.how_recovery_account
+
+- story: faq.how_recovery_webmoney
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_faq.how_recovery_webmoney
+
+- story: faq.how_recovery_wmid
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_faq.how_recovery_wmid
+
+- story: faq.how_recovery_password
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: пароль
+  - slot_was_set:
+    - name: пароль
+  - action: utter_faq.how_recovery_password
+
+- story: faq.how_recovery_winpro_key_file
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: keyfile
+    - keeper_type: winpro
+  - slot_was_set:
+    - name: keyfile
+    - keeper_type: winpro
+  - action: utter_faq.how_recovery_key_file
+
+- story: faq.how_recovery_certificate_in_webpro
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - name: certificate
+    - keeper_type: webpro
+  - slot_was_set:
+    - name: certificate
+    - keeper_type: webpro
+  - action: utter_faq.how_recovery_certificate
+
+
+
+- story: faq.how_recovery_service_name__other__
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: faq.how_recovery_enum
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_faq.how_recovery_enum
+
+
+
+- story: faq.how_recovery_keeper_type__other__
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_recovery_keeper
+
+
+- story: faq.how_recovery_standard
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_faq.how_recovery_standard
+
+- story: faq.how_recovery_winpro
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_faq.how_recovery_winpro
+
+- story: faq.how_recovery_webpro
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_faq.how_recovery_webpro
+
+
+
+- story: faq.how_recovery_purse_type__other__
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_faq.how_recovery_purse
+
+
+- story: faq.how_recovery_wmp
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wme
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmb
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmg
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmz
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmk
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmx
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmh
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wml
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmy
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmr
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmc
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmd
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmu
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_wmf
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_mdl
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_faq.how_recovery_purse
+
+- story: faq.how_recovery_btc
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_faq.how_recovery_purse_btc
+
+- story: faq.how_recovery_bch
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_faq.how_recovery_purse_bch
+
+- story: faq.how_recovery_ltc
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_faq.how_recovery_purse_ltc
+
+- story: faq.how_recovery_eth
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_faq.how_recovery_purse_eth
+
+- story: faq.how_recovery_usdt
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_faq.how_recovery_purse_usdt
+
+
+
+- story: faq.how_recovery_telephone_number
+  steps:
+  - intent: faq.how_recovery
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_faq.how_recovery_telephone_number

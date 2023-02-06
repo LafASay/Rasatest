@@ -1,0 +1,25 @@
+version: "3.1"
+
+stories:
+
+- story: enum.enum_unplug__other__
+  steps:
+  - intent: enum.enum_unplug
+    user: |-
+      как отключить [enumm]{"entity": "service_name", "value": "enumm"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+- story: enum.enum_unplug
+  steps:
+  - intent: enum.enum_unplug
+    user: |-
+      как отключить [enum]{"entity": "service_name", "value": "enum"}
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_enum.enum_unplug

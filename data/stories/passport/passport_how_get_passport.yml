@@ -1,0 +1,239 @@
+version: "3.1"
+
+stories:
+
+- story: webpro.получение_сертификата+++system.name
+  steps:
+  - intent: webpro.получение_сертификата
+  - action: utter_webpro.получение_сертификата
+  - intent: system.name
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_passport.how_get_passport_personal_passport
+
+- story: passport.how_get_passport+++system.what_types
+  steps:
+  - intent: passport.how_get_passport
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: system.what_types
+  - action: utter_system.what_types_passport
+  - action: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+
+
+
+
+
+
+# - story: User
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - intent: debt.debt
+#   - action: utter_please_rephrase
+#   - action: action_deactivate_loop
+#   - active_loop: null
+
+
+
+
+
+
+
+
+
+
+- story: User
+  steps:
+  - intent: passport.how_get_passport
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+
+
+- story: Story from Conversation ID 285901912
+  steps:
+  - intent: passport.how_get_passport
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: passport.how_get_passport
+  - action: how_get_passport_form
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#     entities:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_how_get_passport_form_message
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#     entities:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_how_get_passport_form_message
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   # - slot_was_set:
+#   #   - passport_type: formal_passport
+#   # - slot_was_set:
+#   #   - passport_type: formal_passport
+#   # - slot_was_set:
+#   #   - requested_slot: null
+#   # - active_loop: null
+#   # - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#     entities:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_how_get_passport_form_message
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+
+
+
+
+
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#     entities:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - passport_type: alias_passport
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_how_get_passport_form_message
+#   - intent: system.passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form

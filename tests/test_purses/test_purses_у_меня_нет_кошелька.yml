@@ -1,0 +1,265 @@
+version: "3.1"
+
+stories:
+
+- story: purses.у_меня_нет_кошелька
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет кошелька
+  - action: utter_purses.у_меня_нет_кошелька
+
+
+- story: purses.у_меня_нет_кошелька_purse_type__other__
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошеелька wmp]{"entity": "purse_type", "value": "кошеелька wmp"}
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_purses.у_меня_нет_кошелька
+
+
+- story: purses.у_меня_нет_кошелька_wmp
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmp]{"entity": "purse_type", "value": "wmp"}
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_purses.у_меня_нет_кошелька_wmp
+
+- story: purses.у_меня_нет_кошелька_wmr
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmr]{"entity": "purse_type", "value": "wmr"}
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_purses.у_меня_нет_кошелька_wmr
+
+- story: purses.у_меня_нет_кошелька_wmu
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmu]{"entity": "purse_type", "value": "wmu"}
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_purses.у_меня_нет_кошелька_wmu
+
+- story: purses.у_меня_нет_кошелька_wme
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wme]{"entity": "purse_type", "value": "wme"}
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_purses.у_меня_нет_кошелька_wme
+
+- story: purses.у_меня_нет_кошелька_wmb
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmb]{"entity": "purse_type", "value": "wmb"}
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_purses.у_меня_нет_кошелька_wmb
+
+- story: purses.у_меня_нет_кошелька_wmg
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmg]{"entity": "purse_type", "value": "wmg"}
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_purses.у_меня_нет_кошелька_wmg
+
+- story: purses.у_меня_нет_кошелька_wmz
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmz]{"entity": "purse_type", "value": "wmz"}
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_purses.у_меня_нет_кошелька_wmz
+
+- story: purses.у_меня_нет_кошелька_wmk
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmk]{"entity": "purse_type", "value": "wmk"}
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_purses.у_меня_нет_кошелька_wmk
+
+- story: purses.у_меня_нет_кошелька_wmx
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmx]{"entity": "purse_type", "value": "wmx"}
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_purses.у_меня_нет_кошелька_wmx
+
+- story: purses.у_меня_нет_кошелька_wmh
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmh]{"entity": "purse_type", "value": "wmh"}
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_purses.у_меня_нет_кошелька_wmh
+
+- story: purses.у_меня_нет_кошелька_wml
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wml]{"entity": "purse_type", "value": "wml"}
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_purses.у_меня_нет_кошелька_wml
+
+- story: purses.у_меня_нет_кошелька_wmy
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmy]{"entity": "purse_type", "value": "wmy"}
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_purses.у_меня_нет_кошелька_wmy
+
+- story: purses.у_меня_нет_кошелька_wmf
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmf]{"entity": "purse_type", "value": "wmf"}
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_purses.у_меня_нет_кошелька_wmf
+
+- story: purses.у_меня_нет_кошелька_wmt
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmt]{"entity": "purse_type", "value": "wmt"}
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_purses.у_меня_нет_кошелька_wmt
+
+- story: purses.у_меня_нет_кошелька_mdl
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька mdl]{"entity": "purse_type", "value": "mdl"}
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_purses.у_меня_нет_кошелька_mdl
+
+- story: purses.у_меня_нет_кошелька_wmc
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmc]{"entity": "purse_type", "value": "wmc"}
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_purses.у_меня_нет_кошелька_wmc
+
+- story: purses.у_меня_нет_кошелька_wmd
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька wmd]{"entity": "purse_type", "value": "wmd"}
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_purses.у_меня_нет_кошелька_wmd
+
+- story: purses.у_меня_нет_кошелька_btc
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька btc]{"entity": "currency", "value": "btc"}
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_purses.у_меня_нет_кошелька_btc
+
+- story: purses.у_меня_нет_кошелька_bch
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька bch]{"entity": "currency", "value": "bch"}
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_purses.у_меня_нет_кошелька_bch
+
+- story: purses.у_меня_нет_кошелька_ltc
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька ltc]{"entity": "currency", "value": "ltc"}
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_purses.у_меня_нет_кошелька_ltc
+
+- story: purses.у_меня_нет_кошелька_eth
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька eth]{"entity": "currency", "value": "eth"}
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_purses.у_меня_нет_кошелька_eth
+
+- story: purses.у_меня_нет_кошелька_usdt
+  steps:
+  - intent: purses.у_меня_нет_кошелька
+    user: |-
+      у меня нет [кошелька usdt]{"entity": "currency", "value": "usdt"}
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_purses.у_меня_нет_кошелька_usdt

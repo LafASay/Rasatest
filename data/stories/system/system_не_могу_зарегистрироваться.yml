@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+
+- story: system.не_могу_зарегистрироваться
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+  - action: utter_system.не_могу_зарегистрироваться
+
+
+
+- story: system.не_могу_зарегистрироваться_service_name__other__
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.не_могу_зарегистрироваться_enum
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_system.не_могу_зарегистрироваться_enum
+
+- story: system.не_могу_зарегистрироваться_megastock
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - service_name: megastock
+  - slot_was_set:
+    - service_name: megastock
+  - action: utter_system.не_могу_зарегистрироваться_megastock
+
+- story: system.не_могу_зарегистрироваться_indx
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - service_name: indx
+  - slot_was_set:
+    - service_name: indx
+  - action: utter_system.не_могу_зарегистрироваться_indx
+
+
+
+- story: system.не_могу_зарегистрироваться_keeper_type__other__
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.не_могу_зарегистрироваться_standard
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_system.не_могу_зарегистрироваться_standard
+
+- story: system.не_могу_зарегистрироваться_winpro
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_system.не_могу_зарегистрироваться_winpro
+
+- story: system.не_могу_зарегистрироваться_webpro
+  steps:
+  - intent: system.не_могу_зарегистрироваться
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_system.не_могу_зарегистрироваться_webpro

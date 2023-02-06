@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: languages.how_to_change_the_language_or_font
+  steps:
+  - intent: languages.how_to_change_the_language_or_font
+  - action: utter_languages.how_to_change_the_language_or_font_language
+
+
+- story: languages.how_to_change_the_language_or_font
+  steps:
+  - intent: languages.how_to_change_the_language_or_font
+    entities:
+    - font: font
+  - slot_was_set:
+    - font: font
+  - action: utter_languages.how_to_change_the_language_or_font_font

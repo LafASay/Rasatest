@@ -1,0 +1,8 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.не_могу_войти
+  steps:
+  - intent: keeper.не_могу_войти
+  - action: utter_keeper.не_могу_войти

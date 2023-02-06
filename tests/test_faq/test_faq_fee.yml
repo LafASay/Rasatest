@@ -1,0 +1,58 @@
+version: "3.1"
+
+stories:
+
+- story: faq.fee
+  steps:
+  - intent: faq.fee
+    user: |-
+      какая комиссия
+  - action: utter_faq.fee
+
+
+
+- story: faq.fee__other__
+  steps:
+  - intent: faq.fee
+    user: |-
+      какая комиссия на [вывад]{"entity": "verb", "value": "вывад"}
+    entities:
+    - verb: __other__
+  - slot_was_set:
+    - verb: __other__
+  - action: utter_faq.fee
+
+
+
+- story: faq.fee_withdraw
+  steps:
+  - intent: faq.fee
+    user: |-
+      какая комиссия на [вывод]{"entity": "verb", "value": "withdraw"}
+    entities:
+    - verb: withdraw
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_faq.fee_withdraw
+
+- story: faq.fee_topup
+  steps:
+  - intent: faq.fee
+    user: |-
+      какая комиссия на [пополнение]{"entity": "verb", "value": "topup"}
+    entities:
+    - verb: topup
+  - slot_was_set:
+    - verb: topup
+  - action: utter_faq.fee_topup
+
+- story: faq.fee_steam
+  steps:
+  - intent: faq.fee
+    user: |-
+      какая комиссия на [steam]{"entity": "steam", "value": "steam"}
+    entities:
+    - steam: steam
+  - slot_was_set:
+    - steam: steam
+  - action: utter_faq.fee_steam

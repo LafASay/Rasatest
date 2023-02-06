@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+# - story: sms.email
+#   steps:
+#   - intent: sms.email
+#     user: |-
+#       мой адрес электронной почты
+#   - action: utter_sms.email
+
+# - story: sms.email_with_email
+#   steps:
+#   - intent: sms.email
+#     user: |-
+#       мой адрес электронной почты [lafa.say@gmail.com]{"entity": "email", "value": "lafa.say@gmail.com"}
+#     entities:
+#     - email: email
+#   - slot_was_set:
+#     - email: email
+#   - action: utter_sms.email

@@ -1,0 +1,86 @@
+version: "3.1"
+
+stories:
+
+- story: faq.attach_bank_card_qiwi_юmoney
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+  - action: utter_please_rephrase
+
+
+
+- story: faq.attach_bank_card_qiwi_юmoney__other__
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: __other__
+  - slot_was_set:
+    - electronic_money: __other__
+  - action: utter_please_rephrase
+
+
+
+- story: faq.attach_qiwi
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: qiwi
+  - slot_was_set:
+    - electronic_money: qiwi
+  - action: utter_faq.attach_qiwi_юmoney
+
+- story: faq.attach_юmoney
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: юmoney
+  - slot_was_set:
+    - electronic_money: юmoney
+  - action: utter_faq.attach_qiwi_юmoney
+
+- story: faq.attach_easypaisa
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: easypaisa
+  - slot_was_set:
+    - electronic_money: easypaisa
+  - action: utter_faq.attach_easypaisa
+
+- story: faq.attach_payoneer
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: payoneer
+  - slot_was_set:
+    - electronic_money: payoneer
+  - action: utter_faq.attach_payoneer
+
+- story: faq.attach_payeer
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: payeer
+  - slot_was_set:
+    - electronic_money: payeer
+  - action: utter_faq.attach_payeer
+
+- story: faq.attach_paypal
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - electronic_money: paypal
+  - slot_was_set:
+    - electronic_money: paypal
+  - action: utter_faq.attach_paypal
+
+
+
+- story: faq.attach_bank_card
+  steps:
+  - intent: faq.attach_bank_card_qiwi_юmoney
+    entities:
+    - bank_card: bank_card
+  - slot_was_set:
+    - bank_card: bank_card
+  - action: utter_faq.attach_bank_card

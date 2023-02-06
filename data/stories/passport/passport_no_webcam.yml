@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: passport.no_webcam
+  steps:
+  - intent: passport.no_webcam
+  - action: utter_passport.no_webcam
+
+- story: passport.no_webcam
+  steps:
+  - intent: passport.no_webcam
+    entities:
+    - no_webcam
+  - slot_was_set:
+    - no_webcam
+  - action: utter_passport.no_webcam

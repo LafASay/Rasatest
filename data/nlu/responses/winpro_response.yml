@@ -1,0 +1,12 @@
+version: "3.1"
+
+responses:
+
+  utter_winpro.how_get_keyfile:
+  - text: "Файл ключей Вы можете получить при подключении Keeper WinPro."
+
+  utter_winpro.keyfile_утрачен:
+  - text: 'Если Вы ранее использовали WinPro и у Вас подключена система E-NUM, то попробуйте войти в WM Keeper, используя эту систему. В противном случае Вам необходимо будет пройти процедуру восстановления контроля на странице: https://key.wmtransfer.com/10 и выполнить повторный переход на версию WinPro, используя сайт безопасности https://security.webmoney.ru/asp/controllist2.asp'
+
+  # utter_winpro.keyfile_утрачен+winpro.how_get_keyfile:
+  # - text: "Потеряли файл ключей и хотите получить новый, ответ пока в разработке."

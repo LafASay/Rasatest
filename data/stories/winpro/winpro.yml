@@ -1,0 +1,18 @@
+version: "3.1"
+
+stories:
+
+- story: winpro.how_get_keyfile
+  steps:
+  - intent: winpro.how_get_keyfile
+  - action: utter_winpro.how_get_keyfile
+
+- story: winpro.keyfile_утрачен
+  steps:
+  - intent: winpro.keyfile_утрачен
+  - action: utter_winpro.keyfile_утрачен
+
+# - story: winpro.keyfile_утрачен+winpro.how_get_keyfile
+#   steps:
+#   - intent: winpro.keyfile_утрачен+winpro.how_get_keyfile
+#   - action: utter_winpro.keyfile_утрачен+winpro.how_get_keyfile

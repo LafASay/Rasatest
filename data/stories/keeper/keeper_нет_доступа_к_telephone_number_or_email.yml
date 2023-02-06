@@ -1,0 +1,34 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.нет_доступа_к_telephone_number
+
+- story: keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - нет_доступа_к_email
+  - slot_was_set:
+    - нет_доступа_к_email
+  - action: utter_keeper.нет_доступа_к_email
+
+
+
+- story: keeper.нет_доступа_к_telephone_number_or_email+++passport.как_долго_рассматривается_заявка_на_восстановление
+  steps:
+  - intent: keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.нет_доступа_к_telephone_number
+  - intent: passport.как_долго_рассматривается_заявка_на_восстановление
+  - action: utter_passport.как_долго_рассматривается_заявка_на_восстановление

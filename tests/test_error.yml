@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: error.error
+  steps:
+  - intent: error.error
+    user: |-
+      вот такая ошибка
+  - action: utter_error.error

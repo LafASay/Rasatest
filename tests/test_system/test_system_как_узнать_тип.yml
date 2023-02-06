@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+
+- story: system.как_узнать_тип
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип
+  - action: utter_please_rephrase
+
+
+
+- story: system.как_узнать_тип_purse_type__other__
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип [wibmoney]{"entity": "purse_type", "value": "wibmoney"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.как_узнать_тип_keeper
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип [keeper]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_system.как_узнать_тип_keeper
+
+- story: system.как_узнать_тип_webmoney
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип [webmoney]{"entity": "name", "value": "webmoney"}
+    entities:
+    - name: webmoney
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.как_узнать_тип_keeper
+
+- story: system.как_узнать_тип_passport
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип [аттестата]{"entity": "passport_type", "value": "passport"}
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_system.как_узнать_тип_passport
+
+- story: system.как_узнать_тип_account
+  steps:
+  - intent: system.как_узнать_тип
+    user: |-
+      как узнать тип [аккаунта]{"entity": "name", "value": "account"}
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_system.как_узнать_тип_passport

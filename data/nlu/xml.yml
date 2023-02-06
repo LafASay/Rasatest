@@ -1,0 +1,55 @@
+version: "3.1"
+
+nlu:
+
+- intent: xml.xml
+  examples: |
+    - interface
+    - interface atm5
+    - interface x1
+    - interface x10
+    - interface x12
+    - interface x13
+    - interface x17
+    - interface x18
+    - interface x19
+    - interface x20
+    - interface x3
+    - interfaces
+    - interfaces x1
+    - interfacex19
+    - web merchant interface
+    - webmoney x19 interface
+    - x интерфейс
+    - x.20
+    - x1
+    - x11
+    - x12
+    - x14
+    - x19
+    - x2
+    - x20
+    - x20 payment
+    - x22
+    - x9
+    - xml
+    - xml interface
+    - xml interface x22
+    - xml interfaces
+    - xml interfeysy
+    - xml интерфейсы
+    - xml интерфейсы сервиса exchanger
+    - интерфейс
+    - интерфейс a2
+    - интерфейс x
+    - интерфейс x19
+    - интерфейс x2
+    - интерфейс x20
+    - интерфейс x21
+    - интерфейс x3
+    - интерфейс x4
+    - интерфейс x8
+    - интерфейс xml
+    - интерфейс дал
+    - требования к подключению xml интерфейсов
+    - ошибка загрузки xml c параметрами запроса как ее убрать

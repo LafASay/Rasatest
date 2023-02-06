@@ -1,0 +1,218 @@
+version: "3.1"
+
+stories:
+
+# - story: system.purse
+#   steps:
+#   - intent: system.purse
+#   - action: utter_please_rephrase
+
+
+
+# - story: system.purse_purse_type__other__
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: __other__
+#   - slot_was_set:
+#     - purse_type: __other__
+#   - action: utter_system.determination_purse
+
+
+# - story: system.purse_wmp
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmp
+#   - slot_was_set:
+#     - purse_type: wmp
+#   - action: utter_system.determination_wmp
+
+# - story: system.purse_wme
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wme
+#   - slot_was_set:
+#     - purse_type: wme
+#   - action: utter_system.determination_wme
+
+# - story: system.purse_wmb
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmb
+#   - slot_was_set:
+#     - purse_type: wmb
+#   - action: utter_system.determination_wmb
+
+# - story: system.purse_wmg
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmg
+#   - slot_was_set:
+#     - purse_type: wmg
+#   - action: utter_system.determination_wmg
+
+# - story: system.purse_wmz
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - action: utter_system.determination_wmz
+
+# - story: system.purse_wmk
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmk
+#   - slot_was_set:
+#     - purse_type: wmk
+#   - action: utter_system.determination_wmk
+
+# - story: system.purse_wmx
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmx
+#   - slot_was_set:
+#     - purse_type: wmx
+#   - action: utter_system.determination_wmx
+
+# - story: system.purse_wmh
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmh
+#   - slot_was_set:
+#     - purse_type: wmh
+#   - action: utter_system.determination_wmh
+
+# - story: system.purse_wml
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wml
+#   - slot_was_set:
+#     - purse_type: wml
+#   - action: utter_system.determination_wml
+
+# - story: system.purse_wmy
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmy
+#   - slot_was_set:
+#     - purse_type: wmy
+#   - action: utter_system.determination_wmy
+
+# - story: system.purse_wmr
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmr
+#   - slot_was_set:
+#     - purse_type: wmr
+#   - action: utter_system.determination_wmr
+
+# - story: system.purse_wmc
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmc
+#   - slot_was_set:
+#     - purse_type: wmc
+#   - action: utter_system.determination_wmc
+
+# - story: system.purse_wmd
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmd
+#   - slot_was_set:
+#     - purse_type: wmd
+#   - action: utter_system.determination_wmd
+
+# - story: system.purse_wmu
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmu
+#   - slot_was_set:
+#     - purse_type: wmu
+#   - action: utter_system.determination_wmu
+
+# - story: system.purse_wmf
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmf
+#   - slot_was_set:
+#     - purse_type: wmf
+#   - action: utter_system.determination_wmf
+
+# - story: system.purse_wmt
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: wmt
+#   - slot_was_set:
+#     - purse_type: wmt
+#   - action: utter_system.determination_wmt
+
+# - story: system.purse_mdl
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - purse_type: mdl
+#   - slot_was_set:
+#     - purse_type: mdl
+#   - action: utter_system.determination_mdl
+
+# - story: system.purse_btc
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - currency: btc
+#   - slot_was_set:
+#     - currency: btc
+#   - action: utter_system.determination_btc
+
+# - story: system.purse_bch
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - currency: bch
+#   - slot_was_set:
+#     - currency: bch
+#   - action: utter_system.determination_bch
+
+# - story: system.purse_ltc
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - currency: ltc
+#   - slot_was_set:
+#     - currency: ltc
+#   - action: utter_system.determination_ltc
+
+# - story: system.purse_eth
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - currency: eth
+#   - slot_was_set:
+#     - currency: eth
+#   - action: utter_system.determination_eth
+
+# - story: system.purse_usdt
+#   steps:
+#   - intent: system.purse
+#     entities:
+#     - currency: usdt
+#   - slot_was_set:
+#     - currency: usdt
+#   - action: utter_system.determination_usdt

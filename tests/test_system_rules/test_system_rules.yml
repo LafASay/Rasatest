@@ -1,0 +1,171 @@
+version: "3.1"
+
+stories:
+
+- story: system_rules.system_rules
+  steps:
+  - intent: system_rules.system_rules
+    user: |-
+      где найти нормативные положения webmoney
+  - action: utter_system_rules.system_rules
+
+- story: system_rules.how_to_guarantor
+  steps:
+  - intent: system_rules.how_to_guarantor
+    user: |-
+      как быть новым гарантом
+  - action: utter_system_rules.how_to_guarantor
+
+- story: system_rules.кто_является_гарантом
+  steps:
+  - intent: system_rules.кто_является_гарантом
+    user: |-
+      где посмотреть гарант wmz
+  - action: utter_system_rules.кто_является_гарантом
+
+- story: system_rules.минимальный_возраст
+  steps:
+  - intent: system_rules.минимальный_возраст
+    user: |-
+      а со скольки лет можно получить аттестат
+  - action: utter_system_rules.минимальный_возраст
+
+- story: system_rules.повторная_регистрация
+  steps:
+  - intent: system_rules.повторная_регистрация
+    user: |-
+      как привязать дополнительный wmid
+  - action: utter_system_rules.повторная_регистрация
+
+- story: system_rules.сотрудничество
+  steps:
+  - intent: system_rules.сотрудничество
+    user: |-
+      как с вами сотрудничать
+  - action: utter_system_rules.сотрудничество
+
+- story: system_rules.изменился_bl_tl
+  steps:
+  - intent: system_rules.изменился_bl_tl
+    user: |-
+      у меня изменился бл
+  - action: utter_system_rules.изменился_bl_tl
+
+- story: system_rules.адрес_webmoney
+  steps:
+  - intent: system_rules.адрес_webmoney
+    user: |-
+      где найти жывой центр
+  - action: utter_system_rules.адрес_webmoney
+
+# - story: system_rules.как_работает_webmoney
+#   steps:
+#   - intent: system_rules.как_работает_webmoney
+#     user: |-
+#       как работает ваш сервис
+#   - action: utter_system_rules.как_работает_webmoney
+
+- story: system_rules.webmoney_платное
+  steps:
+  - intent: system_rules.webmoney_платное
+    user: |-
+      а это платно не подскажите
+  - action: utter_system_rules.webmoney_платное
+
+- story: system_rules.webmoney_в_каких_странах
+  steps:
+  - intent: system_rules.webmoney_в_каких_странах
+    user: |-
+      в россии работает wmid
+  - action: utter_system_rules.webmoney_в_каких_странах
+
+- story: system_rules.запрещенные_платежные_системы
+  steps:
+  - intent: system_rules.запрещенные_платежные_системы
+    user: |-
+      какие платежные системы разрешены
+  - action: utter_system_rules.запрещенные_платежные_системы
+
+# - story: system_rules.о_проблемах
+#   steps:
+#   - intent: system_rules.о_проблемах
+#     user: |-
+#       ваш сервис не отключат для россии
+#   - action: utter_system_rules.о_проблемах
+
+- story: system_rules.как_использовать_webmoney
+  steps:
+  - intent: system_rules.как_использовать_webmoney
+    user: |-
+      а как пользоваться вашим сервисом
+  - action: utter_system_rules.как_использовать_webmoney
+
+# - story: system_rules.webmoney_не_работает
+#   steps:
+#   - intent: system_rules.webmoney_не_работает
+#     user: |-
+#       вебмани сейчас работает или нет
+#   - action: utter_system_rules.webmoney_не_работает
+
+- story: system_rules.привязка_к_google_apple_samsung_pay
+  steps:
+  - intent: system_rules.привязка_к_google_apple_samsung_pay
+    user: |-
+      как ее можно прикрепить в apple pay
+  - action: utter_system_rules.привязка_к_google_apple_samsung_pay
+
+# - story: system_rules.webmoney_и_бк
+#   steps:
+#   - intent: system_rules.webmoney_и_бк
+#     user: |-
+#       букмекеры принимают вебмани
+#   - action: utter_system_rules.webmoney_и_бк
+
+- story: system_rules.сколько_лет_webmoney
+  steps:
+  - intent: system_rules.сколько_лет_webmoney
+    user: |-
+      сколько лет вебмани
+  - action: utter_system_rules.сколько_лет_webmoney
+
+- story: system_rules.преимущества_webmoney
+  steps:
+  - intent: system_rules.преимущества_webmoney
+    user: |-
+      преимущества вебмани
+  - action: utter_system_rules.преимущества_webmoney
+
+- story: system_rules.часы_работы
+  steps:
+  - intent: system_rules.часы_работы
+    user: |-
+      часы работы
+  - action: utter_system_rules.часы_работы
+
+- story: system_rules.откуда_webmoney
+  steps:
+  - intent: system_rules.откуда_webmoney
+    user: |-
+      вебмани российская компания
+  - action: utter_system_rules.откуда_webmoney
+
+- story: system_rules.наследство
+  steps:
+  - intent: system_rules.наследство
+    user: |-
+      умер муж
+  - action: utter_system_rules.наследство
+
+- story: system_rules.кому_принадлежит_вебмани
+  steps:
+  - intent: system_rules.кому_принадлежит_вебмани
+    user: |-
+      кто владелец вебмани
+  - action: utter_system_rules.кому_принадлежит_вебмани
+
+- story: system_rules.передача_аккаунта
+  steps:
+  - intent: system_rules.передача_аккаунта
+    user: |-
+      передача регистрации от мамы
+  - action: utter_system_rules.передача_аккаунта

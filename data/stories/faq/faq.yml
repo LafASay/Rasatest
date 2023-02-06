@@ -1,0 +1,120 @@
+version: "3.1"
+
+stories:
+
+- story: faq.я_русский_узбек_и_тд
+  steps:
+  - intent: faq.я_русский_узбек_и_тд
+  - action: utter_faq.я_русский_узбек_и_тд
+
+- story: faq.exchange_rates
+  steps:
+  - intent: faq.exchange_rates
+  - action: utter_faq.exchange_rates
+
+- story: faq.transaction_history_deleted
+  steps:
+  - intent: faq.transaction_history_deleted
+  - action: utter_faq.transaction_history_deleted
+
+- story: faq.transaction_is_not_shown_in_history
+  steps:
+  - intent: faq.transaction_is_not_shown_in_history
+  - action: utter_faq.transaction_is_not_shown_in_history
+
+- story: faq.когда_поменяется_telephone_number_or_email
+  steps:
+  - intent: faq.когда_поменяется_telephone_number_or_email
+  - action: utter_faq.когда_поменяется_telephone_number_or_email
+
+# - story: faq.не_изменился_telephone_number
+#   steps:
+#   - intent: faq.не_изменился_telephone_number
+#   - action: utter_faq.не_изменился_telephone_number
+
+- story: faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+  steps:
+  - intent: faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+  - action: utter_faq.как_изменить_telephone_number_если_он_привязан_к_другому_wmid
+
+- story: faq.how_to_change_purse_number
+  steps:
+  - intent: faq.how_to_change_purse_number
+  - action: utter_faq.how_to_change_purse_number
+
+- story: faq.bl_different_color
+  steps:
+  - intent: faq.bl_different_color
+  - action: utter_faq.bl_different_color
+
+- story: faq.protection_transfer_receive
+  steps:
+  - intent: faq.protection_transfer_receive
+  - action: utter_faq.protection_transfer_receive
+
+# - story: faq.почему_такая_большая_комиссия
+#   steps:
+#   - intent: faq.почему_такая_большая_комиссия
+#   - action: utter_faq.почему_такая_большая_комиссия
+
+- story: faq.services
+  steps:
+  - intent: faq.services
+  - action: utter_faq.services
+
+# - story: faq.cancel_transaction
+#   steps:
+#   - intent: faq.cancel_transaction
+#   - action: utter_faq.cancel_transaction
+
+# - story: faq.cancel_transaction+++faq.корреспондент_не_отвечает
+#   steps:
+#   - intent: faq.cancel_transaction
+#   - action: utter_faq.cancel_transaction
+#   - intent: faq.корреспондент_не_отвечает
+#   - action: utter_faq.cancel_transaction+++faq.корреспондент_не_отвечает
+
+- story: faq.how_make_money
+  steps:
+  - intent: faq.how_make_money
+  - action: utter_faq.how_make_money
+
+# - story: faq.how_change_nickname
+#   steps:
+#   - intent: faq.how_change_nickname
+#   - action: utter_faq.how_change_nickname
+
+- story: faq.termination_of_service_отмена
+  steps:
+  - intent: faq.termination_of_service_отмена
+  - action: utter_faq.termination_of_service_отмена
+
+- story: faq.не_могу_отказаться_от_обслуживания
+  steps:
+  - intent: faq.не_могу_отказаться_от_обслуживания
+  - action: utter_faq.не_могу_отказаться_от_обслуживания
+
+- story: faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+  steps:
+  - intent: faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+  - action: utter_faq.отказался_от_обслуживания_и_теперь_не_могу_получить_аттестат
+
+- story: faq.как_им_написать
+  steps:
+  - intent: faq.как_им_написать
+  - action: utter_faq.как_им_написать
+
+- story: faq.как_настроить
+  steps:
+  - intent: faq.как_настроить
+  - action: utter_faq.как_настроить
+
+- story: faq.где_раздел_финансы
+  steps:
+  - intent: faq.где_раздел_финансы
+  - action: utter_faq.где_раздел_финансы
+
+- story: faq.корреспондент_не_отвечает
+  steps:
+  - intent: faq.корреспондент_не_отвечает
+  - action: utter_faq.корреспондент_не_отвечает

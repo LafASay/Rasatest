@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+
+- story: faq.fee
+  steps:
+  - intent: faq.fee
+  - action: utter_faq.fee
+
+
+- story: faq.fee__other__
+  steps:
+  - intent: faq.fee
+    entities:
+    - verb: __other__
+  - slot_was_set:
+    - verb: __other__
+  - action: utter_faq.fee
+
+
+
+- story: faq.fee_withdraw
+  steps:
+  - intent: faq.fee
+    entities:
+    - verb: withdraw
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_faq.fee_withdraw
+
+- story: faq.fee_topup
+  steps:
+  - intent: faq.fee
+    entities:
+    - verb: topup
+  - slot_was_set:
+    - verb: topup
+  - action: utter_faq.fee_topup
+
+- story: faq.fee_steam
+  steps:
+  - intent: faq.fee
+    entities:
+    - steam: steam
+  - slot_was_set:
+    - steam: steam
+  - action: utter_faq.fee_steam

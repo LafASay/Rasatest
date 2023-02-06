@@ -1,0 +1,424 @@
+version: "3.1"
+
+stories:
+
+- story: purses.purse_disappeared+++system.what_types
+  steps:
+  - intent: purses.purse_disappeared
+    user: |-
+      у меня пропал кошелек
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+  - slot_was_set:
+    - requested_slot: purse_type
+  - intent: system.what_types
+    user: |-
+      а какие они есть
+  - action: utter_system.what_types_purse
+  - action: purse_disappeared_form
+  - slot_was_set:
+    - requested_slot: purse_type
+
+
+
+
+
+
+
+
+
+# - story: purses.purse_disappeared_wmp
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmp кошелек]{"entity": "purse_type", "value": "wmp"}
+#   - slot_was_set:
+#     - purse_type: wmp
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmp
+#   - slot_was_set:
+#     - purse_type: wmp
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wme
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wme кошелек]{"entity": "purse_type", "value": "wme"}
+#   - slot_was_set:
+#     - purse_type: wme
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wme
+#   - slot_was_set:
+#     - purse_type: wme
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmb
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmb кошелек]{"entity": "purse_type", "value": "wmb"}
+#   - slot_was_set:
+#     - purse_type: wmb
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmb
+#   - slot_was_set:
+#     - purse_type: wmb
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmg
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmg кошелек]{"entity": "purse_type", "value": "wmg"}
+#   - slot_was_set:
+#     - purse_type: wmg
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmg
+#   - slot_was_set:
+#     - purse_type: wmg
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmz
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmz кошелек]{"entity": "purse_type", "value": "wmz"}
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - purse_type: wmz
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmk
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmk кошелек]{"entity": "purse_type", "value": "wmk"}
+#   - slot_was_set:
+#     - purse_type: wmk
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmk
+#   - slot_was_set:
+#     - purse_type: wmk
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmx
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmx кошелек]{"entity": "purse_type", "value": "wmx"}
+#   - slot_was_set:
+#     - purse_type: wmx
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmx
+#   - slot_was_set:
+#     - purse_type: wmx
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmh
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmh кошелек]{"entity": "purse_type", "value": "wmh"}
+#   - slot_was_set:
+#     - purse_type: wmh
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmh
+#   - slot_was_set:
+#     - purse_type: wmh
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wml
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wml кошелек]{"entity": "purse_type", "value": "wml"}
+#   - slot_was_set:
+#     - purse_type: wml
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wml
+#   - slot_was_set:
+#     - purse_type: wml
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmy
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmy кошелек]{"entity": "purse_type", "value": "wmy"}
+#   - slot_was_set:
+#     - purse_type: wmy
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmy
+#   - slot_was_set:
+#     - purse_type: wmy
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmr
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmr кошелек]{"entity": "purse_type", "value": "wmr"}
+#   - slot_was_set:
+#     - purse_type: wmr
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmr
+#   - slot_was_set:
+#     - purse_type: wmr
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmc
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmc кошелек]{"entity": "purse_type", "value": "wmc"}
+#   - slot_was_set:
+#     - purse_type: wmc
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmc
+#   - slot_was_set:
+#     - purse_type: wmc
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmd
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmd кошелек]{"entity": "purse_type", "value": "wmd"}
+#   - slot_was_set:
+#     - purse_type: wmd
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmd
+#   - slot_was_set:
+#     - purse_type: wmd
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmu
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmu кошелек]{"entity": "purse_type", "value": "wmu"}
+#   - slot_was_set:
+#     - purse_type: wmu
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmu
+#   - slot_was_set:
+#     - purse_type: wmu
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmf
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmf кошелек]{"entity": "purse_type", "value": "wmf"}
+#   - slot_was_set:
+#     - purse_type: wmf
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmf
+#   - slot_was_set:
+#     - purse_type: wmf
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_wmt
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [wmt кошелек]{"entity": "purse_type", "value": "wmt"}
+#   - slot_was_set:
+#     - purse_type: wmt
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: wmt
+#   - slot_was_set:
+#     - purse_type: wmt
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_mdl
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [mdl кошелек]{"entity": "purse_type", "value": "mdl"}
+#   - slot_was_set:
+#     - purse_type: mdl
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - purse_type: mdl
+#   - slot_was_set:
+#     - purse_type: mdl
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_btc
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [btc кошелек]{"entity": "purse_type", "value": "btc"}
+#   - slot_was_set:
+#     - currency: btc
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - currency: btc
+#   - slot_was_set:
+#     - currency: btc
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_bch
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [bch кошелек]{"entity": "purse_type", "value": "bch"}
+#   - slot_was_set:
+#     - currency: bch
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - currency: bch
+#   - slot_was_set:
+#     - currency: bch
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_ltc
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [ltc кошелек]{"entity": "purse_type", "value": "ltc"}
+#   - slot_was_set:
+#     - currency: ltc
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - currency: ltc
+#   - slot_was_set:
+#     - currency: ltc
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_eth
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [eth кошелек]{"entity": "purse_type", "value": "eth"}
+#   - slot_was_set:
+#     - currency: eth
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - currency: eth
+#   - slot_was_set:
+#     - currency: eth
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message
+
+# - story: purses.purse_disappeared_usdt
+#   steps:
+#   - intent: purses.purse_disappeared
+#     user: |-
+#       у меня пропал [usdt кошелек]{"entity": "purse_type", "value": "usdt"}
+#   - slot_was_set:
+#     - currency: usdt
+#   - action: purse_disappeared_form
+#   - active_loop: purse_disappeared_form
+#   - slot_was_set:
+#     - currency: usdt
+#   - slot_was_set:
+#     - currency: usdt
+#   - slot_was_set:
+#     - requested_slot: null
+#   - active_loop: null
+#   - action: action_purse_disappeared_form_message

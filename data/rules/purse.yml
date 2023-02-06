@@ -1,0 +1,105 @@
+version: "3.1"
+
+rules:
+
+- rule: activate_purse_disappeared_form
+  steps:
+  - intent: purses.purse_disappeared
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+
+- rule: submit_purse_disappeared_form
+  condition:
+  - active_loop: purse_disappeared_form
+  steps:
+  - action: purse_disappeared_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_purse_disappeared_form_message
+
+- rule: submit_purse_disappeared_form+++purses.purse_disappeared
+  condition:
+  - active_loop: purse_disappeared_form
+  steps:
+  - intent: purses.purse_disappeared
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+
+- rule: submit_purse_disappeared_form+++system.name
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_purse_disappeared_form_message
+  - intent: system.name
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+  # - action: purse_disappeared_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_purse_disappeared_form_message
+
+- rule: submit_purse_disappeared_form+++nlu_fallback
+  condition:
+  - active_loop: purse_disappeared_form
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+
+- rule: activate_purse_requirement_form
+  steps:
+  - intent: purses.purse_requirement
+  - action: purse_requirement_form
+  - active_loop: purse_requirement_form
+
+- rule: submit_purse_requirement_form
+  condition:
+  - active_loop: purse_requirement_form
+  steps:
+  - action: purse_requirement_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_purse_requirement_form_message
+
+- rule: submit_purse_requirement_form+++purses.purse_requirement
+  condition:
+  - active_loop: purse_requirement_form
+  steps:
+  - intent: purses.purse_requirement
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: purse_requirement_form
+  - active_loop: purse_requirement_form
+
+- rule: submit_purse_requirement_form+++system.name
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_purse_requirement_form_message
+  - intent: system.name
+  - action: purse_requirement_form
+  - active_loop: purse_requirement_form
+  - action: purse_requirement_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_purse_requirement_form_message
+
+- rule: submit_purse_requirement_form+++nlu_fallback
+  condition:
+  - active_loop: purse_requirement_form
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null

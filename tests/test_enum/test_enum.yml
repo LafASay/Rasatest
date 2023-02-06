@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+
+- story: enum.не_могу_активировать_enum
+  steps:
+  - intent: enum.не_могу_активировать_enum
+    user: |-
+      e num я не могу активировать не поможете
+  - action: utter_enum.не_могу_активировать_enum
+
+- story: enum.не_могу_активировать_enum+sms.sms_not_coming
+  steps:
+  - intent: enum.не_могу_активировать_enum+sms.sms_not_coming
+    user: |-
+      e num я не могу активировать не приходит смс
+  - action: utter_enum.не_могу_активировать_enum+sms.sms_not_coming
+
+- story: enum.как_сменить_enum_аккаунт
+  steps:
+  - intent: enum.как_сменить_enum_аккаунт
+    user: |-
+      аккаунт e num можно менять
+  - action: utter_enum.как_сменить_enum_аккаунт
+
+- story: enum.enum_не_работает
+  steps:
+  - intent: enum.enum_не_работает
+    user: |-
+      enum не работает
+  - action: utter_enum.enum_не_работает
+
+- story: enum.enum
+  steps:
+  - intent: enum.enum
+    user: |-
+      e num для пк
+  - action: utter_enum.enum
+
+- story: enum.как_настроить_enum
+  steps:
+  - intent: enum.как_настроить_enum
+    user: |-
+      настройка webmoney e num
+  - action: utter_enum.как_настроить_enum
+
+- story: enum.не_могу_включить_функцию_enum
+  steps:
+  - intent: enum.не_могу_включить_функцию_enum
+    user: |-
+      не могу включить функцию e-num ошибка авторизации
+  - action: utter_enum.не_могу_включить_функцию_enum
+
+- story: enum.получить_код_активации_enum
+  steps:
+  - intent: enum.получить_код_активации_enum
+    user: |-
+      где взять код активации e num
+  - action: utter_enum.получить_код_активации_enum

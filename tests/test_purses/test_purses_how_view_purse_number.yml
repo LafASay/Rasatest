@@ -1,0 +1,266 @@
+version: "3.1"
+
+stories:
+
+- story: purses.how_view_purse_number
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер кошелька
+  - action: utter_purses.how_view_purse_number
+
+
+
+- story: purses.how_view_purse_number__other__
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmq кошелька]{"entity": "purse_type", "value": "wmq кошелька"}
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_purses.how_view_purse_number
+
+
+- story: purses.how_view_purse_number_wme
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wme кошелька]{"entity": "purse_type", "value": "wme"}
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmb
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmb кошелька]{"entity": "purse_type", "value": "wmb"}
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmg
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmg кошелька]{"entity": "purse_type", "value": "wmg"}
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmz
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmz кошелька]{"entity": "purse_type", "value": "wmz"}
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmk
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmk кошелька]{"entity": "purse_type", "value": "wmk"}
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmx
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmx кошелька]{"entity": "purse_type", "value": "wmx"}
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmh
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmh кошелька]{"entity": "purse_type", "value": "wmh"}
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wml
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wml кошелька]{"entity": "purse_type", "value": "wml"}
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmf
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmf кошелька]{"entity": "purse_type", "value": "wmf"}
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmt
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmt кошелька]{"entity": "purse_type", "value": "wmt"}
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmy
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmy кошелька]{"entity": "purse_type", "value": "wmy"}
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmc
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmc кошелька]{"entity": "purse_type", "value": "wmc"}
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmd
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmd кошелька]{"entity": "purse_type", "value": "wmd"}
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_mdl
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [mdl кошелька]{"entity": "purse_type", "value": "mdl"}
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_purses.how_view_purse_number
+
+- story: purses.how_view_purse_number_wmp
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmp кошелька]{"entity": "purse_type", "value": "wmp"}
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_purses.purse_disappeared_wmp
+
+- story: purses.how_view_purse_number_wmr
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmr кошелька]{"entity": "purse_type", "value": "wmr"}
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_purses.purse_disappeared_wmr
+
+- story: purses.how_view_purse_number_wmu
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [wmu кошелька]{"entity": "purse_type", "value": "wmu"}
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_purses.purse_disappeared_wmu
+
+- story: purses.how_view_purse_number_btc
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [btc кошелька]{"entity": "currency", "value": "btc"}
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_purses.how_view_purse_number_btc
+
+- story: purses.how_view_purse_number_bch
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [bch кошелька]{"entity": "currency", "value": "bch"}
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_purses.how_view_purse_number_bch
+
+- story: purses.how_view_purse_number_ltc
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [ltc кошелька]{"entity": "currency", "value": "ltc"}
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_purses.how_view_purse_number_ltc
+
+- story: purses.how_view_purse_number_eth
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [eth кошелька]{"entity": "currency", "value": "eth"}
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_purses.how_view_purse_number_eth
+
+- story: purses.how_view_purse_number_usdt
+  steps:
+  - intent: purses.how_view_purse_number
+    user: |-
+      как посмотреть номер [usdt кошелька]{"entity": "currency", "value": "usdt"}
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_purses.how_view_purse_number_usdt

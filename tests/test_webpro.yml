@@ -1,0 +1,59 @@
+version: "3.1"
+
+stories:
+
+- story: webpro.получение_сертификата
+  steps:
+  - intent: webpro.получение_сертификата
+    user: |-
+      генерация сертификаа
+  - action: utter_webpro.получение_сертификата
+
+- story: webpro.продление_сертификата
+  steps:
+  - intent: webpro.продление_сертификата
+    user: |-
+      как продлить сертификат
+  - action: utter_webpro.продление_сертификата
+
+- story: webpro.просрочил_сертификата
+  steps:
+  - intent: webpro.просрочил_сертификата
+    user: |-
+      я просрочил сертификат
+  - action: utter_webpro.просрочил_сертификата
+
+- story: webpro.экспорт_сертификата
+  steps:
+  - intent: webpro.экспорт_сертификата
+    user: |-
+      как экспортировать сертификат
+  - action: utter_webpro.экспорт_сертификата
+
+- story: webpro.импорт_сертификата
+  steps:
+  - intent: webpro.импорт_сертификата
+    user: |-
+      как импортировать сертификат
+  - action: utter_webpro.импорт_сертификата
+
+- story: webpro.как_посмотреть_хранилище_сертификатов
+  steps:
+  - intent: webpro.как_посмотреть_хранилище_сертификатов
+    user: |-
+      как посмотреть хранилище сертификатов
+  - action: utter_webpro.как_посмотреть_хранилище_сертификатов
+
+- story: webpro.не_могу_продлить_сертификат
+  steps:
+  - intent: webpro.не_могу_продлить_сертификат
+    user: |-
+      не могу продлить сертификат
+  - action: utter_webpro.не_могу_продлить_сертификат
+
+- story: webpro.нет_сертификата
+  steps:
+  - intent: webpro.нет_сертификата
+    user: |-
+      у меня нет сертификата
+  - action: utter_webpro.нет_сертификата

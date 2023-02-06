@@ -1,0 +1,94 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.changing_the_method_of_managing_wmid
+  steps:
+  - intent: keeper.changing_the_method_of_managing_wmid
+    user: |-
+      как поменять способ управления
+  - action: utter_keeper.changing_the_method_of_managing_wmid
+
+- story: keeper.exchange_did_not_take_place
+  steps:
+  - intent: keeper.exchange_did_not_take_place
+    user: |-
+      деньги не поступили после обмена
+  - action: utter_keeper.exchange_did_not_take_place
+
+- story: keeper.accepting_funds_from_unauthorized_correspondents
+  steps:
+  - intent: keeper.accepting_funds_from_unauthorized_correspondents
+    user: |-
+      а как подключить платежи от неавторизованных коррреспондентов
+  - action: utter_keeper.accepting_funds_from_unauthorized_correspondents
+
+- story: keeper.забыл_пароль
+  steps:
+  - intent: keeper.забыл_пароль
+    user: |-
+      я забыл пароль
+  - action: utter_keeper.забыл_пароль
+
+- story: keeper.забыл_пароль+faq.change_telephone_number_or_email_or_password
+  steps:
+  - intent: keeper.забыл_пароль+faq.change_telephone_number_or_email_or_password
+    user: |-
+      я забыл пароль как его поменять
+  - action: utter_keeper.забыл_пароль+faq.change_telephone_number_or_email_or_password
+
+# - story: keeper.отключение_автологина
+#   steps:
+#   - intent: keeper.отключение_автологина
+#     user: |-
+#       как отключить автологин
+#   - action: utter_keeper.отключение_автологина
+
+# - story: keeper.пароль_не_пришел
+#   steps:
+#   - intent: keeper.пароль_не_пришел
+#     user: |-
+#       пароль не пришел
+#   - action: utter_keeper.пароль_не_пришел
+
+- story: keeper.как_оплатить_счет
+  steps:
+  - intent: keeper.как_оплатить_счет
+    user: |-
+      как оплатить выставленный счет
+  - action: utter_keeper.как_оплатить_счет
+
+# - story: keeper.не_могу_изменить_пароль
+#   steps:
+#   - intent: keeper.не_могу_изменить_пароль
+#     user: |-
+#       не могу изменить пароль
+#   - action: utter_keeper.не_могу_изменить_пароль
+
+- story: keeper.пароль_не_подходит
+  steps:
+  - intent: keeper.пароль_не_подходит
+    user: |-
+      пароль не подходит
+  - action: utter_keeper.пароль_не_подходит
+
+# - story: keeper.как_узнать_тип_кипера
+#   steps:
+#   - intent: keeper.как_узнать_тип_кипера
+#     user: |-
+#       как узнать тип кипера
+#   - action: utter_keeper.как_узнать_тип_кипера
+
+- story: keeper.нет_доступа_к_аккаунту
+  steps:
+  - intent: keeper.нет_доступа_к_аккаунту
+    user: |-
+      нет доступа к аккаунту
+  - action: utter_keeper.нет_доступа_к_аккаунту
+
+- story: keeper.потерял_все_данные
+  steps:
+  - intent: keeper.потерял_все_данные
+    user: |-
+      потерял все данные
+  - action: utter_keeper.потерял_все_данные

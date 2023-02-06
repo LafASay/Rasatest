@@ -1,0 +1,1929 @@
+version: "3.1"
+
+stories:
+
+- story: Story from Conversation ID d0016b5cb9c44a8f985aa8d3eecae87d
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      Здравствуйте
+  - action: utter_hi_bye.greet
+  - intent: support.help_me
+    user: |-
+      У меня есть вопрос
+  - action: utter_support.help_me
+  - intent: support.need_technical_support
+    user: |-
+      Есть живой консультант ?
+  - action: utter_support.need_technical_support
+
+- story: Story from Conversation ID f9f84c4ac4864eb4a6fa8eda27e7760d
+  steps:
+  - intent: faq.how_recovery
+    user: |-
+      Здравствуйте, как мне вернуть мой [веб Мани]{"entity": "name", "value": "webmoney"}
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_faq.how_recovery_webmoney
+  - intent: keeper.забыл_пароль
+    user: |-
+      Я забыла пароль
+  - action: utter_keeper.забыл_пароль
+  - intent: keeper.как_войти
+    user: |-
+      Как зайти на старый аккаунт ?
+  - action: utter_keeper.как_войти
+
+
+
+- story: Story from Conversation ID 285901912
+  steps:
+  - intent: purses.purse_disappeared
+    user: |-
+      у меня пропал кошелек
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+  - slot_was_set:
+    - requested_slot: purse_type
+  - intent: system.purse
+    user: |-
+      [wmp](purse_type)
+  - slot_was_set:
+    - purse_type: wmp
+  - action: purse_disappeared_form
+  - slot_was_set:
+    - purse_type: wmp
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_purse_disappeared_form_message
+  - intent: system.purse
+    user: |-
+      а [wmu](purse_type)
+  - slot_was_set:
+    - purse_type: wmu
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+  - slot_was_set:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_purse_disappeared_form_message
+
+- story: Testing_history_1
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      Приает
+  - action: utter_hi_bye.greet
+  - intent: hi_bye.greet
+    user: |-
+      Привет
+  - action: utter_hi_bye.second_greet
+  - intent: system.determination
+    user: |-
+      что такое [webmoney](name)
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.determination_webmoney
+  - intent: system.registration
+    user: |-
+      как можно зарегистрироваться?
+  - action: utter_system.registration
+  - intent: transfer.transfer
+    user: |-
+      какие способы [пополнения]{"entity": "verb", "value": "topup"} кошелька есть?
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.bank_card
+    user: |-
+      [картой]{"entity": "bank", "value": "bank_card"}
+  - slot_was_set:
+    - bank: bank_card
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_bank
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: transfer.transfer
+    user: |-
+      а как можно [вывести]{"entity": "verb", "value": "withdraw"} средства?
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmr](purse_type)
+  - slot_was_set:
+    - purse_type: wmr
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmr
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} с [wmz]{"entity": "purse_type", "role": "from"}?
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.cash
+    user: |-
+      [наличные]{"entity": "cash", "value": "cash"}
+  - slot_was_set:
+    - cash: cash
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_method: transfer_cash
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: system.how_create
+    user: |-
+      как создать [кошелек]{"entity": "purse_type", "value": "purse"}
+  - slot_was_set:
+    - purse_type: purse
+  - action: utter_system.how_create_purse_in_standard
+  - intent: system.how_create
+    user: |-
+      как создать [wmr](purse_type)?
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_system.how_create_purse_wmr
+  - intent: system.how_create
+    user: |-
+      как создать [wmq](purse_type)
+  - slot_was_set:
+    - purse_type: wmq
+  - action: utter_system.how_create_purse_in_standard
+  - intent: system.how_create
+    user: |-
+      как создать [кошелек типа wmq](purse_type)
+  - slot_was_set:
+    - purse_type: кошелек типа wmq
+  - action: utter_system.how_create_purse_in_standard
+  - intent: system.determination
+    user: |-
+      что такое [кошелёк wmq](purse_type)
+  - slot_was_set:
+    - purse_type: кошелёк wmq
+  - action: utter_system.determination_purse
+  - intent: system.determination
+    user: |-
+      что такое [кошелёк wmz](purse_type)
+  - slot_was_set:
+    - purse_type: кошелёк wmz
+  - action: utter_system.determination_purse
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+  - intent: system.purse
+    user: |-
+      [wmq](purse_type)
+  - slot_was_set:
+    - purse_type: wmq
+  - action: utter_system.determination_purse
+
+- story: Testing_history_2
+  steps:
+  - intent: other.англ
+    user: |-
+      /start
+  - action: utter_other.англ
+  - intent: purses.purse_disappeared
+    user: |-
+      У меня пропал кошелек
+  - action: purse_disappeared_form
+  - active_loop: purse_disappeared_form
+  - slot_was_set:
+    - requested_slot: purse_type
+  - slot_was_set:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_purse_disappeared_form_message
+  - intent: purses.how_view_purse_number
+    user: |-
+      А [wmu](purse_type)
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_purses.purse_disappeared_wmu
+
+- story: Testing_history_3
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      Привет!
+  - action: utter_hi_bye.greet
+  - intent: hi_bye.greet
+    user: |-
+      Привет!
+  - action: utter_hi_bye.second_greet
+  - intent: hi_bye.what_can_you_do
+    user: |-
+      Что ты умеешь?
+  - action: utter_hi_bye.what_can_you_do
+  - intent: hi_bye.i_like_you
+    user: |-
+      Молодец!
+  - action: utter_hi_bye.i_like_you
+  - intent: hi_bye.greet
+    user: |-
+      ПРИВЁТ!
+  - action: utter_hi_bye.greet
+  - intent: transfer.transfer
+    user: |-
+      КАК [ПОПОЛНИТЬ]{"entity": "verb", "value": "topup"} КОШЕЛЁК?
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [ВМЗ]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.bank_card
+    user: |-
+      С [КАРТЫ]{"entity": "bank_card", "role": "from", "value": "bank_card"}
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - transfer_method: transfer_bank
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: faq.fee
+    user: |-
+      А КОМИССИЯ КАКАЯ?
+  - action: utter_faq.fee
+  - intent: transfer.transfer
+    user: |-
+      А за [пополнение]{"entity": "verb", "value": "topup"}?
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [WMZ](purse_type)
+  - slot_was_set:
+    - purse_type: WMZ
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [Z]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: faq.fee
+    user: |-
+      Комиссия какая?
+  - action: utter_faq.fee
+
+- story: Story from Conversation ID 126858095
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: faq.как_им_написать
+    user: |-
+      как можно потратить wmz
+  - action: utter_faq.как_им_написать
+  - intent: faq.как_им_написать
+    user: |-
+      как можно потратить wmz?
+  - action: utter_faq.как_им_написать
+  - intent: faq.как_им_написать
+    user: |-
+      как можно потратить wmz?
+  - action: utter_faq.как_им_написать
+  - intent: system.how_create
+    user: |-
+      как можно потратить webmoney?
+  - action: utter_system.how_create
+  - intent: transfer.как_купить_крипту
+    user: |-
+      где можно купить товар за webmoney wmz ?
+  - action: utter_transfer.как_купить_крипту
+  - intent: transfer.как_купить_крипту
+    user: |-
+      где можно купить товар за wmz ?
+  - action: utter_transfer.как_купить_крипту
+  - intent: system.name
+    user: |-
+      /end
+  - slot_was_set:
+    - service_name: end
+  - action: utter_please_rephrase
+  - intent: hi_bye.bye
+    user: |-
+      пока
+  - action: utter_hi_bye.bye
+  - intent: system.purse
+    user: |-
+      [рш](purse_type)
+  - slot_was_set:
+    - purse_type: рш
+  - action: utter_system.determination_purse
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: sms.sms_not_coming
+    user: |-
+      После ввода номера телефона и селфи я набираю последние 4 цифры номера входящего звонка, но мне не приходит код для подтверждения. Мой номер телефона +79295771969
+  - action: utter_sms.sms_not_coming
+  - intent: hi_bye.thanks
+    user: |-
+      спасибо
+      пока
+  - action: utter_hi_bye.thanks
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: transfer.cant_transfer
+    user: |-
+      Я сегодня пополнил свой [счет]{"entity": "purse_type", "value": "purse"} на [wmz]{"entity": "purse_type", "role": "to"} [кошелек]{"entity": "purse_type", "value": "purse"}, а сейчас я хочу их вывести, но у меня не получается, говорит что-то надо сделать на wmk кошельке.
+
+      Почему я не могу [вывести]{"entity": "verb", "value": "withdraw"} деньги?
+  - slot_was_set:
+    - purse_type: purse
+  - slot_was_set:
+    - verb: withdraw
+  - action: action_default_fallback
+  - intent: enum.enum_не_работает
+    user: |-
+      Как использовать sms при оплате? E-NUM не работает
+  - action: utter_enum.enum_не_работает
+
+- story: Story from Conversation ID test_user724
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: system.determination
+    user: |-
+      что такое [webmoney](name)?
+  - slot_was_set:
+    - name: webmoney
+  - action: utter_system.determination_webmoney
+
+- story: Story from Conversation ID test_user910
+  steps:
+  - intent: faq.termination_of_service
+    user: |-
+      Почему прекращено обслуживание моего кошелька в связи с какими ограничениями
+  - action: utter_faq.termination_of_service
+
+- story: Story from Conversation ID test_user267
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: hi_bye.how_are_you
+    user: |-
+      как дела?
+  - action: utter_hi_bye.how_are_you
+  - intent: system.determination
+    user: |-
+      что такое [сертификат]{"entity": "name", "value": "certificate"}?
+  - slot_was_set:
+    - name: certificate
+  - action: utter_system.determination_certificate
+
+- story: Story from Conversation ID 167582384
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      прив
+  - action: utter_hi_bye.greet
+  - intent: transfer.transfer
+    user: |-
+      как выгодней всего [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [вмз]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: nlu_fallback
+    user: |-
+      [налик]{"entity": "cash", "value": "cash"}
+  - slot_was_set:
+    - cash: cash
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_method: transfer_cash
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: limits.limits
+    user: |-
+      какой лимит на [вывод]{"entity": "verb", "value": "withdraw"}
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_limits.limits_withdraw
+  - intent: limits.limits
+    user: |-
+      лимит на налик
+  - action: utter_limits.limits
+  - intent: faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      как восстановить код активации для енам, если уже [нет доступа к телефону](нет_доступа_к_telephone_number)
+  - slot_was_set:
+    - нет_доступа_к_telephone_number: нет доступа к телефону
+  - action: utter_faq.how_recovery+keeper.нет_доступа_к_telephone_number_or_email_telephone_number
+
+- story: Story from Conversation ID 131064367
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: transfer.как_оплатить
+    user: |-
+      как закинуть на [телефон]{"entity": "telephone_number", "value": "telephone_number"}?
+  - slot_was_set:
+    - telephone_number: telephone_number
+  - action: utter_transfer.как_оплатить_telephone_number
+  - intent: transfer.transfer
+    user: |-
+      а как кошель [пополнить]{"entity": "verb", "value": "topup"} ?
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: other.user_confirm
+    user: |-
+      з
+  - action: utter_other.user_confirm
+  - intent: system.purse
+    user: |-
+      [z]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+  - intent: system.purse
+    user: |-
+      [вмз]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+  - intent: transfer.transfer
+    user: |-
+      [пополнить]{"entity": "verb", "value": "topup"} кошель
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [вмз]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.bank_card
+    user: |-
+      [картой]{"entity": "bank", "value": "bank_card"}
+  - slot_was_set:
+    - bank: bank_card
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_bank
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: transfer.transfer
+    user: |-
+      как [ввести]{"entity": "verb", "value": "topup"} денег
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [вмз]{"entity": "purse_type", "value": "wmz"}
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.determination_wmz
+  - intent: faq.как_им_написать
+    user: |-
+      как потратить wmz
+  - action: utter_faq.как_им_написать
+  - intent: transfer.как_купить_крипту
+    user: |-
+      где купить товар
+  - action: utter_transfer.как_купить_крипту
+  - intent: faq.fee
+    user: |-
+      какая комиссия за [пополнение]{"entity": "verb", "value": "topup"}?
+  - slot_was_set:
+    - verb: topup
+  - action: utter_faq.fee_topup
+
+- story: Story from Conversation ID test_user233
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: transfer.купить_товар
+    user: |-
+      как можно потратить wmz?
+  - action: utter_transfer.купить_товар
+  - intent: transfer.купить_товар
+    user: |-
+      как можно купить товар за webmoney?
+  - action: utter_transfer.купить_товар
+
+- story: Story from Conversation ID 314339146
+  steps:
+  - intent: faq.how_delete
+    user: |-
+      как отвязать [номер телефона]{"entity": "telephone_number", "value": "telephone_number"}
+  - slot_was_set:
+    - telephone_number: telephone_number
+  - action: utter_faq.how_delete_telephone_number
+  - intent: faq.how_delete
+    user: |-
+      как удалить [кошелек]{"entity": "purse_type", "value": "purse"}
+  - slot_was_set:
+    - purse_type: purse
+  - action: utter_faq.how_delete_purse
+  - intent: faq.how_recovery
+    user: |-
+      как восстановить [кошелек]{"entity": "purse_type", "value": "purse"}
+  - slot_was_set:
+    - purse_type: purse
+  - action: utter_faq.how_recovery_purse
+  - intent: faq.undelete_purse
+    user: |-
+      как восстановить кошелек из архива
+  - action: utter_faq.undelete_purse
+  - intent: transfer.wheres_money
+    user: |-
+      как найти отправленные деньги
+  - action: utter_transfer.wheres_money
+  - intent: arbitrage.was_scamed
+    user: |-
+      меня обманули как вернуть средства
+  - action: utter_arbitrage.was_scamed
+  - intent: nlu_fallback
+    user: |-
+      как автоматизировать платежи
+  - action: utter_please_rephrase
+  - intent: webpro.продление_сертификата
+    user: |-
+      как продлить сертификат
+  - action: utter_webpro.продление_сертификата
+  - intent: keeper.как_оплатить_счет
+    user: |-
+      как оплатить выставленный счет
+  - action: utter_keeper.как_оплатить_счет
+  - intent: passport.how_get_passport
+    user: |-
+      как подтвердить личность
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: passport.почему_не_дают_аттестат
+    user: |-
+      мне надо пройти верификацию пришел ответ
+  - action: utter_passport.почему_не_дают_аттестат
+  - intent: passport.почему_не_дают_аттестат
+    user: |-
+      мне надо пройти верификацию пришел ответ поддежрки
+  - action: utter_passport.почему_не_дают_аттестат
+  - intent: funding.funding_open_project
+    user: |-
+      как подключить донаты
+  - action: utter_funding.funding_open_project
+  - intent: system.determination
+    user: |-
+      что такое [didiseller](service_name)
+  - slot_was_set:
+    - service_name: didiseller
+  - action: utter_please_rephrase
+  - intent: system.determination
+    user: |-
+      что такое [digisaller](service_name)
+  - slot_was_set:
+    - service_name: digisaller
+  - action: utter_please_rephrase
+  - intent: passport.зачем_нужен
+    user: |-
+      какие возможности у [merchant](service_name)?
+  - slot_was_set:
+    - service_name: merchant
+  - action: action_default_fallback
+  - intent: purses.какой_кошелек_для
+    user: |-
+      почему wme запрещен
+  - action: utter_purses.какой_кошелек_для
+  - intent: xml.xml
+    user: |-
+      что такое xml интерфейсы
+  - action: utter_xml.xml
+  - intent: system.determination
+    user: |-
+      Что такое [Digiseller](service_name) ?
+  - slot_was_set:
+    - service_name: Digiseller
+  - action: utter_please_rephrase
+  - intent: enum.как_сменить_enum_аккаунт
+    user: |-
+      как поменять имя events
+  - action: utter_enum.как_сменить_enum_аккаунт
+  - intent: system_rules.как_использовать_webmoney
+    user: |-
+      как пользоваться WM Exchanger?
+  - action: utter_system_rules.как_использовать_webmoney
+  - intent: faq.how_change_nickname
+    user: |-
+      как оменить платеж
+  - action: utter_faq.how_change_nickname
+  - intent: keeper.не_могу_войти
+    user: |-
+      Не могу зайти в имеющийся аккаунт
+  - action: utter_keeper.не_могу_войти
+  - intent: keeper.пароль_не_подходит
+    user: |-
+      неверный пароль
+  - action: utter_keeper.пароль_не_подходит
+  - intent: hi_bye.ответ_не_помог
+    user: |-
+      не помогло
+  - action: utter_hi_bye.ответ_не_помог
+  - intent: system.registration
+    user: |-
+      как стать регистратором
+  - action: utter_system.registration
+  - intent: support.how_call_you
+    user: |-
+      как вам позвонить?
+  - action: utter_support.how_call_you
+  - intent: system.безопасность
+    user: |-
+      как безопасно продать цифровой товар?
+  - action: utter_system.безопасность
+  - intent: hi_bye.who_are_you
+    user: |-
+      у вас есть крипта?
+  - action: utter_hi_bye.who_are_you
+  - intent: system.determination
+    user: |-
+      что?
+  - action: utter_system.determination
+  - intent: hi_bye.how_are_you
+    user: |-
+      о крипте
+  - action: utter_hi_bye.how_are_you
+  - intent: other.не_гражданин
+    user: |-
+      я не спрашивал этого
+  - action: utter_other.не_гражданин
+  - intent: system.determination
+    user: |-
+      что такое крипта
+  - action: utter_system.determination
+  - intent: purses.какой_кошелек_для
+    user: |-
+      криптовалюта
+  - action: utter_purses.какой_кошелек_для
+  - intent: purses.какой_кошелек_для
+    user: |-
+      у вас есть криптовалюта?
+  - action: utter_purses.какой_кошелек_для
+  - intent: transfer.как_оплатить
+    user: |-
+      как оплатить [стим]{"entity": "steam", "value": "steam"}
+  - slot_was_set:
+    - steam: steam
+  - action: utter_transfer.как_оплатить_steam
+  - intent: other.страны
+    user: |-
+      слава России
+  - action: utter_other.страны
+  - intent: debt.вернул_долг+arbitrage.unblock_wmid
+    user: |-
+      как снять блок по займу
+  - action: utter_debt.вернул_долг+arbitrage.unblock_wmid
+  - intent: keeper.changing_the_method_of_managing_wmid
+    user: |-
+      как обновить [classic]{"entity": "keeper_type", "value": "winpro"}?
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: action_default_fallback
+  - intent: transfer.как_купить_крипту
+    user: |-
+      как купить вашу валюту
+  - action: utter_transfer.как_купить_крипту
+  - intent: transfer.не_все_деньги_вывелись
+    user: |-
+      почему долго выводят деньги
+  - action: utter_transfer.не_все_деньги_вывелись
+  - intent: transfer.как_долго_выводятся_деньги
+    user: |-
+      зачислятся ли средства по заявке на вывод?
+  - action: utter_transfer.как_долго_выводятся_деньги
+  - intent: transfer.transfer
+    user: |-
+      способы [вывода]{"entity": "verb", "value": "withdraw"}
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: support.help_me
+    user: |-
+      первым
+  - action: utter_support.help_me
+  - intent: system.how_create
+    user: |-
+      как продать $
+  - action: utter_system.how_create
+  - intent: system.how_create
+    user: |-
+      продать [доллары]{"entity": "purse_type", "value": "usd"}
+  - slot_was_set:
+    - purse_type: usd
+  - action: utter_system.how_create_purse_in_standard
+  - intent: faq.how_recovery
+    user: |-
+      как установить аватар?
+  - action: utter_faq.how_recovery
+  - intent: keeper.how_to_add_correspondent
+    user: |-
+      как сделать перенос [WM Keeper WinPro]{"entity": "keeper_type", "value": "winpro"}?
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_keeper.how_to_add_correspondent_in_winpro
+  - intent: nlu_fallback
+    user: |-
+      как я могу принимать платежи от своих клиентов не регистрируясь в вашей системе?
+  - action: utter_please_rephrase
+  - action: transfer_form
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: nlu_fallback
+    user: |-
+      как я могу принимать платежи от своих клиентов не регистрируясь в вашей системе?
+  - action: utter_please_rephrase
+  - action: transfer_form
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: system.determination
+    user: |-
+      что такое [paylink](electronic_money)?
+  - slot_was_set:
+    - electronic_money: paylink
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_electronic_money
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: system.determination
+    user: |-
+      Что такое [WebMoney.Check](service_name)?
+  - slot_was_set:
+    - service_name: WebMoney.Check
+  - action: utter_please_rephrase
+  - intent: transfer.transfer
+    user: |-
+      как [пополнить]{"entity": "verb", "value": "topup"} через сбп
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.bank_card
+    user: |-
+      [карты]{"entity": "bank_card", "value": "bank_card"}
+  - slot_was_set:
+    - bank_card: bank_card
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_bank
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - action: action_slots_restart
+  - slot_was_set:
+    - transfer_direction: null
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - verb: null
+  - intent: faq.termination_of_service
+    user: |-
+      как отказаться от обработки персональных данных?
+  - action: utter_faq.termination_of_service
+  - intent: faq.change_telephone_number_or_email_or_password
+    user: |-
+      Как установить пароль из приложения [WebMoney Keeper]{"entity": "keeper_type", "value": "keeper"}?
+  - slot_was_set:
+    - keeper_type: keeper
+  - action: utter_faq.change_telephone_number_or_email_or_password
+  - intent: debt.debt
+    user: |-
+      Как удалить заявку на получение кредита?
+  - action: utter_debt.debt
+  - intent: keeper.нет_доступа_к_аккаунту
+    user: |-
+      потерял доступ к аккаунту в сервисе E-num
+  - action: utter_keeper.нет_доступа_к_аккаунту
+  - intent: system.determination
+    user: |-
+      что такое [WebMoney.Check](name)?
+  - slot_was_set:
+    - name: WebMoney.Check
+  - action: utter_please_rephrase
+  - intent: sms.покупка_смс
+    user: |-
+      как купить еще смс?
+  - action: utter_sms.покупка_смс
+  - intent: webpro.получение_сертификата
+    user: |-
+      как получить персональный сертификат?
+  - action: utter_webpro.получение_сертификата
+  - intent: passport.я_получил_passport_or_videoid_or_photoid
+    user: |-
+      я имел ввиду аттестат
+  - action: utter_passport.я_получил_passport_or_videoid_or_photoid
+  - intent: faq.termination_of_service
+    user: |-
+      как отказаться от оплаты [счета]{"entity": "purse_type", "value": "purse"}
+  - slot_was_set:
+    - purse_type: purse
+  - action: utter_faq.change_telephone_number_or_email_or_password
+  - intent: nlu_fallback
+    user: |-
+      персональные данные
+  - action: utter_please_rephrase
+  - intent: faq.termination_of_service
+    user: |-
+      как удалить персональные данные
+  - action: utter_faq.termination_of_service
+  - intent: faq.termination_of_service
+    user: |-
+      без отказа никак?
+  - action: utter_faq.termination_of_service
+  - intent: arbitrage.unblock_wmid
+    user: |-
+      как возобновить обслуживание
+  - action: utter_arbitrage.unblock_wmid
+  - intent: arbitrage.how_apply_to_arbitrage
+    user: |-
+      как обратиться в арбитраж
+  - action: utter_arbitrage.how_apply_to_arbitrage
+  - intent: enum.enum
+    user: |-
+      как отменить заявку exchanger?
+  - action: utter_enum.enum
+  - intent: enum.enum
+    user: |-
+      как отменить заявку exchanger?
+  - action: utter_enum.enum
+  - intent: system.determination
+    user: |-
+      Что такое [tl]{"entity": "name", "value": "trust_level"}
+  - slot_was_set:
+    - name: trust_level
+  - action: utter_system.determination_trust_level
+  - intent: debt.вернул_долг+arbitrage.unblock_wmid
+    user: |-
+      как снять блокировку по займу
+  - action: utter_debt.вернул_долг+arbitrage.unblock_wmid
+  - intent: hi_bye.ответ_не_помог
+    user: |-
+      не помогло
+  - action: utter_hi_bye.ответ_не_помог
+  - intent: merchant.merchant
+    user: |-
+      как стать продавцом
+  - action: utter_merchant.merchant
+  - intent: system_rules.system_rules
+    user: |-
+      что запрещено покупать за webmoney?
+  - action: utter_system_rules.system_rules
+  - intent: winpro.how_get_keyfile
+    user: |-
+      где ключи
+  - action: utter_winpro.how_get_keyfile
+  - intent: other.user_confirm
+    user: |-
+      и
+  - action: utter_other.user_confirm
+  - intent: system_rules.кто_является_гарантом
+    user: |-
+      кто такие гаранты
+  - action: utter_system_rules.кто_является_гарантом
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: hi_bye.bye
+    user: |-
+      международный
+  - action: utter_hi_bye.bye
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: other.англ
+    user: |-
+      /start
+  - action: utter_other.англ
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: hi_bye.thanks
+    user: |-
+      упс
+  - action: utter_hi_bye.thanks
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для аттестации
+  - action: action_default_fallback
+  - intent: passport.how_get_passport
+    user: |-
+      что надо для [аттестата]{"entity": "passport_type", "value": "passport"}
+  - slot_was_set:
+    - passport_type: passport
+  - action: how_get_passport_form
+  - slot_was_set:
+    - passport_type: null
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: system.what_types
+    user: |-
+      а какие есть?
+  - action: utter_please_rephrase
+  - intent: hi_bye.who_are_you
+    user: |-
+      железяка
+  - action: utter_hi_bye.who_are_you
+  - intent: hi_bye.trash
+    user: |-
+      работаешь?
+  - action: utter_hi_bye.trash
+  - intent: nlu_fallback
+    user: |-
+      я спрашиваю
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - intent: hi_bye.trash
+    user: |-
+      работаешь или да?
+  - action: utter_hi_bye.trash
+  - intent: keeper.how_to_check_the_history
+    user: |-
+      как получить выписку
+  - action: utter_keeper.how_to_check_the_history_in_standard
+  - intent: faq.termination_of_service
+    user: |-
+      как удалить кореспондента
+  - action: utter_faq.termination_of_service
+  - intent: keeper.how_to_add_correspondent
+    user: |-
+      как убрать корреспондента
+  - action: utter_keeper.how_to_add_correspondent_in_standard
+  - intent: faq.не_могу_отказаться_от_обслуживания
+    user: |-
+      что значит отказано в обслуживании?
+  - action: utter_faq.не_могу_отказаться_от_обслуживания
+  - intent: sms.sms_not_coming
+    user: |-
+      не приходит смс
+  - action: utter_sms.sms_not_coming
+  - intent: arbitrage.was_scamed
+    user: |-
+      меня обманули
+  - action: utter_arbitrage.was_scamed
+  - intent: arbitrage.how_apply_to_arbitrage
+    user: |-
+      меня пытаются развести на вебмани
+  - action: utter_arbitrage.how_apply_to_arbitrage
+  - intent: transfer.не_могу_оплатить
+    user: |-
+      не могу оплатить товар
+  - action: utter_transfer.не_могу_оплатить
+  - intent: transfer.как_оплатить
+    user: |-
+      Оплата по указанным реквизитам невозможна
+  - action: utter_transfer.как_оплатить
+  - intent: events.events
+    user: |-
+      где увидеть список входов
+  - action: utter_events.events
+  - intent: transfer.cant_transfer
+    user: |-
+      выдает ошибку на [пополнение]{"entity": "verb", "value": "topup"} кошелька
+  - slot_was_set:
+    - verb: topup
+  - action: action_default_fallback
+  - intent: system.how_create
+    user: |-
+      как получить [вируальную карту](bank_card)
+  - slot_was_set:
+    - bank_card: вируальную карту
+  - action: utter_system.how_create_bank_card
+  - intent: system_rules.как_использовать_webmoney
+    user: |-
+      что значит доступ запрещен
+  - action: utter_system_rules.как_использовать_webmoney
+  - intent: languages.how_to_change_the_language_or_font
+    user: |-
+      есть китайский язык?
+  - action: utter_languages.how_to_change_the_language_or_font_language
+  - intent: nlu_fallback
+    user: |-
+      пропал мой вмид
+  - action: utter_please_rephrase
+  - intent: nlu_fallback
+    user: |-
+      как вернуть отправителю
+  - action: utter_please_rephrase
+  - intent: transfer.transfer
+    user: |-
+      способы [вывода]{"entity": "verb", "value": "withdraw"}
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [WMX](purse_type)
+  - slot_was_set:
+    - purse_type: WMX
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmx](purse_type)
+  - slot_was_set:
+    - purse_type: wmx
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmx
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.transfer
+    user: |-
+      способы [вывода]{"entity": "verb", "value": "withdraw"} [wmx](purse_type)
+  - slot_was_set:
+    - purse_type: wmx
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_purse_type: wmx
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.transfer
+    user: |-
+      методы [пополнения]{"entity": "verb", "value": "topup"} криптовалютой
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: other.user_confirm
+    user: |-
+      этим
+  - action: utter_other.user_confirm
+  - intent: transfer.transfer
+    user: |-
+      методы [пополнения]{"entity": "verb", "value": "topup"} криптовалютой
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: system_rules.кто_является_гарантом
+    user: |-
+      передачей гаранту на хранение
+  - action: utter_system_rules.кто_является_гарантом
+  - intent: transfer.transfer
+    user: |-
+      методы [пополнения]{"entity": "verb", "value": "topup"} криптовалютой
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: system_rules.адрес_webmoney
+    user: |-
+      по адресу
+  - action: utter_system_rules.адрес_webmoney
+  - intent: transfer.transfer
+    user: |-
+      методы [пополнения]{"entity": "verb", "value": "topup"} криптовалютой
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.трансфер_в_страны
+    user: |-
+      передачей на хранение
+  - action: utter_transfer.трансфер_в_страны
+  - intent: transfer.transfer
+    user: |-
+      методы [пополнения]{"entity": "verb", "value": "topup"} криптовалютой
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.electronic_money
+    user: |-
+      [электронными деньгами]{"entity": "electronic_money", "value": "electronic_money"}
+  - slot_was_set:
+    - electronic_money: electronic_money
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_electronic_money
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: transfer.transfer
+    user: |-
+      минимальная сумма [пополнения]{"entity": "verb", "value": "topup"} [телефона]{"entity": "telephone_number", "value": "telephone_number"}
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - telephone_number: telephone_number
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - telephone_number: telephone_number
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_method: transfer_telephone_number
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: transfer.transfer
+    user: |-
+      как [пополнить]{"entity": "verb", "value": "topup"} [wmr](purse_type)
+  - slot_was_set:
+    - purse_type: wmr
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - purse_type: wmr
+  - slot_was_set:
+    - verb: topup
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - transfer_purse_type: wmr
+  - slot_was_set:
+    - transfer_method: null
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: debt.вернуть_долг
+    user: |-
+      как отдать кредит
+  - action: utter_debt.вернуть_долг
+  - intent: transfer.transfer
+    user: |-
+      можно перевести в сша?
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - transfer_direction: transfer
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: transfer.transfer
+    user: |-
+      куда можно отправить деньги?
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - transfer_direction: transfer
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: system.determination
+    user: |-
+      что [с паспортом](purse_type)
+  - slot_was_set:
+    - purse_type: с паспортом
+  - action: utter_system.determination_purse
+  - intent: passport.я_загрузил_фото_паспорта
+    user: |-
+      я загрузил паспорт, что с аттестатом
+  - action: utter_passport.я_загрузил_фото_паспорта
+  - intent: passport.какие_документы_нужны
+    user: |-
+      я загрузил данные, что с моим аттестатом
+  - action: utter_passport.какие_документы_нужны
+  - intent: transfer.деньги_не_вернулись
+    user: |-
+      почему средства вернулись назад?
+  - action: utter_transfer.деньги_не_вернулись
+  - intent: transfer.сколько_ждать_перевод_средств
+    user: |-
+      когда придут деньги на стим
+  - action: utter_transfer.сколько_ждать_перевод_средств
+  - intent: transfer.electronic_money
+    user: |-
+      что там с [деньгами]{"entity": "electronic_money", "role": "from"}
+  - action: utter_transfer.electronic_money
+  - intent: passport.how_get_passport
+    user: |-
+      как получить аттестат
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: system.passport
+    user: |-
+      [формальный]{"entity": "passport_type", "value": "formal_passport"}
+  - slot_was_set:
+    - passport_type: formal_passport
+  - action: how_get_passport_form
+  - slot_was_set:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_how_get_passport_form_message
+  - intent: passport.how_get_passport
+    user: |-
+      как получить аттестат
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - passport_type: formal_passport
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_how_get_passport_form_message
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "purse_type", "role": "to"}
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "purse_type", "role": "to"}
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_purse_type: null
+  - slot_was_set:
+    - requested_slot: transfer_purse_type
+  - intent: system.purse
+    user: |-
+      [wmz](purse_type)
+  - slot_was_set:
+    - purse_type: wmz
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_purse_type: wmz
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.banks
+    user: |-
+      [первым](bank)
+  - slot_was_set:
+    - bank: первым
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_method: transfer_bank
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: other.дайте_ссылку
+    user: |-
+      а вторым?
+  - action: utter_other.дайте_ссылку
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.cash
+    user: |-
+      [наличные]{"entity": "cash", "value": "cash"}
+  - slot_was_set:
+    - cash: cash
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - transfer_method: transfer_cash
+  - slot_was_set:
+    - requested_slot: null
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_transfer_form_message
+  - slot_was_set:
+    - fee: null
+  - slot_was_set:
+    - protected_payment: null
+  - slot_was_set:
+    - transfer_method: null
+  - intent: other.дайте_ссылку
+    user: |-
+      а вторым?
+  - action: utter_other.дайте_ссылку
+  - intent: transfer.transfer
+    user: |-
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства
+  - slot_was_set:
+    - verb: withdraw
+  - action: transfer_form
+  - active_loop: transfer_form
+  - slot_was_set:
+    - verb: withdraw
+  - slot_was_set:
+    - transfer_direction: withdraw
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: other.дайте_ссылку
+    user: |-
+      вторым
+  - action: utter_other.дайте_ссылку
+  - intent: system.purse
+    user: |-
+      первый
+  - action: utter_please_rephrase
+  - intent: nlu_fallback
+    user: |-
+      второй
+  - action: utter_please_rephrase
+  - action: transfer_form
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: other.англ
+    user: |-
+      /start
+  - action: utter_other.англ
+  - intent: purses.какой_кошелек_для
+    user: |-
+      что такое криптовалюта
+  - action: utter_purses.какой_кошелек_для
+  - intent: transfer.transfer
+    user: |-
+      как [пополнить]{"entity": "verb", "value": "topup"} [ltc](currency)
+  - slot_was_set:
+    - purse_type: ltc
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - transfer_purse_type: ltc
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: transfer.transfer
+    user: |-
+      как [пополнить]{"entity": "verb", "value": "topup"} [wml](purse_type)
+  - slot_was_set:
+    - purse_type: wml
+  - slot_was_set:
+    - verb: topup
+  - action: transfer_form
+  - slot_was_set:
+    - transfer_direction: topup
+  - slot_was_set:
+    - transfer_purse_type: wml
+  - slot_was_set:
+    - requested_slot: transfer_method
+  - intent: hi_bye.thanks
+    user: |-
+      расизм есть?
+  - action: utter_hi_bye.thanks
+  - intent: faq.how_change_nickname
+    user: |-
+      вопрос, как изменить псевдоним?
+  - action: utter_faq.how_change_nickname
+  - intent: support.help_me
+    user: |-
+      почему?
+  - action: utter_support.help_me
+  - intent: passport.почему_не_дают_аттестат
+    user: |-
+      почему только после получения [персональнго аттестата](passport_type)?
+  - slot_was_set:
+    - passport_type: персональнго аттестата
+  - action: action_default_fallback
+  - intent: keeper.нет_доступа_к_аккаунту
+    user: |-
+      можете помочь, я потерял свой смартфон
+  - action: utter_keeper.нет_доступа_к_аккаунту
+  - intent: faq.how_change_nickname
+    user: |-
+      как изменить незаметно
+  - action: utter_faq.how_change_nickname
+  - intent: system.determination
+    user: |-
+      что с [wmy](purse_type)?
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_system.determination_wmy
+  - intent: passport.не_могу_получить_аттестат
+    user: |-
+      проблема с верификацией
+  - action: utter_passport.не_могу_получить_аттестат
+  - intent: passport.не_хочу_отправлять_документы
+    user: |-
+      нет паспорта
+  - action: utter_passport.не_хочу_отправлять_документы
+  - intent: passport.how_get_passport
+    user: |-
+      как получить аттестат без паспорта
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  - slot_was_set:
+    - requested_slot: passport_type
+  - intent: funding.funding_open_project
+    user: |-
+      как принимать донаты
+  - action: utter_funding.funding_open_project
+  - intent: transfer.автоплатеж
+    user: |-
+      как автоматизировать прием средств
+  - action: utter_transfer.автоплатеж
+  - intent: funding.funding_open_project
+    user: |-
+      как привлечь средства
+  - action: utter_funding.funding_open_project
+  - intent: keeper.не_могу_войти
+    user: |-
+      не могу войти
+  - action: utter_keeper.не_могу_войти
+  - intent: passport.у_меня_нет_аттестата
+    user: |-
+      нет такого вмид
+  - action: utter_passport.у_меня_нет_аттестата
+  - intent: passport.не_могу_получить_аттестат
+    user: |-
+      не могу получить аттестат
+  - action: utter_passport.не_могу_получить_аттестат
+  - intent: passport.open_personal_information
+    user: |-
+      есть аккаунт с моими данными
+  - action: utter_passport.open_personal_information
+  - intent: passport.какой_аттестат_нужен
+    user: |-
+      на такие данные получен аттестат на другом аккаунте
+  - action: utter_passport.какой_аттестат_нужен
+  - intent: debt.debt
+    user: |-
+      как получить документы для обращения в суд по невозврату кредита
+  - action: utter_debt.debt

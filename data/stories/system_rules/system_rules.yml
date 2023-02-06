@@ -1,0 +1,118 @@
+version: "3.1"
+
+stories:
+
+- story: system_rules.system_rules
+  steps:
+  - intent: system_rules.system_rules
+  - action: utter_system_rules.system_rules
+
+- story: system_rules.how_to_guarantor
+  steps:
+  - intent: system_rules.how_to_guarantor
+  - action: utter_system_rules.how_to_guarantor
+
+- story: system_rules.кто_является_гарантом
+  steps:
+  - intent: system_rules.кто_является_гарантом
+  - action: utter_system_rules.кто_является_гарантом
+
+- story: system_rules.минимальный_возраст
+  steps:
+  - intent: system_rules.минимальный_возраст
+  - action: utter_system_rules.минимальный_возраст
+
+- story: system_rules.повторная_регистрация
+  steps:
+  - intent: system_rules.повторная_регистрация
+  - action: utter_system_rules.повторная_регистрация
+
+- story: system_rules.сотрудничество
+  steps:
+  - intent: system_rules.сотрудничество
+  - action: utter_system_rules.сотрудничество
+
+- story: system_rules.адрес_webmoney
+  steps:
+  - intent: system_rules.адрес_webmoney
+  - action: utter_system_rules.адрес_webmoney
+
+# - story: system_rules.как_работает_webmoney
+#   steps:
+#   - intent: system_rules.как_работает_webmoney
+#   - action: utter_system_rules.как_работает_webmoney
+
+- story: system_rules.webmoney_платное
+  steps:
+  - intent: system_rules.webmoney_платное
+  - action: utter_system_rules.webmoney_платное
+
+- story: system_rules.webmoney_в_каких_странах
+  steps:
+  - intent: system_rules.webmoney_в_каких_странах
+  - action: utter_system_rules.webmoney_в_каких_странах
+
+- story: system_rules.запрещенные_платежные_системы
+  steps:
+  - intent: system_rules.запрещенные_платежные_системы
+  - action: utter_system_rules.запрещенные_платежные_системы
+
+# - story: system_rules.о_проблемах
+#   steps:
+#   - intent: system_rules.о_проблемах
+#   - action: utter_system_rules.о_проблемах
+
+- story: system_rules.как_использовать_webmoney
+  steps:
+  - intent: system_rules.как_использовать_webmoney
+  - action: utter_system_rules.как_использовать_webmoney
+
+# - story: system_rules.webmoney_не_работает
+#   steps:
+#   - intent: system_rules.webmoney_не_работает
+#   - action: utter_system_rules.webmoney_не_работает
+
+- story: system_rules.привязка_к_google_apple_samsung_pay
+  steps:
+  - intent: system_rules.привязка_к_google_apple_samsung_pay
+  - action: utter_system_rules.привязка_к_google_apple_samsung_pay
+
+# - story: system_rules.webmoney_и_бк
+#   steps:
+#   - intent: system_rules.webmoney_и_бк
+#   - action: utter_system_rules.webmoney_и_бк
+
+- story: system_rules.сколько_лет_webmoney
+  steps:
+  - intent: system_rules.сколько_лет_webmoney
+  - action: utter_system_rules.сколько_лет_webmoney
+
+- story: system_rules.преимущества_webmoney
+  steps:
+  - intent: system_rules.преимущества_webmoney
+  - action: utter_system_rules.преимущества_webmoney
+
+- story: system_rules.часы_работы
+  steps:
+  - intent: system_rules.часы_работы
+  - action: utter_system_rules.часы_работы
+
+- story: system_rules.откуда_webmoney
+  steps:
+  - intent: system_rules.откуда_webmoney
+  - action: utter_system_rules.откуда_webmoney
+
+- story: system_rules.наследство
+  steps:
+  - intent: system_rules.наследство
+  - action: utter_system_rules.наследство
+
+- story: system_rules.кому_принадлежит_вебмани
+  steps:
+  - intent: system_rules.кому_принадлежит_вебмани
+  - action: utter_system_rules.кому_принадлежит_вебмани
+
+- story: system_rules.передача_аккаунта
+  steps:
+  - intent: system_rules.передача_аккаунта
+  - action: utter_system_rules.передача_аккаунта

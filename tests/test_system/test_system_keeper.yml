@@ -1,0 +1,120 @@
+version: "3.1"
+
+stories:
+
+- story: system.keeper
+  steps:
+  - intent: system.keeper
+    user: |-
+      класик
+  - action: utter_please_rephrase
+
+
+
+- story: system.keeper_keeper_type__other__
+  steps:
+  - intent: system.keeper
+    user: |-
+      [кипер]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_system.determination_keeper
+
+
+- story: system.keeper_standard
+  steps:
+  - intent: system.keeper
+    user: |-
+      [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_system.determination_standard
+
+- story: system.keeper_winpro
+  steps:
+  - intent: system.keeper
+    user: |-
+      [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_system.determination_winpro
+
+- story: system.keeper_webpro
+  steps:
+  - intent: system.keeper
+    user: |-
+      [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_system.determination_webpro
+
+
+
+- story: system.keeper_keeper_type__other__+++faq.how_plug
+  steps:
+  - intent: system.keeper
+    user: |-
+      [кипер]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_system.determination_keeper
+  - intent: faq.how_plug
+    user: |-
+      как подключить?
+  - action: utter_please_rephrase
+
+
+- story: system.keeper_standard+++faq.how_plug
+  steps:
+  - intent: system.keeper
+    user: |-
+      [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_system.determination_standard
+  - intent: faq.how_plug
+    user: |-
+      как подключить?
+  - action: utter_faq.how_plug_standard
+
+- story: system.keeper_winpro+++faq.how_plug
+  steps:
+  - intent: system.keeper
+    user: |-
+      [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_system.determination_winpro
+  - intent: faq.how_plug
+    user: |-
+      как подключить?
+  - action: utter_faq.how_plug_winpro
+
+- story: system.keeper_webpro+++faq.how_plug
+  steps:
+  - intent: system.keeper
+    user: |-
+      [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_system.determination_webpro
+  - intent: faq.how_plug
+    user: |-
+      как подключить?
+  - action: utter_faq.how_plug_webpro

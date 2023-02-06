@@ -1,0 +1,1117 @@
+version: "3.1"
+
+stories:
+
+- story: system.how_create
+  steps:
+  - intent: system.how_create
+  - action: utter_system.how_create
+
+
+- story: system.how_create_name__other__
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.how_create_group
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: group
+  - slot_was_set:
+    - name: group
+  - action: utter_system.how_create_group
+
+- story: system.how_create_root_certificate
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: root_certificate
+  - slot_was_set:
+    - name: root_certificate
+  - action: utter_system.how_create_root_certificate
+
+- story: system.how_create_keyfile
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: keyfile
+  - slot_was_set:
+    - name: keyfile
+  - action: utter_system.how_create_keyfile
+
+- story: system.how_create_certificate
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: certificate
+  - slot_was_set:
+    - name: certificate
+  - action: utter_system.how_create_certificate
+
+- story: system.how_create_account
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: account
+  - slot_was_set:
+    - name: account
+  - action: utter_system.how_create_account
+
+- story: system.how_create_wmid
+  steps:
+  - intent: system.how_create
+    entities:
+    - name: wmid
+  - slot_was_set:
+    - name: wmid
+  - action: utter_system.how_create_wmid
+
+
+
+- story: system.how_create_bank_card
+  steps:
+  - intent: system.how_create
+    entities:
+    - bank_card
+  - slot_was_set:
+    - bank_card
+  - action: utter_system.how_create_bank_card
+
+
+
+- story: system.how_create_purse_keeper_type__other__
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: __other__
+    - keeper_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+    - keeper_type: __other__
+  - action: utter_system.how_create_purse_in_standard
+
+
+- story: system.how_create_purse_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: __other__
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: __other__
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_purse_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: __other__
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: __other__
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_purse_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: __other__
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: __other__
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+
+
+- story: system.how_create_service_name__other__
+  steps:
+  - intent: system.how_create
+    entities:
+    - service_name: __other__
+  - slot_was_set:
+    - service_name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.how_create_enum
+  steps:
+  - intent: system.how_create
+    entities:
+    - service_name: enum
+  - slot_was_set:
+    - service_name: enum
+  - action: utter_system.how_create_enum
+
+
+
+- story: system.how_create_purse_type__other__
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_system.how_create_purse_in_standard
+
+
+- story: system.how_create_wmp
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmp
+  - slot_was_set:
+    - purse_type: wmp
+  - action: utter_system.how_create_purse_wmp
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wme
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wme
+  - slot_was_set:
+    - purse_type: wme
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmb
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmb
+  - slot_was_set:
+    - purse_type: wmb
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmg
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmg
+  - slot_was_set:
+    - purse_type: wmg
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmz
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmz
+  - slot_was_set:
+    - purse_type: wmz
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmk
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmk
+  - slot_was_set:
+    - purse_type: wmk
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmx
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmx
+  - slot_was_set:
+    - purse_type: wmx
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmh
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmh
+  - slot_was_set:
+    - purse_type: wmh
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wml
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wml
+  - slot_was_set:
+    - purse_type: wml
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmy
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmy
+  - slot_was_set:
+    - purse_type: wmy
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmr
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmr
+  - slot_was_set:
+    - purse_type: wmr
+  - action: utter_system.how_create_purse_wmr
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmc
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmc
+  - slot_was_set:
+    - purse_type: wmc
+  - action: utter_system.how_create_wmc_purse_in_standard
+
+- story: system.how_create_wmd
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmd
+  - slot_was_set:
+    - purse_type: wmd
+  - action: utter_system.how_create_wmd_purse_in_standard
+
+- story: system.how_create_wmu
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmu
+  - slot_was_set:
+    - purse_type: wmu
+  - action: utter_system.how_create_purse_wmu
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmf
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmf
+  - slot_was_set:
+    - purse_type: wmf
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmt
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmt
+  - slot_was_set:
+    - purse_type: wmt
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_mdl
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: mdl
+  - slot_was_set:
+    - purse_type: mdl
+  - action: utter_system.how_create_purse_mdl
+
+- story: system.how_create_btc
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: btc
+  - slot_was_set:
+    - currency: btc
+  - action: utter_system.how_create_purse_btc
+
+- story: system.how_create_bch
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: bch
+  - slot_was_set:
+    - currency: bch
+  - action: utter_system.how_create_purse_bch
+
+- story: system.how_create_ltc
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: ltc
+  - slot_was_set:
+    - currency: ltc
+  - action: utter_system.how_create_purse_ltc
+
+- story: system.how_create_eth
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: eth
+  - slot_was_set:
+    - currency: eth
+  - action: utter_system.how_create_purse_eth
+
+- story: system.how_create_usdt
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: usdt
+  - slot_was_set:
+    - currency: usdt
+  - action: utter_system.how_create_purse_usdt
+
+
+- story: system.how_create_wmp_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmp
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmp
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_wmp
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wme_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wme
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wme
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmb_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmb
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmb
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmg_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmg
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmg
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmz_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmz
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmz
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmk_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmk
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmk
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmx_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmx
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmx
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmh_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmh
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmh
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wml_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wml
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wml
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmy_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmy
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmy
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmr_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmr
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmr
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_wmr
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmc_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmc
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmc
+    - keeper_type: standard
+  - action: utter_system.how_create_wmc_purse_in_standard
+
+- story: system.how_create_wmd_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmd
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmd
+    - keeper_type: standard
+  - action: utter_system.how_create_wmd_purse_in_standard
+
+- story: system.how_create_wmu_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmu
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmu
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_wmu
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmf_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmf
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmf
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_wmt_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmt
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: wmt
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_in_standard
+
+- story: system.how_create_mdl_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: mdl
+    - keeper_type: standard
+  - slot_was_set:
+    - purse_type: mdl
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_mdl
+
+- story: system.how_create_btc_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: btc
+    - keeper_type: standard
+  - slot_was_set:
+    - currency: btc
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_btc
+
+- story: system.how_create_bch_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: bch
+    - keeper_type: standard
+  - slot_was_set:
+    - currency: bch
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_bch
+
+- story: system.how_create_ltc_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: ltc
+    - keeper_type: standard
+  - slot_was_set:
+    - currency: ltc
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_ltc
+
+- story: system.how_create_eth_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: eth
+    - keeper_type: standard
+  - slot_was_set:
+    - currency: eth
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_eth
+
+- story: system.how_create_usdt_in_standard
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: usdt
+    - keeper_type: standard
+  - slot_was_set:
+    - currency: usdt
+    - keeper_type: standard
+  - action: utter_system.how_create_purse_usdt
+
+
+
+- story: system.how_create_wmp_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmp
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmp
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_wmp
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wme_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wme
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wme
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmb_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmb
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmb
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmg_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmg
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmg
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmz_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmz
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmz
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmk_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmk
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmk
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmx_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmx
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmx
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmh_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmh
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmh
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wml_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wml
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wml
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmy_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmy
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmy
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmr_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmr
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmr
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_wmr
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmc_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmc
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmc
+    - keeper_type: winpro
+  - action: utter_system.how_create_wmc_purse_in_winpro
+
+- story: system.how_create_wmd_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmd
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmd
+    - keeper_type: winpro
+  - action: utter_system.how_create_wmd_purse_in_winpro
+
+- story: system.how_create_wmu_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmu
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmu
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_wmu
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmf_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmf
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmf
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_wmt_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmt
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: wmt
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_in_winpro
+
+- story: system.how_create_mdl_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: mdl
+    - keeper_type: winpro
+  - slot_was_set:
+    - purse_type: mdl
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_mdl
+
+- story: system.how_create_btc_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: btc
+    - keeper_type: winpro
+  - slot_was_set:
+    - currency: btc
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_btc
+
+- story: system.how_create_bch_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: bch
+    - keeper_type: winpro
+  - slot_was_set:
+    - currency: bch
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_bch
+
+- story: system.how_create_ltc_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: ltc
+    - keeper_type: winpro
+  - slot_was_set:
+    - currency: ltc
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_ltc
+
+- story: system.how_create_eth_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: eth
+    - keeper_type: winpro
+  - slot_was_set:
+    - currency: eth
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_eth
+
+- story: system.how_create_usdt_in_winpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: usdt
+    - keeper_type: winpro
+  - slot_was_set:
+    - currency: usdt
+    - keeper_type: winpro
+  - action: utter_system.how_create_purse_usdt
+
+
+
+- story: system.how_create_wmp_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmp
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmp
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_wmp
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wme_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wme
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wme
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmb_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmb
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmb
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmg_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmg
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmg
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmz_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmz
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmz
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmk_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmk
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmk
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmx_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmx
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmx
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmh_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmh
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmh
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wml_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wml
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wml
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmy_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmy
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmy
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmr_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmr
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmr
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_wmr
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmc_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmc
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmc
+    - keeper_type: webpro
+  - action: utter_system.how_create_wmc_purse_in_webpro
+
+- story: system.how_create_wmd_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmd
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmd
+    - keeper_type: webpro
+  - action: utter_system.how_create_wmd_purse_in_webpro
+
+- story: system.how_create_wmu_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmu
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmu
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_wmu
+  - action: utter_purses.какой_кошелек_для
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmf_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmf
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmf
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_wmt_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: wmt
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: wmt
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_in_webpro
+
+- story: system.how_create_mdl_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - purse_type: mdl
+    - keeper_type: webpro
+  - slot_was_set:
+    - purse_type: mdl
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_mdl
+
+- story: system.how_create_btc_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: btc
+    - keeper_type: webpro
+  - slot_was_set:
+    - currency: btc
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_btc
+
+- story: system.how_create_bch_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: bch
+    - keeper_type: webpro
+  - slot_was_set:
+    - currency: bch
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_bch
+
+- story: system.how_create_ltc_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: ltc
+    - keeper_type: webpro
+  - slot_was_set:
+    - currency: ltc
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_ltc
+
+- story: system.how_create_eth_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: eth
+    - keeper_type: webpro
+  - slot_was_set:
+    - currency: eth
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_eth
+
+- story: system.how_create_usdt_in_webpro
+  steps:
+  - intent: system.how_create
+    entities:
+    - currency: usdt
+    - keeper_type: webpro
+  - slot_was_set:
+    - currency: usdt
+    - keeper_type: webpro
+  - action: utter_system.how_create_purse_usdt

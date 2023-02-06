@@ -1,0 +1,52 @@
+version: "3.1"
+
+stories:
+
+- story: funding.funding_conditions_of_project
+  steps:
+  - intent: funding.funding_conditions_of_project
+    user: |-
+      условия создания проекта
+  - action: utter_funding.funding_conditions_of_project
+
+- story: funding.funding_edit
+  steps:
+  - intent: funding.funding_edit
+    user: |-
+      редактирование проекта
+  - action: utter_funding.funding_edit
+
+- story: funding.funding_many_project
+  steps:
+  - intent: funding.funding_many_project
+    user: |-
+      несколько проектов
+  - action: utter_funding.funding_many_project
+
+- story: funding.funding_moderation
+  steps:
+  - intent: funding.funding_moderation
+    user: |-
+      время модерации проекта
+  - action: utter_funding.funding_moderation
+
+- story: funding.money_from_funding
+  steps:
+  - intent: funding.money_from_funding
+    user: |-
+      где пожертвования
+  - action: utter_funding.money_from_funding
+
+- story: funding.funding_open_project
+  steps:
+  - intent: funding.funding_open_project
+    user: |-
+      открыть проект
+  - action: utter_funding.funding_open_project
+
+- story: funding.funding_refund_of_a_fee
+  steps:
+  - intent: funding.funding_refund_of_a_fee
+    user: |-
+      отменить взнос
+  - action: utter_funding.funding_refund_of_a_fee

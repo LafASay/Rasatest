@@ -1,0 +1,71 @@
+version: "3.1"
+
+stories:
+
+- story: limits.how_to_increase_limits
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты
+  - action: utter_limits.how_to_increase_limits
+
+
+
+- story: limits.how_to_increase_limits_verb__other__
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты на [вивад]{"entity": "verb", "value": "вивад"}
+    entities:
+    - verb: __other__
+  - slot_was_set:
+    - verb: __other__
+  - action: utter_please_rephrase
+
+
+- story: limits.how_to_increase_limits_topup
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты на [пополнение]{"entity": "verb", "value": "topup"}
+    entities:
+    - verb: topup
+  - slot_was_set:
+    - verb: topup
+  - action: utter_limits.how_to_increase_limits_topup
+
+- story: limits.how_to_increase_limits_withdraw
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты на [вывод]{"entity": "verb", "value": "withdraw"}
+    entities:
+    - verb: withdraw
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_limits.how_to_increase_limits_withdraw
+
+
+- story: limits.how_to_increase_limits_topup_steam
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты на [пополнение]{"entity": "verb", "value": "topup"} [стим]{"entity": "steam", "value": "steam"}
+    entities:
+    - verb: topup
+    - steam
+  - slot_was_set:
+    - verb: topup
+    - steam
+  - action: utter_limits.how_to_increase_limits_topup_steam
+
+- story: limits.how_to_increase_limits_steam
+  steps:
+  - intent: limits.how_to_increase_limits
+    user: |-
+      как увеличить лимиты [стим]{"entity": "steam", "value": "steam"}
+    entities:
+    - steam
+  - slot_was_set:
+    - steam
+  - action: utter_limits.how_to_increase_limits_topup_steam

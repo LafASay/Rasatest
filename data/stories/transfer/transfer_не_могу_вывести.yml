@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+# - story: transfer.не_могу_вывести
+#   steps:
+#   - intent: transfer.не_могу_вывести
+#   - action: utter_transfer.не_могу_вывести
+
+# - story: transfer.не_могу_вывести_error_недостаточно_средств
+#   steps:
+#   - intent: transfer.не_могу_вывести
+#     entities:
+#     - error_недостаточно_средств
+#   - slot_was_set:
+#     - error_недостаточно_средств
+#   - action: utter_transfer.не_могу_вывести_error_недостаточно_средств

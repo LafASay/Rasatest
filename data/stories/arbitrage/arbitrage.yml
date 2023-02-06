@@ -1,0 +1,68 @@
+version: "3.1"
+
+stories:
+
+- story: arbitrage.how_to_become_arbitr
+  steps:
+  - intent: arbitrage.how_to_become_arbitr
+  - action: utter_arbitrage.how_to_become_arbitr
+
+- story: arbitrage.how_apply_to_arbitrage
+  steps:
+  - intent: arbitrage.how_apply_to_arbitrage
+  - action: utter_arbitrage.how_apply_to_arbitrage
+
+- story: arbitrage.was_scamed
+  steps:
+  - intent: arbitrage.was_scamed
+  - action: utter_arbitrage.was_scamed
+
+# - story: arbitrage.how_to_create_a_claim_or_pretension
+#   steps:
+#   - intent: arbitrage.how_to_create_a_claim_or_pretension
+#   - action: utter_arbitrage.how_to_create_a_claim_or_pretension
+
+- story: arbitrage.how_to_pretension_block
+  steps:
+  - intent: arbitrage.how_to_pretension_block
+  - action: utter_arbitrage.how_to_pretension_block
+
+- story: arbitrage.unblock_wmid
+  steps:
+  - intent: arbitrage.unblock_wmid
+  - action: utter_arbitrage.unblock_wmid
+
+- story: arbitrage.validity_period_of_claim
+  steps:
+  - intent: arbitrage.validity_period_of_claim
+  - action: utter_arbitrage.validity_period_of_claim
+
+- story: arbitrage.claim_processing_time
+  steps:
+  - intent: arbitrage.claim_processing_time
+  - action: utter_arbitrage.claim_processing_time
+
+# - story: arbitrage.how_to_file_claim
+#   steps:
+#   - intent: arbitrage.how_to_file_claim
+#   - action: utter_arbitrage.how_to_file_claim
+
+- story: arbitrage.вы_мошенники
+  steps:
+  - intent: arbitrage.вы_мошенники
+  - action: utter_arbitrage.вы_мошенники
+
+# - story: arbitrage.почему_меня_заблокировали
+#   steps:
+#   - intent: arbitrage.почему_меня_заблокировали
+#   - action: utter_arbitrage.почему_меня_заблокировали
+
+# - story: arbitrage.как_вывести_деньги_при_блокировке
+#   steps:
+#   - intent: arbitrage.как_вывести_деньги_при_блокировке
+#   - action: utter_arbitrage.как_вывести_деньги_при_блокировке
+
+- story: arbitrage.я_ничего_не_нарушал
+  steps:
+  - intent: arbitrage.я_ничего_не_нарушал
+  - action: utter_arbitrage.я_ничего_не_нарушал

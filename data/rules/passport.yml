@@ -1,0 +1,403 @@
+version: "3.1"
+
+rules:
+
+- rule: activate_how_get_passport_form
+  steps:
+  - intent: passport.how_get_passport
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+
+- rule: submit_how_get_passport_form
+  condition:
+  - active_loop: how_get_passport_form
+  steps:
+  - action: how_get_passport_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_how_get_passport_form_message
+
+- rule: submit_how_get_passport_form+++passport.how_get_passport
+  condition:
+  - active_loop: how_get_passport_form
+  steps:
+  - intent: passport.how_get_passport
+  - action: action_deactivate_loop
+  - active_loop: null
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+
+- rule: submit_how_get_passport_form+++system.name
+  condition:
+  - slot_was_set:
+    - requested_slot: null
+  steps:
+  - action: action_how_get_passport_form_message
+  - intent: system.name
+  - action: how_get_passport_form
+  - active_loop: how_get_passport_form
+  # - action: how_get_passport_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_how_get_passport_form_message
+
+- rule: submit_how_get_passport_form+++nlu_fallback
+  condition:
+  - active_loop: how_get_passport_form
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+  - action: action_deactivate_loop
+  - active_loop: null
+
+
+
+
+# - rule: submit_how_get_passport_form_123123
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+
+
+
+
+# - rule: submit_how_get_passport_form+++how_get_passport
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+
+
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: system.passport
+#     entities:
+#     - passport_type: initial_passport
+#   - slot_was_set:
+#     - passport_type: initial_passport
+#   - action: action_deactivate_loop
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+# - rule: submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# - rule: submit_how_get_passport_form+++system.passport
+#   condition:
+#   - slot_was_set:
+#     - requested_slot: null
+#   steps:
+#   - action: action_how_get_passport_form_message
+#   - intent: system.passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   # - action: how_get_passport_form
+#   # - active_loop: null
+#   # - slot_was_set:
+#   #   - requested_slot: null
+#   # - action: action_how_get_passport_form_message
+
+# # убрал лишнее
+
+# - rule: submit_how_get_passport_form+++nlu_fallback
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: nlu_fallback
+#   - action: utter_please_rephrase
+#   - action: action_deactivate_loop
+#   - active_loop: null
+
+
+
+
+
+
+
+
+#запуск формы, точно работает
+# - rule: activate_how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+#фигнякакая то
+# - rule: activate_how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+# - rule: activate_how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+
+
+# хуйня
+# - rule: submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - action: how_get_passport_form
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+# - rule: submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+  # - action: how_get_passport_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_how_get_passport_form_message
+
+
+
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: passport.how_get_passport
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+# - rule: submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - action: how_get_passport_form
+#   - intent: passport.how_get_passport
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+# не зашло
+# - rule: submit_how_get_passport_form+++submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+# - rule: submit_how_get_passport_form+++submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+
+
+# - rule: activate_how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+
+# - rule: submit_how_get_passport_form
+#   condition:
+#   - active_loop: how_get_passport_form
+#   steps:
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message
+
+
+# - rule: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: passport.how_get_passport
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: action_how_get_passport_form_message
+
+
+# - story: interactive_story_1
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - slot_was_set:
+#     - requested_slot: passport_type
+#   - intent: passport.how_get_passport
+#   - intent: system.passport
+#     entities:
+#     - passport_type: formal_passport
+#   - slot_was_set:
+#     - passport_type: formal_passport
+#   - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+  # - action: how_get_passport_form
+  # - active_loop: how_get_passport_form
+  # - action: how_get_passport_form
+  # - active_loop: null
+  # - slot_was_set:
+  #   - requested_slot: null
+  # - action: action_how_get_passport_form_message
+
+
+
+
+
+
+
+
+
+
+# - rule: activate_how_get_passport_form
+#   steps:
+#   - intent: passport.how_get_passport
+#   - action: how_get_passport_form
+#   - active_loop: how_get_passport_form
+#   - action: how_get_passport_form
+#   - active_loop: null
+#   - slot_was_set:
+#     - requested_slot: null
+#   - action: action_how_get_passport_form_message

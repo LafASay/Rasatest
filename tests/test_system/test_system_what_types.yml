@@ -1,0 +1,69 @@
+version: "3.1"
+
+stories:
+
+- story: system.what_types
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы
+  - action: utter_please_rephrase
+
+
+
+- story: system.what_types_name__other__
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы [проиктов]{"entity": "name", "value": "проиктов"}
+    entities:
+    - name: __other__
+  - slot_was_set:
+    - name: __other__
+  - action: utter_please_rephrase
+
+
+- story: system.what_types_purse
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы [кошельков]{"entity": "purse_type", "value": "purse"}
+    entities:
+    - purse_type: __other__
+  - slot_was_set:
+    - purse_type: __other__
+  - action: utter_system.what_types_purse
+
+- story: system.what_types_passport
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы [аттестатов]{"entity": "passport_type", "value": "passport"}
+    entities:
+    - passport_type: __other__
+  - slot_was_set:
+    - passport_type: __other__
+  - action: utter_system.what_types_passport
+#  - action: utter_passport.recomend_formal_passport
+
+- story: system.what_types_project_funding
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы [проектов]{"entity": "name", "value": "project_funding"}
+    entities:
+    - name: project_funding
+  - slot_was_set:
+    - name: project_funding
+  - action: utter_system.what_types_project_funding
+
+- story: system.what_types_keeper
+  steps:
+  - intent: system.what_types
+    user: |-
+      какие есть типы [киперов]{"entity": "keeper_type", "value": "keeper"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_system.what_types_keeper

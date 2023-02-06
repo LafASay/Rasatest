@@ -1,0 +1,10 @@
+version: "3.1"
+
+stories:
+
+- story: referal.referal
+  steps:
+  - intent: referal.referal
+    user: |-
+      тут есть реферальные ссылки
+  - action: utter_referal.referal

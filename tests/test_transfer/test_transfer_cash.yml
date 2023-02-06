@@ -1,0 +1,22 @@
+version: "3.1"
+
+stories:
+
+- story: transfer.cash
+  steps:
+  - intent: transfer.cash
+    user: |-
+      наличными
+  - action: utter_transfer.cash
+
+
+- story: transfer.cash_cash
+  steps:
+  - intent: transfer.cash
+    user: |-
+      [наличными]{"entity": "cash", "value": "cash"}
+    entities:
+    - cash
+  - slot_was_set:
+    - cash
+  - action: utter_transfer.cash

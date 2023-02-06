@@ -1,0 +1,47 @@
+version: "3.1"
+
+stories:
+
+- story: faq.how_unplug
+  steps:
+  - intent: faq.how_unplug
+  - action: utter_faq.how_unplug
+
+
+
+- story: faq.how_unplug_keeper_type__other__
+  steps:
+  - intent: faq.how_unplug
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_faq.how_unplug_keeper
+
+
+- story: faq.how_unplug_standard
+  steps:
+  - intent: faq.how_unplug
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_faq.how_unplug_standard
+
+- story: faq.how_unplug_winpro
+  steps:
+  - intent: faq.how_unplug
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_faq.how_unplug_winpro
+
+- story: faq.how_unplug_webpro
+  steps:
+  - intent: faq.how_unplug
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_faq.how_unplug_webpro

@@ -1,0 +1,81 @@
+version: "3.1"
+
+stories:
+
+- story: limits.limits
+  steps:
+  - intent: limits.limits
+  - action: utter_limits.limits
+
+
+
+- story: limits.limits_verb__other__
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: __other__
+  - slot_was_set:
+    - verb: __other__
+  - action: utter_limits.limits_topup_withdraw
+
+
+- story: limits.limits_topup
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: topup
+  - slot_was_set:
+    - verb: topup
+  - action: utter_limits.limits_topup
+
+- story: limits.limits_withdraw
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: withdraw
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_limits.limits_withdraw
+
+
+
+- story: limits.limits+++other.как_увеличить
+  steps:
+  - intent: limits.limits
+  - action: utter_limits.limits
+  - intent: other.как_увеличить
+  - action: utter_limits.how_to_increase_limits
+
+
+- story: limits.limits_verb__other__+++other.как_увеличить
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: __other__
+  - slot_was_set:
+    - verb: __other__
+  - action: utter_limits.limits_topup_withdraw
+  - intent: other.как_увеличить
+  - action: utter_limits.how_to_increase_limits
+
+- story: limits.limits_topup+++other.как_увеличить
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: topup
+  - slot_was_set:
+    - verb: topup
+  - action: utter_limits.limits_topup
+  - intent: other.как_увеличить
+  - action: utter_limits.how_to_increase_limits_topup
+
+- story: limits.limits_withdraw+++other.как_увеличить
+  steps:
+  - intent: limits.limits
+    entities:
+    - verb: withdraw
+  - slot_was_set:
+    - verb: withdraw
+  - action: utter_limits.limits_withdraw
+  - intent: other.как_увеличить
+  - action: utter_limits.how_to_increase_limits_withdraw

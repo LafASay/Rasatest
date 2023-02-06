@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+- story: passport.как_загрузить_документы+passport.no_webcam
+  steps:
+  - intent: passport.как_загрузить_документы+passport.no_webcam
+  - action: utter_passport.как_загрузить_документы+passport.no_webcam
+
+- story: passport.как_загрузить_документы+passport.no_webcam
+  steps:
+  - intent: passport.как_загрузить_документы+passport.no_webcam
+    entities:
+    - no_webcam: no_webcam
+  - slot_was_set:
+    - no_webcam: no_webcam
+  - action: utter_passport.как_загрузить_документы+passport.no_webcam

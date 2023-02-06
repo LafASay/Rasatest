@@ -1,0 +1,89 @@
+version: "3.1"
+
+stories:
+
+# - story: keeper.как_изменить_пароль
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#   - action: utter_keeper.как_изменить_пароль
+
+
+
+# - story: keeper.как_изменить_пароль_service_name__other__
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - service_name: __other__
+#   - slot_was_set:
+#     - service_name: __other__
+#   - action: utter_please_rephrase
+
+
+# - story: keeper.как_изменить_пароль_enum
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - service_name: enum
+#   - slot_was_set:
+#     - service_name: enum
+#   - action: utter_keeper.как_изменить_пароль_enum
+
+
+
+# - story: keeper.как_изменить_пароль_name__other__
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - name: __other__
+#   - slot_was_set:
+#     - name: __other__
+#   - action: utter_please_rephrase
+
+
+# - story: keeper.как_изменить_пароль_keyfile
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - name: keyfile
+#   - slot_was_set:
+#     - name: keyfile
+#   - action: utter_keeper.как_изменить_пароль_keyfile
+
+
+
+# - story: keeper.как_изменить_пароль_keeper_type__other__
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - keeper_type: __other__
+#   - slot_was_set:
+#     - keeper_type: __other__
+#   - action: utter_please_rephrase
+
+
+# - story: keeper.как_изменить_пароль_standard
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - keeper_type: standard
+#   - slot_was_set:
+#     - keeper_type: standard
+#   - action: utter_keeper.как_изменить_пароль_standard
+
+# - story: keeper.как_изменить_пароль_winpro
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - keeper_type: winpro
+#   - slot_was_set:
+#     - keeper_type: winpro
+#   - action: utter_keeper.как_изменить_пароль_winpro
+
+# - story: keeper.как_изменить_пароль_webpro
+#   steps:
+#   - intent: keeper.как_изменить_пароль
+#     entities:
+#     - keeper_type: webpro
+#   - slot_was_set:
+#     - keeper_type: webpro
+#   - action: utter_keeper.как_изменить_пароль_webpro

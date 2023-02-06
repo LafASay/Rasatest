@@ -1,0 +1,46 @@
+version: "3.1"
+
+stories:
+
+- story: number.number_and_email
+  steps:
+  - intent: number.number_and_email
+  - action: utter_please_rephrase
+
+
+
+- story: number.number_and_email_purse_number
+  steps:
+  - intent: number.number_and_email
+    entities:
+    - purse_number
+  - slot_was_set:
+    - purse_number
+  - action: utter_number.number_and_email_purse_number
+
+- story: number.number_and_email_wmid_number
+  steps:
+  - intent: number.number_and_email
+    entities:
+    - wmid_number
+  - slot_was_set:
+    - wmid_number
+  - action: utter_number.number_and_email_wmid_number
+
+- story: number.number_and_email_phone_number
+  steps:
+  - intent: number.number_and_email
+    entities:
+    - phone_number
+  - slot_was_set:
+    - phone_number
+  - action: utter_number.number_and_email_phone_number
+
+- story: number.number_and_email_email
+  steps:
+  - intent: number.number_and_email
+    entities:
+    - email
+  - slot_was_set:
+    - email
+  - action: utter_number.number_and_email_email

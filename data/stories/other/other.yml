@@ -1,0 +1,133 @@
+version: "3.1"
+
+stories:
+
+- story: other.user_confirm
+  steps:
+  - intent: other.user_confirm
+  - action: utter_other.user_confirm
+
+- story: other.user_deny
+  steps:
+  - intent: other.user_deny
+  - action: utter_other.user_deny
+
+- story: other.user_know
+  steps:
+  - intent: other.user_know
+  - action: utter_other.user_know
+
+- story: other.user_dont_know
+  steps:
+  - intent: other.user_dont_know
+  - action: utter_other.user_dont_know
+
+- story: other.user_dont_understand
+  steps:
+  - intent: other.user_dont_understand
+  - action: utter_other.user_dont_understand
+
+# - story: other.user_less_utr
+#   steps:
+#   - intent: other.user_less_utr
+#   - action: utter_other.user_less_utr
+
+# - story: other.user_more_utr
+#   steps:
+#   - intent: other.user_more_utr
+#   - action: utter_other.user_more_utr
+
+- story: other.англ
+  steps:
+  - intent: other.англ
+  - action: utter_other.англ
+
+- story: other.сколько_ждать
+  steps:
+  - intent: other.сколько_ждать
+  - action: utter_other.сколько_ждать
+
+- story: other.прошло_много_времени
+  steps:
+  - intent: other.прошло_много_времени
+  - action: utter_other.прошло_много_времени
+
+- story: other.все_сделал
+  steps:
+  - intent: other.все_сделал
+  - action: utter_other.все_сделал
+
+- story: other.страны
+  steps:
+  - intent: other.страны
+  - action: utter_other.страны
+
+- story: other.дайте_ссылку
+  steps:
+  - intent: other.дайте_ссылку
+  - action: utter_other.дайте_ссылку
+
+- story: other.хочу_быстрее
+  steps:
+  - intent: other.хочу_быстрее
+  - action: utter_other.хочу_быстрее
+
+- story: other.где_посмотреть
+  steps:
+  - intent: other.где_посмотреть
+  - action: utter_other.где_посмотреть
+
+- story: other.как_увеличить
+  steps:
+  - intent: other.как_увеличить
+  - action: utter_other.как_увеличить
+
+- story: other.не_получилось
+  steps:
+  - intent: other.не_получилось
+  - action: utter_other.не_получилось
+
+- story: other.приведи_пример
+  steps:
+  - intent: other.приведи_пример
+  - action: utter_other.приведи_пример
+
+- story: other.нужно_подробнее
+  steps:
+  - intent: other.нужно_подробнее
+  - action: utter_other.нужно_подробнее
+
+- story: other.что_нужно_делать
+  steps:
+  - intent: other.что_нужно_делать
+  - action: utter_other.что_нужно_делать
+
+- story: other.указание_возраста
+  steps:
+  - intent: other.указание_возраста
+  - action: utter_other.указание_возраста
+
+- story: other.я_уже_отправил
+  steps:
+  - intent: other.я_уже_отправил
+  - action: utter_other.я_уже_отправил
+
+- story: other.не_работает
+  steps:
+  - intent: other.не_работает
+  - action: utter_other.не_работает
+
+- story: other.не_гражданин
+  steps:
+  - intent: other.не_гражданин
+  - action: utter_other.не_гражданин
+
+- story: other.why
+  steps:
+  - intent: other.why
+  - action: utter_other.why
+
+- story: other.counter
+  steps:
+  - intent: other.counter
+  - action: utter_other.counter

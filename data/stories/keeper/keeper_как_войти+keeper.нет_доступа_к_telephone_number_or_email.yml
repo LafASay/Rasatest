@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+  steps:
+  - intent: keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - нет_доступа_к_telephone_number
+  - slot_was_set:
+    - нет_доступа_к_telephone_number
+  - action: utter_keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_telephone_number
+
+- story: keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email
+  steps:
+  - intent: keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email
+    entities:
+    - нет_доступа_к_email
+  - slot_was_set:
+    - нет_доступа_к_email
+  - action: utter_keeper.как_войти+keeper.нет_доступа_к_telephone_number_or_email_нет_доступа_к_email

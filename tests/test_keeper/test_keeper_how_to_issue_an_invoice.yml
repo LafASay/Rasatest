@@ -1,0 +1,57 @@
+version: "3.1"
+
+stories:
+
+- story: keeper.how_to_issue_an_invoice
+  steps:
+  - intent: keeper.how_to_issue_an_invoice
+    user: |-
+      выставить счет на оплату
+  - action: utter_keeper.how_to_issue_an_invoice_in_standard
+
+
+
+- story: keeper.how_to_issue_an_invoice_keeper_type__other__
+  steps:
+  - intent: keeper.how_to_issue_an_invoice
+    user: |-
+      выставить счет на оплату в [класссик]{"entity": "keeper_type", "value": "класссик"}
+    entities:
+    - keeper_type: __other__
+  - slot_was_set:
+    - keeper_type: __other__
+  - action: utter_keeper.how_to_issue_an_invoice_in_standard
+
+
+- story: keeper.how_to_issue_an_invoice_in_standard
+  steps:
+  - intent: keeper.how_to_issue_an_invoice
+    user: |-
+      выставить счет на оплату в [standard]{"entity": "keeper_type", "value": "standard"}
+    entities:
+    - keeper_type: standard
+  - slot_was_set:
+    - keeper_type: standard
+  - action: utter_keeper.how_to_issue_an_invoice_in_standard
+
+- story: keeper.how_to_issue_an_invoice_in_winpro
+  steps:
+  - intent: keeper.how_to_issue_an_invoice
+    user: |-
+      выставить счет на оплату в [winpro]{"entity": "keeper_type", "value": "winpro"}
+    entities:
+    - keeper_type: winpro
+  - slot_was_set:
+    - keeper_type: winpro
+  - action: utter_keeper.how_to_issue_an_invoice_in_winpro
+
+- story: keeper.how_to_issue_an_invoice_in_webpro
+  steps:
+  - intent: keeper.how_to_issue_an_invoice
+    user: |-
+      выставить счет на оплату в [webpro]{"entity": "keeper_type", "value": "webpro"}
+    entities:
+    - keeper_type: webpro
+  - slot_was_set:
+    - keeper_type: webpro
+  - action: utter_keeper.how_to_issue_an_invoice_in_webpro

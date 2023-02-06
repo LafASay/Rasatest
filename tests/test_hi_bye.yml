@@ -1,0 +1,231 @@
+version: "3.1"
+
+stories:
+
+- story: hi_bye.greet
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+
+- story: second_greet
+  steps:
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.greet
+  - intent: hi_bye.greet
+    user: |-
+      привет
+  - action: utter_hi_bye.second_greet
+
+- story: hi_bye.how_are_you
+  steps:
+  - intent: hi_bye.how_are_you
+    user: |-
+      бот как твои дела
+  - action: utter_hi_bye.how_are_you
+
+- story: hi_bye.who_are_you
+  steps:
+  - intent: hi_bye.who_are_you
+    user: |-
+      а вы кто
+  - action: utter_hi_bye.who_are_you
+
+- story: hi_bye.мальчик_или_девочка
+  steps:
+  - intent: hi_bye.мальчик_или_девочка
+    user: |-
+      ты мальчик или девочка
+  - action: utter_hi_bye.мальчик_или_девочка
+
+- story: hi_bye.есть_кто_нибудь
+  steps:
+  - intent: hi_bye.есть_кто_нибудь
+    user: |-
+      есть кто нибудь
+  - action: utter_hi_bye.есть_кто_нибудь
+
+- story: hi_bye.what_can_you_do
+  steps:
+  - intent: hi_bye.what_can_you_do
+    user: |-
+      на что способен
+  - action: utter_hi_bye.what_can_you_do
+
+- story: hi_bye.where_do_you_live
+  steps:
+  - intent: hi_bye.where_do_you_live
+    user: |-
+      где ты водишься
+  - action: utter_hi_bye.where_do_you_live
+
+- story: hi_bye.what_the_wather
+  steps:
+  - intent: hi_bye.what_the_wather
+    user: |-
+      какая сейчас погода
+  - action: utter_hi_bye.what_the_wather
+
+- story: hi_bye.thanks
+  steps:
+  - intent: hi_bye.thanks
+    user: |-
+      спасибо
+  - action: utter_hi_bye.thanks
+
+- story: hi_bye.ответ_не_помог
+  steps:
+  - intent: hi_bye.ответ_не_помог
+    user: |-
+      вы мне не помогли
+  - action: utter_hi_bye.ответ_не_помог
+
+- story: hi_bye.offend
+  steps:
+  - intent: hi_bye.offend
+    user: |-
+      ты еблан
+  - action: utter_hi_bye.offend
+
+- story: hi_bye.i_like_you
+  steps:
+  - intent: hi_bye.i_like_you
+    user: |-
+      я тебя люблю
+  - action: utter_hi_bye.i_like_you
+
+# - story: hi_bye.who_is_creater
+#   steps:
+#   - intent: hi_bye.who_is_creater
+#     user: |-
+#       кто тебя создал
+#   - action: utter_hi_bye.who_is_creater
+
+- story: hi_bye.вторая_половинка_муравьиха
+  steps:
+  - intent: hi_bye.вторая_половинка_муравьиха
+    user: |-
+      у тебя есть муравьиха
+  - action: utter_hi_bye.вторая_половинка_муравьиха
+
+- story: hi_bye.где_твой_муравейник
+  steps:
+  - intent: hi_bye.где_твой_муравейник
+    user: |-
+      где твой муравейник
+  - action: utter_hi_bye.где_твой_муравейник
+
+# - story: hi_bye.who_president
+#   steps:
+#   - intent: hi_bye.who_president
+#     user: |-
+#       кто сейчас президент
+#   - action: utter_hi_bye.who_president
+
+- story: hi_bye.who_is_bot_owner
+  steps:
+  - intent: hi_bye.who_is_bot_owner
+    user: |-
+      кто твой хозяин
+  - action: utter_hi_bye.who_is_bot_owner
+
+# - story: hi_bye.search_engine
+#   steps:
+#   - intent: hi_bye.search_engine
+#     user: |-
+#       знаешь что такое гугл
+#   - action: utter_hi_bye.search_engine
+
+- story: hi_bye.sad
+  steps:
+  - intent: hi_bye.sad
+    user: |-
+      плохо
+  - action: utter_hi_bye.sad
+
+# - story: hi_bye.вы_плохие
+#   steps:
+#   - intent: hi_bye.вы_плохие
+#     user: |-
+#       ты плохой
+#   - action: utter_hi_bye.вы_плохие
+
+- story: hi_bye.bye
+  steps:
+  - intent: hi_bye.bye
+    user: |-
+      пока
+  - action: utter_hi_bye.bye
+
+- story: hi_bye.sorry
+  steps:
+  - intent: hi_bye.sorry
+    user: |-
+      сорян
+  - action: utter_hi_bye.sorry
+
+- story: hi_bye.анекдот
+  steps:
+  - intent: hi_bye.анекдот
+    user: |-
+      расскажи анекдот
+  - action: utter_hi_bye.анекдот
+
+- story: hi_bye.калькулятор
+  steps:
+  - intent: hi_bye.калькулятор
+    user: |-
+      сколько будет 100-2
+  - action: utter_hi_bye.калькулятор
+
+- story: hi_bye.im_from
+  steps:
+  - intent: hi_bye.im_from
+    user: |-
+      гражданин киргизии
+  - action: utter_hi_bye.im_from
+
+# - story: hi_bye.name
+#   steps:
+#   - intent: hi_bye.name
+#     user: |-
+#       юрий
+#   - action: utter_hi_bye.name
+
+- story: hi_bye.вебмани_не_нравится
+  steps:
+  - intent: hi_bye.вебмани_не_нравится
+    user: |-
+      вебмани плохая система
+  - action: utter_hi_bye.вебмани_не_нравится
+
+- story: hi_bye.are_you_kidding_me
+  steps:
+  - intent: hi_bye.are_you_kidding_me
+    user: |-
+      ты издеваешься
+  - action: utter_hi_bye.are_you_kidding_me
+
+- story: hi_bye.trash
+  steps:
+  - intent: hi_bye.trash
+    user: |-
+      хочу какать
+  - action: utter_hi_bye.trash
+
+- story: hi_bye.lol
+  steps:
+  - intent: hi_bye.lol
+    user: |-
+      лол кек чебурек
+  - action: utter_hi_bye.lol
+
+- story: hi_bye.ты_не_понял
+  steps:
+  - intent: hi_bye.ты_не_понял
+    user: |-
+      ты не понял
+  - action: utter_hi_bye.ты_не_понял

@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+
+# - story: sms.phone_number
+#   steps:
+#   - intent: sms.phone_number
+#     user: |-
+#       мой номер телефона
+#   - action: utter_sms.phone_number
+
+# - story: sms.phone_number
+#   steps:
+#   - intent: sms.phone_number
+#     user: |-
+#       мой номер [+79645740770]{"entity": "phone_number", "value": "+79645740770"}
+#     entities:
+#     - phone_number: phone_number
+#   - slot_was_set:
+#     - phone_number: phone_number
+#   - action: utter_sms.phone_number

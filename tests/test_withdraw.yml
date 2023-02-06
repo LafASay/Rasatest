@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+
+- story: withdraw.требования_для_вывода_средств
+  steps:
+  - intent: withdraw.требования_для_вывода_средств
+    user: |-
+      как использовать другую банковскую карту не на мое имя
+  - action: utter_withdraw.требования_для_вывода_средств
+
+- story: withdraw.when_do_transfers_work
+  steps:
+  - intent: withdraw.when_do_transfers_work
+    user: |-
+      когда будет доступно выводить деньги на карты типа visa в долларах
+  - action: utter_withdraw.when_do_transfers_work
+
+- story: webpro.как_посмотреть_хранилище_сертификатов
+  steps:
+  - intent: webpro.как_посмотреть_хранилище_сертификатов
+    user: |-
+      как посмотреть хранилище сертификатов
+  - action: utter_webpro.как_посмотреть_хранилище_сертификатов

@@ -1,0 +1,26 @@
+version: "3.1"
+
+stories:
+
+- story: system_rules.изменился_bl_tl
+  steps:
+  - intent: system_rules.изменился_bl_tl
+  - action: utter_system_rules.изменился_bl_tl_bl
+
+- story: system_rules.изменился_bl_tl_bl
+  steps:
+  - intent: system_rules.изменился_bl_tl
+    entities:
+    - name: business_level
+  - slot_was_set:
+    - name: business_level
+  - action: utter_system_rules.изменился_bl_tl_bl
+
+- story: system_rules.изменился_bl_tl_tl
+  steps:
+  - intent: system_rules.изменился_bl_tl
+    entities:
+    - name: trust_level
+  - slot_was_set:
+    - name: trust_level
+  - action: utter_system_rules.изменился_bl_tl_tl

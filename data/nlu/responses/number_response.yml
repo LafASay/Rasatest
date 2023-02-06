@@ -1,0 +1,15 @@
+version: "3.1"
+
+responses:
+
+  utter_number.number_and_email_purse_number:
+  - text: "WM кошелек - это зарегистрированный в рамках WMID реквизит для учета титульных знаков. Каждый кошелёк имеет номер и префикс, обозначающий для каких средств он предназначен. Например — Z012345678910. Доступные типы кошельков указаны на странице https://www.webmoney.ru/rus/information/wmwallets/index.shtml"
+
+  utter_number.number_and_email_wmid_number:
+  - text: "Идентификатор участника (WMID) представляет собой уникальную 12-тизначную цифровую последовательность, которая является адресом участника в системе WebMoney. Например, WMID 464889785562 - идентификатор центра аттестации WebMoney."
+
+  utter_number.number_and_email_phone_number:
+  - text: 'Видимо это Ваш номер телефона.'
+
+  utter_number.number_and_email_email:
+  - text: 'Видимо это Ваш адрес электронной почты.'

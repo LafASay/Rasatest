@@ -1,0 +1,17 @@
+version: "3.1"
+
+stories:
+
+# - story: purses.purse_number
+#   steps:
+#   - intent: purses.purse_number
+#   - action: utter_purses.purse_number
+
+# - story: purses.purse_number
+#   steps:
+#   - intent: purses.purse_number
+#     entities:
+#     - purse_number: purse_number
+#   - slot_was_set:
+#     - purse_number: purse_number
+#   - action: utter_purses.purse_number

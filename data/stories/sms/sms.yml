@@ -1,0 +1,124 @@
+version: "3.1"
+
+stories:
+
+- story: sms.call_instead_of_sms
+  steps:
+  - intent: sms.call_instead_of_sms
+  - action: utter_sms.call_instead_of_sms
+
+- story: sms.куда_ввести_проверочный_код
+  steps:
+  - intent: sms.куда_ввести_проверочный_код
+  - action: utter_sms.куда_ввести_проверочный_код
+
+- story: sms.re-registering_sim
+  steps:
+  - intent: sms.re-registering_sim
+  - action: utter_sms.re-registering_sim
+  
+- story: sms.подключение_telegram
+  steps:
+  - intent: sms.подключение_telegram
+  - action: utter_sms.подключение_telegram
+
+- story: sms.число-ответ
+  steps:
+  - intent: sms.число-ответ
+  - action: utter_sms.число-ответ
+
+- story: sms.установить_авторизацию_через_смс
+  steps:
+  - intent: sms.установить_авторизацию_через_смс
+  - action: utter_sms.установить_авторизацию_через_смс
+
+- story: sms.подтверждение_операций
+  steps:
+  - intent: sms.подтверждение_операций
+  - action: utter_sms.подтверждение_операций
+
+- story: sms.покупка_смс
+  steps:
+  - intent: sms.покупка_смс
+  - action: utter_sms.покупка_смс
+
+- story: sms.cant_re-registering_sim
+  steps:
+  - intent: sms.cant_re-registering_sim
+  - action: utter_sms.cant_re-registering_sim
+
+- story: sms.cant_re-registering_sim+sms.sms_not_coming
+  steps:
+  - intent: sms.cant_re-registering_sim+sms.sms_not_coming
+  - action: utter_sms.cant_re-registering_sim+sms.sms_not_coming
+
+- story: sms.пишет_что_код_неправильный
+  steps:
+  - intent: sms.пишет_что_код_неправильный
+  - action: utter_sms.пишет_что_код_неправильный
+
+- story: sms.не_приходит_пуш
+  steps:
+  - intent: sms.не_приходит_пуш
+  - action: utter_sms.не_приходит_пуш
+
+- story: sms.получить_смс_на_почту
+  steps:
+  - intent: sms.получить_смс_на_почту
+  - action: utter_sms.получить_смс_на_почту
+
+- story: sms.unplug_sms
+  steps:
+  - intent: sms.unplug_sms
+  - action: utter_sms.unplug_sms
+
+- story: sms.не_активна_кнопка_смс
+  steps:
+  - intent: sms.не_активна_кнопка_смс
+  - action: utter_sms.не_активна_кнопка_смс
+
+- story: sms.без_подтверждения
+  steps:
+  - intent: sms.без_подтверждения
+  - action: utter_sms.без_подтверждения
+
+
+
+- story: sms.sms_not_coming+++hi_bye.ответ_не_помог
+  steps:
+  - intent: sms.sms_not_coming
+  - action: utter_sms.sms_not_coming
+  - intent: hi_bye.ответ_не_помог
+  - action: utter_sms.укажите_номер_вашего_телефона
+  - intent: number.number_and_email
+    entities:
+    - phone_number: phone_number
+  - slot_was_set:
+    - phone_number: phone_number
+  - action: utter_sms.передали_оператору
+
+- story: sms.sms_not_coming+++other.не_получилось
+  steps:
+  - intent: sms.sms_not_coming
+  - action: utter_sms.sms_not_coming
+  - intent: other.не_получилось
+  - action: utter_sms.укажите_номер_вашего_телефона
+  - intent: number.number_and_email
+    entities:
+    - phone_number
+  - slot_was_set:
+    - phone_number
+  - action: utter_sms.передали_оператору
+
+- story: sms.sms_not_coming+++sms.sms_not_coming
+  steps:
+  - intent: sms.sms_not_coming
+  - action: utter_sms.sms_not_coming
+  - intent: sms.sms_not_coming
+  - action: utter_sms.укажите_номер_вашего_телефона
+  - intent: number.number_and_email
+    entities:
+    - phone_number
+  - slot_was_set:
+    - phone_number
+  - action: utter_sms.передали_оператору

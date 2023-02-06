@@ -1,0 +1,79 @@
+version: "3.1"
+
+stories:
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number__other__
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      как поменять [номер телефона]{"entity": "telephone_number", "value": "telephone_number"} в [enumm]{"entity": "service_name", "value": "enumm"} если сим карта утеряна
+    entities:
+    - telephone_number
+    - service_name: __other__
+  - slot_was_set:
+    - telephone_number
+    - service_name: __other__
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number_in_enum
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email__other__
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      хочу поменять [почту]{"entity": "email", "value": "email"} в [enumm]{"entity": "service_name", "value": "enumm"} старая почта была утерена
+    entities:
+    - email
+    - service_name: __other__
+  - slot_was_set:
+    - email
+    - service_name: __other__
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email_in_enum
+
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      как поменять [номер телефона]{"entity": "telephone_number", "value": "telephone_number"} если сим карта утеряна
+    entities:
+    - telephone_number
+  - slot_was_set:
+    - telephone_number
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      хочу поменять [почту]{"entity": "email", "value": "email"} старая почта была утерена
+    entities:
+    - email
+  - slot_was_set:
+    - email
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email
+
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number_in_enum
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      как поменять [номер телефона]{"entity": "telephone_number", "value": "telephone_number"} в [enum]{"entity": "service_name", "value": "enum"} если сим карта утеряна
+    entities:
+    - telephone_number
+    - service_name: enum
+  - slot_was_set:
+    - telephone_number
+    - service_name: enum
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_telephone_number_in_enum
+
+- story: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email_in_enum
+  steps:
+  - intent: faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email
+    user: |-
+      как поменять [электронную почту]{"entity": "email", "value": "email"} в [енам]{"entity": "service_name", "value": "enum"} старая почта была утерена
+    entities:
+    - email
+    - service_name: enum
+  - slot_was_set:
+    - email
+    - service_name: enum
+  - action: utter_faq.change_telephone_number_or_email_or_password+keeper.нет_доступа_к_telephone_number_or_email_email_in_enum
