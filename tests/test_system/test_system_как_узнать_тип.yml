@@ -15,7 +15,7 @@ stories:
   steps:
   - intent: system.как_узнать_тип
     user: |-
-      как узнать тип [wibmoney]{"entity": "purse_type", "value": "wibmoney"}
+      как узнать тип [wibmoney]{"entity": "name", "value": "wibmoney"}
     entities:
     - name: __other__
   - slot_was_set:

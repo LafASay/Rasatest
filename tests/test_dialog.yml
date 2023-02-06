@@ -989,7 +989,7 @@ stories:
   - action: utter_system.how_create
   - intent: system.how_create
     user: |-
-      продать [доллары]{"entity": "purse_type", "value": "usd"}
+      продать [доллары]{"entity": "currency", "value": "usd"}
   - slot_was_set:
     - purse_type: usd
   - action: utter_system.how_create_purse_in_standard
@@ -1665,7 +1665,7 @@ stories:
     - requested_slot: transfer_method
   - intent: transfer.transfer
     user: |-
-      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "purse_type", "role": "to"}
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "bank", "role": "to"}
   - slot_was_set:
     - verb: withdraw
   - action: transfer_form
@@ -1687,7 +1687,7 @@ stories:
     - requested_slot: transfer_purse_type
   - intent: transfer.transfer
     user: |-
-      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "purse_type", "role": "to"}
+      как [вывести]{"entity": "verb", "value": "withdraw"} средства на [счет банка]{"entity": "bank", "role": "to"}
   - slot_was_set:
     - verb: withdraw
   - action: transfer_form
